@@ -1,6 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -37,26 +38,26 @@ const Hero = () => {
         className="section-container flex flex-col items-center text-center transition-all duration-700 opacity-0 translate-y-8"
       >
         <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-6">
-          Beautifully Crafted
+          Fighting Cancer Together
         </span>
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold max-w-4xl leading-tight md:leading-tight lg:leading-tight">
-          Design with <span className="text-primary">simplicity</span>, built with precision
+          Supporting the <span className="text-primary">Tibetan</span> community against cancer
         </h1>
         <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl">
-          A minimalist approach to products that embodies elegance, functionality, and attention to detail.
+          The Tibetan Cancer Society is dedicated to raising awareness, providing support, and offering resources to cancer patients and their families in the Tibetan community.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
-          <a href="#features" className="btn-primary">
-            Explore Features
+          <Link to="/about" className="btn-primary">
+            Learn About Us
             <ArrowRight className="ml-2 h-4 w-4" />
-          </a>
-          <a href="#about" className="btn-secondary">
-            Learn More
-          </a>
+          </Link>
+          <Link to="/donate" className="btn-secondary">
+            Donate Now
+          </Link>
         </div>
         
         <div className="mt-24 w-full max-w-5xl rounded-xl overflow-hidden shadow-2xl">
-          <div className="aspect-video bg-gray-100 animate-pulse"></div>
+          <div className="aspect-video bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb')" }}></div>
         </div>
       </div>
     </div>

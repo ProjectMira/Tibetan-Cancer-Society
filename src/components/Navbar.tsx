@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
@@ -34,27 +35,36 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <a href="#" className="text-xl font-display font-bold tracking-tight">
-              Minimalist
-            </a>
+            <Link to="/" className="text-xl font-display font-bold tracking-tight text-primary">
+              Tibetan Cancer Society
+            </Link>
           </div>
           
-          <nav className="hidden md:flex space-x-8">
-            <a href="#features" className="text-sm font-medium hover:text-primary transition-colors">
-              Features
-            </a>
-            <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">
+          <nav className="hidden md:flex space-x-6">
+            <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">
               About
-            </a>
-            <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
+            </Link>
+            <Link to="/gallery" className="text-sm font-medium hover:text-primary transition-colors">
+              Gallery
+            </Link>
+            <Link to="/team" className="text-sm font-medium hover:text-primary transition-colors">
+              Team
+            </Link>
+            <Link to="/donate" className="text-sm font-medium hover:text-primary transition-colors">
+              Donate
+            </Link>
+            <Link to="/cancer-info" className="text-sm font-medium hover:text-primary transition-colors">
+              Cancer Info
+            </Link>
+            <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">
               Contact
-            </a>
+            </Link>
           </nav>
           
           <div className="hidden md:block">
-            <a href="#contact" className="btn-primary">
-              Get Started
-            </a>
+            <Link to="/donate" className="btn-primary">
+              Donate Now
+            </Link>
           </div>
           
           <button 
@@ -71,34 +81,55 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-background border-t border-border">
           <div className="px-4 py-6 space-y-4">
-            <a 
-              href="#features" 
-              className="block text-sm font-medium hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Features
-            </a>
-            <a 
-              href="#about" 
+            <Link 
+              to="/about" 
               className="block text-sm font-medium hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
-            </a>
-            <a 
-              href="#contact" 
+            </Link>
+            <Link 
+              to="/gallery" 
+              className="block text-sm font-medium hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Gallery
+            </Link>
+            <Link 
+              to="/team" 
+              className="block text-sm font-medium hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Team
+            </Link>
+            <Link 
+              to="/donate" 
+              className="block text-sm font-medium hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Donate
+            </Link>
+            <Link 
+              to="/cancer-info" 
+              className="block text-sm font-medium hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Cancer Info
+            </Link>
+            <Link 
+              to="/contact" 
               className="block text-sm font-medium hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact
-            </a>
-            <a 
-              href="#contact" 
+            </Link>
+            <Link 
+              to="/donate" 
               className="btn-primary w-full justify-center"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Get Started
-            </a>
+              Donate Now
+            </Link>
           </div>
         </div>
       )}
