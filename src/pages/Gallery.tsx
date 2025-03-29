@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import PageLayout from '../components/PageLayout';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -14,7 +14,8 @@ import {
   CardContent, 
   CardFooter,
   CardHeader,
-  CardTitle
+  CardTitle,
+  CardDescription
 } from "@/components/ui/card";
 
 const galleryItems = [
@@ -106,21 +107,18 @@ const galleryItems = [
       'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
       'https://images.unsplash.com/photo-1472396961693-142e6e269027'
     ]
-  },
+  }
 ];
 
 const Gallery = () => {
   const [selectedItem, setSelectedItem] = useState<(typeof galleryItems)[0] | null>(null);
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
   
   const handleItemClick = (item: typeof galleryItems[0]) => {
     setSelectedItem(item);
-    setActiveImageIndex(0);
   };
   
   const closeModal = () => {
     setSelectedItem(null);
-    setActiveImageIndex(0);
   };
   
   return (
@@ -138,14 +136,29 @@ const Gallery = () => {
                 onClick={() => handleItemClick(item)}
               >
                 <div className="aspect-square">
-                  <img 
-                    src={item.images[0]} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-                  />
+                  <Carousel className="w-full">
+                    <CarouselContent>
+                      {item.images.map((image, index) => (
+                        <CarouselItem key={index}>
+                          <img 
+                            src={image} 
+                            alt={`${item.title} - Image ${index + 1}`} 
+                            className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+                          />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    {item.images.length > 1 && (
+                      <>
+                        <CarouselPrevious className="left-2 h-8 w-8" />
+                        <CarouselNext className="right-2 h-8 w-8" />
+                      </>
+                    )}
+                  </Carousel>
                 </div>
                 <CardHeader className="p-4">
                   <CardTitle className="text-lg">{item.title}</CardTitle>
+                  <CardDescription className="line-clamp-2 text-sm">{item.description}</CardDescription>
                 </CardHeader>
                 <CardFooter className="px-4 py-2 text-xs text-muted-foreground flex justify-between">
                   <span>{item.date}</span>

@@ -1,16 +1,47 @@
-
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { Image, Users, Info, Gift, Phone, FileText, User, Lock } from 'lucide-react';
+import { Image, Users, Info, Gift, Phone, FileText, User, Lock, Calendar, MapPin, Plus, X } from 'lucide-react';
 import PageLayout from '../components/PageLayout';
+import { Form, FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '@/components/ui/form';
+import { useForm } from 'react-hook-form';
+
+const initialGalleryItems = [
+  {
+    id: 1,
+    title: 'Health Camp in Dharamshala',
+    description: 'Our team provided free cancer screenings and educational workshops to over 100 community members.',
+    location: 'Dharamshala, Himachal Pradesh',
+    date: 'March 15, 2023',
+    images: [
+      'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
+      'https://images.unsplash.com/photo-1472396961366-2d5fba72006d',
+      'https://images.unsplash.com/photo-1493962853295-0fd70327578a'
+    ]
+  },
+  {
+    id: 2,
+    title: 'Cancer Awareness Workshop',
+    description: 'Local healthcare workers learning about early detection and prevention methods.',
+    location: 'McLeod Ganj',
+    date: 'April 20, 2023',
+    images: [
+      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
+      'https://images.unsplash.com/photo-1466721591366-2d5fba72006d'
+    ]
+  },
+  // ... keep existing code
+];
 
 const Admin = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [galleryItems, setGalleryItems] = useState(initialGalleryItems);
+  const [editingGalleryItem, setEditingGalleryItem] = useState<null | typeof galleryItems[0]>(null);
+  const [newImageUrl, setNewImageUrl] = useState('');
   
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,6 +51,65 @@ const Admin = () => {
       setIsLoggedIn(true);
     } else {
       alert('Invalid credentials. Please try again.');
+    }
+  };
+
+  const handleAddImage = () => {
+    if (editingGalleryItem && newImageUrl.trim()) {
+      setEditingGalleryItem({
+        ...editingGalleryItem,
+        images: [...editingGalleryItem.images, newImageUrl.trim()]
+      });
+      setNewImageUrl('');
+    }
+  };
+
+  const handleRemoveImage = (index: number) => {
+    if (editingGalleryItem) {
+      const newImages = [...editingGalleryItem.images];
+      newImages.splice(index, 1);
+      setEditingGalleryItem({
+        ...editingGalleryItem,
+        images: newImages
+      });
+    }
+  };
+
+  const handleEditGalleryItem = (item: typeof galleryItems[0]) => {
+    setEditingGalleryItem({...item});
+  };
+
+  const handleSaveGalleryItem = () => {
+    if (editingGalleryItem) {
+      setGalleryItems(galleryItems.map(item => 
+        item.id === editingGalleryItem.id ? editingGalleryItem : item
+      ));
+      setEditingGalleryItem(null);
+    }
+  };
+
+  const handleCancelEdit = () => {
+    setEditingGalleryItem(null);
+    setNewImageUrl('');
+  };
+
+  const handleAddGalleryItem = () => {
+    const newItem = {
+      id: Math.max(0, ...galleryItems.map(item => item.id)) + 1,
+      title: 'New Gallery Item',
+      description: 'Description for this item',
+      location: 'Location',
+      date: 'Date',
+      images: ['https://images.unsplash.com/photo-1506744038136-46273834b3fb']
+    };
+    setGalleryItems([...galleryItems, newItem]);
+    setEditingGalleryItem(newItem);
+  };
+
+  const handleDeleteGalleryItem = (id: number) => {
+    setGalleryItems(galleryItems.filter(item => item.id !== id));
+    if (editingGalleryItem && editingGalleryItem.id === id) {
+      setEditingGalleryItem(null);
     }
   };
   
@@ -107,7 +197,7 @@ const Admin = () => {
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-lg shadow-md p-6">
-          <Tabs defaultValue="about">
+          <Tabs defaultValue="gallery">
             <TabsList className="mb-8 overflow-x-auto flex items-center w-full justify-start border-b pb-4">
               <TabsTrigger value="about" className="mr-2">
                 <FileText className="h-4 w-4 mr-2" />
@@ -226,92 +316,175 @@ const Admin = () => {
               <h2 className="text-2xl font-bold mb-6">Manage Gallery</h2>
               
               <div className="space-y-6">
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    {[1, 2, 3, 4].map((item) => (
-                      <div key={item} className="bg-white p-6 rounded-lg shadow-sm">
-                        <h3 className="text-lg font-semibold mb-4">Gallery Item {item}</h3>
-                        
-                        <div className="space-y-4 mb-6">
-                          <div>
-                            <label className="block text-sm font-medium mb-2">
-                              Title
-                            </label>
-                            <Input defaultValue={`Gallery Item ${item}`} />
-                          </div>
-                          
-                          <div>
-                            <label className="block text-sm font-medium mb-2">
-                              Description
-                            </label>
-                            <Textarea 
-                              className="min-h-20"
-                              defaultValue="Description for this gallery item."
-                            />
-                          </div>
-                          
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div>
-                              <label className="block text-sm font-medium mb-2">
-                                Date
-                              </label>
-                              <Input defaultValue="January 15, 2023" />
-                            </div>
-                            
-                            <div>
-                              <label className="block text-sm font-medium mb-2">
-                                Location
-                              </label>
-                              <Input defaultValue="Dharamshala, India" />
-                            </div>
-                          </div>
+                {editingGalleryItem ? (
+                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 className="text-lg font-semibold mb-4">Edit Gallery Item</h3>
+                    
+                    <div className="space-y-4 mb-6">
+                      <div>
+                        <label className="block text-sm font-medium mb-2">
+                          Title
+                        </label>
+                        <Input 
+                          value={editingGalleryItem.title} 
+                          onChange={(e) => setEditingGalleryItem({
+                            ...editingGalleryItem,
+                            title: e.target.value
+                          })}
+                        />
+                      </div>
+                      
+                      <div>
+                        <label className="block text-sm font-medium mb-2">
+                          Description
+                        </label>
+                        <Textarea 
+                          className="min-h-20"
+                          value={editingGalleryItem.description}
+                          onChange={(e) => setEditingGalleryItem({
+                            ...editingGalleryItem,
+                            description: e.target.value
+                          })}
+                        />
+                      </div>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-medium mb-2">
+                            <Calendar className="h-4 w-4 inline mr-1" />
+                            Date
+                          </label>
+                          <Input 
+                            value={editingGalleryItem.date} 
+                            onChange={(e) => setEditingGalleryItem({
+                              ...editingGalleryItem,
+                              date: e.target.value
+                            })}
+                          />
                         </div>
                         
-                        <div className="border-t pt-4 mb-4">
-                          <h4 className="text-md font-medium mb-3">Images</h4>
+                        <div>
+                          <label className="block text-sm font-medium mb-2">
+                            <MapPin className="h-4 w-4 inline mr-1" />
+                            Location
+                          </label>
+                          <Input 
+                            value={editingGalleryItem.location} 
+                            onChange={(e) => setEditingGalleryItem({
+                              ...editingGalleryItem,
+                              location: e.target.value
+                            })}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="border-t pt-4 mb-4">
+                      <h4 className="text-md font-medium mb-3">Images</h4>
+                      
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+                        {editingGalleryItem.images.map((image, index) => (
+                          <div key={index} className="relative group border rounded-md overflow-hidden">
+                            <div className="aspect-square bg-gray-200 relative">
+                              <img 
+                                src={image} 
+                                alt={`Image ${index + 1}`} 
+                                className="w-full h-full object-cover"
+                              />
+                              <div className="absolute top-1 right-1 hidden group-hover:block">
+                                <Button 
+                                  variant="destructive" 
+                                  size="icon" 
+                                  className="h-6 w-6"
+                                  onClick={() => handleRemoveImage(index)}
+                                >
+                                  <X className="h-3 w-3" />
+                                </Button>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                      
+                      <div className="flex space-x-2">
+                        <Input 
+                          placeholder="Enter image URL" 
+                          value={newImageUrl}
+                          onChange={(e) => setNewImageUrl(e.target.value)}
+                          className="flex-1"
+                        />
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          onClick={handleAddImage}
+                          disabled={!newImageUrl.trim()}
+                        >
+                          <Plus className="h-4 w-4 mr-1" /> Add Image
+                        </Button>
+                      </div>
+                    </div>
+                    
+                    <div className="flex justify-end space-x-2 mt-6">
+                      <Button variant="outline" onClick={handleCancelEdit}>
+                        Cancel
+                      </Button>
+                      <Button onClick={handleSaveGalleryItem}>
+                        Save Changes
+                      </Button>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {galleryItems.map((item) => (
+                        <div key={item.id} className="bg-white p-6 rounded-lg shadow-sm">
+                          <div className="flex justify-between items-start">
+                            <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                            <div className="flex space-x-2">
+                              <Button 
+                                variant="outline" 
+                                size="sm"
+                                onClick={() => handleEditGalleryItem(item)}
+                              >
+                                Edit
+                              </Button>
+                              <Button 
+                                variant="destructive" 
+                                size="sm"
+                                onClick={() => handleDeleteGalleryItem(item.id)}
+                              >
+                                Delete
+                              </Button>
+                            </div>
+                          </div>
                           
-                          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-3">
-                            {[1, 2, 3].map((imageIndex) => (
-                              <div key={imageIndex} className="relative group">
-                                <div className="aspect-square bg-gray-200 rounded relative">
-                                  <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                                    Image {imageIndex}
-                                  </div>
-                                  <div className="absolute top-1 right-1 hidden group-hover:flex space-x-1">
-                                    <Button variant="destructive" size="icon" className="h-6 w-6">
-                                      <X className="h-3 w-3" />
-                                    </Button>
-                                  </div>
-                                </div>
+                          <p className="text-sm text-gray-600 mb-3 line-clamp-2">{item.description}</p>
+                          
+                          <div className="flex justify-between text-xs text-gray-500 mb-4">
+                            <span>{item.date}</span>
+                            <span>{item.location}</span>
+                          </div>
+                          
+                          <div className="flex space-x-2 overflow-x-auto pb-2">
+                            {item.images.map((image, index) => (
+                              <div key={index} className="flex-shrink-0 w-16 h-16 border rounded">
+                                <img 
+                                  src={image} 
+                                  alt={`${item.title} - Image ${index + 1}`} 
+                                  className="w-full h-full object-cover"
+                                />
                               </div>
                             ))}
                           </div>
-                          
-                          <Button variant="outline" size="sm" className="w-full">
-                            Add New Image
-                          </Button>
                         </div>
-                        
-                        <div className="flex justify-end space-x-2">
-                          <Button variant="outline" size="sm">
-                            Edit
-                          </Button>
-                          <Button variant="destructive" size="sm">
-                            Delete
-                          </Button>
-                        </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
+                    
+                    <Button className="mt-6" onClick={handleAddGalleryItem}>
+                      <Plus className="h-4 w-4 mr-1" /> Add New Gallery Item
+                    </Button>
                   </div>
-                  
-                  <Button className="mt-6">
-                    Add New Gallery Item
-                  </Button>
-                </div>
-                
-                <div className="flex justify-end">
-                  <Button>Save Changes</Button>
-                </div>
+                )}
               </div>
             </TabsContent>
             
