@@ -46,7 +46,7 @@ const galleryItems = [
     id: 3,
     title: 'Support Group Meeting',
     description: 'Monthly gatherings provide emotional support and practical advice for patients and families.',
-    location: 'Tibetan Children's Village, Dharamshala',
+    location: 'Tibetan Children\'s Village, Dharamshala', // Added backslash to escape the apostrophe
     date: 'May 10, 2023',
     images: [
       'https://images.unsplash.com/photo-1472396961693-142e6e269027',
