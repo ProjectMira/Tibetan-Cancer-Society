@@ -227,25 +227,72 @@ const Admin = () => {
               
               <div className="space-y-6">
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {[1, 2, 3, 4, 5, 6].map((item) => (
-                      <div key={item} className="bg-white p-4 rounded-lg shadow-sm">
-                        <div className="aspect-square bg-gray-200 mb-4 relative">
-                          <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                            Image Preview
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {[1, 2, 3, 4].map((item) => (
+                      <div key={item} className="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 className="text-lg font-semibold mb-4">Gallery Item {item}</h3>
+                        
+                        <div className="space-y-4 mb-6">
+                          <div>
+                            <label className="block text-sm font-medium mb-2">
+                              Title
+                            </label>
+                            <Input defaultValue={`Gallery Item ${item}`} />
+                          </div>
+                          
+                          <div>
+                            <label className="block text-sm font-medium mb-2">
+                              Description
+                            </label>
+                            <Textarea 
+                              className="min-h-20"
+                              defaultValue="Description for this gallery item."
+                            />
+                          </div>
+                          
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                              <label className="block text-sm font-medium mb-2">
+                                Date
+                              </label>
+                              <Input defaultValue="January 15, 2023" />
+                            </div>
+                            
+                            <div>
+                              <label className="block text-sm font-medium mb-2">
+                                Location
+                              </label>
+                              <Input defaultValue="Dharamshala, India" />
+                            </div>
                           </div>
                         </div>
-                        <Input 
-                          className="mb-2" 
-                          placeholder="Image Title" 
-                          defaultValue={`Gallery Item ${item}`}
-                        />
-                        <Textarea 
-                          placeholder="Image Description"
-                          className="mb-3 min-h-20"
-                          defaultValue="Description for this gallery item."
-                        />
-                        <div className="flex justify-between">
+                        
+                        <div className="border-t pt-4 mb-4">
+                          <h4 className="text-md font-medium mb-3">Images</h4>
+                          
+                          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-3">
+                            {[1, 2, 3].map((imageIndex) => (
+                              <div key={imageIndex} className="relative group">
+                                <div className="aspect-square bg-gray-200 rounded relative">
+                                  <div className="absolute inset-0 flex items-center justify-center text-gray-400">
+                                    Image {imageIndex}
+                                  </div>
+                                  <div className="absolute top-1 right-1 hidden group-hover:flex space-x-1">
+                                    <Button variant="destructive" size="icon" className="h-6 w-6">
+                                      <X className="h-3 w-3" />
+                                    </Button>
+                                  </div>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                          
+                          <Button variant="outline" size="sm" className="w-full">
+                            Add New Image
+                          </Button>
+                        </div>
+                        
+                        <div className="flex justify-end space-x-2">
                           <Button variant="outline" size="sm">
                             Edit
                           </Button>
@@ -258,7 +305,7 @@ const Admin = () => {
                   </div>
                   
                   <Button className="mt-6">
-                    Add New Image
+                    Add New Gallery Item
                   </Button>
                 </div>
                 
