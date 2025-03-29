@@ -1,7 +1,7 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PageLayout from '../components/PageLayout';
 import { X } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 import {
   Carousel,
   CarouselContent,
@@ -46,7 +46,7 @@ const galleryItems = [
     id: 3,
     title: 'Support Group Meeting',
     description: 'Monthly gatherings provide emotional support and practical advice for patients and families.',
-    location: 'Tibetan Children\'s Village, Dharamshala', // Added backslash to escape the apostrophe
+    location: 'Tibetan Children\'s Village, Dharamshala',
     date: 'May 10, 2023',
     images: [
       'https://images.unsplash.com/photo-1472396961693-142e6e269027',
@@ -112,6 +112,18 @@ const galleryItems = [
 
 const Gallery = () => {
   const [selectedItem, setSelectedItem] = useState<(typeof galleryItems)[0] | null>(null);
+  const location = useLocation();
+  
+  useEffect(() => {
+    if (location.state && location.state.selectedItemId) {
+      const itemId = location.state.selectedItemId;
+      const item = galleryItems.find(item => item.id === itemId);
+      if (item) {
+        setSelectedItem(item);
+        window.history.replaceState({}, document.title);
+      }
+    }
+  }, [location]);
   
   const handleItemClick = (item: typeof galleryItems[0]) => {
     setSelectedItem(item);
@@ -170,7 +182,6 @@ const Gallery = () => {
         </div>
       </section>
       
-      {/* Modal for displaying gallery item details */}
       {selectedItem && (
         <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto">

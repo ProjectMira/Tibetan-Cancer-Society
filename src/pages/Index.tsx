@@ -1,8 +1,8 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
+import PhotoGallery from '../components/PhotoGallery';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
@@ -40,8 +40,11 @@ const Index = () => {
       <main>
         <Hero />
         
+        {/* Photo Gallery Section - New */}
+        <PhotoGallery />
+        
         {/* Quick Links Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-gray-50">
           <div className="section-container">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-gray-50 rounded-xl p-8 text-center hover:shadow-md transition-all">
@@ -72,7 +75,7 @@ const Index = () => {
         </section>
         
         {/* Impact Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-white">
           <div className="section-container">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Impact</h2>
