@@ -32,10 +32,19 @@ const Hero = () => {
   }, []);
   
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-50 pt-16">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-50 pt-16 relative">
+      {/* Background image */}
+      <div className="absolute inset-0 z-0 opacity-20">
+        <img 
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
+          alt="Mountains in Tibet" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
       <div 
         ref={heroRef} 
-        className="section-container flex flex-col items-center text-center transition-all duration-700 opacity-0 translate-y-8"
+        className="section-container flex flex-col items-center text-center transition-all duration-700 opacity-0 translate-y-8 relative z-10"
       >
         <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-6">
           Fighting Cancer Together

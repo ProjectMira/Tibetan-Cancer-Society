@@ -1,227 +1,160 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import PageLayout from '../components/PageLayout';
-import { Check, ArrowRight } from 'lucide-react';
+import { Check, Upload, X } from 'lucide-react';
+import { Card } from '@/components/ui/card';
+import { toast } from "@/hooks/use-toast";
 
 const Donate = () => {
+  const [uploadedImage, setUploadedImage] = useState<string | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setIsDragging(false);
+    
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      const file = e.dataTransfer.files[0];
+      if (file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          if (event.target?.result) {
+            setUploadedImage(event.target.result as string);
+            toast({
+              title: "Success!",
+              description: "Your donation receipt has been uploaded.",
+            });
+          }
+        };
+        reader.readAsDataURL(file);
+      } else {
+        toast({
+          title: "Invalid file type",
+          description: "Please upload an image file.",
+          variant: "destructive"
+        });
+      }
+    }
+  };
+
+  const handleFileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0];
+      if (file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          if (event.target?.result) {
+            setUploadedImage(event.target.result as string);
+            toast({
+              title: "Success!",
+              description: "Your donation receipt has been uploaded.",
+            });
+          }
+        };
+        reader.readAsDataURL(file);
+      } else {
+        toast({
+          title: "Invalid file type",
+          description: "Please upload an image file.",
+          variant: "destructive"
+        });
+      }
+    }
+  };
+
+  const removeUploadedImage = () => {
+    setUploadedImage(null);
+  };
+
   return (
     <PageLayout 
       title="Support Our Cause" 
       description="Your generous donations help us continue our mission to support cancer patients and their families."
+      backgroundImage="https://images.unsplash.com/photo-1615729947596-a598e5de0ab3"
     >
       <section className="py-16 bg-white">
-        <div className="section-container">
-          <div className="text-center mb-12 max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4">How Your Donation Helps</h2>
-            <p className="text-muted-foreground">
-              Every contribution makes a difference in the lives of those affected by cancer. Your support enables us to provide essential services, education, and resources to our community.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Patient Support</h3>
-              <p className="text-muted-foreground mb-4">
-                Your donations help provide direct assistance to cancer patients, including transportation to medical appointments, accommodation during treatment, and essential supplies.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mt-0.5 mr-2 flex-shrink-0" />
-                  <span className="text-muted-foreground">Transportation assistance</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mt-0.5 mr-2 flex-shrink-0" />
-                  <span className="text-muted-foreground">Accommodation during treatment</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mt-0.5 mr-2 flex-shrink-0" />
-                  <span className="text-muted-foreground">Essential medical supplies</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Education & Awareness</h3>
-              <p className="text-muted-foreground mb-4">
-                Support our efforts to educate the community about cancer prevention, early detection, and treatment options through workshops, materials, and outreach programs.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mt-0.5 mr-2 flex-shrink-0" />
-                  <span className="text-muted-foreground">Educational workshops</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mt-0.5 mr-2 flex-shrink-0" />
-                  <span className="text-muted-foreground">Information materials</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mt-0.5 mr-2 flex-shrink-0" />
-                  <span className="text-muted-foreground">Community outreach programs</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Health Camps</h3>
-              <p className="text-muted-foreground mb-4">
-                Help us organize health camps in remote areas to provide cancer screenings, awareness, and connect people with healthcare resources.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mt-0.5 mr-2 flex-shrink-0" />
-                  <span className="text-muted-foreground">Mobile screening services</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mt-0.5 mr-2 flex-shrink-0" />
-                  <span className="text-muted-foreground">Medical consultations</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="h-5 w-5 text-primary mt-0.5 mr-2 flex-shrink-0" />
-                  <span className="text-muted-foreground">Resource distribution</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section className="py-16 bg-primary/10">
-        <div className="section-container">
+        <div className="section-container max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Ways to Donate</h2>
-              <p className="text-muted-foreground mb-8">
-                We offer several convenient options for you to support our cause. All donations are tax-deductible.
-              </p>
-              
-              <div className="space-y-6">
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-lg mb-2">One-Time Donation</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Make a single contribution of any amount to support our programs and services.
+              <h2 className="text-3xl font-bold mb-6">Bank Transfer Details</h2>
+              <Card className="p-6">
+                <div className="space-y-4">
+                  <p className="mb-4 text-muted-foreground">
+                    Please use the following bank details to make your donation via direct transfer:
                   </p>
-                  <button className="btn-primary">
-                    Donate Now <ArrowRight className="ml-2 h-4 w-4" />
-                  </button>
-                </div>
-                
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-lg mb-2">Monthly Giving</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Become a sustaining supporter by setting up a recurring monthly donation.
-                  </p>
-                  <button className="btn-primary">
-                    Become a Monthly Donor <ArrowRight className="ml-2 h-4 w-4" />
-                  </button>
-                </div>
-                
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-lg mb-2">Bank Transfer</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Make a direct transfer to our bank account:
-                  </p>
-                  <div className="bg-gray-50 p-4 rounded-md text-sm">
-                    <p className="mb-1"><span className="font-medium">Bank Name:</span> Tibet National Bank</p>
-                    <p className="mb-1"><span className="font-medium">Account Name:</span> Tibetan Cancer Society</p>
-                    <p className="mb-1"><span className="font-medium">Account Number:</span> 123456789012</p>
+                  <div className="bg-gray-50 p-4 rounded-md space-y-2">
+                    <p><span className="font-medium">Bank Name:</span> Tibet National Bank</p>
+                    <p><span className="font-medium">Account Name:</span> Tibetan Cancer Society</p>
+                    <p><span className="font-medium">Account Number:</span> 123456789012</p>
                     <p><span className="font-medium">IFSC Code:</span> TNBL0001234</p>
+                    <p><span className="font-medium">Swift Code:</span> TIBNATBNK</p>
+                  </div>
+                  <div className="flex items-start mt-4">
+                    <Check className="h-5 w-5 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">After making the donation, upload a screenshot of your payment receipt below.</span>
                   </div>
                 </div>
-              </div>
+              </Card>
             </div>
             
             <div>
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-2xl font-bold mb-6">Donate Now</h3>
-                <form className="space-y-6">
-                  <div>
-                    <label htmlFor="amount" className="block text-sm font-medium mb-2">
-                      Select Amount
-                    </label>
-                    <div className="grid grid-cols-3 gap-4 mb-4">
-                      <button type="button" className="px-4 py-2 border border-primary text-primary rounded-md font-medium hover:bg-primary/5">
-                        $25
-                      </button>
-                      <button type="button" className="px-4 py-2 border border-primary bg-primary/10 text-primary rounded-md font-medium">
-                        $50
-                      </button>
-                      <button type="button" className="px-4 py-2 border border-primary text-primary rounded-md font-medium hover:bg-primary/5">
-                        $100
-                      </button>
-                    </div>
-                    <input
-                      type="text"
-                      id="amount"
-                      name="amount"
-                      placeholder="Other Amount"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Donation Type
-                    </label>
-                    <div className="flex space-x-4">
-                      <label className="flex items-center">
-                        <input
-                          type="radio"
-                          name="donationType"
-                          value="oneTime"
-                          defaultChecked
-                          className="mr-2"
-                        />
-                        One-time
-                      </label>
-                      <label className="flex items-center">
-                        <input
-                          type="radio"
-                          name="donationType"
-                          value="monthly"
-                          className="mr-2"
-                        />
-                        Monthly
-                      </label>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="fullName" className="block text-sm font-medium mb-2">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      id="fullName"
-                      name="fullName"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                      required
-                    />
-                  </div>
-                  
-                  <button type="submit" className="w-full btn-primary">
-                    Proceed to Payment
+              <h2 className="text-3xl font-bold mb-6">Upload Payment Receipt</h2>
+              {!uploadedImage ? (
+                <div 
+                  className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-colors ${isDragging ? 'border-primary bg-primary/5' : 'border-gray-300 hover:border-primary hover:bg-gray-50'}`}
+                  onDragOver={handleDragOver}
+                  onDragLeave={handleDragLeave}
+                  onDrop={handleDrop}
+                  onClick={() => document.getElementById('file-upload')?.click()}
+                >
+                  <Upload className="h-12 w-12 mx-auto text-gray-400 mb-4" />
+                  <p className="text-lg font-medium mb-2">Upload Your Payment Screenshot</p>
+                  <p className="text-sm text-muted-foreground mb-4">Drag and drop your image here, or click to select a file</p>
+                  <p className="text-xs text-muted-foreground">Supports: JPG, PNG, GIF</p>
+                  <input 
+                    id="file-upload" 
+                    type="file" 
+                    className="hidden" 
+                    accept="image/*" 
+                    onChange={handleFileInput} 
+                  />
+                </div>
+              ) : (
+                <div className="relative rounded-lg overflow-hidden">
+                  <img 
+                    src={uploadedImage} 
+                    alt="Uploaded payment receipt" 
+                    className="w-full h-auto" 
+                  />
+                  <button 
+                    onClick={removeUploadedImage}
+                    className="absolute top-2 right-2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-colors"
+                  >
+                    <X size={20} />
                   </button>
-                  
-                  <div className="text-center text-sm text-muted-foreground">
-                    <p>Secure payment powered by Stripe</p>
-                    <p className="mt-2">All donations are tax-deductible</p>
-                  </div>
-                </form>
-              </div>
+                </div>
+              )}
+              <p className="text-center mt-4 text-sm text-muted-foreground">
+                Your donation will help us provide essential services to cancer patients in the Tibetan community.
+              </p>
             </div>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <h3 className="text-xl font-semibold mb-4">Thank You for Your Support</h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Your contribution makes a significant difference in our ability to provide cancer awareness, 
+              education, and support services to the Tibetan community. All donations are tax-deductible.
+            </p>
           </div>
         </div>
       </section>

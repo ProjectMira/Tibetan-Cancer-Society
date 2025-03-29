@@ -41,8 +41,11 @@ const Navbar = () => {
           </div>
           
           <nav className="hidden md:flex space-x-6">
+            <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">
+              Home
+            </Link>
             <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">
-              About
+              About Us
             </Link>
             <Link to="/gallery" className="text-sm font-medium hover:text-primary transition-colors">
               Gallery
@@ -82,11 +85,18 @@ const Navbar = () => {
         <div className="md:hidden bg-background border-t border-border">
           <div className="px-4 py-6 space-y-4">
             <Link 
+              to="/" 
+              className="block text-sm font-medium hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link 
               to="/about" 
               className="block text-sm font-medium hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              About
+              About Us
             </Link>
             <Link 
               to="/gallery" 
