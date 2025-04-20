@@ -58,26 +58,6 @@ const About = () => {
           </div>
         </section>
         
-        {/* Partners Section */}
-        <section className="py-16 bg-white">
-          <div className="section-container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Our Partners & Collaborators</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                We work alongside these organizations to provide comprehensive support and resources to our community.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-items-center">
-              {/* Partner logos would go here - using placeholder boxes for now */}
-              {[1, 2, 3, 4, 5, 6, 8].map((item) => (
-                <div key={item} className="bg-gray-100 rounded-lg p-8 flex items-center justify-center w-full h-32">
-                  <div className="text-gray-400 font-semibold">Partner Logo</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
