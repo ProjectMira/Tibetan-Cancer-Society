@@ -21,19 +21,19 @@ import {
 const galleryItems = [
   {
     id: 1,
-    title: 'Health Camp in Dharamshala',
+    title: 'Health Camps',
     description: 'Our team provided free cancer screenings and educational workshops to over 100 community members.',
     location: 'Dharamshala, Himachal Pradesh',
     date: 'March 15, 2023',
     images: [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
-      'https://images.unsplash.com/photo-1472396961366-2d5fba72006d',
-      'https://images.unsplash.com/photo-1493962853295-0fd70327578a'
+      'data/gallery-images/health-camps/3.png',
+      'data/gallery-images/health-camps/5.png',
+      'data/gallery-images/health-camps/8.png',
     ]
   },
   {
     id: 2,
-    title: 'Cancer Awareness Workshop',
+    title: 'Compassion Home',
     description: 'Local healthcare workers learning about early detection and prevention methods.',
     location: 'McLeod Ganj',
     date: 'April 20, 2023',
@@ -44,7 +44,7 @@ const galleryItems = [
   },
   {
     id: 3,
-    title: 'Support Group Meeting',
+    title: 'Covid Aid Tour',
     description: 'Monthly gatherings provide emotional support and practical advice for patients and families.',
     location: 'Tibetan Children\'s Village, Dharamshala',
     date: 'May 10, 2023',
@@ -55,57 +55,13 @@ const galleryItems = [
   },
   {
     id: 4,
-    title: 'Fundraising Event',
+    title: 'World Cancer Day',
     description: 'Community members came together to raise funds for treatment support programs.',
     location: 'Main Temple Complex, McLeod Ganj',
     date: 'June 5, 2023',
     images: [
       'https://images.unsplash.com/photo-1501854140801-50d01698950b',
       'https://images.unsplash.com/photo-1493962853295-0fd70327578a'
-    ]
-  },
-  {
-    id: 5,
-    title: 'Medical Training Program',
-    description: 'Training local health workers in basic cancer care and patient support techniques.',
-    location: 'Delek Hospital, Dharamshala',
-    date: 'July 12, 2023',
-    images: [
-      'https://images.unsplash.com/photo-1615729947596-a598e5de0ab3',
-      'https://images.unsplash.com/photo-1472396961693-142e6e269027'
-    ]
-  },
-  {
-    id: 6,
-    title: 'Rural Outreach Initiative',
-    description: 'Bringing cancer awareness to remote mountain communities through mobile health units.',
-    location: 'Kangra Valley',
-    date: 'August 25, 2023',
-    images: [
-      'https://images.unsplash.com/photo-1649972904349-6e44c42644a7',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb'
-    ]
-  },
-  {
-    id: 7,
-    title: 'Patient Success Story',
-    description: 'Tenzin, a breast cancer survivor, sharing her journey and inspiring others at our community event.',
-    location: 'Community Hall, McLeod Ganj',
-    date: 'September 18, 2023',
-    images: [
-      'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
-      'https://images.unsplash.com/photo-1493962853295-0fd70327578a'
-    ]
-  },
-  {
-    id: 8,
-    title: 'Annual Conference',
-    description: 'Healthcare professionals and advocates gathered to discuss advancements in cancer care.',
-    location: 'Tibetan Institute of Performing Arts',
-    date: 'October 7, 2023',
-    images: [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
-      'https://images.unsplash.com/photo-1472396961693-142e6e269027'
     ]
   }
 ];
