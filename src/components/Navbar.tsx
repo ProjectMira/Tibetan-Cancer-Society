@@ -41,12 +41,6 @@ const Navbar = () => {
           </div>
           
           <nav className="hidden md:flex space-x-6">
-            <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">
-              Home
-            </Link>
-            <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">
-              About Us
-            </Link>
             <Link to="/gallery" className="text-sm font-medium hover:text-primary transition-colors">
               Gallery
             </Link>
@@ -56,19 +50,7 @@ const Navbar = () => {
             <Link to="/donate" className="text-sm font-medium hover:text-primary transition-colors">
               Donate
             </Link>
-            <Link to="/cancer-info" className="text-sm font-medium hover:text-primary transition-colors">
-              Cancer Info
-            </Link>
-            <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">
-              Contact
-            </Link>
           </nav>
-          
-          <div className="hidden md:block">
-            <Link to="/donate" className="btn-primary">
-              Donate Now
-            </Link>
-          </div>
           
           <button 
             className="md:hidden"
@@ -80,24 +62,9 @@ const Navbar = () => {
         </div>
       </div>
       
-      {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-background border-t border-border">
           <div className="px-4 py-6 space-y-4">
-            <Link 
-              to="/" 
-              className="block text-sm font-medium hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <Link 
-              to="/about" 
-              className="block text-sm font-medium hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              About Us
-            </Link>
             <Link 
               to="/gallery" 
               className="block text-sm font-medium hover:text-primary transition-colors"
@@ -118,27 +85,6 @@ const Navbar = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               Donate
-            </Link>
-            <Link 
-              to="/cancer-info" 
-              className="block text-sm font-medium hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Cancer Info
-            </Link>
-            <Link 
-              to="/contact" 
-              className="block text-sm font-medium hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
-            </Link>
-            <Link 
-              to="/donate" 
-              className="btn-primary w-full justify-center"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Donate Now
             </Link>
           </div>
         </div>
