@@ -37,7 +37,7 @@ const Navbar = () => {
           <div className="flex items-center">
             {/* Logo Image */}
             <img
-              src="/data/logo.jpeg"
+              src="/assets/logo.jpeg"
               alt="Tibetan Cancer Society Logo"
               className="w-14 h-14 object-cover rounded-full mr-4 border-2 border-blue-300 shadow-inner bg-white"
             />
