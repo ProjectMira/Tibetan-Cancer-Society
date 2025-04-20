@@ -7,7 +7,7 @@ const teamMembers = [
     name: 'Tsultrim Dorjee',
     role: 'Founder & President, Dharamshala',
     message: 'The feeling of winning after a hardfought battle for life is always euphoric and overwhelming. Cancer is curable if detected early. I would like to thank the team at Tibetan Cancer Society for your brave and selfless efforts. I’m truly honored to have been a part of it.',
-    image: '/data/team-images/Tsultrim Dorjee.jpg'
+    image: '/assets/team-images/Tsultrim Dorjee.jpg'
   },
   {
     id: 2,
