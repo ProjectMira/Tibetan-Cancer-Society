@@ -38,8 +38,9 @@ const galleryItems = [
     location: 'McLeod Ganj',
     date: 'April 20, 2023',
     images: [
-      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158',
-      'https://images.unsplash.com/photo-1466721591366-2d5fba72006d'
+      'data/gallery-images/compassion-home/1.png',
+      'data/gallery-images/compassion-home/3.png',
+      'data/gallery-images/compassion-home/4.png'
     ]
   },
   {
