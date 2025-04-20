@@ -111,115 +111,35 @@ const galleryItems = [
 ];
 
 const Gallery = () => {
-  const [selectedItem, setSelectedItem] = useState<(typeof galleryItems)[0] | null>(null);
-  const location = useLocation();
   
-  useEffect(() => {
-    if (location.state && location.state.selectedItemId) {
-      const itemId = location.state.selectedItemId;
-      const item = galleryItems.find(item => item.id === itemId);
-      if (item) {
-        setSelectedItem(item);
-        window.history.replaceState({}, document.title);
-      }
-    }
-  }, [location]);
-  
-  const handleItemClick = (item: typeof galleryItems[0]) => {
-    setSelectedItem(item);
-  };
-  
-  const closeModal = () => {
-    setSelectedItem(null);
-  };
   
   return (
     <PageLayout>
       <section className="py-16 bg-white">
         <div className="section-container">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {galleryItems.map((item) => (
-              <Card 
-                key={item.id} 
-                className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
-                onClick={() => handleItemClick(item)}
-              >
-                <div className="aspect-square">
-                  <Carousel className="w-full">
-                    <CarouselContent>
-                      {item.images.map((image, index) => (
-                        <CarouselItem key={index}>
-                          <img 
-                            src={image} 
-                            alt={`${item.title} - Image ${index + 1}`} 
-                            className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-                          />
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                    {item.images.length > 1 && (
-                      <>
-                        <CarouselPrevious className="left-2 h-8 w-8" />
-                        <CarouselNext className="right-2 h-8 w-8" />
-                      </>
-                    )}
-                  </Carousel>
-                </div>
-                <CardHeader className="p-4">
-                  <CardTitle className="text-lg">{item.title}</CardTitle>
-                  <CardDescription className="line-clamp-2 text-sm">{item.description}</CardDescription>
-                </CardHeader>
-                <CardFooter className="px-4 py-2 text-xs text-muted-foreground flex justify-between">
-                  <span>{item.date}</span>
-                  <span>{item.location}</span>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
+          <div className="flex flex-col gap-12">
+  {galleryItems.map((item) => (
+    <div key={item.id} className="p-6">
+      <div className="mb-4">
+  <h3 className="text-2xl font-bold text-center mb-4">{item.title}</h3>
+</div>
+      <div className="flex flex-row flex-wrap gap-4">
+        {item.images.map((image, idx) => (
+          <img
+            key={idx}
+            src={image}
+            alt={`${item.title} - Image ${idx + 1}`}
+            className="w-72 h-56 object-cover rounded"
+          />
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
         </div>
       </section>
       
-      {selectedItem && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto">
-            <div className="relative">
-              <Carousel className="w-full">
-                <CarouselContent>
-                  {selectedItem.images.map((image, index) => (
-                    <CarouselItem key={index}>
-                      <div className="p-1">
-                        <div className="aspect-video relative">
-                          <img 
-                            src={image} 
-                            alt={`${selectedItem.title} - Image ${index + 1}`} 
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="left-2" />
-                <CarouselNext className="right-2" />
-              </Carousel>
-              <button 
-                onClick={closeModal}
-                className="absolute top-4 right-4 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-70 transition-colors z-10"
-              >
-                <X size={24} />
-              </button>
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">{selectedItem.title}</h3>
-              <p className="text-muted-foreground mb-4">{selectedItem.description}</p>
-              <div className="flex justify-between text-sm text-muted-foreground">
-                <span>📅 {selectedItem.date}</span>
-                <span>📍 {selectedItem.location}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      
     </PageLayout>
   );
 };
