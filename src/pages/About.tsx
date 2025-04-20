@@ -15,12 +15,12 @@ const About = () => {
           <div className="section-container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
+                <h2 className="text-3xl font-bold mb-6">Introduction</h2>
                 <p className="text-muted-foreground mb-6">
-                  The Tibetan Cancer Society is dedicated to improving the lives of cancer patients and their families through education, support, and advocacy. We work to ensure that all members of the Tibetan community have access to information, resources, and quality care.
+                The Tibetan Cancer Society (TCS) is a non-profit organization dedicated to cancer prevention, early detection, and awareness in Tibetan communities. Founded by Mr. Tsultrim Dorjee in 2014 and officially registered in May 2015, TCS was created to address the urgent need for better cancer care in the Tibetan diaspora. It was formally introduced during a 2016 health meeting organized by the Central Tibetan Administration, following His Holiness the Dalai Lama’s call to improve Tibetan public health.
                 </p>
                 <p className="text-muted-foreground">
-                  We strive to reduce the impact of cancer through early detection, prevention programs, and by providing emotional and practical support to those affected by cancer. By working together with healthcare providers, community leaders, and other organizations, we aim to create a comprehensive support system for all those in need.
+                TCS holds the distinction of being the first and only Tibetan cancer-focused society to be recognized and registered under the global UICC (Union for International Cancer Control) membership, further solidifying its credibility and commitment to global cancer care standards.
                 </p>
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg">
