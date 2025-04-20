@@ -9,14 +9,6 @@ const About = () => {
       <Navbar />
       <main className="pt-24">
         {/* Page Header */}
-        <div className="bg-primary/10 py-12">
-          <div className="section-container text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Learn about our mission, vision, and the people who make our work possible.
-            </p>
-          </div>
-        </div>
         
         {/* Mission Section */}
         <section className="py-16 bg-white">
