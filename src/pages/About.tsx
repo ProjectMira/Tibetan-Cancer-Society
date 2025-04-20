@@ -40,8 +40,8 @@ const About = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1 rounded-lg overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1615729947596-a598e5de0ab3" 
-                  alt="Tibetan mountains" 
+                  src="data/about-images/TCS-mission.png" 
+                  alt="TCS-mission" 
                   className="w-full h-auto"
                 />
               </div>
