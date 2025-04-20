@@ -4,10 +4,7 @@ import PageLayout from '../components/PageLayout';
 
 const Donate = () => {
   return (
-    <PageLayout 
-      title="Donate" 
-      description="Support our mission by making a donation to the Tibetan Cancer Society"
-    >
+    <PageLayout>
       <section className="py-16 bg-white">
         <div className="section-container max-w-3xl mx-auto">
           <div className="text-center mb-12">

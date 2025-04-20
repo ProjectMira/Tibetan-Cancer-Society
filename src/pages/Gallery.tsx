@@ -27,7 +27,7 @@ const galleryItems = [
     date: 'March 15, 2023',
     images: [
       'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
-      'https://images.unsplash.com/photo-1472396961693-142e6e269027',
+      'https://images.unsplash.com/photo-1472396961366-2d5fba72006d',
       'https://images.unsplash.com/photo-1493962853295-0fd70327578a'
     ]
   },
@@ -134,10 +134,7 @@ const Gallery = () => {
   };
   
   return (
-    <PageLayout 
-      title="Gallery" 
-      description="Explore photos from our events, programs, and the communities we serve."
-    >
+    <PageLayout>
       <section className="py-16 bg-white">
         <div className="section-container">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

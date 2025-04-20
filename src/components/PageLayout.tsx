@@ -5,6 +5,9 @@ import Footer from './Footer';
 
 interface PageLayoutProps {
   children: ReactNode;
+  title?: string;
+  description?: string;
+  backgroundClass?: string;
 }
 
 const PageLayout = ({ children }: PageLayoutProps) => {

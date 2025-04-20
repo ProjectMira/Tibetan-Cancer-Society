@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PageLayout from '../components/PageLayout';
 
@@ -49,10 +48,7 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <PageLayout 
-      title="Our Team" 
-      description="Meet the dedicated individuals who make our work possible."
-    >
+    <PageLayout>
       <section className="py-16 bg-white">
         <div className="section-container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
