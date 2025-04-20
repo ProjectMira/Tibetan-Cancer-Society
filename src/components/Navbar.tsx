@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -27,40 +26,45 @@ const Navbar = () => {
   };
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-300 ${
         scrolled ? 'bg-white/80 backdrop-blur-md border-b border-border shadow-sm' : 'bg-transparent'
       }`}
+      style={{marginTop: '0.75rem'}}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+      <div className="w-[96%] bg-blue-100 border-2 border-gray-200 rounded-2xl shadow-xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-6 md:py-6" style={{ fontSize: '1.5rem' }}>
           <div className="flex items-center">
-            <Link to="/" className="text-xl font-display font-bold tracking-tight text-primary">
+            {/* Logo Image */}
+            <img
+              src="/data/logo.jpeg"
+              alt="Tibetan Cancer Society Logo"
+              className="w-14 h-14 object-cover rounded-full mr-4 border-2 border-blue-300 shadow-inner bg-white"
+            />
+            <Link to="/" className="text-2xl md:text-3xl font-display font-bold tracking-tight text-primary">
               Tibetan Cancer Society
             </Link>
           </div>
-          
-          <nav className="hidden md:flex space-x-6">
-            <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">
+          <nav className="hidden md:flex space-x-10 ml-4">
+            <Link to="/about" className="text-xl font-semibold hover:text-primary transition-colors">
               About
             </Link>
-            <Link to="/gallery" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link to="/gallery" className="text-xl font-semibold hover:text-primary transition-colors">
               Gallery
             </Link>
-            <Link to="/team" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link to="/team" className="text-xl font-semibold hover:text-primary transition-colors">
               Team
             </Link>
-            <Link to="/donate" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link to="/donate" className="text-xl font-semibold hover:text-primary transition-colors">
               Donate
             </Link>
           </nav>
-          
-          <button 
+          <button
             className="md:hidden"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
           </button>
         </div>
       </div>
