@@ -79,16 +79,16 @@ const Gallery = () => {
       <div className="mb-4">
   <h3 className="text-2xl font-bold text-center mb-4">{item.title}</h3>
 </div>
-      <div className="flex flex-row flex-wrap gap-4">
-        {item.images.map((image, idx) => (
-          <img
-            key={idx}
-            src={image}
-            alt={`${item.title} - Image ${idx + 1}`}
-            className="w-72 h-56 object-cover rounded"
-          />
-        ))}
-      </div>
+      <div className="flex flex-row flex-wrap gap-6 justify-center items-center">
+  {item.images.map((image, idx) => (
+    <img
+      key={idx}
+      src={image}
+      alt={`${item.title} - Image ${idx + 1}`}
+      className="w-72 h-56 object-cover rounded"
+    />
+  ))}
+</div>
     </div>
   ))}
 </div>
