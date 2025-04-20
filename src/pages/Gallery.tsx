@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PageLayout from '../components/PageLayout';
-import { X } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
 import {
   Carousel,
   CarouselContent,
@@ -9,14 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { 
-  Card, 
-  CardContent, 
-  CardFooter,
-  CardHeader,
-  CardTitle,
-  CardDescription
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 const galleryItems = [
   {
@@ -26,9 +17,9 @@ const galleryItems = [
     location: 'Dharamshala, Himachal Pradesh',
     date: 'March 15, 2023',
     images: [
-      'data/gallery-images/health-camps/3.png',
-      'data/gallery-images/health-camps/5.png',
-      'data/gallery-images/health-camps/8.png',
+      'assets/gallery-images/health-camps/3.png',
+      'assets/gallery-images/health-camps/5.png',
+      'assets/gallery-images/health-camps/8.png',
     ]
   },
   {
@@ -38,9 +29,9 @@ const galleryItems = [
     location: 'McLeod Ganj',
     date: 'April 20, 2023',
     images: [
-      'data/gallery-images/compassion-home/1.png',
-      'data/gallery-images/compassion-home/3.png',
-      'data/gallery-images/compassion-home/4.png'
+      'assets/gallery-images/compassion-home/1.png',
+      'assets/gallery-images/compassion-home/3.png',
+      'assets/gallery-images/compassion-home/4.png'
     ]
   },
   {
@@ -50,9 +41,9 @@ const galleryItems = [
     location: 'Tibetan Children\'s Village, Dharamshala',
     date: 'May 10, 2023',
     images: [
-      'data/gallery-images/covid-aid-tour/darjeeling.png',
-      'data/gallery-images/covid-aid-tour/sanada-west-bengal.png',
-      'data/gallery-images/covid-aid-tour/shilong.png'
+      'assets/gallery-images/covid-aid-tour/darjeeling.png',
+      'assets/gallery-images/covid-aid-tour/sanada-west-bengal.png',
+      'assets/gallery-images/covid-aid-tour/shilong.png'
     ]
   },
   {
@@ -62,43 +53,61 @@ const galleryItems = [
     location: 'Main Temple Complex, McLeod Ganj',
     date: 'June 5, 2023',
     images: [
-      'data/gallery-images/cancer-day/educational-session.png',
-      'data/gallery-images/cancer-day/indian-man-interview.png',
-      'data/gallery-images/cancer-day/yes-we-can-children.png'
+      'assets/gallery-images/cancer-day/educational-session.png',
+      'assets/gallery-images/cancer-day/indian-man-interview.png',
+      'assets/gallery-images/cancer-day/yes-we-can-children.png'
     ]
   }
 ];
 
 const Gallery = () => {
-  
-  
   return (
     <PageLayout>
       <section className="py-16 bg-white">
-        <div className="section-container">
-          <div className="flex flex-col gap-12">
-  {galleryItems.map((item) => (
-    <div key={item.id} className="p-6">
-      <div className="mb-4">
-  <h3 className="text-2xl font-bold text-center mb-4">{item.title}</h3>
-</div>
-      <div className="flex flex-row flex-wrap gap-6 justify-center items-center">
-  {item.images.map((image, idx) => (
-    <img
-      key={idx}
-      src={image}
-      alt={`${item.title} - Image ${idx + 1}`}
-      className="w-72 h-56 object-cover rounded"
-    />
-  ))}
-</div>
-    </div>
-  ))}
-</div>
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col gap-16">
+            {galleryItems.map((item) => (
+              <div key={item.id} className="p-6 bg-gray-50 rounded-lg shadow">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-center mb-2">{item.title}</h3>
+                  <p className="text-gray-600 text-center mb-1">{item.description}</p>
+                  <div className="flex justify-center gap-4 text-sm text-gray-500">
+                    <span>{item.location}</span>
+                    <span>•</span>
+                    <span>{item.date}</span>
+                  </div>
+                </div>
+                
+                <Carousel className="w-full max-w-4xl mx-auto"
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}>
+                  <CarouselContent>
+                    {item.images.map((image, idx) => (
+                      <CarouselItem key={idx} className="md:basis-1/2 lg:basis-1/3">
+                        <Card className="border-none">
+                          <CardContent className="p-2">
+                            <img
+                              src={image}
+                              alt={`${item.title} - Image ${idx + 1}`}
+                              className="w-full h-56 object-cover rounded-lg shadow"
+                            />
+                          </CardContent>
+                        </Card>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <div className="flex justify-center mt-4">
+                    <CarouselPrevious className="mr-2" />
+                    <CarouselNext />
+                  </div>
+                </Carousel>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
-      
-      
     </PageLayout>
   );
 };
