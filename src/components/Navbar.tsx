@@ -41,6 +41,9 @@ const Navbar = () => {
           </div>
           
           <nav className="hidden md:flex space-x-6">
+            <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">
+              About
+            </Link>
             <Link to="/gallery" className="text-sm font-medium hover:text-primary transition-colors">
               Gallery
             </Link>
@@ -65,6 +68,13 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-background border-t border-border">
           <div className="px-4 py-6 space-y-4">
+            <Link 
+              to="/about" 
+              className="block text-sm font-medium hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              About
+            </Link>
             <Link 
               to="/gallery" 
               className="block text-sm font-medium hover:text-primary transition-colors"

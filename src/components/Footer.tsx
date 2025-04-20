@@ -1,13 +1,12 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Tibetan Cancer Society</h3>
             <p className="text-muted-foreground mb-4 max-w-xs">
@@ -32,42 +31,6 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/gallery" className="text-muted-foreground hover:text-primary transition-colors">
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link to="/team" className="text-muted-foreground hover:text-primary transition-colors">
-                  Our Team
-                </Link>
-              </li>
-              <li>
-                <Link to="/donate" className="text-muted-foreground hover:text-primary transition-colors">
-                  Support Our Cause
-                </Link>
-              </li>
-              <li>
-                <Link to="/cancer-info" className="text-muted-foreground hover:text-primary transition-colors">
-                  Cancer Information
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
           </div>
           
           <div>
