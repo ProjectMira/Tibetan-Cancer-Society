@@ -25,8 +25,8 @@ const About = () => {
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1472396961693-142e6e269027" 
-                  alt="Tibetan landscape" 
+                  src="data/about-images/TCS.png" 
+                  alt="TCS" 
                   className="w-full h-auto"
                 />
               </div>
