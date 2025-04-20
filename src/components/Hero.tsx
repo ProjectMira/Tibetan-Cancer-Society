@@ -6,7 +6,6 @@ const Hero = () => {
   return (
     <div className="min-h-[70vh] flex flex-col items-center justify-center bg-white pt-16 relative">
       <div className="section-container w-full max-w-7xl mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-8">Tibetan Cancer Society</h1>
         
         {/* Hero Images Container */}
         <div className="w-full max-w-4xl mx-auto p-6 border border-gray-200 rounded-lg shadow-sm bg-white">
