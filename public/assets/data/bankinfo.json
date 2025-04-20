@@ -1,0 +1,9 @@
+{
+    "bankDetails": {
+      "accountName": "Tibetan Cancer Society",
+      "accountNumber": "XXXX XXXX XXXX 1234",
+      "bankName": "State Bank of India",
+      "ifscCode": "SBIN0123456",
+      "branch": "Dharamshala"
+    }
+  }
