@@ -11,6 +11,43 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import PhotoGallery from '../components/PhotoGallery';
+import { Link } from 'react-router-dom';
+
+// About section component for the home page
+const AboutSection = () => {
+  return (
+    <section className="py-8 md:py-12 bg-gray-50">
+      <div className="section-container px-4 md:px-6">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-center">
+          <div className="md:w-1/2 order-2 md:order-1">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">About Us</h2>
+            <p className="text-muted-foreground text-sm md:text-base mb-4">
+              The Tibetan Cancer Society (TCS) is a non-profit organization dedicated to cancer prevention, early detection, and awareness in Tibetan communities. Founded by Mr. Tsultrim Dorjee in 2014 and officially registered in May 2015, TCS addresses the urgent need for better cancer care in the Tibetan diaspora.
+            </p>
+            <p className="text-muted-foreground text-sm md:text-base mb-4">
+              Our mission is to prevent cancer through early screening, awareness programs, and health education while providing crucial support to those affected by cancer.
+            </p>
+            <Link to="/about" className="inline-flex items-center text-primary font-medium hover:underline">
+              Learn more about us
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+          <div className="md:w-1/2 order-1 md:order-2">
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src="assets/about-images/TCS.png" 
+                alt="Tibetan Cancer Society" 
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const GallerySection = () => {
   const [galleryItems, setGalleryItems] = useState([]);
@@ -63,6 +100,7 @@ const GallerySection = () => {
   return (
     <section id="gallery" className="py-8 md:py-16 bg-white">
       <div className="container mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Programs and Services</h2>
         <div className="flex flex-col gap-8 md:gap-16">
           {galleryItems.map((item) => (
             <div key={item.id} className="p-4 md:p-6 bg-gray-50 rounded-lg shadow">
@@ -110,6 +148,9 @@ const Home = () => {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+
+      {/* About Section */}
+      <AboutSection />
 
       {/* Gallery Section */}
       <GallerySection />
