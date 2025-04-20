@@ -11,7 +11,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 // const galleryItems = [ ... ]; // REMOVE the hardcoded data
 
-const Gallery = () => {
+const ProgramsAndServices = () => {
   const [galleryItems, setGalleryItems] = useState([]); // State to hold fetched data
   const [loading, setLoading] = useState(true); // State for loading status
   const [error, setError] = useState(null); // State for error handling
@@ -100,4 +100,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default ProgramsAndServices;

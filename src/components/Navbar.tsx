@@ -49,8 +49,8 @@ const Navbar = () => {
             <Link to="/about" className="text-xl font-semibold hover:text-primary transition-colors">
               About
             </Link>
-            <Link to="/gallery" className="text-xl font-semibold hover:text-primary transition-colors">
-              Gallery
+            <Link to="/programs-services" className="text-xl font-semibold hover:text-primary transition-colors">
+              Programs & Services
             </Link>
             <Link to="/team" className="text-xl font-semibold hover:text-primary transition-colors">
               Team
@@ -80,11 +80,11 @@ const Navbar = () => {
               About
             </Link>
             <Link 
-              to="/gallery" 
+              to="/programs-services" 
               className="block text-sm font-medium hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Gallery
+              Programs & Services
             </Link>
             <Link 
               to="/team" 
