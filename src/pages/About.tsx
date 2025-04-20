@@ -25,7 +25,7 @@ const About = () => {
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img 
-                  src="data/about-images/TCS.png" 
+                  src="assets/about-images/TCS.png" 
                   alt="TCS" 
                   className="w-full h-auto"
                 />
@@ -40,7 +40,7 @@ const About = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1 rounded-lg overflow-hidden shadow-lg">
                 <img 
-                  src="data/about-images/TCS-mission.png" 
+                  src="assets/about-images/TCS-mission.png" 
                   alt="TCS-mission" 
                   className="w-full h-auto"
                 />
