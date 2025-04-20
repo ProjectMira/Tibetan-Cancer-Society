@@ -46,12 +46,12 @@ const About = () => {
                 />
               </div>
               <div className="order-1 lg:order-2">
-                <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
+                <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
                 <p className="text-muted-foreground mb-6">
-                  We envision a future where cancer no longer poses a significant threat to the Tibetan community. A world where every individual has access to education about cancer prevention, early detection, and treatment options.
+                At the Tibetan Cancer Society, our mission is to do everything possible to prevent cancer in Tibetan communities through early screening, awareness programs, and health education. We are committed to empowering individuals with knowledge about cancer prevention and encouraging regular check-ups for early detection. Through education and counseling, we aim to foster a proactive approach to health and wellness.
                 </p>
                 <p className="text-muted-foreground">
-                  We work toward a community where cancer patients receive holistic care that addresses both their physical and emotional needs, and where their families have the resources and support to help their loved ones through the cancer journey.
+                We also provide crucial support to those affected by cancer, offering financial assistance for treatment, palliative care, rehabilitation, and overall welfare. Our work extends to research and awareness efforts to better understand and address the challenges faced by Tibetans living with cancer. We are dedicated to creating a compassionate network that supports patients and their families throughout their cancer journey.
                 </p>
               </div>
             </div>
