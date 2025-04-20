@@ -4,45 +4,45 @@ import PageLayout from '../components/PageLayout';
 const teamMembers = [
   {
     id: 1,
-    name: 'Tenzin Dorje',
+    name: 'Dhargyal',
     role: 'Founder & President',
     bio: 'With over 15 years of experience in healthcare and community service, Tenzin has dedicated his life to improving cancer care in the Tibetan community.',
-    image: 'https://images.unsplash.com/photo-1472396961693-142e6e269027?crop=faces&cs=tinysrgb&fit=crop&h=300&w=300'
+    image: '/data/team-images/Dhargyal.png'
   },
   {
     id: 2,
-    name: 'Pema Yangchen',
+    name: 'Dekyong',
     role: 'Medical Director',
     bio: 'Dr. Pema brings her extensive knowledge in oncology to help guide our medical programs and ensure we provide accurate information to our community.',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?crop=faces&cs=tinysrgb&fit=crop&h=300&w=300'
+    image: '/data/team-images/Dekyong.png'
   },
   {
     id: 3,
     name: 'Lobsang Wangdu',
     role: 'Outreach Coordinator',
     bio: 'Lobsang organizes our health camps and educational programs, bringing vital information to remote communities across the region.',
-    image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?crop=faces&cs=tinysrgb&fit=crop&h=300&w=300'
+    image: '/data/team-images/Lobsang.png'
   },
   {
     id: 4,
     name: 'Dechen Lhamo',
     role: 'Patient Support Officer',
     bio: 'Dechen works directly with patients and families, providing emotional support and connecting them with resources they need during treatment.',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=faces&cs=tinysrgb&fit=crop&h=300&w=300'
+    image: '/data/team-images/Dechen.png'
   },
   {
     id: 5,
     name: 'Karma Tsering',
     role: 'Administrative Director',
     bio: 'Karma ensures the smooth operation of our organization, managing finances and coordinating with partner organizations.',
-    image: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?crop=faces&cs=tinysrgb&fit=crop&h=300&w=300'
+    image: '/data/team-images/Karma.png'
   },
   {
     id: 6,
     name: 'Choeying Dolma',
     role: 'Fundraising Manager',
     bio: 'Choeying leads our fundraising efforts, developing relationships with donors and organizing events to support our mission.',
-    image: 'https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?crop=faces&cs=tinysrgb&fit=crop&h=300&w=300'
+    image: '/data/team-images/Choeying.png'
   },
 ];
 
