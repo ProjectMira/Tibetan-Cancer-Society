@@ -26,9 +26,9 @@ const galleryItems = [
     location: 'Dharamshala, Himachal Pradesh',
     date: 'March 15, 2023',
     images: [
-      'data/gallery-images/health-camps/3.png',
-      'data/gallery-images/health-camps/5.png',
-      'data/gallery-images/health-camps/8.png',
+      'assets/gallery-images/health-camps/3.png',
+      'assets/gallery-images/health-camps/5.png',
+      'assets/gallery-images/health-camps/8.png',
     ]
   },
   {
@@ -38,9 +38,9 @@ const galleryItems = [
     location: 'McLeod Ganj',
     date: 'April 20, 2023',
     images: [
-      'data/gallery-images/compassion-home/1.png',
-      'data/gallery-images/compassion-home/3.png',
-      'data/gallery-images/compassion-home/4.png'
+      'assets/gallery-images/compassion-home/1.png',
+      'assets/gallery-images/compassion-home/3.png',
+      'assets/gallery-images/compassion-home/4.png'
     ]
   },
   {
@@ -50,9 +50,9 @@ const galleryItems = [
     location: 'Tibetan Children\'s Village, Dharamshala',
     date: 'May 10, 2023',
     images: [
-      'data/gallery-images/covid-aid-tour/darjeeling.png',
-      'data/gallery-images/covid-aid-tour/sanada-west-bengal.png',
-      'data/gallery-images/covid-aid-tour/shilong.png'
+      'assets/gallery-images/covid-aid-tour/darjeeling.png',
+      'assets/gallery-images/covid-aid-tour/sanada-west-bengal.png',
+      'assets/gallery-images/covid-aid-tour/shilong.png'
     ]
   },
   {
@@ -62,9 +62,9 @@ const galleryItems = [
     location: 'Main Temple Complex, McLeod Ganj',
     date: 'June 5, 2023',
     images: [
-      'data/gallery-images/cancer-day/educational-session.png',
-      'data/gallery-images/cancer-day/indian-man-interview.png',
-      'data/gallery-images/cancer-day/yes-we-can-children.png'
+      'assets/gallery-images/cancer-day/educational-session.png',
+      'assets/gallery-images/cancer-day/indian-man-interview.png',
+      'assets/gallery-images/cancer-day/yes-we-can-children.png'
     ]
   }
 ];
