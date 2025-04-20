@@ -44,6 +44,20 @@ const teamMembers = [
     message: 'I take this as a great opportunity to express how grateful I still feel to have worked as a volunteer with TCS (Tibetan Cancer Society) for a period of two years, mainly assisting with health camps in the Northeast and the remote areas of Ladakh. I want to express my gratitude to the organization —starting from the lead, Tsultrim Dorjee, to all the staff associated with it. We were given a platform to give back to the community, and I believe we made the tiniest difference in the settlements I visited during those two years. We were also provided a safe space to work in. The effort that goes into organizing and operating the health camps is immense, but I have to say, Tsultrim Dorjee (Genla, as I call him) is truly commendable. As stressful as it sometimes gets, he has consistently shown why he is leading the organization. Thank you for your hard work, Genla. I carry such fond memories, and the peak moment was when we got to see Tibet just a few meters away—our Phayul. I will always be ever so indebted for that once-in-a-lifetime experience. I believe in the vision this organization holds and hope it continues to do such meaningful work.',
     image: '/data/team-images/Tenzin Chokey.png'
   },
+  {
+    id: 7,
+    name: 'Chime Dolkar',
+    role: 'Ex-Staff Nurse, Delhi',
+    message: 'From January 2021 to September 2022, I served as a position of Head Nurse at the Tibetan Cancer Society (TCS), working diligently at the Compassion Home in Delhi. This period, encompassing the challenging times of the COVID-19 pandemic and its aftermath, was both demanding and profoundly rewarding. My responsibilities included providing comprehensive care to cancer patients, addressing their medical needs with professionalism and their emotional well-being with compassion. I played my role during medical consultations, ensuring seamless communication between patients and healthcare providers. Efficiently managing appointment schedules and patient records was crucial to maintaining smooth operations and facilitating timely treatments. During the peak of the COVID-19 crisis, I was an active member of the emergency response team, gaining invaluable experience in infection control protocols and patient care under pressure. Participating in various NGO-led programs further enhanced my knowledge in oncology care, infection prevention, and stress management techniques. This journey with TCS was a testament to the strength of the human spirit and the impact of dedicated healthcare. I was profoundly grateful for the opportunity to serve and grow within such a compassionate organization.',
+    image: '/data/team-images/Chime Dolkar.png'
+  },
+  {
+    id: 8,
+    name: 'Tenzin Jigme',
+    role: 'TCS Volunteer, Delhi',
+    message: 'I want to take a moment to express my deep admiration and gratitude to the Tibetan Cancer Society on their 10th anniversary. Over the past decade, this incredible organization has dedicated itself to supporting individuals and families affected by cancer within the Tibetan community. Their unwavering compassion, tireless efforts, and commitment to those in need have made a profound difference in countless lives. I had the honor of volunteering with the Tibetan Cancer Society, and the experience was truly humbling. I witnessed firsthand the kindness, strength, and unity that define this organization. From raising awareness to providing financial assistance and emotional support, their work goes far beyond just medical aid—it’s about bringing hope and dignity to those who need it most. Congratulations on this important milestone. May the next decade bring even more healing, compassion, and positive impact. Here’s to the Tibetan Cancer Society and all the hearts behind it —thank you for being a beacon of light in the community.',
+    image: '/data/team-images/Tenzin Jigme.png'
+  }
 ];
 
 const Team = () => {
@@ -55,7 +69,7 @@ const Team = () => {
     <PageLayout>
       <section className="py-16 bg-white">
         <div className="section-container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member) => (
               <div
                 key={member.id}
@@ -92,7 +106,7 @@ const Team = () => {
             <img
               src={selectedMember.image}
               alt={selectedMember.name}
-              className="w-64 h-64 object-cover rounded-lg border shadow-md mb-6"
+              className="w-48 h-48 object-cover rounded-lg border shadow-md mb-6"
             />
             <h3 className="text-3xl font-bold mb-2">{selectedMember.name}</h3>
             <p className="text-primary font-semibold mb-4 text-lg">{selectedMember.role}</p>
