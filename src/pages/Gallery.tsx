@@ -17,8 +17,12 @@ const galleryItems = [
     location: 'Dharamshala, Himachal Pradesh',
     date: 'March 15, 2023',
     images: [
+      'assets/gallery-images/health-camps/1.png',
       'assets/gallery-images/health-camps/3.png',
+      'assets/gallery-images/health-camps/4.png',
       'assets/gallery-images/health-camps/5.png',
+      'assets/gallery-images/health-camps/6.png',
+      'assets/gallery-images/health-camps/7.png',
       'assets/gallery-images/health-camps/8.png',
     ]
   },
@@ -30,8 +34,10 @@ const galleryItems = [
     date: 'April 20, 2023',
     images: [
       'assets/gallery-images/compassion-home/1.png',
+      'assets/gallery-images/compassion-home/2.png',
       'assets/gallery-images/compassion-home/3.png',
-      'assets/gallery-images/compassion-home/4.png'
+      'assets/gallery-images/compassion-home/4.png',
+      'assets/gallery-images/compassion-home/5.png'
     ]
   },
   {
