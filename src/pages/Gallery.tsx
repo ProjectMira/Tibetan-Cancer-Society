@@ -50,8 +50,9 @@ const galleryItems = [
     location: 'Tibetan Children\'s Village, Dharamshala',
     date: 'May 10, 2023',
     images: [
-      'https://images.unsplash.com/photo-1472396961693-142e6e269027',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb'
+      'data/gallery-images/covid-aid-tour/darjeeling.png',
+      'data/gallery-images/covid-aid-tour/sanada-west-bengal.png',
+      'data/gallery-images/covid-aid-tour/shilong.png'
     ]
   },
   {
