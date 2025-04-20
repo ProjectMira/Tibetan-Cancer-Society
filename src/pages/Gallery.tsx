@@ -62,8 +62,9 @@ const galleryItems = [
     location: 'Main Temple Complex, McLeod Ganj',
     date: 'June 5, 2023',
     images: [
-      'https://images.unsplash.com/photo-1501854140801-50d01698950b',
-      'https://images.unsplash.com/photo-1493962853295-0fd70327578a'
+      'data/gallery-images/cancer-day/educational-session.png',
+      'data/gallery-images/cancer-day/indian-man-interview.png',
+      'data/gallery-images/cancer-day/yes-we-can-children.png'
     ]
   }
 ];
