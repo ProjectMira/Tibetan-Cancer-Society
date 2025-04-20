@@ -67,7 +67,7 @@ const Team = () => {
 
   return (
     <PageLayout>
-      <section className="py-16 bg-white">
+      <section className="pt-2 pb-10 bg-white">
         <div className="section-container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member) => (
@@ -115,17 +115,6 @@ const Team = () => {
         </div>
       )}
 
-      <section className="py-16 bg-gray-50">
-        <div className="section-container text-center">
-          <h2 className="text-3xl font-bold mb-6">Join Our Team</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            We're always looking for passionate individuals to join our cause. If you're interested in helping us make a difference, please get in touch with us.
-          </p>
-          <a href="/contact" className="btn-primary">
-            Contact Us
-          </a>
-        </div>
-      </section>
     </PageLayout>
   );
 };
