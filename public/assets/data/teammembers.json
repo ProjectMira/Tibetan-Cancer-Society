@@ -1,58 +1,471 @@
 [
-    {
-      "id": 1,
-      "name": "Tsultrim Dorjee",
-      "role": "Founder & President, Dharamshala",
-      "message": "The feeling of winning after a hardfought battle for life is always euphoric and overwhelming. Cancer is curable if detected early. I would like to thank the team at Tibetan Cancer Society for your brave and selfless efforts. I’m truly honored to have been a part of it.",
-      "image": "/assets/team-images/Tsultrim Dorjee.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Sonam Dhargye",
-      "role": "Ex-TCS Manager, Nepal",
-      "message": "I wanted to express my gratitude for the opportunities I had while working with the Tibetan Cancer Society (TCS). I will always cherish the experiences and lessons learned. As a former manager at TCS, I witnessed the organization's remarkable work in providing cancer care and support to the Tibetan community at the grassroots level. Their dedication to improving health outcomes and promoting awareness about cancer is truly commendable. They provide accessible cancer treatment and care at the Compassion Home in Delhi. TCS promotes cancer awareness and educates the Tibetan community by organizing free health camps in India and Nepal. Most importantly, they support patients and their families as if they were their own, which further empowers our society. As a grassroots NGO, the Tibetan Cancer Society does a wonderful job with very limited resources. My personal favorite program is \"Meals for Invisible,\" which provides nutritious meals to poor and needy people around Delhi. I must thank those who selflessly donate to this program; your money is used solely for the benefit of the poor. Thank you, Tibetan Cancer Society, for your compassionate work and commitment to cancer care. Your efforts are making a real difference in our society",
-      "image": "/assets/team-images/Sonam Dhargye.png"
-    },
-    {
-      "id": 3,
-      "name": "Tenzin Dekyong",
-      "role": "Ex-Staff Nurse/Volunteer, India",
-      "message": "As we celebrate the 10th anniversary of the Tibetan Cancer Society, I feel incredibly grateful for the opportunity to share a part of my journey with this inspiring organization. I joined TCS as a volunteer nurse on October 15, 2022, during a health camp organized in Nepal. Though it lasted just 15 days, those two weeks left a lasting impact on me. We visited four Tibetan settlements in Pokhara, reaching out to people of all ages—children, elders, monks, and nuns—and extended our care to Himalayan communities in Kathmandu as well. The work TCS does in Nepal is truly remarkable. From raising awareness about cancer to screening for serious conditions like H. pylori (which is linked to stomach cancer), they’re not just providing medical assistance—they’re offering hope. The emotional support they give is just as vital as the treatment itself. For me, this experience was more than just a volunteer opportunity—it was deeply meaningful. I didn’t just grow in my nursing skills; I grew as a person. I learned so much about compassion, resilience, and the power of human connection. Being surrounded by such dedicated and kind-hearted people reminded me why I chose this path in the first place. I’m so proud to have been even a small part of the work TCS does. It’s something I’ll carry with me always.",
-      "image": "/assets/team-images/Tenzin Dekyong.png"
-    },
-    {
-      "id": 4,
-      "name": "Yangkey",
-      "role": "Ex-Staff Nurse, Canada",
-      "message": "I am writing this letter to express my heartfelt reflections on my journey with the Tibetan Cancer Society, where I had the honor to serve from 2020 to 2023. Those three years were among the most memorable moments of my life, deeply moving and shaping me emotionally, spiritually, mentally, and personally. Through my work, I came to understand the true essence of compassion and the strength of the human spirit. I was fortunate to support individuals and families during their most vulnerable moments, and each interaction left a lasting impact on me. It was heartbreaking when disease affected people in unimaginable ways, but this beautiful organization chose to work tirelessly and serve those in need. I learned that healing goes beyond medicine—a comforting word, a warm presence, or simply holding space for someone in pain can create powerful impacts. I also came to understand the importance of awareness, advocacy, and early detection in our community, especially among vulnerable and underserved populations. Working with the Tibetan Cancer Society wasn’t just about service—it was about humanity, healing, and heart. It taught me how to listen with empathy, serve with sincerity, and love without expectations. I am forever grateful for this journey and the people who became part of it",
-      "image": "/assets/team-images/Yangkey.png"
-    },
-    {
-      "id": 5,
-      "name": "Dechen Lhamo",
-      "role": "TCS Volunteer Nurse, Canada",
-      "message": "I began my journey as a volunteer with this incredible NGO in 2020, right in the midst of the COVID-19 pandemic—a time when the need for compassion, solidarity, and community support was more urgent than ever. One of the first projects I was involved in was Meals for the Invisible—a deeply moving initiative where we distributed nutritious meals to destitute individuals who are often overlooked by society. Beyond that, I had the privilege of assisting patients with hospital admissions, taking part in health camps, and contributing to fundraising events aimed at supporting cancer treatment for those in need. Each experience, every story I encountered, and every interaction I had along the way taught me something valuable and expanded my understanding of empathy, resilience, and selfless service. When I first joined, the organization didn’t even have an ambulance. Today, we not only have a dedicated ambulance service but also a fully functioning community kitchen that serves hundreds of people. Witnessing this transformation has been profoundly inspiring and rewarding. Volunteering with this organization has truly been a journey of growth, compassion, and purpose. I feel deeply honored to be part of this mission, and I will always carry the lessons, stories, and memories with me as I continue to serve in whatever ways I can.",
-      "image": "/assets/team-images/Dechen Lhamo.png"
-    },
-    {
-      "id": 6,
-      "name": "Tenzin Chokey",
-      "role": "TCS Volunteer Nurse, England",
-      "message": "I take this as a great opportunity to express how grateful I still feel to have worked as a volunteer with TCS (Tibetan Cancer Society) for a period of two years, mainly assisting with health camps in the Northeast and the remote areas of Ladakh. I want to express my gratitude to the organization —starting from the lead, Tsultrim Dorjee, to all the staff associated with it. We were given a platform to give back to the community, and I believe we made the tiniest difference in the settlements I visited during those two years. We were also provided a safe space to work in. The effort that goes into organizing and operating the health camps is immense, but I have to say, Tsultrim Dorjee (Genla, as I call him) is truly commendable. As stressful as it sometimes gets, he has consistently shown why he is leading the organization. Thank you for your hard work, Genla. I carry such fond memories, and the peak moment was when we got to see Tibet just a few meters away—our Phayul. I will always be ever so indebted for that once-in-a-lifetime experience. I believe in the vision this organization holds and hope it continues to do such meaningful work.",
-      "image": "/assets/team-images/Tenzin Chokey.png"
-    },
-    {
-      "id": 7,
-      "name": "Chime Dolkar",
-      "role": "Ex-Staff Nurse, Delhi",
-      "message": "From January 2021 to September 2022, I served as a position of Head Nurse at the Tibetan Cancer Society (TCS), working diligently at the Compassion Home in Delhi. This period, encompassing the challenging times of the COVID-19 pandemic and its aftermath, was both demanding and profoundly rewarding. My responsibilities included providing comprehensive care to cancer patients, addressing their medical needs with professionalism and their emotional well-being with compassion. I played my role during medical consultations, ensuring seamless communication between patients and healthcare providers. Efficiently managing appointment schedules and patient records was crucial to maintaining smooth operations and facilitating timely treatments. During the peak of the COVID-19 crisis, I was an active member of the emergency response team, gaining invaluable experience in infection control protocols and patient care under pressure. Participating in various NGO-led programs further enhanced my knowledge in oncology care, infection prevention, and stress management techniques. This journey with TCS was a testament to the strength of the human spirit and the impact of dedicated healthcare. I was profoundly grateful for the opportunity to serve and grow within such a compassionate organization.",
-      "image": "/assets/team-images/Chime Dolkar.png"
-    },
-    {
-      "id": 8,
-      "name": "Tenzin Jigme",
-      "role": "TCS Volunteer, Delhi",
-      "message": "I want to take a moment to express my deep admiration and gratitude to the Tibetan Cancer Society on their 10th anniversary. Over the past decade, this incredible organization has dedicated itself to supporting individuals and families affected by cancer within the Tibetan community. Their unwavering compassion, tireless efforts, and commitment to those in need have made a profound difference in countless lives. I had the honor of volunteering with the Tibetan Cancer Society, and the experience was truly humbling. I witnessed firsthand the kindness, strength, and unity that define this organization. From raising awareness to providing financial assistance and emotional support, their work goes far beyond just medical aid—it’s about bringing hope and dignity to those who need it most. Congratulations on this important milestone. May the next decade bring even more healing, compassion, and positive impact. Here’s to the Tibetan Cancer Society and all the hearts behind it —thank you for being a beacon of light in the community.",
-      "image": "/assets/team-images/Tenzin Jigme.png"
-    }
-  ]
+      {
+            "id": 1,
+            "name": "Tsultrim Dorjee",
+            "role": "Founder & President, India",
+            "message": "The feeling of winning after a hardfought battle for life is always euphoric and overwhelming. Cancer is curable if detected early. I would like to thank the team at Tibetan Cancer Society for your brave and selfless efforts. I’m truly honored to have been a part of it.",
+            "image": "/assets/team-images/Tsultrim Dorjee.jpg"
+      },
+      {
+            "id": 2,
+            "name": "Sonam Dhargye",
+            "role": "Ex-TCS Manager, Nepal",
+            "message": "I wanted to express my gratitude for the opportunities I had while working with the Tibetan Cancer Society (TCS). I will always cherish the experiences and lessons learned. As a former manager at TCS, I witnessed the organization's remarkable work in providing cancer care and support to the Tibetan community at the grassroots level. Their dedication to improving health outcomes and promoting awareness about cancer is truly commendable. They provide accessible cancer treatment and care at the Compassion Home in Delhi. TCS promotes cancer awareness and educates the Tibetan community by organizing free health camps in India and Nepal. Most importantly, they support patients and their families as if they were their own, which further empowers our society. As a grassroots NGO, the Tibetan Cancer Society does a wonderful job with very limited resources. My personal favorite program is \"Meals for Invisible,\" which provides nutritious meals to poor and needy people around Delhi. I must thank those who selflessly donate to this program; your money is used solely for the benefit of the poor. Thank you, Tibetan Cancer Society, for your compassionate work and commitment to cancer care. Your efforts are making a real difference in our society",
+            "image": "/assets/team-images/Sonam Dhargye.png"
+      },
+      {
+            "id": 3,
+            "name": "Tenzin Dekyong",
+            "role": "Ex-Staff Nurse, India",
+            "message": "As we celebrate the 10th anniversary of the Tibetan Cancer Society, I feel incredibly grateful for the opportunity to share a part of my journey with this inspiring organization. I joined TCS as a volunteer nurse on October 15, 2022, during a health camp organized in Nepal. Though it lasted just 15 days, those two weeks left a lasting impact on me. We visited four Tibetan settlements in Pokhara, reaching out to people of all ages—children, elders, monks, and nuns—and extended our care to Himalayan communities in Kathmandu as well. The work TCS does in Nepal is truly remarkable. From raising awareness about cancer to screening for serious conditions like H. pylori (which is linked to stomach cancer), they’re not just providing medical assistance—they’re offering hope. The emotional support they give is just as vital as the treatment itself. For me, this experience was more than just a volunteer opportunity—it was deeply meaningful. I didn’t just grow in my nursing skills; I grew as a person. I learned so much about compassion, resilience, and the power of human connection. Being surrounded by such dedicated and kind-hearted people reminded me why I chose this path in the first place. I’m so proud to have been even a small part of the work TCS does. It’s something I’ll carry with me always.",
+            "image": "/assets/team-images/Tenzin Dekyong.png"
+      },
+      {
+            "id": 4,
+            "name": "Yangkyi",
+            "role": "Ex-Staff Nurse, Canada",
+            "message": "I am writing this letter to express my heartfelt reflections on my journey with the Tibetan Cancer Society, where I had the honor to serve from 2020 to 2023. Those three years were among the most memorable moments of my life, deeply moving and shaping me emotionally, spiritually, mentally, and personally. Through my work, I came to understand the true essence of compassion and the strength of the human spirit. I was fortunate to support individuals and families during their most vulnerable moments, and each interaction left a lasting impact on me. It was heartbreaking when disease affected people in unimaginable ways, but this beautiful organization chose to work tirelessly and serve those in need. I learned that healing goes beyond medicine—a comforting word, a warm presence, or simply holding space for someone in pain can create powerful impacts. I also came to understand the importance of awareness, advocacy, and early detection in our community, especially among vulnerable and underserved populations. Working with the Tibetan Cancer Society wasn’t just about service—it was about humanity, healing, and heart. It taught me how to listen with empathy, serve with sincerity, and love without expectations. I am forever grateful for this journey and the people who became part of it",
+            "image": "/assets/team-images/Yangkyi.png"
+      },
+      {
+            "id": 5,
+            "name": "Dechen Lhamo",
+            "role": "TCS Volunteer Nurse, Canada",
+            "message": "I began my journey as a volunteer with this incredible NGO in 2020, right in the midst of the COVID-19 pandemic—a time when the need for compassion, solidarity, and community support was more urgent than ever. One of the first projects I was involved in was Meals for the Invisible—a deeply moving initiative where we distributed nutritious meals to destitute individuals who are often overlooked by society. Beyond that, I had the privilege of assisting patients with hospital admissions, taking part in health camps, and contributing to fundraising events aimed at supporting cancer treatment for those in need. Each experience, every story I encountered, and every interaction I had along the way taught me something valuable and expanded my understanding of empathy, resilience, and selfless service. When I first joined, the organization didn’t even have an ambulance. Today, we not only have a dedicated ambulance service but also a fully functioning community kitchen that serves hundreds of people. Witnessing this transformation has been profoundly inspiring and rewarding. Volunteering with this organization has truly been a journey of growth, compassion, and purpose. I feel deeply honored to be part of this mission, and I will always carry the lessons, stories, and memories with me as I continue to serve in whatever ways I can.",
+            "image": "/assets/team-images/Dechen Lhamo.png"
+      },
+      {
+            "id": 6,
+            "name": "Tenzin Chokey",
+            "role": "TCS Volunteer Nurse, England",
+            "message": "I take this as a great opportunity to express how grateful I still feel to have worked as a volunteer with TCS (Tibetan Cancer Society) for a period of two years, mainly assisting with health camps in the Northeast and the remote areas of Ladakh. I want to express my gratitude to the organization —starting from the lead, Tsultrim Dorjee, to all the staff associated with it. We were given a platform to give back to the community, and I believe we made the tiniest difference in the settlements I visited during those two years. We were also provided a safe space to work in. The effort that goes into organizing and operating the health camps is immense, but I have to say, Tsultrim Dorjee (Genla, as I call him) is truly commendable. As stressful as it sometimes gets, he has consistently shown why he is leading the organization. Thank you for your hard work, Genla. I carry such fond memories, and the peak moment was when we got to see Tibet just a few meters away—our Phayul. I will always be ever so indebted for that once-in-a-lifetime experience. I believe in the vision this organization holds and hope it continues to do such meaningful work.",
+            "image": "/assets/team-images/Tenzin Chokey.png"
+      },
+      {
+            "id": 7,
+            "name": "Chime Dolkar",
+            "role": "Ex-Staff Nurse, India",
+            "message": "From January 2021 to September 2022, I served as a position of Head Nurse at the Tibetan Cancer Society (TCS), working diligently at the Compassion Home in Delhi. This period, encompassing the challenging times of the COVID-19 pandemic and its aftermath, was both demanding and profoundly rewarding. My responsibilities included providing comprehensive care to cancer patients, addressing their medical needs with professionalism and their emotional well-being with compassion. I played my role during medical consultations, ensuring seamless communication between patients and healthcare providers. Efficiently managing appointment schedules and patient records was crucial to maintaining smooth operations and facilitating timely treatments. During the peak of the COVID-19 crisis, I was an active member of the emergency response team, gaining invaluable experience in infection control protocols and patient care under pressure. Participating in various NGO-led programs further enhanced my knowledge in oncology care, infection prevention, and stress management techniques. This journey with TCS was a testament to the strength of the human spirit and the impact of dedicated healthcare. I was profoundly grateful for the opportunity to serve and grow within such a compassionate organization.",
+            "image": "/assets/team-images/Chime Dolkar.png"
+      },
+      {
+            "id": 8,
+            "name": "Tenzin Jigme",
+            "role": "TCS Volunteer, India",
+            "message": "I want to take a moment to express my deep admiration and gratitude to the Tibetan Cancer Society on their 10th anniversary. Over the past decade, this incredible organization has dedicated itself to supporting individuals and families affected by cancer within the Tibetan community. Their unwavering compassion, tireless efforts, and commitment to those in need have made a profound difference in countless lives. I had the honor of volunteering with the Tibetan Cancer Society, and the experience was truly humbling. I witnessed firsthand the kindness, strength, and unity that define this organization. From raising awareness to providing financial assistance and emotional support, their work goes far beyond just medical aid—it’s about bringing hope and dignity to those who need it most. Congratulations on this important milestone. May the next decade bring even more healing, compassion, and positive impact. Here’s to the Tibetan Cancer Society and all the hearts behind it —thank you for being a beacon of light in the community.",
+            "image": "/assets/team-images/Tenzin Jigme.png"
+      },
+      {
+            "id": 9,
+            "name": "Tashi Youdon",
+            "role": "Ex-Staff Nurse, India",
+            "message": "To begin with, I want to congratulate the Tibetan Cancer Society on your 10th-year anniversary! It was back in 2019 when I was scrolling through Instagram and saw a poster about a health camp in Bodh Gaya. It was the happiest day of my life because I had always wanted to be a volunteer, and that was it—without giving it a second thought, I signed up. In fact, it was one of the best decisions I’ve ever made. I still remember how excited yet nervous I was because it was my first time, but the whole team, including the Director Mr. Tsultrim Dorjee la, was so welcoming and warm. Being a part of the health camp made me realize that the satisfaction and joy you get from serving your people is worth more than anything else.I remember TCS Director Mr. Tsultrim la told me about a new project back in 2020, which was Meals for the Invisible. I was genuinely awestruck and inspired listening to him speak about his plan to bring the destitute into the light and provide basic meals directly to the doorsteps of those in need. It was during COVID-19 that his vision came to life with the launch of Meals for the Invisible. Of course, it wouldn’t have been possible without the beautiful souls and dedicated colleagues, namely Tenzin Lekdhen la, Penpa Wangmo la, Tenzin Jigmey la, and many more.Luckily, from day one, I got the opportunity to join them as a volunteer, and it has been an incredibly soulful journey.",
+            "image": "/assets/team-images/Tashi Youdon.png"
+      },
+      {
+            "id": 10,
+            "name": "Choedon",
+            "role": "Ex-Staff Nurse, India",
+            "message": "Working as a registered nurse at the Tibetan Cancer Society since June 6, 2024, has been a meaningful and fulfilling journey. My responsibilities included assisting with translation during hospital visits, which helped improve communication between patients and medical staff. I also took part in health camps and the “Meals for Invisible” initiative, supporting patients and caregivers through outreach and practical care. These roles allowed me to connect with individuals from diverse backgrounds and provide compassionate support beyond clinical duties.​What made this experience truly special was the deep connection I built with patients. Being directly involved in their care, listening to their stories, and offering comfort gave me a sense of purpose and emotional fulfillment. This experience not only strengthened my nursing skills but also taught me the value of empathy, patience, and human connection in healthcare.​ Working for humanity is essential in healthcare, as it ensures that compassion and empathy remain at the heart of medical practice. By prioritizing human dignity and understanding the unique experiences of each patient, healthcare professionals can provide more effective and personalized care. This approach not only improves patient outcomes but also fosters a more compassionate and just society.",
+            "image": "/assets/team-images/Choedon.png"
+      },
+      {
+            "id": 11,
+            "name": "Tenzin Tsegyal",
+            "role": "Ex-TCS Manager, India",
+            "message": "Working as a manager at the Tibetan Cancer Society was a rewarding experience. It was deeply fulfilling to support cancer patients in every possible way and to provide meals to the underprivileged through the 'Meals for the Invisible' program. Collaborating with compassionate and talented young individuals at TCS was truly a privilege.",
+            "image": "/assets/team-images/Tenzin Tsegyal.png"
+      },
+      {
+            "id": 12,
+            "name": "Migmar Norbhu",
+            "role": "TCS Volunteer, India",
+            "message": "It’s about making sure that hungry people have a good meal in the middle of the day. It does help them with their living and stay healthy. It’s an enormous opportunity for me to show love and good deeds, in another hand, it’s a great opportunity for youth like me. A community kitchen has been soul for not only the outside of the people who are hungry, but also people like me to get the service to pay them. I am extremely honoured to be part of it.It’s about opportunity and acts of kindness same time.",
+            "image": "/assets/team-images/Migmar Norbhu.png"
+      },
+      {
+            "id": 13,
+            "name": "Tenzin Pema",
+            "role": "Ex-Staff Nurse, India",
+            "message": "I had an incredible experience working at the Tibetan Cancer Society in 2024. It was an enriching opportunity to learn and grow while contributing to the meaningful work done by the NGO. I gained valuable insights and knowledge that will stay with me forever. Grateful for the chance to be a part of such a dedicated and impactful organization!",
+            "image": "/assets/team-images/Tenzin Pema.png"
+      },
+      {
+            "id": 14,
+            "name": "Tsering Dolkar",
+            "role": "TCS Staff Nurse, India",
+            "message": "My name is Tsering Dolkar, and I am currently working as a staff nurse at the Tibetan Cancer Society (TCS).​Through this experience, I have learned many new things, such as distributing meals to the underprivileged and assisting patients who require support in hospitals. There is immense joy in helping others, and it brings me happiness to be of service.​Although it can be challenging to go out in extreme weather conditions, it is all worth it when we see their smiles and receive appreciation for our work.​I am truly grateful for the opportunity to work at TCS, and I am committed to giving my best.​",
+            "image": "/assets/team-images/Tsering Dolkar.png"
+      },
+      {
+            "id": 15,
+            "name": "Tseten Dolkar",
+            "role": "TCS Staff, India",
+            "message": "I have been coordinating the South Branch shop and activities managed by the Tibetan Cancer Society since December 5, 2023. All profits from the shop go towards supporting individuals who are unable to afford their medical expenses. Being part of this initiative is deeply fulfilling, as I truly value the opportunity to contribute to a cause that benefits society in such a meaningful way. The organization comprises many dedicated and compassionate members, and I feel grateful to work alongside them. Together, we strive not only to run the shop efficiently but also to make a positive impact on the lives of those in need.",
+            "image": "/assets/team-images/Tseten Dolkar.png"
+      },
+      {
+            "id": 16,
+            "name": "Tenzin Seldon",
+            "role": "TCS Volunteer, India",
+            "message": "Being a volunteer with TCS was a blessing in disguise. Playing a role, however small, in improving someone’s well-being gives you a sense of strength and capability. There's a unique happiness that comes from selfless service and making someone smile or feel cared for. It is also a humbling experience to witness the struggles and resilience of other people. I’m grateful for the chance to contribute and learn, and I truly admire the impactful work you continue to do!",
+            "image": "/assets/team-images/Tenzin Seldon.png"
+      },
+      {
+            "id": 17,
+            "name": "Phuntsok Namgyal",
+            "role": "TCS Volunteer, India",
+            "message": "My month-long volunteer stint at the Tibetan Cancer Society was truly eye-opening.I was deeply inspired by the resilience and determination of the individuals I met, as well as by the organization’s mission to provide support and care to those in need. During my time at the Sciety,I had the opportunity to contribute to various activities, including organizing fundraising events and interacting with people from diverse backgrounds. Sharing the Society's goals and impact with others was a rewarding experience, and I truly appreciated the chance to make a positive difference.One of the highlights of my volunteering experience was working alongside a diverse group of like-minded individuals who shared my passion for giving back to the community. We had a wonderful time working together, and it was fulfilling to see our collective efforts make a real difference.I highly recommend volunteering with the Tibetan Cancer Society to anyone looking to create a positive impact in their community. The experience will not only enrich your life but also offer the opportunity to be part of something deeply meaningful.Lastly, I’d like to extend my heartfelt gratitude to our CEO,  Nortse la, for providing me with this incredible opportunity.",
+            "image": "/assets/team-images/Phuntsok Namgyal.png"
+      },
+      {
+            "id": 18,
+            "name": "Tenzin Dolma",
+            "role": "TCS Volunteer Nurse, India",
+            "message": "When I think of the word “momentous,” one of the first things that comes to mind is the time I’ve spent with the Tibetan Cancer Society.As an individual, I’ve gained valuable insights and experiences from the organization in many ways—whether it was through getting to know the community and people around me, or by fine-tuning my social skills. The Tibetan Cancer Society has had a profound impact on me, and I hold it in the highest regard.I’m extremely grateful to Chocho Tsultrim, the CEO, and the entire team for their dedication, support, and hard work.Thank you, TCS.",
+            "image": "/assets/team-images/Tenzin Dolma.png"
+      },
+      {
+            "id": 19,
+            "name": "Nyima Dolma",
+            "role": "TCS Volunteer Nurse, India",
+            "message": "The 2022 Ladakh Health Camp was a great opportunity, and I’m truly grateful to the Tibetan Cancer Society for making it possible. It was my first time being part of such a camp, and the experience was filled with learning, exploration, and adventure. I feel fortunate to have been part of it and to have created unforgettable memories that I’ll cherish for a lifetime.",
+            "image": "/assets/team-images/Nyima Dolma.png"
+      },
+      {
+            "id": 20,
+            "name": "Migma Wangdhi Lepcha",
+            "role": "TCS Volunteer, India",
+            "message": "Being part of the Tibetan Cancer Society has been an incredible experience. Working with the team, meeting inspiring people, and witnessing the support given to those in need has been truly humbling.TCS’s free treatment camp and care for patients is a powerful model of compassion in today's world. I've grown more confident, learned the value of teamwork, and am deeply grateful for this opportunity. I look forward to continuing my support and service with the Tibetan Cancer Society. This is my first ever participation for the Tibetan NGO’s Initiatives.",
+            "image": "/assets/team-images/Migma Wangdhi Lepcha.png"
+      },
+      {
+            "id": 21,
+            "name": "Tenzin Chemi",
+            "role": "TCS Volunteer Nurse, India",
+            "message": "I had the opportunity to serve in two major health camps—Manali and Ladakh—in the year 2024. The organization of both camps was truly impeccable.The impact we made was profound. We provided essential services such as basic medical check-ups, including random glucose monitoring, vital signs, and stool examinations. Every volunteer—whether a healthcare professional or a general helper—contributed their skills and compassion to ensure each attendee received the care they needed. We were blessed to witness the gratitude and relief on the faces of those we helped.Overall, my experience at these health camps was incredibly rewarding. It strengthened my belief in the power of community service .",
+            "image": "/assets/team-images/Tenzin Chemi.png"
+      },
+      {
+            "id": 22,
+            "name": "Jigmey Lobsang",
+            "role": "TCS Volunteer, India",
+            "message": "In 2020, I spent a year volunteering with the Tibetan Cancer Society. It was one of the most eye-opening and humbling experiences of my life.I met people fighting cancer with strength and grace, despite having so little. I helped arrange hospital visits, translated when needed, and simply spent time listening. I still remember a young monk who came alone from a remote village—scared, lost, and sick. We built a bond over time, and being there for him reminded me how powerful simple human connection can be.That year taught me more than I ever expected—about compassion, resilience, and the impact of small acts of care. TCS wasn’t just a place I volunteered; it became a part of who I am.",
+            "image": "/assets/team-images/Jigmey Lobsang.png"
+      },
+      {
+            "id": 23,
+            "name": "Chundi Zangmu Bhutia",
+            "role": "TCS Volunteer, India",
+            "message": "One day, while scrolling through my phone, a WhatsApp notification from the Sikkim Students’ Association Delhi caught my eye. It was an invitation to join the Tibetan Cancer Society (TCS) for their “Meals for the Invisible” initiative during Lhabab Duchen. .............. Intrigued, I signed up immediately, marking the beginning of my journey with this remarkable NGO. Later, I participated in the World Cancer Day celebrations, from Dharamshala to Delhi—an incredible experience for a Sikkimese student like me in the capital. ......... The Saka Dawa campaign, offering free meals during Delhi's hottest month, deeply touched my heart. These experiences have profoundly shaped me. Thank you, TCS director and the entire TCS family.",
+            "image": "/assets/team-images/Chundi Zangmu Bhutia.png"
+      },
+      {
+            "id": 24,
+            "name": "Yeshi",
+            "role": "TCS Volunteer, India",
+            "message": "Volunteering with TCS during Saka Dawa was a deeply moving experience. As a Buddhist, the day already held profound significance, but serving meals to those in need added a new layer of meaning. I vividly recall an elderly man who gently held my hand as he received his meal—a silent gesture that conveyed immense gratitude. That moment instilled in me a profound sense of presence and joy derived from selfless giving.​The experience left me feeling blessed and grounded, reminding me of the importance of compassion and the impact of small acts of kindness. I'm grateful to TCS for allowing me to be part of such meaningful work and look forward to future opportunities to serve.​",
+            "image": "/assets/team-images/Yeshi.png"
+      },
+      {
+            "id": 25,
+            "name": "Sonam Dorjee Gyana",
+            "role": "TCS Volunteer, India",
+            "message": "The 2023 TCS Bodh Gaya Campaign was one of the most impactful and memorable events I joined that year. I had a wonderful experience learning new things and meeting people from different regions who shared the same interests and values. I had always wanted to help people and be part of something meaningful.I especially enjoyed small tasks like serving food through the “Meals for the Invisible” program and collecting donations for a good cause. I also had the chance to explore and understand the values and cultures of the places we visited.The people I worked with were amazing and kind—they treated me like family, took great care of me, and encouraged me in everything I did. Thank you TCS.",
+            "image": "/assets/team-images/Sonam Dorjee Gyana.png"
+      },
+      {
+            "id": 26,
+            "name": "Tenzin Wangmo",
+            "role": "TCS Volunteer Nurse, India",
+            "message": "I had the opportunity to serve as a volunteer nurse in the Tibetan Cancer Society’s 2023 medical camp in the Northeast Tibetan community. It was truly one of the most fulfilling experiences of my life. I had never been involved in a community organization so deeply committed to helping those in need. It was an eye-opening journey where I learned firsthand the value of community service and the role a medical professional can play in society.Tibetan Cancer Society, led by Tsultrim Dorjee la, sets a great example for those in the medical field—showing how expertise can be used in service of others. Tsultrim la and his team planned the camp thoughtfully, considering the needs of every member and supporting us with great care.",
+            "image": "/assets/team-images/Tenzin Wangmo.png"
+      },
+      {
+            "id": 27,
+            "name": "Tenzin Yeka",
+            "role": "TCS Volunteer, India",
+            "message": "I had always wanted to volunteer with the Tibetan Cancer Society, and being part of the 2023 health camp in Bodhgaya felt like a dream finally coming true. The work TCS does is honestly incredible. Seeing how much love, effort, and care goes into helping our community—especially those who often go unseen—was both humbling and inspiring. I’m not a nurse, but I was happy to help in any way I could. Whether it was organizing materials, guiding patients, or just making sure things ran smoothly, I felt proud to be part of something so meaningful. But what made it even more special were the people. The other volunteers were kind, funny, and full of heart. I still think about our dinner night with the impromptu bonfire, the friendly competition to sell merchandise and raise funds, the field trip, and of course, Secret Santa. It all felt so warm, joyful, and full of purpose.The 2023 health camp was more than just a volunteering experience—it felt like home. A truly happy place I’ll always carry with me.I was meant to be part of the 2023 TCS health camp.",
+            "image": "/assets/team-images/Tenzin Yeka.png"
+      },
+      {
+            "id": 28,
+            "name": "Aanchal Gautam",
+            "role": "TCS Volunteer, India",
+            "message": "Volunteering with the Tibetan Cancer Society (TCS) has been one of the most humbling and meaningful experiences of my life. In April 2023, I had the honor of joining the Meals for Invisible initiative—through a batch mate who is an active member of TCS. This community outreach program bring volunteers together to serve hot, nutritious meals to those who are often overlooked in our society—people experiencing homelessness, the elderly, those with disabilities, and daily wage earners.It is more than just food—it is about offering dignity, connection, and a reminder that they are not forgotten. I vividly remember - “a quiet thank you from a woman holding her child”, “men smiling widely even under the scorching heat”—moments that reminded me how deeply a simple act can create waves in someone’s life...........I was honored to be part of the World Cancer Day 2024 celebration in Dharamshala, alongside doctors, directors, nurses, and volunteers. It was truly a memorable moment. I especially extended my gratitude to the Director of TCS, whom we all addressed as 'Chocho,' who had been doing a wonderful job since the establishment of TCS. I was grateful to Norbu Tsering, who always looked out for everyone in the team and was eager to interact, making one feel at ease. All the volunteer nurses I came to know were incredibly marvelous, using their knowledge and wisdom for the noble cause..........",
+            "image": "/assets/team-images/Aanchal Gautam.png"
+      },
+      {
+            "id": 29,
+            "name": "Chime Dolker",
+            "role": "TCS Volunteer, United State",
+            "message": "Working with the Tibetan Cancer Society has been a life-changing experience in ways I never imagined. What started as volunteering soon turned into a calling, and the people I worked with became family. Our director and fellow volunteer’s unconditional commitment to serving others ignited something in me: an overwhelming sense of duty towards community, to lead with kindness, and to stand firm in service.I got to work with top doctors in India and inspiring groups like Dashugs, a Ladakhi folk band whose songs echo the soul of our mountains. My journey with the Tibetan Cancer Society has been a powerful extension of my community work, bringing together culture, healing, and awareness. This experience not only showed me the importance of service but set a lifelong passion ablaze. I believe that meaningful change starts with compassion and that even the tiniest gesture of kindness can transform an entire community. It is with Tibetan Cancer Society that I got to put our school ethos, “Others Before Self,” into action!",
+            "image": "/assets/team-images/Chime Dolker.png"
+      },
+      {
+            "id": 30,
+            "name": "Tenzin Choeney",
+            "role": "Ex-Staff Nurse, India",
+            "message": "My journey with the Tibetan Cancer Society (TCS) began in 2022 when I volunteered as a nurse during a health camp. This initial experience ignited a profound commitment to community healthcare, leading me to assume the role of Head Nurse. In this capacity, I participated in numerous health camps across remote settlements, where I provided care to countless patients, addressing both oncology and non-oncology cases.​ Each challenge encountered during these camps served as a valuable learning opportunity, reinforcing the adage, 'you learn through experience.' Despite facing hardships that sometimes made it nearly impossible to assist patients, we consistently provided the best possible care with the resources available. This journey significantly enhanced my knowledge of oncology care, deepening my understanding and empathy towards patients battling cancer.​I am deeply grateful to my dedicated team, whose unwavering support and commitment made this journey profoundly rewarding. Their collaboration and resilience were instrumental in overcoming obstacles and delivering quality healthcare to underserved communities. Together, we transformed challenges into triumphs, making a tangible difference in the lives of many.​",
+            "image": "/assets/team-images/Tenzin Choeney.png"
+      },
+      {
+            "id": 31,
+            "name": "Tenzin Chime",
+            "role": "TCS Volunteer, India",
+            "message": "Since 2019, I had the opportunity to volunteer with the Tibetan Cancer Society (TCS), which became one of the most rewarding parts of my life. Participating in health camps like the Northeast and Manali Health Camps provided a meaningful break from college life and allowed me to engage in work I truly valued.​These camps were emotionally enriching and eye-opening. Assisting individuals in receiving necessary care and witnessing their gratitude made every effort worthwhile. It was fulfilling to realize that even small contributions could have a significant impact.​Beyond aiding others, these experiences profoundly influenced me. I gained substantial knowledge about health, particularly cancer, prompting me to reflect more on personal and family well-being. The dedication of doctors and health workers even inspired me to contemplate a medical career, though my path eventually diverged.​I am deeply thankful to TCS for providing the chance to serve our communities and to Gen Tsultrim for their inspiring leadership. Volunteering with TCS taught me the importance of giving back and the joy that comes from helping others.",
+            "image": "/assets/team-images/Tenzin Chime.png"
+      },
+      {
+            "id": 32,
+            "name": "Puga Buchi",
+            "role": "TCS Volunteer, India",
+            "message": "Congratulations on the 10-year anniversary of the Tibetan Cancer Society. I am Puga Buchi, and I had the honor of volunteering with your remarkable team during the winter of 2023 in Bodhgaya—a season that profoundly impacted my life.​As a Roman Catholic entering a Buddhist-rooted environment, I anticipated challenges. However, the transition was unexpectedly smooth and enriching. The simplicity and openness of the work environment felt comforting and peaceful.​Director chocho, wisdom and guidance deeply moved me. The stories they shared—about the ambulance, time during COVID, and the compassionate work at Compassion Home—offered profound insights into service and happiness. The experience of community service taught me invaluable lessons. Emotional moments, like meeting an elderly gentleman from Bihar during the medical camp, reshaped my understanding of life and selfless service. I returned home with cherished memories and a renewed moral compass.​Volunteering with TCS also deepened my understanding of Tibet and the resilience of its people. It was an honor to serve under an organization that extends compassion beyond cultural boundaries.​",
+            "image": "/assets/team-images/Puga Buchi.png"
+      },
+      {
+            "id": 33,
+            "name": "Tsering Sangmo",
+            "role": "TCS Volunteer, India",
+            "message": "During my 20-day volunteer experience (2023), which was undertaken during my one-month college break before the start of my internship, I was fortunate to gain one of the most enriching and meaningful experiences of my life. One of the highlights of my volunteer work was spending a week in the physiotherapy department. This allowed me to apply my hands-on skills and gain valuable patient exposure enhancing both my understanding of patient care and my clinical competence. Along with working in the clinic, I also participated in fund raising activities such as selling lottery tickets and other items to support TCS’s mission. Participating in the 'Meal for the Invisible' food distribution programme stands out as a very significant and unforgettable part of my time with TCS. This program provides meals to underprivileged and often overlooked individuals in the community, those who are rarely seen or acknowledged by society. I was deeply impressed by the incredibly warm, supportive, and inclusive environment fostered by the entire TCS team. The director, manager, and staff were consistently respectful, approachable, and open to our ideas. They ensured that all volunteers felt comfortable, valued, and encouraged, turning what could have been a simple volunteering experience into a truly memorable journey.",
+            "image": "/assets/team-images/Tsering Sangmo.png"
+      },
+      {
+            "id": 34,
+            "name": "Pema Genjan Sona",
+            "role": "TCS Volunteer, India",
+            "message": "Last December (2023–2024), I had the incredible opportunity to volunteer in Bodh Gaya as part of the Tibetan Cancer Society. The experience was deeply humbling and spiritually enriching, especially since Bodh Gaya is one of the holiest sites in Buddhism.From the moment I stepped into the temple area, I was struck by the calm, welcoming atmosphere. As a volunteer, my primary responsibility was to assist attendees who had come to listen to the teachings of His Holiness. We served free meals to the 'invisible'—individuals often overlooked—regardless of their religion or background. I also contributed to the medical camp, where we provided free health check-ups.What touched me most was the profound sense of equality and selfless service. There were no distinctions of class, caste, or creed. The concept of 'seva' (selfless service) wasn't just discussed—it was actively practiced. I formed strong bonds with my volunteer team, Mahayana, with whom I spent over half a month. Together, we created cherished memories that I will always hold dear.I am especially grateful to the director of the Tibetan Cancer Society, Gen Tsultrim la. His positive energy and guidance inspired us to work harder and serve better.",
+            "image": "/assets/team-images/Pema Genjan Sona.png"
+      },
+      {
+            "id": 35,
+            "name": "Tenzin Seldon",
+            "role": "TCS Volunteer, India",
+            "message": "I extend my sincere congratulations to the Tibetan Cancer Society (TCS) on reaching this significant 10-year milestone. Wishing the entire TCS family continued success in all their endeavors.I joined the TCS Bodh Gaya Health Camp on December 28, 2022, traveling from Varanasi. Typically, I haven't been very active in volunteering for social services due to personal preferences. However, I'm truly grateful that the TCS program was my first experience stepping out of my comfort zone. I would like to thank Cho Tsultrim la and the TCS family for creating such a friendly and enjoyable atmosphere for all the Varanasi students.During the camp, I spent my days registering patients, selling sweaters, and helping serve food to those in need during lunch. Witnessing how hoodies were sold to raise funds made me realize the struggles of my Tibetan brothers and sisters who sell sweaters for their livelihood. I also had the pleasure of making new friends like Leki and Cho Nortse la. I must mention that all the nurses and volunteers were not only highly skilled but also incredibly kind to us. The TCS family was filled with positive attitudes and clearly carries a vision for a better society.",
+            "image": "/assets/team-images/Tenzin Seldon1.png"
+      },
+      {
+            "id": 36,
+            "name": "Dechen  Lhamo",
+            "role": "TCS Volunteer, India",
+            "message": "My name is Dechen Lhamo, and I have been associated with the Tibetan Cancer Society (TCS) for the past six years, contributing both as a volunteer and as a staff member. My journey with TCS commenced shortly after the first wave of COVID-19, when I had the opportunity to participate in the Meals for the Invisible (MFI) project. This initiative, aimed at providing meals to those in need, marked the beginning of my active involvement with the society.​Reflecting on this period, I consider my engagement with TCS as one of the most fulfilling decisions I've made. It allowed me to contribute meaningfully to my community and introduced me to remarkable individuals who have become lifelong friends. The experiences and memories I've gathered during this time are treasures I will cherish forever.​ I learned that genuine service transcends personal gains and is rooted in compassion, empathy, and a deep commitment to uplift others. This understanding has profoundly influenced my perspective on community service and personal growth. I am profoundly grateful to TCS for the impactful work they've accomplished and for the positive changes they've brought to countless lives. Being part of such a dedicated organization fills me with immense pride.",
+            "image": "/assets/team-images/Dechen  Lhamo1.png"
+      },
+      {
+            "id": 37,
+            "name": "Tenzin Rigzin",
+            "role": "TCS Volunteer, Canada",
+            "message": "I never imagined that volunteering could bring such a transformative and beautiful experience into my life. Volunteering at TCS allowed me to develop and hone essential life skills, including communication, adaptability, problem-solving, and leadership. Whether it was speaking with patients, coordinating with fellow volunteers, or helping manage the logistics of health camps, each moment pushed me to grow and step into a better version of myself. But beyond skill-building, it was the people who made this journey unforgettable. I had the opportunity to meet some of the most compassionate and inspiring individuals.I was fortunate to be part of three health camps organized by TCS, where each one is unique and impactful in its own way. The first was in Northeast India in November 2023, followed by Bodhgaya in December 2023, and then Dharamsala in February 2024. Each location brought its own set of challenges and rewards, but the sense of purpose and unity among the volunteers remained constant throughout. This journey will forever hold a special place in my heart. What started as volunteering turned into a journey of becoming, growing, and discovering the true joy of serving others",
+            "image": "/assets/team-images/Tenzin Rigzin.png"
+      },
+      {
+            "id": 38,
+            "name": "Tenzin Sherap",
+            "role": "TCS Volunteer, India",
+            "message": "I volunteered in two of the Cancer Society’s initiatives focused on health awareness and the fight against cancer. The time I spent in Bodh Gaya and Dharamshala was among the most enriching social experiences I've had. I look forward to volunteering again wherever possible and am truly proud to be part of this community.The people I met within the organization were welcoming and genuinely passionate about the cause. The leadership—from the president to the senior members—was well-organized and made integration seamless, making me feel as though I had always been a part of the team.Volunteering felt like an opportunity for personal growth, as I gained much more than I contributed. Assisting those in genuine need and being part of such a noble cause taught me to appreciate life more deeply and underscored the significance of having the ability to help others.One memorable night, during a long journey, I had the chance to converse with the founder about the origins of the organization. Learning how an idea and aspiration transformed into a reputable community that continues to inspire was truly enlightening. For that, I extend my heartfelt thanks to the President.Congratulations to the Tibetan Cancer Society on reaching its 10th anniversary. I commend all that has been achieved in this decade and wish continued success in future endeavors. I hope to be part of these developments whenever possible.",
+            "image": "/assets/team-images/Tenzin Sherap.png"
+      },
+      {
+            "id": 39,
+            "name": "Kunga Namdol",
+            "role": "TCS Volunteer Nurse, Canada",
+            "message": "The 2023 Northeast Health Camp was my first experience of such a medical camp, and I was truly thankful for the many opportunities afforded to me by TCS during my time there.It was a great learning experience—whether working with my team or assisting in community healthcare outreach. The opportunity made possible by TCS was unforgettable and reaffirmed for each of us that we were on the right career path. The two weeks spent with TCS were among the most memorable and one of the best decisions I made as a new graduate nurse. I was especially grateful to my team for making this journey so special. I will surely miss this experience—thank you, everyone!",
+            "image": "/assets/team-images/Kunga Namdol.png"
+      },
+      {
+            "id": 40,
+            "name": "Jamyang Dolma",
+            "role": "TCS Staff Nurse, India",
+            "message": "I’m truly grateful for the chance to volunteer at the Bodh Gaya health camp. Presently, I’m working as a staff nurse at TCS. During that period, I learned so much and met many wonderful people whom I deeply admire.​Thank you for giving me this opportunity to help. I appreciate Cho Tsultrim la for believing in my abilities and dedication. I’m so grateful for the chance to contribute. Your trust means the world to me. I feel energized and motivated by this opportunity. It means a lot to me, and I am committed to giving my best.Thank you for allowing me to be a part of something so meaningful. I’m honored to be part of the team.",
+            "image": "/assets/team-images/Jamyang Dolma.png"
+      },
+      {
+            "id": 41,
+            "name": "Damchin Yangzom",
+            "role": "TCS Volunteer, India",
+            "message": "As part of my Master's program, I had the opportunity to complete a two-month internship at the Tibetan Cancer Society in 2023. During this time, I learned a lot—not just about the technical aspects of cancer care and prevention, but also about the importance of community service and compassion. The organization is doing remarkable work for the Tibetan community by supporting cancer patients and raising awareness about early detection. One initiative that truly inspired me was the MFI – Meals for the Invisible, which provides free meals to underprivileged people, reflecting the organization’s deep commitment to humanity and care beyond medical support. It was a great experience, and I’m grateful to have been part of their work in helping the Tibetan community.",
+            "image": "/assets/team-images/Damchin Yangzom.png"
+      },
+      {
+            "id": 42,
+            "name": "Tenzin Bhuti",
+            "role": "TCS Volunteer Nurse, Canada",
+            "message": "Tashi Delek!!! My name is Tenzin Bhuti and I have volunteered at Tibetan Cancer Society as a nurse for four memorable months. I participated in 2 major health camps during these amazing months, and I realised I do not know a lot of things. As the time goes, team members started to feel like a family and we grew closer than ever. They gave me countless memories and enlightened me with their experiences and knowledge. Growing up in TCV and now a nurse, I have always felt a strong desire to repay their kindness and compassion towards me. And being a part of Tibetan Cancer Society was the best way to contribute them. Thank you my team mates for your support and hard work!",
+            "image": "/assets/team-images/Tenzin Bhuti.png"
+      },
+      {
+            "id": 43,
+            "name": "Tenzing Norden",
+            "role": "TCS Volunteer Nurse, India",
+            "message": "The health camp on cancer prevention organized by the Tibetan Cancer Society, which included H. pylori examinations, consultations with specialist doctors, and numerous volunteer nurses led by our Sir Tsultrim la, was truly beneficial to many rural communities. It was a wonderful experience and an effective primary prevention initiative conducted by the Tibetan Cancer Society at the Manali–Tsopema health camp. This health camp was an important and crucial step toward preventing cancer in our society.During the camp, all team members were very hardworking and sincere in their efforts. I hope that this teamwork will bring significant changes in cancer prevention within our community in future.",
+            "image": "/assets/team-images/Tenzing Norden.png"
+      },
+      {
+            "id": 44,
+            "name": "Dunkyi",
+            "role": "TCS Volunteer, India",
+            "message": "My name is Dunkyi. I had heard about the Tibetan Cancer Society many times and was fortunate to have the opportunity to volunteer with them for an entire day during my summer vacation. That day happened to be a full moon day (Tsepa 15), which made the experience even more special.It was my friends, who study in Delhi, who recommended I volunteer with the society on that day to help distribute meals for the invisible. That day turned out to be one of the most memorable and meaningful days of my life. Their work ethic and team spirit were truly impressive. Even the head, Cho-la, was exceptionally kind, approachable, and responsible. I genuinely enjoyed the experience and remain deeply grateful to the Tibetan Cancer Society for allowing me to be part of their noble efforts..",
+            "image": "/assets/team-images/Dunkyi.png"
+      },
+      {
+            "id": 45,
+            "name": "Chemet Gyalson",
+            "role": "TCS Volunteer, India",
+            "message": "Volunteering with Tibetan cancer society was profoundly humbling experience for me. Each food distribution event, where we handed out meals to grateful families, filled me with a mix of humility and purpose.This experience strengthened my commitment to community service.Thank you team TCS.",
+            "image": "/assets/team-images/Chemet Gyalson.png"
+      },
+      {
+            "id": 46,
+            "name": "Dawa Dolma",
+            "role": "TCS Volunteer Nurse, India",
+            "message": "Volunteering at the Cancer Society Organization was a truly rewarding experience. I had the opportunity to be part of the Meals for Invisible (MFI) program, which focuses on providing nutritious meals to people living in slum areas who are often overlooked.​This experience taught me the power of kindness and how small actions can make a significant impact. I'm grateful for the opportunity and inspired to continue serving my community.",
+            "image": "/assets/team-images/Dawa Dolma.png"
+      },
+      {
+            "id": 47,
+            "name": "Tashi Dema",
+            "role": "TCS Volunteer, India",
+            "message": "During my time volunteering at the Tibetan Cancer Society, I had the opportunity to witness the strength and resilience of patients and their families. It was a truly humbling experience that deepened my compassion and commitment to care. Being part of a team that offered support, comfort, and hope to those affected by cancer was both inspiring and rewarding. This experience has left a lasting impact on me and strengthened my dedication to making a difference in the lives of others. It was a time worth sharing with people who share the same thoughts. It's rare to see people like Cho Tsultrim la going to great lengths to help others when they need it most. I am grateful to be included in this team and look forward to many opportunities to volunteer and learn from the experience.​",
+            "image": "/assets/team-images/Tashi Dema.png"
+      },
+      {
+            "id": 48,
+            "name": "Tsering Tsomo",
+            "role": "TCS Volunteer Nurse, India",
+            "message": "I deeply appreciated the Tibetan Cancer Society's profound humanitarian work within the community and its efforts in initiating health camps. I looked forward to witnessing more enthusiastic initiatives that thrived on determination and voluntary support. These efforts significantly raised awareness about the essence of health and provided free medical treatment in remote areas.​It was essential to acknowledge the priority of health and to educate the younger generation about healthcare. Personally, I gained valuable exposure by dealing with a variety of patients and cherished the quality time spent collaborating with colleagues in a team setting.",
+            "image": "/assets/team-images/Tsering Tsomo.png"
+      },
+      {
+            "id": 49,
+            "name": "Shayja Dasam",
+            "role": "TCS Volunteer, Nepal",
+            "message": "In today’s Geopolitics shipment, where the war on tariffs, trade, and land is at stake, it is possible to have human-made disasters like Covid 19 again. And to rise from those disasters; organization such as the Tibetan Cancer Society is needed. I saw them bringing life to many hopeless while standing aside and working as volunteer.",
+            "image": "/assets/team-images/Shayja Dasam.png"
+      },
+      {
+            "id": 50,
+            "name": "Pema Yeshi",
+            "role": "TCS Volunteer, India",
+            "message": "I would like to express my sincere gratitude for the opportunity I had to serve at the Tibetan Cancer Society (TCS). It was a valuable and enriching experience, and I truly appreciated the trust and confidence placed in me.​Thank you once again for the chance to contribute. I look forward to any future opportunities to work together.​",
+            "image": "/assets/team-images/Pema Yeshi.png"
+      },
+      {
+            "id": 51,
+            "name": "Tenzing Choden Bhutia",
+            "role": "TCS Volunteer, India",
+            "message": "Warmest congratulations to The Tibetan Cancer Society, Director Cho Tsultrim La, and the whole team on reaching an incredible milestone of ten years of service.My experience as a volunteer with the Tibetan Cancer Society (TCS) during the 2023-2024 Bodh Gaya Health Camp & MFI Program was very memorable. Having traveled solo to Bodh Gaya, I initially felt a bit anxious since I only knew Cho Norbu Tsering La, who kindly allowed me to participate in the program. I found myself completely alone in an unfamiliar environment, but that sensation quickly faded when the first people I encountered.What really impressed me was how TCS cultivated a profound sense of togetherness, encouraging collaboration and togetherness. We were divided into smaller teams, each responsible for various activities—selling raffle tickets, operating fundraising stalls, and overseeing merchandise. Meanwhile, the nurses, doctors, and therapists were completely focused on assisting patients at the health camp. Each person did their role with utmost sincerity, and the enthusiasm was motivating.One of the most touching aspects of the experience was the MFI program—the noble deed of providing meals to those in need. We assisted in meal distribution EVERY single day!—without fail...",
+            "image": "/assets/team-images/Tenzing Choden Bhutia.png"
+      },
+      {
+            "id": 52,
+            "name": "Chenga Tsering Lepcha",
+            "role": "TCS Volunteer, India",
+            "message": "Volunteering with the Tibetan Cancer Society (TCS) has been one of the most rewarding experiences in my life. I had the privilege of contributing to several occasions and events under the guidance of coordinator Norbu Tsering, whose dedication and leadership made each experience enriching and impactful. TCS’s mission to provide free meals and essential medical healthcare, specifically to those affected by cancer, is not only admirable but deeply necessary.I have primarily participated in the free meal distribution initiatives, and to be honest, it remains one of the most impactful volunteering experiences of my life. Whether it was providing hot meals during the coldest December days or serving during the intense heat of Saka Dawa and Delhi summers, each moment was profoundly enriching and memorable. it was always deeply rewarding.Through my time with the organization,i witnessed firsthand the compassion, care, and tireless efforts that go into supporting individuals and families during their most difficult times. Being a small part of this journey has given me a deeper appreciation for the strength of community and the power of giving back. I’m truly grateful to be associated with TCS and look forward to continuing to support their incredible work in any way I can.Thank you TCS for the support and encouragement.",
+            "image": "/assets/team-images/Chenga Tsering Lepcha.png"
+      },
+      {
+            "id": 53,
+            "name": "Dawa Choedon",
+            "role": "TCS Volunteer, India",
+            "message": " I am truly grateful for the opportunity to share my experience through this magazine. My journey with the Tibetan Cancer Society (TCS) began in 2019, when I first heard about the organization through my friends. What drew me in was their compassionate vision—helping those battling cancer who cannot afford treatment.As a student at the time, I didn’t have much to offer, but I knew I wanted to contribute in any way I could. Volunteering with TCS gave me that chance—to serve my people.I had the opportunity to participate in health camps, where I not only contributed but also learned so much—from the practical aspects of organizing medical outreach to the emotional strength of those we served.As a student, I felt empowered knowing I was part of something meaningful. I am especially thankful to the founder, Gen Tsultrim, and all the members of TCS for welcoming me with open arms and treating me like family. Working with them was one of the best experiences of my life. I not only gained valuable insights and experience but also formed friendships and made memories that I will cherish forever.",
+            "image": "/assets/team-images/Dawa Choedon.png"
+      },
+      {
+            "id": 54,
+            "name": "Tenzin Woeser Shasur",
+            "role": "Ex-Staff Nurse, India",
+            "message": "My role as a Medical assistant in TCS South Branch placed me at the intersection of clinical care, emotional support, and administrative coordination.In this position, I worked closely with oncology specialists, surgeons, pharmacists, and other multidisciplinary teams at Tibetan Cancer Society to ensure that each patient received timely, coordinated, and personalized care. I ensured that all aspects of the treatment were scheduled efficiently, identifying hospitals and that patients were well-informed about every step of their journey. Patient education was a key part of my role. With co-ordination of my Director , I provided clear and compassionate explanations of treatment procedures, possible side effects, AND dietary recommendations. I also offered support to both patients and their families, helping them cope with the psychological challenges of a cancer diagnosis. I was also responsible for maintaining meticulous documentation and coordinating with insurance providers when needed........This experience has not only strengthened my social service and coordination skills but has also reinforced my passion for nursing. It has taught me the importance of empathy, patience, and resilience in helping patients and their families navigate one of the most difficult journeys of their lives. I am grateful to the Tibetan Cancer Society for giving me an opportunity to work and serve my community with greatest pride.",
+            "image": "/assets/team-images/Tenzin Woeser Shasur.png"
+      },
+      {
+            "id": 55,
+            "name": "Afroj Tanveer",
+            "role": "TCS Volunteer, India",
+            "message": "I hope this message finds you well. I wanted to take a moment to sincerely thank you for the incredible opportunity to volunteer with the Tibetan Cancer Society (TCS). The experience has been deeply rewarding, and I’m truly inspired by the impactful work your organization does in distributing food and toys with the help of TCS.​From distributing toys to children with cancer at AIIMS, I witnessed firsthand the dedication, passion, and tireless effort your team pours into making a difference. It’s inspiring to see how TCS turns compassion into action, and I feel honored to have contributed, even in a small way, to your mission.​This experience has not only allowed me to grow personally but has also reinforced my belief in the power of collective effort. The warmth and guidance from your team made every moment meaningful, and I’m leaving with memories (and skills!) I’ll carry forward.​i extend my gratitude to everyone involved. The world needs more organizations like yours, and I’m committed to continuing to support your efforts in any way I can. Thank you again for letting me be part of something so transformative.",
+            "image": "/assets/team-images/Afroj Tanveer.png"
+      },
+      {
+            "id": 56,
+            "name": "Tenzin Youdon",
+            "role": "TCS Volunteer, India",
+            "message": " I volunteered with the Tibetan Cancer Society for the first time in 2018, not really knowing what I was getting myself into. I went to Dharamshala to raise donations for cancer patients. The funds may have been limited, but the experience was overwhelming in the best way. I found myself literally shouting out loud, pleading with people for support—and that’s when I think I truly mastered the art of not caring what others thought of me.More importantly, that’s when I realized how powerful and fulfilling it is to do something for someone else.During health camps, I learned how to connect with people. Listening to their stories while they waited for their turn was magical—it taught me patience and empathy in ways I never imagined.Fast forward to 2022, when I volunteered for 'Meals for Invisible'—an experience that deepened my understanding of teamwork and gratitude. It made me realize just how privileged I am, and I carry that lesson with me every day.I’m incredibly thankful to the Tibetan Cancer Society for these life-shaping opportunities. Helping others remains one of the most cherished memories of my college days in Delhi.Wishing the Tibetan Cancer Society a heartfelt congratulations on its 10th anniversary. May you continue to inspire, uplift, and provide platforms for students like me to explore, learn, and grow.",
+            "image": "/assets/team-images/Tenzin Youdon.png"
+      },
+      {
+            "id": 57,
+            "name": "Tenzin Dawoe",
+            "role": "TCS Volunteer, India",
+            "message": "I would like to share my experience of distributing free meals to the poor and helpless people through the Tibetan Cancer Society. It was a truly humbling and eye-opening experience—a moment that touched my heart deeply and one I will carry with me for a long time.​On the day I participated in this noble work, I felt a mixture of emotions. At first, I was a little nervous, unsure of how the people would react or whether I would be able to truly help. Many people had gathered—some old, some young, and many sick—all in need. As I handed out the meals, I saw the relief and genuine smiles on their faces. Some of them were thankful, while others just smiled after receiving their pack of warm food.​Working with the Tibetan Cancer Society made me realize that helping others, even in small ways, can create real change. The organization not only provided food but also dignity and kindness to those who are often forgotten by society. Being a small part of that effort was incredibly fulfilling. It made me realize how fortunate I am and how important it is to use my time and energy to help those who are struggling.​By the end of the day, I felt physically tired but emotionally fulfilled. I am truly grateful to the Tibetan Cancer Society for giving me the opportunity to be part of this meaningful work, and I look forward to contributing more in the future.",
+            "image": "/assets/team-images/Tenzin Dawoe.png"
+      },
+      {
+            "id": 58,
+            "name": "Tenzing Chosang",
+            "role": "TCS Volunteer, India",
+            "message": "When I first joined the Tibetan Cancer Society as a volunteer during Saka Dawa in 2023, I had no idea how profoundly this experience would shape my life. That first day, June 4th,2023, marked the beginning of a transformative journey, evolving from merely a holiday away from my books into a day etched in my heart. It became a lesson in selflessness, community, and the quiet joy of giving. I had the incredible opportunity to be part of Team A: Preparation, Packing, and Loading for the Meals for Invisible program. Each early morning started with a sense of purpose as I arrived at the community kitchen by 9 a.m., ready to roll up my sleeves. Working alongside a group of passionate volunteers, we prepared and packed over 2,000 meals. It was exhausting, no doubt, but it was the kind of tiredness that leaves your body aching yet fills your heart with joy. There’s something gratifying about knowing that every grain of rice and every carefully packed meal is destined to nourish someone who might otherwise go to bed hungry. It’s a beautiful reminder of the impact we can make when we come together for a common cause.......As a student at Delhi University, I often find my time stretched thin, with only holidays forvolunteering. Yet, those days have never felt like a burden to me. They have become themoments I eagerly anticipate the most...",
+            "image": "/assets/team-images/Tenzing Chosang.png"
+      },
+      {
+            "id": 59,
+            "name": "Dorjee Dolma",
+            "role": "TCS Volunteer, India",
+            "message": "Better to wear out than to rust out. I have volunteered a few times, and celebrating this success is a testament to the members' hard work, dedication, and teamwork. May this celebration serve as a reminder of our collective strength and a source of inspiration for future endeavors. Cheers to our success and to many more accomplishments together.Thank you, TCS, for allowing me to be a part of it.",
+            "image": "/assets/team-images/Dorjee Dolma.png"
+      },
+      {
+            "id": 60,
+            "name": "Yangchen Dawa",
+            "role": "TCS Volunteer, India",
+            "message": "Working with Team TCS was a truly enriching experience. I gained valuable insights and deeply appreciate the meaningful connections I made along the way. I'm sincerely thankful for the opportunity to contribute to such a dedicated and compassionate organization. The experience not only enhanced my professional growth but also reinforced the importance of teamwork and community service. I look forward to future opportunities to collaborate and support TCS's impactful mission.",
+            "image": "/assets/team-images/Yangchen Dawa.png"
+      },
+      {
+            "id": 61,
+            "name": "Tashi Choetso",
+            "role": "TCS Volunteer Nurse, India",
+            "message": "As part of my volunteer work with the Tibetan Cancer Society, I am truly grateful for the invaluable experience I gained. It taught me how to interact with many different people and how to communicate with calmness and compassion.Volunteering in this field has made me proud to be involved in humanitarian work, as His Holiness the Dalai Lama always emphasizes the importance of service to others. I feel deeply thankful to this non-profit community and to every individual I had the privilege of meeting along the way.I began this journey in June 2022, continuing from Manali to Tso Pema, working closely with the Tibetan society.Thank you so much to everyone who was part of this meaningful experience.",
+            "image": "/assets/team-images/Tashi Choetso.png"
+      },
+      {
+            "id": 62,
+            "name": "Dickey Dolkar",
+            "role": "TCS Volunteer, India",
+            "message": "I had the opportunity to volunteer with the Tibetan Cancer Society for a few months, and it was a truly meaningful experience. Although I couldn’t volunteer consistently due to personal commitments, even the short time I was involved gave me a deep sense of satisfaction. The team is incredibly kind, supportive, and always ready to help those in need, especially the sick and underprivileged. I’m grateful to have been part of such a noble cause, and I encourage everyone to contribute in any way they can—whether through time, donations, or support.",
+            "image": "/assets/team-images/Dickey Dolkar.png"
+      },
+      {
+            "id": 63,
+            "name": "Tenzin Tashi",
+            "role": "TCS Volunteer, India",
+            "message": "I first came to know about the Tibetan Cancer Society during the COVID-19 pandemic. I used to watch live sessions on Instagram led by Mr. Tsultrim Dorjee la.Their fearless work for the community left a deep impression on me. I always wanted to be a part of it, and luckily, during my college holiday gap year, I got the chance to volunteer. It was a wonderful experience that taught me a lot and truly inspired me through the selfless work they do.One of the most touching initiatives is the “Meal for the Invisible” program, where I witnessed how a simple, thoughtfully prepared meal can bring comfort and dignity to those who are often overlooked. It’s not just about food; it’s about care, connection, and reminding people that they are seen and valued.",
+            "image": "/assets/team-images/Tenzin Tashi.png"
+      },
+      {
+            "id": 64,
+            "name": "Lobsang Choedon",
+            "role": "TCS Volunteer Nurse, India",
+            "message": "It was such a memorable experience working in the organization as a nurse volunteer, covering health camps around Ladakh and the Northeast over two years. I truly appreciate the organization for the commendable work done each day and the dedication everyone puts in, and I congratulate the Tibetan Cancer Society on their 10 years of service. I would like to extend my gratitude to the lead, Tsultrim Dorjee, for the opportunity given to try and serve the Tibetan community through the health camps.Thank you Team TCS",
+            "image": "/assets/team-images/Lobsang Choedon.png"
+      },
+      {
+            "id": 65,
+            "name": "Tenzin Lhawang",
+            "role": "TCS Volunteer, India",
+            "message": "Tashi Delek everyone, This is Tenzin Lhawang here to congratulate all the team members of the Tibetan Cancer Society, especially Mr. Tsultrim Dorji la, the founder and director of the Tibetan Cancer Society.It was truly great working with you all — we had so much fun and gained valuable experience within a short period of time. Thank you for giving us the opportunity to give back to the community.I can’t believe it’s been 10 years already — hats off to you! You have accomplished what you set out to do, and we know how passionate and hardworking you were back then. Seeing where you are today makes us so proud. It was an honor working with you, and we will always look forward to seeing you achieve even greater goals, continuing to help our Tibetan community in every way possible.We know, because we have seen it firsthand, how difficult it is to change people’s thoughts and habits. Yet you persisted. Today, providing awareness and free check-ups — especially when people were initially scared even to get themselves checked — is a huge achievement. Now, seeing that you have even helped people beat cancer is truly a big, big thing.I really appreciate Mr. Tsultrim la for never giving up. Best wishes to you — may you continue achieving your dreams!",
+            "image": "/assets/team-images/Tenzin Lhawang.png"
+      },
+      {
+            "id": 66,
+            "name": "Pasang lhamo",
+            "role": "TCS Volunteer Nurse, India",
+            "message": "Hi, Tashi Delek. My name is Pasang Lhamo, and I am currently working as a nurse at TPHC Mainpat. I am writing this to congratulate Mr. Tsultrim Dorjee and the team of the Cancer Society for completing a successful ten years and working so hard.As for me, I have been a member of the Cancer Society since my college days in the year 2016, and I know this organization does the best job in terms of health awareness as well as providing financial support for those in need.So, congratulations to the current team members and the people who have been part of this organization since the beginning too. I hope you all can continue working even more to provide better healthcare in our society.Congratulations to all members, and especially to Mr. Tsultrim la, for not giving up during the difficult times and bringing this organization to a better place in our society.",
+            "image": "/assets/team-images/Pasang lhamo.png"
+      },
+      {
+            "id": 67,
+            "name": "Norbu Tsering",
+            "role": "Ex-TCS Program Manager, India",
+            "message": "It has been a true honour and privilege to be part of the Tibetan Cancer Society (TCS) — a UICC-registered NGO — as an executive member in administrative and program management. From March 2022 to 2024, this period has been one of the most professionally rewarding journeys of my life.Under the inspiring leadership of Mr. Tsultrim Dorjee, whose vision for innovative and sustainable growth guided every step we took, I had the opportunity to actively contribute to grassroots planning, strategic development, and community-centered initiatives. Together, we witnessed TCS grow from a single branch to, today, three active branches, significantly expanding our mission.A highlight of my tenure was successfully leading and reporting on over 20 registered projects and grants, including significant initiatives funded by USAID–The Tibet Fund. I had the opportunity to organise and manage medical health camps, prepare documentation and proposals, coordinate fundraising events, and recruit and lead dozens of staff and hundreds of volunteers alongside the TCS Director. Beyond grants, I played a hands-on role in various field programs — notably Meals for Invisible, through which we distributed meals to lakhs of people every year.My work took me to some of the most remote and network-deprived corners of India and Nepal. Travelling from state to state, I worked alongside a dedicated network of nurses, doctors, managers, philanthropists, and stakeholders — an experience that was both humbling and deeply inspiring. Each challenge taught me resilience, adaptability, and the immense value of community-driven service.The Tibetan Cancer Society is not just an NGO — it is a testament to what collective vision, fieldwork, and tireless effort can achieve. Having walked hand-in-hand with its mission, staff, and leadership, I can confidently say it stands as one of the most action-oriented and result-driven Tibetan organisations I have known. I will forever carry pride in being part of this remarkable network and its enduring legacy.",
+            "image": "/assets/team-images/Norbu Tsering.png"
+      }
+]
