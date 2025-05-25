@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone, HelpCircle, Mail, Heart, Search } from 'lucide-react';
+import HelpModal from './HelpModal';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [helpModalOpen, setHelpModalOpen] = useState(false);
+  const [contactInfo, setContactInfo] = useState({
+    phone: '',
+    email: ''
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +26,23 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  
+  useEffect(() => {
+    const fetchContactInfo = async () => {
+      try {
+        const response = await fetch('/assets/data/footer.json');
+        const data = await response.json();
+        setContactInfo({
+          phone: data.contact.phone,
+          email: data.contact.email
+        });
+      } catch (error) {
+        console.error('Error fetching contact info:', error);
+      }
+    };
+
+    fetchContactInfo();
+  }, []);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -28,81 +51,131 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 flex flex-col justify-center transition-all duration-300 ${
-        scrolled ? 'bg-white/80 backdrop-blur-md border-b border-border shadow-sm' : 'bg-transparent'
+        scrolled ? 'bg-white shadow-sm' : 'bg-white'
       }`}
-      style={{marginTop: '0.75rem'}}
     >
-      <div className="w-[96%] bg-blue-100 border-2 border-gray-200 rounded-2xl shadow-xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4 md:py-6" style={{ fontSize: '1.5rem' }}>
-          <div className="flex items-center">
-            {/* Logo Image */}
-            <img
-              src="/assets/logo.jpeg"
-              alt="Tibetan Cancer Society Logo"
-              className="w-10 h-10 md:w-14 md:h-14 object-cover rounded-full mr-2 md:mr-4 border-2 border-blue-300 shadow-inner bg-white"
-            />
-            <Link to="/" className="text-xl md:text-3xl font-display font-bold tracking-tight text-primary truncate">
-              Tibetan Cancer Society
-            </Link>
+
+
+      {/* Main Navigation */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <div className="flex items-center">
+              {/* Logo */}
+              <Link to="/" className="flex items-center">
+                <img
+                  src="/assets/logo.jpeg"
+                  alt="Tibetan Cancer Society Logo"
+                  className="h-12 w-12 object-cover rounded-full mr-3 border border-blue-200"
+                />
+                <span className="text-xl font-bold text-primary">Tibetan Cancer Society</span>
+              </Link>
+            </div>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
+              <Link to="/about" className="font-medium hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">
+                About Us
+              </Link>
+              <Link to="/programs-services" className="font-medium hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">
+                Programs & Services
+              </Link>
+              <Link to="/testimonials" className="font-medium hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">
+                Testimonials
+              </Link>
+              <Link to="/team" className="font-medium hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">
+                Our Team
+              </Link>
+              <Link to="/contact" className="font-medium hover:text-primary transition-colors py-2 border-b-2 border-transparent hover:border-primary">
+                Contact
+              </Link>
+              <button className="text-gray-600 hover:text-primary" aria-label="Search">
+                <Search className="h-5 w-5" />
+              </button>
+            </nav>
+
+            {/* Mobile Menu Button */}
+            <div className="flex items-center md:hidden">
+              <Link to="/donate" className="flex items-center bg-red-600 text-white hover:bg-red-700 px-3 py-1.5 rounded-md mr-4">
+                <Heart className="h-3.5 w-3.5 mr-1" />
+                Donate
+              </Link>
+              <button
+                className="text-gray-600"
+                onClick={toggleMobileMenu}
+                aria-label="Toggle menu"
+              >
+                {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
-          <nav className="hidden md:flex space-x-10 ml-4">
-            <Link to="/about" className="text-xl font-semibold hover:text-primary transition-colors">
-              About
-            </Link>
-            <Link to="/programs-services" className="text-xl font-semibold hover:text-primary transition-colors">
-              Programs & Services
-            </Link>
-            <Link to="/team" className="text-xl font-semibold hover:text-primary transition-colors">
-              Team
-            </Link>
-            <Link to="/donate" className="text-xl font-semibold hover:text-primary transition-colors">
-              Donate
-            </Link>
-          </nav>
-          <button
-            className="md:hidden"
-            onClick={toggleMobileMenu}
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
         </div>
       </div>
       
+      {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed top-[5.5rem] left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg z-50 rounded-b-lg border-x border-b border-gray-200 mx-2">
-          <div className="px-6 py-6 space-y-6 flex flex-col">
+        <div className="md:hidden fixed top-[6.5rem] left-0 right-0 bg-white shadow-lg z-50 border-t border-gray-200">
+          <div className="px-4 py-2 space-y-1 divide-y divide-gray-200">
             <Link 
               to="/about" 
-              className="block text-lg font-medium hover:text-primary transition-colors py-2"
+              className="block py-3 font-medium hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
-              About
+              About Us
             </Link>
             <Link 
               to="/programs-services" 
-              className="block text-lg font-medium hover:text-primary transition-colors py-2"
+              className="block py-3 font-medium hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
               Programs & Services
             </Link>
             <Link 
-              to="/team" 
-              className="block text-lg font-medium hover:text-primary transition-colors py-2"
+              to="/testimonials" 
+              className="block py-3 font-medium hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Team
+              Testimonials
             </Link>
             <Link 
-              to="/donate" 
-              className="block text-lg font-medium hover:text-primary transition-colors py-2"
+              to="/team" 
+              className="block py-3 font-medium hover:text-primary"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Donate
+              Our Team
             </Link>
+            <Link 
+              to="/contact" 
+              className="block py-3 font-medium hover:text-primary"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
+            <Link 
+              to="/honor" 
+              className="block py-3 font-medium hover:text-primary"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Give In Honor & Memorial
+            </Link>
+            <div className="py-3">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  className="w-full py-2 pl-3 pr-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                />
+                <button className="absolute inset-y-0 right-0 flex items-center px-3 text-gray-500">
+                  <Search className="h-5 w-5" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}
+      
+      {/* Help Modal */}
+      <HelpModal isOpen={helpModalOpen} onClose={() => setHelpModalOpen(false)} />
     </header>
   );
 };

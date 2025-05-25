@@ -56,40 +56,42 @@ const Donate = () => {
           </div>
 
           <div className="bg-gray-50 p-4 md:p-8 rounded-lg shadow-sm mb-6 md:mb-8">
-            <div className="flex flex-col items-center mb-6 md:mb-8">
-              <div className="w-48 h-48 md:w-64 md:h-64 bg-white p-3 md:p-4 rounded-lg shadow-sm mb-3 md:mb-4">
-                {/* Actual QR code image */}
-                <img
-                  src="/assets/QR.jpeg"
-                  alt="UPI QR Code for donations"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <p className="text-xs md:text-sm text-muted-foreground">Scan to donate via UPI</p>
-            </div>
-
             <div className="space-y-4 md:space-y-6">
               <div>
-                <h3 className="text-base md:text-lg font-semibold mb-2">Bank Account Details</h3>
-                <div className="bg-white p-3 md:p-4 rounded-lg space-y-1 md:space-y-2 text-sm md:text-base">
-                   {/* Render fetched bank details */}
+                <h3 className="text-xl font-semibold mb-4">Bank Account Details</h3>
+                <div className="bg-white p-6 rounded-lg space-y-3 text-base shadow-sm">
                   {bankInfo ? (
                     <>
-                      <p><strong>Account Name:</strong> {bankInfo.accountName}</p>
-                      <p><strong>Account Number:</strong> {bankInfo.accountNumber}</p>
-                      <p><strong>Bank Name:</strong> {bankInfo.bankName}</p>
-                      <p><strong>IFSC Code:</strong> {bankInfo.ifscCode}</p>
-                      <p><strong>Branch:</strong> {bankInfo.branch}</p>
+                      <p className="flex justify-between border-b pb-2">
+                        <strong>Account Name:</strong>
+                        <span>{bankInfo.accountName}</span>
+                      </p>
+                      <p className="flex justify-between border-b pb-2">
+                        <strong>Account Number:</strong>
+                        <span>{bankInfo.accountNumber}</span>
+                      </p>
+                      <p className="flex justify-between border-b pb-2">
+                        <strong>Bank Name:</strong>
+                        <span>{bankInfo.bankName}</span>
+                      </p>
+                      <p className="flex justify-between border-b pb-2">
+                        <strong>IFSC Code:</strong>
+                        <span>{bankInfo.ifscCode}</span>
+                      </p>
+                      <p className="flex justify-between pb-2">
+                        <strong>Branch:</strong>
+                        <span>{bankInfo.branch}</span>
+                      </p>
                     </>
-                   ) : (
-                     <p>Bank details not available.</p> // Fallback if bankInfo is null after loading
-                   )}
+                  ) : (
+                    <p>Bank details not available.</p>
+                  )}
                 </div>
               </div>
 
-              <div>
-                <h3 className="text-base md:text-lg font-semibold mb-2">Important Note</h3>
-                <p className="text-muted-foreground text-xs md:text-sm">
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h3 className="text-lg font-semibold mb-2">Important Note</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
                   After making your donation, please keep your transaction reference number for our records.
                   All donations to the Tibetan Cancer Society are tax-deductible.
                 </p>

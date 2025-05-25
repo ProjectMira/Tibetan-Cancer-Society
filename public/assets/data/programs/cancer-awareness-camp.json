@@ -1,0 +1,229 @@
+{
+  "id": "cancer-awareness-camp",
+  "title": "Cancer Awareness Cum Detection Camp",
+  "shortDescription": "Regular camps for cancer awareness and early detection in Tibetan communities.",
+  "fullDescription": "Our Cancer Awareness Cum Detection Camps are comprehensive events organized in various Tibetan settlements to raise awareness about cancer and provide free screening services. These camps combine educational sessions with practical screening activities, helping community members understand cancer risks while offering immediate screening services for early detection. Through these camps, we aim to reduce cancer mortality rates in the Tibetan community by promoting early detection and timely treatment.",
+  "icon": "Search",
+  "image": "/assets/programs/awareness-camp.jpg",
+  "features": [
+    "Free cancer screening services",
+    "Educational workshops about cancer prevention",
+    "Distribution of awareness materials in Tibetan",
+    "One-on-one consultations with healthcare professionals",
+    "Follow-up care coordination for positive screenings"
+  ],
+  "stats": [
+    {
+      "value": "1500+",
+      "label": "People Screened"
+    },
+    {
+      "value": "25+",
+      "label": "Camps Conducted"
+    },
+    {
+      "value": "70%",
+      "label": "H. pylori Negative Results"
+    },
+    {
+      "value": "11%",
+      "label": "H. pylori Positive Results"
+    }
+  ],
+  "ageDistribution": [
+    {
+      "group": "0-15",
+      "count": 3
+    },
+    {
+      "group": "16-30",
+      "count": 9
+    },
+    {
+      "group": "31-45",
+      "count": 20
+    },
+    {
+      "group": "46-60",
+      "count": 32
+    },
+    {
+      "group": "60+",
+      "count": 36
+    }
+  ],
+  "genderDistribution": {
+    "male": 30.1,
+    "female": 69.9
+  },
+  "testResults": {
+    "hPylori": [
+      {
+        "category": "Negative",
+        "percentage": 70
+      },
+      {
+        "category": "Positive",
+        "percentage": 11
+      },
+      {
+        "category": "Invalid",
+        "percentage": 19
+      }
+    ]
+  },
+  "contactPerson": "Tenzin Dolma",
+  "contactEmail": "camps@tibetancancersociety.org",
+  "healthCamps": [
+    {
+      "id": "hc-2025-01",
+      "date": "March 15-20, 2025",
+      "place": "Karnataka",
+      "testsOffered": ["Breast Cancer Screening", "Oral Cancer Screening", "Cervical Cancer Screening", "General Health Check-up", "H. pylori Testing", "ECG Check-up"],
+      "collaborators": [
+        {
+          "name": "Karnataka Cancer Society",
+          "logo": "/assets/collaborators/karnataka-cancer-society.png"
+        },
+        {
+          "name": "Manipal Hospital",
+          "logo": "/assets/collaborators/manipal-hospital.png"
+        }
+      ],
+      "settlements": [
+        {
+          "name": "Bylakuppe Settlement",
+          "summary": "The camp in Bylakuppe was conducted over three days, focusing on breast and oral cancer screenings for the community members. Local monasteries helped in organizing and promoting the event.",
+          "genderStats": {
+            "male": 120,
+            "female": 180
+          },
+          "ageGroups": [
+            { "group": "18-30", "count": 45 },
+            { "group": "31-45", "count": 95 },
+            { "group": "46-60", "count": 110 },
+            { "group": "61+", "count": 50 }
+          ],
+          "testResults": [
+            { "category": "Normal", "count": 260 },
+            { "category": "Suspicious", "count": 30 },
+            { "category": "Positive", "count": 10 }
+          ],
+          "photos": [
+            "/assets/camps/bylakuppe-1.jpg",
+            "/assets/camps/bylakuppe-2.jpg",
+            "/assets/camps/bylakuppe-3.jpg"
+          ]
+        },
+        {
+          "name": "Mundgod Settlement",
+          "summary": "In Mundgod, we conducted a two-day camp with a focus on cervical cancer screening and general health check-ups. The camp saw active participation from the elderly community members.",
+          "genderStats": {
+            "male": 90,
+            "female": 130
+          },
+          "ageGroups": [
+            { "group": "18-30", "count": 35 },
+            { "group": "31-45", "count": 65 },
+            { "group": "46-60", "count": 80 },
+            { "group": "61+", "count": 40 }
+          ],
+          "testResults": [
+            { "category": "Normal", "count": 190 },
+            { "category": "Suspicious", "count": 20 },
+            { "category": "Positive", "count": 10 }
+          ],
+          "photos": [
+            "/assets/camps/mundgod-1.jpg",
+            "/assets/camps/mundgod-2.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hc-2024-12",
+      "date": "December 5-10, 2024",
+      "place": "Himachal Pradesh",
+      "testsOffered": ["Breast Cancer Screening", "Lung Cancer Screening", "Oral Cancer Screening", "Blood Tests"],
+      "collaborators": [
+        {
+          "name": "Delek Hospital",
+          "logo": "/assets/collaborators/delek-hospital.png"
+        },
+        {
+          "name": "Fortis Healthcare",
+          "logo": "/assets/collaborators/fortis-healthcare.png"
+        }
+      ],
+      "settlements": [
+        {
+          "name": "Dharamshala",
+          "summary": "The Dharamshala camp was our largest, spanning five days and offering comprehensive cancer screenings. We collaborated with local healthcare providers to offer a wide range of services.",
+          "genderStats": {
+            "male": 150,
+            "female": 200
+          },
+          "ageGroups": [
+            { "group": "18-30", "count": 60 },
+            { "group": "31-45", "count": 110 },
+            { "group": "46-60", "count": 120 },
+            { "group": "61+", "count": 60 }
+          ],
+          "testResults": [
+            { "category": "Normal", "count": 300 },
+            { "category": "Suspicious", "count": 40 },
+            { "category": "Positive", "count": 10 }
+          ],
+          "photos": [
+            "/assets/camps/dharamshala-1.jpg",
+            "/assets/camps/dharamshala-2.jpg",
+            "/assets/camps/dharamshala-3.jpg",
+            "/assets/camps/dharamshala-4.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hc-2024-09",
+      "date": "September 20-25, 2024",
+      "place": "Delhi",
+      "testsOffered": ["Breast Cancer Screening", "Prostate Cancer Screening", "Skin Cancer Check", "General Health Assessment"],
+      "collaborators": [
+        {
+          "name": "All India Institute of Medical Sciences",
+          "logo": "/assets/collaborators/aiims.png"
+        },
+        {
+          "name": "Delhi Cancer Society",
+          "logo": "/assets/collaborators/delhi-cancer-society.png"
+        }
+      ],
+      "settlements": [
+        {
+          "name": "Majnu Ka Tilla",
+          "summary": "Our Delhi camp at Majnu Ka Tilla focused on the urban Tibetan population, offering specialized screenings for common urban cancers. We also provided educational sessions on lifestyle-related cancer risks.",
+          "genderStats": {
+            "male": 110,
+            "female": 140
+          },
+          "ageGroups": [
+            { "group": "18-30", "count": 70 },
+            { "group": "31-45", "count": 90 },
+            { "group": "46-60", "count": 60 },
+            { "group": "61+", "count": 30 }
+          ],
+          "testResults": [
+            { "category": "Normal", "count": 220 },
+            { "category": "Suspicious", "count": 25 },
+            { "category": "Positive", "count": 5 }
+          ],
+          "photos": [
+            "/assets/camps/delhi-1.jpg",
+            "/assets/camps/delhi-2.jpg",
+            "/assets/camps/delhi-3.jpg"
+          ]
+        }
+      ]
+    }
+  ]
+}
