@@ -1,0 +1,27 @@
+{
+  "organization": {
+    "name": "Tibetan Cancer Society",
+    "description": "Dedicated to providing support, awareness, and resources for cancer patients and their families in the Tibetan community.",
+    "socialMedia": [
+      {
+        "platform": "facebook",
+        "url": "https://www.facebook.com/tibethealth.org"
+      },
+      {
+        "platform": "twitter",
+        "url": "https://x.com/TcsAdmin"
+      },
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/tibetan.cancersociety/"
+      }
+    ]
+  },
+  "contact": {
+    "mainAddress": "Tibetan Cancer Society, Manocha House, DC Resident, Dharamshala, Himachal Pradesh, India - 176215",
+    "delhiAddress": "Tibetan Cancer Society, Community Kitchen, Ladakh Budh Vihar, Delhi - 110054",
+    "southAddress": "TCS Shop Number : 11, New Shopping Complex, Old Camp No. 1, Bylakuppe - 571104",
+    "phone": "+91 82172 11567",
+    "email": "tibetancancersocietys@gmail.com"
+  }
+}

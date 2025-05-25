@@ -1,0 +1,27 @@
+{
+  "id": "sunday-program",
+  "title": "Sunday Program",
+  "shortDescription": "Weekly gatherings for cancer patients and survivors to connect, share, and heal together.",
+  "fullDescription": "Our Sunday Program provides a regular gathering space for cancer patients, survivors, and their families. Every Sunday, we host activities that promote healing, connection, and emotional wellbeing. These gatherings include support group discussions, meditation sessions, art therapy, educational talks, and simply sharing meals together in a supportive community environment.",
+  "icon": "Users",
+  "image": "/assets/programs/sunday-program.jpg",
+  "features": [
+    "Weekly support group meetings",
+    "Meditation and mindfulness sessions",
+    "Creative expression through art therapy",
+    "Educational talks from healthcare professionals",
+    "Community meals and social connection"
+  ],
+  "stats": [
+    {
+      "value": "50+",
+      "label": "Regular Attendees"
+    },
+    {
+      "value": "200+",
+      "label": "Sessions Conducted"
+    }
+  ],
+  "contactPerson": "Tenzin Dolma",
+  "contactEmail": "sunday@tibetancancersociety.org"
+}

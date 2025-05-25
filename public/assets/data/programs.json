@@ -1,0 +1,387 @@
+{
+  "programs": [
+    {
+      "id": "cancer-awareness-camp",
+      "title": "Cancer Awareness Cum Detection Camp",
+      "shortDescription": "Regular camps for cancer awareness and early detection in Tibetan communities.",
+      "fullDescription": "Our Cancer Awareness Cum Detection Camps are comprehensive events organized in various Tibetan settlements to raise awareness about cancer and provide free screening services. These camps combine educational sessions with practical screening activities, helping community members understand cancer risks while offering immediate screening services for early detection.",
+      "icon": "Search",
+      "image": "/assets/programs/awareness-camp.jpg",
+      "features": [
+        "Free cancer screening services",
+        "Educational workshops about cancer prevention",
+        "Distribution of awareness materials in Tibetan",
+        "One-on-one consultations with healthcare professionals",
+        "Follow-up care coordination for positive screenings"
+      ],
+      "stats": [
+        {
+          "value": "1500+",
+          "label": "People Screened"
+        },
+        {
+          "value": "25+",
+          "label": "Camps Conducted"
+        }
+      ],
+      "contactPerson": "Tenzin Dolma",
+      "contactEmail": "camps@tibetancancersociety.org"
+    },
+    {
+      "id": "world-cancer-day",
+      "title": "World Cancer Day",
+      "shortDescription": "Annual events and activities to mark World Cancer Day on February 4th.",
+      "fullDescription": "Every year on February 4th, we organize special events to mark World Cancer Day. These events aim to inspire action, raise awareness, and reduce stigma around cancer in the Tibetan community. Our World Cancer Day activities include educational sessions, survivor testimonials, memorial ceremonies, and community engagement initiatives that promote cancer prevention and support.",
+      "icon": "Calendar",
+      "image": "/assets/programs/world-cancer-day.jpg",
+      "features": [
+        "Annual awareness campaigns",
+        "Community gatherings and educational sessions",
+        "Cancer survivor testimonials",
+        "Memorial ceremonies for those lost to cancer",
+        "Free screening opportunities"
+      ],
+      "stats": [
+        {
+          "value": "1000+",
+          "label": "Annual Participants"
+        },
+        {
+          "value": "7",
+          "label": "Years of Celebration"
+        }
+      ],
+      "contactPerson": "Lobsang Wangmo",
+      "contactEmail": "events@tibetancancersociety.org"
+    },
+    {
+      "id": "patient-support",
+      "title": "Patient Support",
+      "shortDescription": "Find emotional support, financial assistance, and practical help during your cancer journey.",
+      "fullDescription": "Our Patient Support program provides comprehensive assistance to cancer patients and their families. We offer emotional support through counseling, financial assistance for treatment costs, transportation to medical appointments, and help navigating the healthcare system.",
+      "icon": "Heart",
+      "image": "/assets/programs/patient-support.jpg",
+      "features": [
+        "One-on-one counseling services",
+        "Financial assistance for treatment costs",
+        "Transportation to medical appointments",
+        "Translation services for medical consultations",
+        "Accommodation assistance for patients traveling for treatment"
+      ],
+      "stats": [
+        {
+          "value": "500+",
+          "label": "Patients Supported"
+        },
+        {
+          "value": "₹1.5M",
+          "label": "Financial Aid Provided"
+        }
+      ],
+      "contactPerson": "Lobsang Wangmo",
+      "contactEmail": "support@tibetancancersociety.org"
+    },
+    {
+      "id": "compassion-home",
+      "title": "Compassion Home",
+      "shortDescription": "A safe and supportive residence for cancer patients undergoing treatment away from home.",
+      "fullDescription": "Compassion Home provides temporary accommodation for cancer patients who need to travel away from their homes for treatment. Our facility offers a comfortable, supportive environment where patients can stay during their treatment period, reducing the financial and logistical burden of finding accommodation near treatment centers.",
+      "icon": "Home",
+      "image": "/assets/programs/compassion-home.jpg",
+      "features": [
+        "Safe and comfortable accommodation",
+        "Nutritious meals prepared with care",
+        "Transportation to and from treatment centers",
+        "Emotional support from staff and fellow residents",
+        "Regular visits from healthcare professionals"
+      ],
+      "stats": [
+        {
+          "value": "200+",
+          "label": "Patients Housed"
+        },
+        {
+          "value": "3000+",
+          "label": "Nights of Accommodation Provided"
+        }
+      ],
+      "contactPerson": "Pema Yangzom",
+      "contactEmail": "compassionhome@tibetancancersociety.org"
+    },
+    {
+      "id": "ambulance-services",
+      "title": "Ambulance Services",
+      "shortDescription": "Emergency and scheduled transportation for cancer patients to medical facilities.",
+      "fullDescription": "Our Ambulance Services provide critical transportation for cancer patients who need to reach medical facilities for treatment, emergencies, or routine appointments. This service is especially important for elderly patients and those with mobility issues, ensuring they can access necessary medical care without transportation barriers.",
+      "icon": "Truck",
+      "image": "/assets/programs/ambulance.jpg",
+      "features": [
+        "24/7 emergency transportation",
+        "Scheduled transportation for appointments",
+        "Trained medical staff on board",
+        "Equipped with essential medical supplies",
+        "Service available across all Tibetan settlements"
+      ],
+      "stats": [
+        {
+          "value": "300+",
+          "label": "Patients Transported"
+        },
+        {
+          "value": "5000+",
+          "label": "Kilometers Traveled"
+        }
+      ],
+      "contactPerson": "Tenzin Choedak",
+      "contactEmail": "ambulance@tibetancancersociety.org"
+    },
+    {
+      "id": "community-kitchen",
+      "title": "Community Kitchen",
+      "shortDescription": "Providing nutritious meals for cancer patients and their families during treatment.",
+      "fullDescription": "Our Community Kitchen program prepares and delivers nutritious meals to cancer patients and their families. Proper nutrition is crucial during cancer treatment, yet many patients struggle with meal preparation due to fatigue, treatment side effects, or financial constraints. Our kitchen provides healthy, specially prepared meals that support patients' nutritional needs during treatment.",
+      "icon": "Utensils",
+      "image": "/assets/programs/community-kitchen.jpg",
+      "features": [
+        "Nutritionally balanced meals designed for cancer patients",
+        "Consideration of dietary restrictions and preferences",
+        "Home delivery service",
+        "Meals for patients and immediate family members",
+        "Nutrition education and counseling"
+      ],
+      "stats": [
+        {
+          "value": "10,000+",
+          "label": "Meals Provided"
+        },
+        {
+          "value": "150+",
+          "label": "Families Supported"
+        }
+      ],
+      "contactPerson": "Dolma Tsering",
+      "contactEmail": "kitchen@tibetancancersociety.org"
+    },
+    {
+      "id": "meals-for-invisibles",
+      "title": "Meals for Invisibles",
+      "shortDescription": "Providing food for homeless and underprivileged cancer patients who often go unnoticed.",
+      "fullDescription": "Meals for Invisibles is a special initiative focused on providing nutritious food to homeless and underprivileged cancer patients who often go unnoticed in the healthcare system. This program ensures that even the most vulnerable members of our community receive the nutrition they need during cancer treatment, regardless of their housing or financial status.",
+      "icon": "Coffee",
+      "image": "/assets/programs/meals-invisibles.jpg",
+      "features": [
+        "Daily meal distribution in key locations",
+        "Nutritionally complete meal packages",
+        "Outreach to identify and support homeless cancer patients",
+        "Coordination with local shelters and social services",
+        "Additional support services referrals"
+      ],
+      "stats": [
+        {
+          "value": "5,000+",
+          "label": "Meals Distributed"
+        },
+        {
+          "value": "75+",
+          "label": "Regular Recipients"
+        }
+      ],
+      "contactPerson": "Tenzin Yangdon",
+      "contactEmail": "meals@tibetancancersociety.org"
+    },
+    {
+      "id": "sunday-program",
+      "title": "Sunday Program",
+      "shortDescription": "Weekly gatherings for cancer patients and survivors to connect, share, and heal together.",
+      "fullDescription": "Our Sunday Program provides a regular gathering space for cancer patients, survivors, and their families. Every Sunday, we host activities that promote healing, connection, and emotional wellbeing. These gatherings include support group discussions, meditation sessions, art therapy, educational talks, and simply sharing meals together in a supportive community environment.",
+      "icon": "Users",
+      "image": "/assets/programs/sunday-program.jpg",
+      "features": [
+        "Weekly support group meetings",
+        "Meditation and mindfulness sessions",
+        "Creative expression through art therapy",
+        "Educational talks from healthcare professionals",
+        "Community meals and social connection"
+      ],
+      "stats": [
+        {
+          "value": "50+",
+          "label": "Regular Attendees"
+        },
+        {
+          "value": "200+",
+          "label": "Sessions Conducted"
+        }
+      ],
+      "contactPerson": "Tenzin Dolma",
+      "contactEmail": "sunday@tibetancancersociety.org"
+    },
+    {
+      "id": "cancer-info",
+      "title": "Cancer Information",
+      "shortDescription": "Access reliable information about different types of cancer, treatments, and prevention strategies.",
+      "fullDescription": "Our Cancer Information program provides accurate, up-to-date information about various types of cancer, treatment options, side effects, and prevention strategies. We offer resources in both Tibetan and English to ensure accessibility for all community members.",
+      "icon": "Info",
+      "image": "/assets/programs/cancer-info.jpg",
+      "features": [
+        "Educational materials in Tibetan and English",
+        "Cancer type-specific information guides",
+        "Treatment option explanations",
+        "Prevention and early detection resources"
+      ],
+      "stats": [
+        {
+          "value": "1000+",
+          "label": "Information Packets Distributed"
+        },
+        {
+          "value": "15",
+          "label": "Cancer Types Covered"
+        }
+      ],
+      "contactPerson": "Tenzin Dolma",
+      "contactEmail": "info@tibetancancersociety.org"
+    },
+    {
+      "id": "patient-support",
+      "title": "Patient Support",
+      "shortDescription": "Find emotional support, financial assistance, and practical help during your cancer journey.",
+      "fullDescription": "Our Patient Support program provides comprehensive assistance to cancer patients and their families. We offer emotional support through counseling, financial assistance for treatment costs, transportation to medical appointments, and help navigating the healthcare system.",
+      "icon": "Heart",
+      "image": "/assets/programs/patient-support.jpg",
+      "features": [
+        "One-on-one counseling services",
+        "Financial assistance for treatment costs",
+        "Transportation to medical appointments",
+        "Translation services for medical consultations",
+        "Accommodation assistance for patients traveling for treatment"
+      ],
+      "stats": [
+        {
+          "value": "500+",
+          "label": "Patients Supported"
+        },
+        {
+          "value": "₹1.5M",
+          "label": "Financial Aid Provided"
+        }
+      ],
+      "contactPerson": "Lobsang Wangmo",
+      "contactEmail": "support@tibetancancersociety.org"
+    },
+    {
+      "id": "screening-programs",
+      "title": "Screening Programs",
+      "shortDescription": "Early detection saves lives. Learn about our cancer screening programs and how to participate.",
+      "fullDescription": "Our Screening Programs focus on early detection of cancer, which significantly improves treatment outcomes. We conduct regular screening camps in Tibetan settlements for breast, cervical, oral, and lung cancers. Our mobile screening unit brings these vital services to remote communities.",
+      "icon": "Search",
+      "image": "/assets/programs/screening.jpg",
+      "features": [
+        "Mobile screening unit for remote settlements",
+        "Regular screening camps in Tibetan communities",
+        "Follow-up care coordination",
+        "Screening for breast, cervical, oral, and lung cancers",
+        "Partnerships with local healthcare providers"
+      ],
+      "stats": [
+        {
+          "value": "1000+",
+          "label": "Screenings Conducted"
+        },
+        {
+          "value": "50+",
+          "label": "Early Detections"
+        }
+      ],
+      "contactPerson": "Dr. Tenzin Choedak",
+      "contactEmail": "screening@tibetancancersociety.org"
+    },
+    {
+      "id": "support-groups",
+      "title": "Support Groups",
+      "shortDescription": "Connect with others who understand what you're going through in our community support groups.",
+      "fullDescription": "Our Support Groups bring together cancer patients, survivors, and caregivers to share experiences, coping strategies, and emotional support. These groups provide a safe space for community members to connect with others who truly understand the cancer journey.",
+      "icon": "Users",
+      "image": "/assets/programs/support-groups.jpg",
+      "features": [
+        "Regular meetings in major Tibetan settlements",
+        "Separate groups for patients, survivors, and caregivers",
+        "Facilitated by trained counselors",
+        "Virtual support options for remote participants",
+        "Special focus groups for specific cancer types"
+      ],
+      "stats": [
+        {
+          "value": "12",
+          "label": "Active Support Groups"
+        },
+        {
+          "value": "200+",
+          "label": "Regular Participants"
+        }
+      ],
+      "contactPerson": "Pema Yangzom",
+      "contactEmail": "groups@tibetancancersociety.org"
+    },
+    {
+      "id": "mobile-screening",
+      "title": "Mobile Cancer Screening Program",
+      "shortDescription": "Our mobile screening program brings cancer detection services directly to remote Tibetan settlements.",
+      "fullDescription": "The Mobile Cancer Screening Program is our flagship initiative that brings essential cancer screening services directly to remote Tibetan settlements. Equipped with portable diagnostic equipment and staffed by trained healthcare professionals, our mobile unit conducts screenings for common cancers and provides immediate consultations.",
+      "icon": "Truck",
+      "image": "/assets/programs/mobile-screening.jpg",
+      "features": [
+        "Portable diagnostic equipment for on-site screenings",
+        "Team of trained healthcare professionals",
+        "Screenings for breast, cervical, oral, and lung cancers",
+        "Immediate consultation with healthcare providers",
+        "Referral system for follow-up care",
+        "Educational workshops during screening camps"
+      ],
+      "stats": [
+        {
+          "value": "200+",
+          "label": "People Screened"
+        },
+        {
+          "value": "5",
+          "label": "Settlements Covered"
+        },
+        {
+          "value": "15",
+          "label": "Early Detections"
+        }
+      ],
+      "contactPerson": "Dr. Tenzin Choedak",
+      "contactEmail": "mobile@tibetancancersociety.org"
+    },
+    {
+      "id": "awareness-campaigns",
+      "title": "Awareness Campaigns",
+      "shortDescription": "Spreading knowledge about cancer prevention, early detection, and treatment options throughout the Tibetan community.",
+      "fullDescription": "Our Awareness Campaigns aim to educate the Tibetan community about cancer prevention, risk factors, symptoms, and the importance of early detection. Through workshops, seminars, and media campaigns, we work to reduce cancer stigma and encourage proactive health behaviors.",
+      "icon": "Megaphone",
+      "image": "/assets/programs/awareness.jpg",
+      "features": [
+        "Community workshops and seminars",
+        "Educational materials in Tibetan language",
+        "School-based cancer education programs",
+        "Media campaigns on radio and social platforms",
+        "Training for community health workers",
+        "Annual cancer awareness month activities"
+      ],
+      "stats": [
+        {
+          "value": "50+",
+          "label": "Awareness Programs Conducted"
+        },
+        {
+          "value": "5000+",
+          "label": "People Reached"
+        }
+      ],
+      "contactPerson": "Tenzin Yangdon",
+      "contactEmail": "awareness@tibetancancersociety.org"
+    }
+  ]
+}

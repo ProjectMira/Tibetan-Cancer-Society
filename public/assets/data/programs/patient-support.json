@@ -1,0 +1,27 @@
+{
+  "id": "patient-support",
+  "title": "Patient Support",
+  "shortDescription": "Find emotional support, financial assistance, and practical help during your cancer journey.",
+  "fullDescription": "Our Patient Support program provides comprehensive assistance to cancer patients and their families. We offer emotional support through counseling, financial assistance for treatment costs, transportation to medical appointments, and help navigating the healthcare system.",
+  "icon": "Heart",
+  "image": "/assets/programs/patient-support.jpg",
+  "features": [
+    "One-on-one counseling services",
+    "Financial assistance for treatment costs",
+    "Transportation to medical appointments",
+    "Translation services for medical consultations",
+    "Accommodation assistance for patients traveling for treatment"
+  ],
+  "stats": [
+    {
+      "value": "500+",
+      "label": "Patients Supported"
+    },
+    {
+      "value": "₹1.5M",
+      "label": "Financial Aid Provided"
+    }
+  ],
+  "contactPerson": "Lobsang Wangmo",
+  "contactEmail": "support@tibetancancersociety.org"
+}
