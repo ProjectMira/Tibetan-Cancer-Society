@@ -27,11 +27,38 @@ const Contact = () => {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-blue-700 text-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative text-white py-[4.4rem] md:py-[6.6rem]">
+        {/* Background Image with responsive cropping */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          {/* Mobile view - show face */}
+          <img 
+            src="/assets/contact-us/contact.png" 
+            alt="Contact Us Background" 
+            className="w-full h-full object-cover md:hidden" 
+            style={{ minHeight: '100%', objectPosition: '50% 40%' }}
+          />
+          
+          {/* Desktop view - focus on hands */}
+          <img 
+            src="/assets/contact-us/contact.png" 
+            alt="Contact Us Background" 
+            className="w-full h-full object-cover hidden md:block" 
+            style={{ 
+              minHeight: '100%', 
+              objectPosition: '50% 85%',
+              transform: 'scale(1.5)',
+              transformOrigin: 'center 85%'
+            }}
+          />
+          
+          {/* Overlay for both */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6 drop-shadow-lg">Contact Us</h1>
+            <p className="text-lg md:text-xl mb-6 md:mb-8 max-w-md mx-auto leading-relaxed drop-shadow-md">
               Reach out to the Tibetan Cancer Society for support, information, or to get involved.
             </p>
           </div>
