@@ -57,14 +57,15 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-10">
+          {/* Column 1: Organization Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">{footerData.organization.name}</h3>
-            <p className="text-muted-foreground mb-4 max-w-xs">
+            <h3 className="text-lg font-semibold mb-3">{footerData.organization.name}</h3>
+            <p className="text-muted-foreground text-sm mb-4 max-w-xs">
               {footerData.organization.description}
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mb-2">
               {footerData.organization.socialMedia.map((social, index) => (
                 <a 
                   key={index}
@@ -79,116 +80,101 @@ const Footer = () => {
             </div>
           </div>
           
+          {/* Column 2: Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link 
-                  to="/testimonials" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Patient Stories
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/donate" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Support Us
-                </Link>
-              </li>
-            </ul>
-            
-            <h3 className="text-lg font-semibold mt-6 mb-4">Our Programs</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link 
-                  to="/programs/cancer-awareness-camp" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Awareness Camps
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/programs/world-cancer-day" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  World Cancer Day
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/programs/patient-support" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Patient Support
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/programs/compassion-home" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Compassion Home
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/programs/ambulance-services" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Ambulance Services
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/programs/community-kitchen" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Community Kitchen
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/programs/meals-for-invisibles" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Meals for Invisibles
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/programs/sunday-program" 
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Sunday Program
-                </Link>
-              </li>
-            </ul>
+            <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
+            <div className="grid gap-y-2">
+              <Link 
+                to="/about" 
+                className="text-muted-foreground text-sm hover:text-primary transition-colors"
+              >
+                About Us
+              </Link>
+              <Link 
+                to="/testimonials" 
+                className="text-muted-foreground text-sm hover:text-primary transition-colors"
+              >
+                Patient Stories
+              </Link>
+              <Link 
+                to="/team" 
+                className="text-muted-foreground text-sm hover:text-primary transition-colors"
+              >
+                Our Team
+              </Link>
+              <Link 
+                to="/donate" 
+                className="text-muted-foreground text-sm hover:text-primary transition-colors"
+              >
+                Support Us
+              </Link>
+              <Link 
+                to="/contact" 
+                className="text-muted-foreground text-sm hover:text-primary transition-colors"
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
           
+          {/* Column 3: Our Programs */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Information</h3>
-            <ul className="space-y-4">
+            <h3 className="text-lg font-semibold mb-3">Our Programs</h3>
+            <div className="grid gap-y-2">
+              <Link 
+                to="/programs/cancer-awareness-camp" 
+                className="text-muted-foreground text-sm hover:text-primary transition-colors"
+              >
+                Awareness Camps
+              </Link>
+              <Link 
+                to="/programs/world-cancer-day" 
+                className="text-muted-foreground text-sm hover:text-primary transition-colors"
+              >
+                World Cancer Day
+              </Link>
+              <Link 
+                to="/programs/patient-support" 
+                className="text-muted-foreground text-sm hover:text-primary transition-colors"
+              >
+                Patient Support
+              </Link>
+              <Link 
+                to="/programs/compassion-home" 
+                className="text-muted-foreground text-sm hover:text-primary transition-colors"
+              >
+                Compassion Home
+              </Link>
+              <Link 
+                to="/programs/ambulance-services" 
+                className="text-muted-foreground text-sm hover:text-primary transition-colors"
+              >
+                Ambulance Services
+              </Link>
+            </div>
+          </div>
+          
+          {/* Column 4: Contact Information */}
+          <div>
+            <h3 className="text-lg font-semibold mb-3">Contact Information</h3>
+            <ul className="space-y-3">
               <li className="flex items-start">
-                <MapPin className="h-5 w-5 text-primary mt-0.5 mr-3" />
-                <span className="text-muted-foreground">{footerData.contact.mainAddress}</span>
+                <MapPin className="h-4 w-4 text-primary mt-0.5 mr-2" />
+                <span className="text-muted-foreground text-sm">{footerData.contact.mainAddress}</span>
               </li>
               <li className="flex items-center">
-                <Phone className="h-5 w-5 text-primary mr-3" />
-                <span className="text-muted-foreground">{footerData.contact.phone}</span>
+                <Phone className="h-4 w-4 text-primary mr-2" />
+                <span className="text-muted-foreground text-sm">{footerData.contact.phone}</span>
               </li>
               <li className="flex items-center">
-                <Mail className="h-5 w-5 text-primary mr-3" />
-                <span className="text-muted-foreground">{footerData.contact.email}</span>
+                <Mail className="h-4 w-4 text-primary mr-2" />
+                <span className="text-muted-foreground text-sm">{footerData.contact.email}</span>
               </li>
             </ul>
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-gray-200">
+        <div className="mt-8 pt-6 border-t border-gray-200">
           <p className="text-center text-muted-foreground text-sm">
             © {new Date().getFullYear()} {footerData.organization.name}. All rights reserved.
           </p>

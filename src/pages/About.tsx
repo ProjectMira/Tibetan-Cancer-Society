@@ -11,7 +11,7 @@ const About = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img 
-            src="/assets/about-images/TCS.png" 
+            src="/assets/about-images/TCS.JPG" 
             alt="About Us Background" 
             className="w-full h-full object-cover" 
             style={{ objectPosition: '50% 30%' }}
@@ -59,7 +59,7 @@ const About = () => {
             <div className="md:w-1/2">
               <div className="rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="/assets/about-images/TCS.png" 
+                  src="/assets/about-images/TCS.JPG" 
                   alt="Tibetan Cancer Society" 
                   className="w-full h-auto"
                   onError={(e) => {

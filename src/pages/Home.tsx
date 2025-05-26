@@ -69,7 +69,7 @@ const AboutSection = () => {
           <div className="md:w-1/2">
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img 
-                src="assets/about-images/TCS.png" 
+                src="assets/about-images/TCS.JPG" 
                 alt="Tibetan Cancer Society" 
                 className="w-full h-auto"
               />
@@ -301,13 +301,9 @@ const ServicesSection = () => {
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/3">
               <img 
-                src="/assets/programs/ambulance-services.jpg" 
+                src="/assets/home/ambulance.png" 
                 alt="Ambulance Services" 
                 className="w-full h-auto rounded-lg object-cover"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/assets/placeholders/placeholder-image.svg';
-                }}
               />
             </div>
             <div className="md:w-2/3">
@@ -352,13 +348,9 @@ const ServicesSection = () => {
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/3">
               <img 
-                src="/assets/programs/community-kitchen.jpg" 
+                src="/assets/home/community-kitchen.jpg" 
                 alt="Community Kitchen" 
                 className="w-full h-auto rounded-lg object-cover"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/assets/placeholders/placeholder-image.svg';
-                }}
               />
             </div>
             <div className="md:w-2/3">
@@ -403,13 +395,9 @@ const ServicesSection = () => {
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/3">
               <img 
-                src="/assets/programs/meals-for-invisibles.jpg" 
+                src="/assets/home/MFI.png" 
                 alt="Meals for Invisibles" 
                 className="w-full h-auto rounded-lg object-cover"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/assets/placeholders/placeholder-image.svg';
-                }}
               />
             </div>
             <div className="md:w-2/3">

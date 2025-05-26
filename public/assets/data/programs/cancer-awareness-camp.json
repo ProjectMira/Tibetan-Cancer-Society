@@ -76,7 +76,7 @@
   "contactEmail": "camps@tibetancancersociety.org",
   "healthCamps": [
     {
-      "id": "hc-2025-01",
+      "id": "01",
       "date": "March 15-20, 2025",
       "place": "Karnataka",
       "testsOffered": ["Breast Cancer Screening", "Oral Cancer Screening", "Cervical Cancer Screening", "General Health Check-up", "H. pylori Testing", "ECG Check-up"],
@@ -218,9 +218,32 @@
             { "category": "Positive", "count": 5 }
           ],
           "photos": [
-            "/assets/camps/delhi-1.jpg",
-            "/assets/camps/delhi-2.jpg",
-            "/assets/camps/delhi-3.jpg"
+            "/assets/camps/2025-karnataka-bylakupee-1.jpg",
+            "/assets/camps/2025-karnataka-bylakupee-2.jpg",
+            "/assets/camps/2025-karnataka-bylakupee-3.jpg"
+          ]
+        },
+        {
+          "name": "Mundgod Settlement",
+          "summary": "In Mundgod, we conducted a two-day camp with a focus on cervical cancer screening and general health check-ups. The camp saw active participation from the elderly community members.",
+          "genderStats": {
+            "male": 90,
+            "female": 130
+          },
+          "ageGroups": [
+            { "group": "18-30", "count": 35 },
+            { "group": "31-45", "count": 65 },
+            { "group": "46-60", "count": 80 },
+            { "group": "61+", "count": 40 }
+          ],
+          "testResults": [
+            { "category": "Normal", "count": 190 },
+            { "category": "Suspicious", "count": 20 },
+            { "category": "Positive", "count": 10 }
+          ],
+          "photos": [
+            "/assets/camps/2025-karnataka-mundgod-1.jpg",
+            "/assets/camps/2025-karnataka-mundgod-2.jpg"
           ]
         }
       ]

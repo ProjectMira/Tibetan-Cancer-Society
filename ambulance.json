@@ -1,0 +1,46 @@
+{
+    "ambulance_services_provided": [
+      {
+        "Diagnosis": "Appendicitis",
+        "Date": "2024-05-20",
+        "From": "123 Main St",
+        "To": "City General Hospital",
+        "Trip": "One way"
+      },
+      {
+        "Diagnosis": "Fractured Arm",
+        "Date": "2024-05-22",
+        "From": "Community Park",
+        "To": "Ortho Clinic",
+        "Trip": "Round Trip"
+      }
+    ],
+    "patient_stories": [
+      {
+        "Patient Name": "Jane Doe",
+        "Diagnosis": "Pneumonia",
+        "Date": "2024-04-15",
+        "From": "Home",
+        "To": "Regional Medical Center",
+        "Trip": "One way",
+        "Story": "Jane was feeling very unwell and the ambulance crew was quick and professional...",
+        "Image": [
+            "jane_doe_recovery.jpg",
+            "jane_doe_recovery2.jpg"
+        ]
+      },
+      {
+        "Patient Name": "Jane Doe",
+        "Diagnosis": "Pneumonia",
+        "Date": "2024-04-15",
+        "From": "Home",
+        "To": "Regional Medical Center",
+        "Trip": "One way",
+        "Story": "Jane was feeling very unwell and the ambulance crew was quick and professional...",
+        "Image": [
+            "jane_doe_recovery.jpg",
+            "jane_doe_recovery2.jpg"
+        ]
+      }
+    ]
+  }

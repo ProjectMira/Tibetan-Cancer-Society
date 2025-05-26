@@ -151,13 +151,7 @@ const Navbar = () => {
             >
               Contact
             </Link>
-            <Link 
-              to="/honor" 
-              className="block py-3 font-medium hover:text-primary"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Give In Honor & Memorial
-            </Link>
+
             <div className="py-3">
               <div className="relative">
                 <input
