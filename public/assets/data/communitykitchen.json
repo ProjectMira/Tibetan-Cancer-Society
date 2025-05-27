@@ -1,0 +1,41 @@
+{
+  "Community_kitchen1": {
+    "location": "Majnukatilla, Delhi",
+    "inauguration_date": "2021-09-17",
+    "funded_by": "Tibet Relief Fund",
+    "total_staff": "2 Nurses, 1 Manager, 1 Head Cook, 1 Kitchen Assistant, 1 Ambulance Driver",
+    "images": [
+      "/assets/community-kitchen/2021-communitykitchen-majnukatilla1.JPG",
+      "/assets/community-kitchen/2021-communitykitchen-majnukatilla2.JPG",
+      "/assets/community-kitchen/2021-communitykitchen-majnukatilla3.JPG",
+      "/assets/community-kitchen/2021-communitykitchen-majnukatilla4.jpg",
+      "/assets/community-kitchen/2021-communitykitchen-majnukatilla5.jpg",
+      "/assets/community-kitchen/2021-communitykitchen-majnukatilla6.jpg",
+      "/assets/community-kitchen/2021-communitykitchen-majnukatilla7.jpg"
+    ]
+  },
+  "Community_kitchen2": {
+    "location": "Budh Vihar, Delhi",
+    "inauguration_date": "2024-08-28",
+    "funded_by": "Tibetan Cancer Society",
+    "total_staff": "2 Nurses, 1 Head Cook",
+    "images": [
+      "/assets/community-kitchen/2024-communitykitchen-BudhVihar1.jpeg",
+      "/assets/community-kitchen/2024-communitykitchen-BudhVihar2.jpeg",
+      "/assets/community-kitchen/2024-communitykitchen-BudhVihar3.jpeg",
+      "/assets/community-kitchen/2024-communitykitchen-BudhVihar4.jpeg",
+      "/assets/community-kitchen/2024-communitykitchen-BudhVihar5.jpeg",
+      "/assets/community-kitchen/2024-communitykitchen-BudhVihar6.jpeg",
+      "/assets/community-kitchen/2024-communitykitchen-BudhVihar7.jpeg",
+      "/assets/community-kitchen/2024-communitykitchen-BudhVihar8.jpeg",
+      "/assets/community-kitchen/2024-communitykitchen-BudhVihar9.jpeg"
+    ]
+  },
+  "purposes": [
+      "1. Providing Free Nutritious Meals to Patients: The Community Kitchen serves free breakfast and lunch to cancer patients and individuals in need, ensuring they receive nutritious meals throughout the week except on Sundays.",
+      "2. Supporting the Marginalized & Homeless: We provide free breakfast to disadvantaged individuals, including the homeless, sex workers, and drug addicts, while maintaining their privacy and dignity by refraining from photography or videography.",
+      "3. Sustaining the Kitchen Through Affordable Meals: To keep the kitchen running, we offer affordable lunch meals to staff, volunteers, and community members, using the proceeds to support free meals for those in need.",
+      "4. Youth Employment Program: The kitchen creates job opportunities for unemployed youth by training and employing them in food preparation, service, and management roles.",
+      "5. Operational Efficiency & Sustainability: We implement careful planning, resource allocation, and cost-effective measures to maximize efficiency, maintain food quality, and ensure long-term sustainability."
+    ]
+}

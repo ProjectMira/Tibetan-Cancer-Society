@@ -15,6 +15,8 @@ import NotFound from "./pages/NotFound";
 import ProgramDetail from "./components/ProgramDetail";
 import Contact from "./pages/Contact";
 import CancerAwarenessCamp from './pages/CancerAwarenessCamp';
+import AmbulanceServices from './pages/AmbulanceServices';
+import CommunityKitchen from './pages/CommunityKitchen';
 
 const queryClient = new QueryClient();
 
@@ -62,6 +64,8 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/programs-services" element={<ProgramsAndServices />} />
             <Route path="/programs/cancer-awareness-camp" element={<CancerAwarenessCamp />} />
+            <Route path="/programs/ambulance-services" element={<AmbulanceServices />} />
+            <Route path="/programs/community-kitchen" element={<CommunityKitchen />} />
             <Route path="/program/:id" element={<ProgramDetail programs={programs} />} />
             <Route path="/programs/:id" element={<ProgramDetail programs={programs} />} />
             <Route path="/team" element={<Team />} />
