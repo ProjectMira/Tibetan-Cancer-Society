@@ -81,7 +81,122 @@ const AboutSection = () => {
   );
 };
 
+// Services section component
 const ServicesSection = () => {
+  interface ProgramData {
+    id: string;
+    title: string;
+    shortDescription: string;
+    fullDescription: string;
+    icon: string;
+    image: string;
+    features: string[];
+    stats: { value: string; label: string }[];
+    contactPerson: string;
+    contactEmail: string;
+  }
+
+  // State for all program data
+  const [programsData, setProgramsData] = useState<Record<string, ProgramData>>({}); 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProgramsData = async () => {
+      setLoading(true);
+      try {
+        // Fetch the centralized programs.json file
+        const response = await fetch('/assets/data/programs.json');
+        if (!response.ok) {
+          throw new Error(`Failed to load programs data: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        
+        if (!data || !Array.isArray(data.programs)) {
+          throw new Error('Invalid programs data format');
+        }
+        
+        // Create a record with program ID as key for easier access
+        const programsRecord: Record<string, ProgramData> = {};
+        data.programs.forEach((program: ProgramData) => {
+          programsRecord[program.id] = program;
+        });
+        
+        setProgramsData(programsRecord);
+      } catch (error) {
+        console.error('Error loading programs data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProgramsData();
+  }, []);
+
+  // Program Card component for displaying each program
+  const ProgramCard = ({ programId, label }: { programId: string, label: string }) => {
+    const program = programsData[programId];
+    
+    if (!program && !loading) {
+      return <div>Program information not available</div>;
+    }
+    
+    // Determine the correct link path based on the program ID
+    const linkPath = programId === 'sunday-program' ? '/programs/compassion-home?tab=sunday' : `/programs/${programId}`;
+    
+    return (
+      <div className="mb-10 bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
+        <div className="flex flex-col md:flex-row gap-8">
+          <div className="md:w-1/3">
+            <img 
+              src={program?.image || `/assets/programs/${programId}.jpg`} 
+              alt={program?.title || programId} 
+              className="w-full h-auto rounded-lg object-cover"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = '/assets/placeholders/placeholder-image.svg';
+              }}
+            />
+          </div>
+          <div className="md:w-2/3">
+            <div className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
+              {label}
+            </div>
+            <Link to={linkPath} className="hover:text-primary transition-colors">
+              <h3 className="text-2xl font-bold mb-3">{program?.title || programId}</h3>
+            </Link>
+            <div className="text-gray-600 mb-4">
+              {program ? (
+                <div dangerouslySetInnerHTML={{ __html: program.fullDescription.replace(/\n/g, '<br/>') }} />
+              ) : (
+                <p>Loading program information...</p>
+              )}
+            </div>
+            <div className="flex flex-wrap gap-4">
+              {program?.stats && program.stats.map((stat, index) => (
+                <div key={index} className="flex items-center">
+                  <div className="bg-green-100 p-2 rounded-full mr-2">
+                    <Users className="h-4 w-4 text-green-600" />
+                  </div>
+                  <span className="text-sm">{stat.value} {stat.label.toLowerCase()}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-4">
+              <Link 
+                to={linkPath} 
+                className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
+              >
+                Learn more
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,401 +207,21 @@ const ServicesSection = () => {
           </p>
         </div>
         
-        {/* Cancer Awareness Camp */}
-        <div className="mb-10 bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
-          <div className="flex flex-col md:flex-row gap-8">
-            <div className="md:w-1/3">
-              <img 
-                src="/assets/programs/awareness-camp.jpg" 
-                alt="Cancer Awareness Camp" 
-                className="w-full h-auto rounded-lg object-cover"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/assets/placeholders/placeholder-image.svg';
-                }}
-              />
-            </div>
-            <div className="md:w-2/3">
-              <div className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
-                Early Detection Program
-              </div>
-              <Link to="/programs/cancer-awareness-camp" className="hover:text-primary transition-colors">
-                <h3 className="text-2xl font-bold mb-3">Cancer Awareness Camp</h3>
-              </Link>
-              <p className="text-gray-600 mb-4">
-                Our Cancer Awareness Cum Detection Camps are comprehensive events organized in various Tibetan settlements to raise awareness about cancer and provide free screening services.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <Users className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">1500+ people screened</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <MapPin className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">25+ camps conducted</span>
-                </div>
-              </div>
-              <div className="mt-4">
-                <Link 
-                  to="/programs/cancer-awareness-camp" 
-                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
+        {loading ? (
+          <div className="text-center py-12">
+            <p className="text-lg">Loading programs information...</p>
           </div>
-        </div>
-        
-        {/* World Cancer Day */}
-        <div className="mb-10 bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
-          <div className="flex flex-col md:flex-row gap-8">
-            <div className="md:w-1/3">
-              <img 
-                src="/assets/programs/world-cancer-day.jpg" 
-                alt="World Cancer Day" 
-                className="w-full h-auto rounded-lg object-cover"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/assets/placeholders/placeholder-image.svg';
-                }}
-              />
-            </div>
-            <div className="md:w-2/3">
-              <div className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
-                Annual Event
-              </div>
-              <Link to="/programs/world-cancer-day" className="hover:text-primary transition-colors">
-                <h3 className="text-2xl font-bold mb-3">World Cancer Day</h3>
-              </Link>
-              <p className="text-gray-600 mb-4">
-                Every year on February 4th, we organize special events to mark World Cancer Day. These events aim to inspire action, raise awareness, and reduce stigma around cancer in the Tibetan community.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <Users className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">1000+ annual participants</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <MapPin className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">7 years of celebration</span>
-                </div>
-              </div>
-              <div className="mt-4">
-                <Link 
-                  to="/programs/world-cancer-day" 
-                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Patient Support */}
-        <div className="mb-10 bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
-          <div className="flex flex-col md:flex-row gap-8">
-            <div className="md:w-1/3">
-              <img 
-                src="/assets/programs/patient-support.jpg" 
-                alt="Patient Support" 
-                className="w-full h-auto rounded-lg object-cover"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/assets/placeholders/placeholder-image.svg';
-                }}
-              />
-            </div>
-            <div className="md:w-2/3">
-              <div className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
-                Support Program
-              </div>
-              <Link to="/programs/patient-support" className="hover:text-primary transition-colors">
-                <h3 className="text-2xl font-bold mb-3">Patient Support</h3>
-              </Link>
-              <p className="text-gray-600 mb-4">
-                Our Patient Support program provides comprehensive assistance to cancer patients and their families. We offer emotional support through counseling, financial assistance for treatment costs, transportation to medical appointments, and help navigating the healthcare system.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <Users className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">500+ patients supported</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <MapPin className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">₹1.5M financial aid provided</span>
-                </div>
-              </div>
-              <div className="mt-4">
-                <Link 
-                  to="/programs/patient-support" 
-                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Compassion Home */}
-        <div className="mb-10 bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
-          <div className="flex flex-col md:flex-row gap-8">
-            <div className="md:w-1/3">
-              <img 
-                src="/assets/programs/compassion-home.jpg" 
-                alt="Compassion Home" 
-                className="w-full h-auto rounded-lg object-cover"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/assets/placeholders/placeholder-image.svg';
-                }}
-              />
-            </div>
-            <div className="md:w-2/3">
-              <div className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
-                Accommodation Program
-              </div>
-              <Link to="/programs/compassion-home" className="hover:text-primary transition-colors">
-                <h3 className="text-2xl font-bold mb-3">Compassion Home</h3>
-              </Link>
-              <p className="text-gray-600 mb-4">
-                Compassion Home provides temporary accommodation for cancer patients who need to travel away from their homes for treatment. Our facility offers a comfortable, supportive environment where patients can stay during their treatment period.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <Users className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">200+ patients housed</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <MapPin className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">3000+ nights of accommodation</span>
-                </div>
-              </div>
-              <div className="mt-4">
-                <Link 
-                  to="/programs/compassion-home" 
-                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Ambulance Services */}
-        <div className="mb-10 bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
-          <div className="flex flex-col md:flex-row gap-8">
-            <div className="md:w-1/3">
-              <img 
-                src="/assets/home/ambulance.png" 
-                alt="Ambulance Services" 
-                className="w-full h-auto rounded-lg object-cover"
-              />
-            </div>
-            <div className="md:w-2/3">
-              <div className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
-                Transportation Program
-              </div>
-              <Link to="/programs/ambulance-services" className="hover:text-primary transition-colors">
-                <h3 className="text-2xl font-bold mb-3">Ambulance Services</h3>
-              </Link>
-              <p className="text-gray-600 mb-4">
-                Our ambulance services provide reliable transportation for cancer patients to medical facilities for treatments, check-ups, and emergencies. This service helps reduce the burden of transportation for patients and their families.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <Users className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">300+ patients transported</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <MapPin className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">2 dedicated ambulances</span>
-                </div>
-              </div>
-              <div className="mt-4">
-                <Link 
-                  to="/programs/ambulance-services" 
-                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Community Kitchen */}
-        <div className="mb-10 bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
-          <div className="flex flex-col md:flex-row gap-8">
-            <div className="md:w-1/3">
-              <img 
-                src="/assets/home/community-kitchen.jpg" 
-                alt="Community Kitchen" 
-                className="w-full h-auto rounded-lg object-cover"
-              />
-            </div>
-            <div className="md:w-2/3">
-              <div className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
-                Nutrition Program
-              </div>
-              <Link to="/programs/community-kitchen" className="hover:text-primary transition-colors">
-                <h3 className="text-2xl font-bold mb-3">Community Kitchen</h3>
-              </Link>
-              <p className="text-gray-600 mb-4">
-                Our Community Kitchen provides nutritious meals for cancer patients and their families during treatment. Proper nutrition is crucial for cancer recovery, and our kitchen ensures patients receive balanced, healthy meals.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <Users className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">10,000+ meals served</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <MapPin className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">Daily service available</span>
-                </div>
-              </div>
-              <div className="mt-4">
-                <Link 
-                  to="/programs/community-kitchen" 
-                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Meals for Invisibles */}
-        <div className="mb-10 bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
-          <div className="flex flex-col md:flex-row gap-8">
-            <div className="md:w-1/3">
-              <img 
-                src="/assets/home/MFI.png" 
-                alt="Meals for Invisibles" 
-                className="w-full h-auto rounded-lg object-cover"
-              />
-            </div>
-            <div className="md:w-2/3">
-              <div className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
-                Outreach Program
-              </div>
-              <Link to="/programs/meals-for-invisibles" className="hover:text-primary transition-colors">
-                <h3 className="text-2xl font-bold mb-3">Meals for Invisibles</h3>
-              </Link>
-              <p className="text-gray-600 mb-4">
-                Meals for Invisibles provides food for homeless and underprivileged cancer patients who often go unnoticed. This program ensures that even the most vulnerable members of our community receive proper nutrition during their cancer journey.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <Users className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">150+ individuals served weekly</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <MapPin className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">3 distribution centers</span>
-                </div>
-              </div>
-              <div className="mt-4">
-                <Link 
-                  to="/programs/meals-for-invisibles" 
-                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Sunday Program */}
-        <div className="mb-10 bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
-          <div className="flex flex-col md:flex-row gap-8">
-            <div className="md:w-1/3">
-              <img 
-                src="/assets/programs/sunday-program.jpg" 
-                alt="Sunday Program" 
-                className="w-full h-auto rounded-lg object-cover"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/assets/placeholders/placeholder-image.svg';
-                }}
-              />
-            </div>
-            <div className="md:w-2/3">
-              <div className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
-                Community Program
-              </div>
-              <Link to="/programs/sunday-program" className="hover:text-primary transition-colors">
-                <h3 className="text-2xl font-bold mb-3">Sunday Program</h3>
-              </Link>
-              <p className="text-gray-600 mb-4">
-                Our Sunday Program provides weekly gatherings for cancer patients and survivors to connect, share experiences, and heal together. These sessions include support group discussions, meditation, and educational talks about cancer management.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <Users className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">30+ participants weekly</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <MapPin className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">250+ sessions conducted</span>
-                </div>
-              </div>
-              <div className="mt-4">
-                <Link 
-                  to="/programs/sunday-program" 
-                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+        ) : (
+          <>
+            <ProgramCard programId="cancer-awareness-camp" label="Early Detection Program" />
+            <ProgramCard programId="world-cancer-day" label="Annual Event" />
+            <ProgramCard programId="compassion-home" label="Accommodation Program" />
+            <ProgramCard programId="ambulance-services" label="Transportation Program" />
+            <ProgramCard programId="community-kitchen" label="Nutrition Program" />
+            <ProgramCard programId="meals-for-invisibles" label="Outreach Program" />
+            <ProgramCard programId="sunday-program" label="Community Program" />
+          </>
+        )}
       </div>
     </section>
   );
@@ -523,6 +258,7 @@ const Home = () => {
 
     fetchTestimonials();
   }, []);
+  
   return (
     <div className="min-h-screen">
       <Navbar />

@@ -133,12 +133,7 @@ const Footer = () => {
               >
                 World Cancer Day
               </Link>
-              <Link 
-                to="/programs/patient-support" 
-                className="text-muted-foreground text-sm hover:text-primary transition-colors"
-              >
-                Patient Support
-              </Link>
+
               <Link 
                 to="/programs/compassion-home" 
                 className="text-muted-foreground text-sm hover:text-primary transition-colors"

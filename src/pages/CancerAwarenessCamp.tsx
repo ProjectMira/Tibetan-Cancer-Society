@@ -72,7 +72,7 @@ const CancerAwarenessCamp = () => {
   useEffect(() => {
     const fetchCampData = async () => {
       try {
-        const response = await fetch('/assets/data/programs/cancer-awareness-camp.json');
+        const response = await fetch('/assets/data/cancer-awareness-camp.json');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

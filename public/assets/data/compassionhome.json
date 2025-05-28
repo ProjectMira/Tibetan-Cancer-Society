@@ -1,0 +1,136 @@
+{
+  "Purpose": [
+      "Addressing the Needs of Cancer Patients: Compassion Home supports cancer patients from remote areas by providing a nurturing space where they can recover with dignity and receive essential care.",
+      "Free Stay Facilities: We offer clean, safe, and cost-free accommodation for patients and their caregivers to reduce financial burden during treatment.",
+      "Bridging the Gap in Medical Support: The home helps patients navigate healthcare systems, providing referrals, medical guidance, and basic health support when needed.",
+      "Providing a Safe & Comfortable Environment: Compassion Home ensures a secure, hygienic, and peaceful space designed for the comfort and well-being of patients and caretakers.",
+      "Offering Emotional & Psychological Support: Through counseling, group activities, and volunteer interactions, we support patients emotional and mental well-being.",
+      "Ensuring Access to Emergency Medical Attention: With emergency plans and ambulance access, we ensure timely medical intervention in critical situations."
+    ],
+  "compassion_home": [
+  {
+    "inauguration_date": "2019-03-15",
+    "funded_by": "Kalu Rinpoche Trust",
+    "location": "Punjab Basti, Delhi",
+    "total_staff": "2 Nurses, 1 Program Mangemant, 1 Ambulance Driver",
+    "images": [
+       "/assets/compassion-home/punjabbasticompassionhome1.jpg",
+       "/assets/compassion-home/punjabbasticompassionhome2.jpg",
+       "/assets/compassion-home/punjabbasticompassionhome3.jpg",
+       "/assets/compassion-home/punjabbasticompassionhome4.jpg",
+       "/assets/compassion-home/punjabbasticompassionhome5.jpg",
+       "/assets/compassion-home/punjabbasticompassionhome6.jpg",
+       "/assets/compassion-home/punjabbasticompassionhome7.jpg",
+       "/assets/compassion-home/punjabbasticompassionhome8.jpg",
+       "/assets/compassion-home/punjabbasticompassionhome9.jpg",
+       "/assets/compassion-home/punjabbasticompassionhome10.jpg",
+       "/assets/compassion-home/punjabbasticompassionhome11.jpg",
+       "/assets/compassion-home/punjabbasticompassionhome12.jpg"
+    ]
+  },
+  {
+    "inauguration_date": "2021-09-17",
+    "funded_by": "Tibet Relief Fund",
+    "location": "Sameyling Tibetan Settlement, Delhi",
+    "total_staff": "2 Nurses, 1 Manager, 1 Head Cook, 1 Kitchen Assistant, 1 Ambulance Driver",
+    "images": [
+       "/assets/compassion-home/majnukatillacompassionhome1.JPG",
+       "/assets/compassion-home/majnukatillacompassionhome2.JPG",
+       "/assets/compassion-home/majnukatillacompassionhome3.JPG",
+       "/assets/compassion-home/majnukatillacompassionhome4.JPG",
+       "/assets/compassion-home/majnukatillacompassionhome5.JPG"
+    ]
+  },
+    {
+      "inauguration_date": "2021-08-27",
+      "funded_by": "Lelung Dharma Trust",
+      "location": "Mysore, Karnataka",
+      "total_staff": "2 Nurses, 1 Assistant, 1 Ambulance Driver",
+      "images": [
+          "/assets/compassion-home/mysorecompassionhome1.jpg",
+          "/assets/compassion-home/mysorecompassionhome2.jpg",
+          "/assets/compassion-home/mysorecompassionhome3.jpg",
+          "/assets/compassion-home/mysorecompassionhome4.jpg",
+          "/assets/compassion-home/mysorecompassionhome5.jpg",
+          "/assets/compassion-home/mysorecompassionhome6.jpg",
+          "/assets/compassion-home/mysorecompassionhome7.jpg",
+          "/assets/compassion-home/mysorecompassionhome8.jpg",
+          "/assets/compassion-home/mysorecompassionhome9.jpg"
+      ]
+    }
+  ],
+  "sunday_program": {
+    "initiated_on": "2020-01-26",
+    "Purpose": [
+                "Emotional and Psychological Support: Patients engaged in a relaxed environment that helped reduce anxiety and feelings of isolation.",
+                "Encouraging Social Interaction: The program created a space for patients and survivors to connect, share experiences, and form meaningful bonds.",
+                "Enhancing Quality of Life: Outdoor activities provided a refreshing break from treatment, promoting positivity and mental well-being.",
+                "Expanding Community Engagement: Cancer survivors from across Delhi were invited to join, strengthening community ties and shared resilience."
+    ],
+    "images": [
+      "/assets/compassion-home/sundayprogram1.jpg",
+      "/assets/compassion-home/sundayprogram2.jpg",
+      "/assets/compassion-home/sundayprogram3.jpg",
+      "/assets/compassion-home/sundayprogram4.jpg",
+      "/assets/compassion-home/sundayprogram5.jpg",
+      "/assets/compassion-home/sundayprogram6.jpg",
+      "/assets/compassion-home/sundayprogram7.jpg",
+      "/assets/compassion-home/sundayprogram8.jpg",
+      "/assets/compassion-home/sundayprogram9.jpg",
+      "/assets/compassion-home/sundayprogram10.jpg",
+      "/assets/compassion-home/sundayprogram11.jpg",
+      "/assets/compassion-home/sundayprogram12.jpg",
+      "/assets/compassion-home/sundayprogram13.jpg",
+      "/assets/compassion-home/sundayprogram14.jpg",
+      "/assets/compassion-home/sundayprogram15.jpg",
+      "/assets/compassion-home/sundayprogram16.jpg",
+      "/assets/compassion-home/sundayprogram17.jpg",
+      "/assets/compassion-home/sundayprogram18.jpg",
+      "/assets/compassion-home/sundayprogram19.jpg",
+      "/assets/compassion-home/sundayprogram20.jpg",
+      "/assets/compassion-home/sundayprogram21.jpg",
+      "/assets/compassion-home/sundayprogram22.jpg",
+      "/assets/compassion-home/sundayprogram23.jpg",
+      "/assets/compassion-home/sundayprogram24.jpg",
+      "/assets/compassion-home/sundayprogram25.jpg",
+      "/assets/compassion-home/sundayprogram26.jpg",
+      "/assets/compassion-home/sundayprogram27.jpg",
+      "/assets/compassion-home/sundayprogram28.jpg",
+      "/assets/compassion-home/sundayprogram29.jpg",
+      "/assets/compassion-home/sundayprogram30.jpg",
+      "/assets/compassion-home/sundayprogram31.jpg",
+      "/assets/compassion-home/sundayprogram32.jpg",
+      "/assets/compassion-home/sundayprogram33.jpg",
+      "/assets/compassion-home/sundayprogram34.jpg",
+      "/assets/compassion-home/sundayprogram35.jpg",
+      "/assets/compassion-home/sundayprogram36.jpg",
+      "/assets/compassion-home/sundayprogram37.jpg",
+      "/assets/compassion-home/sundayprogram38.jpg",
+      "/assets/compassion-home/sundayprogram39.jpg",
+      "/assets/compassion-home/sundayprogram40.jpg",
+      "/assets/compassion-home/sundayprogram41.jpg",
+      "/assets/compassion-home/sundayprogram42.jpg",
+      "/assets/compassion-home/sundayprogram43.jpg",
+      "/assets/compassion-home/sundayprogram44.jpg",
+      "/assets/compassion-home/sundayprogram45.jpg",
+      "/assets/compassion-home/sundayprogram46.jpg",
+      "/assets/compassion-home/sundayprogram47.jpg",
+      "/assets/compassion-home/sundayprogram48.jpg",
+      "/assets/compassion-home/sundayprogram49.jpg",
+      "/assets/compassion-home/sundayprogram50.jpg",
+      "/assets/compassion-home/sundayprogram51.jpg",
+      "/assets/compassion-home/sundayprogram52.jpg",
+      "/assets/compassion-home/sundayprogram53.jpg",
+      "/assets/compassion-home/sundayprogram54.jpg",
+      "/assets/compassion-home/sundayprogram55.jpg",
+      "/assets/compassion-home/sundayprogram56.jpg",
+      "/assets/compassion-home/sundayprogram57.jpg",
+      "/assets/compassion-home/sundayprogram58.jpg",
+      "/assets/compassion-home/sundayprogram59.jpg",
+      "/assets/compassion-home/sundayprogram60.jpg",
+      "/assets/compassion-home/sundayprogram61.jpg",
+      "/assets/compassion-home/sundayprogram62.jpg"
+
+    ]
+  }
+}

@@ -42,30 +42,18 @@ const ProgramsAndServices = () => {
   useEffect(() => {
     const fetchPrograms = async () => {
       try {
-        // List of program IDs to fetch
-        const programIds = [
-          'cancer-awareness-camp',
-          'world-cancer-day',
-          'patient-support',
-          'compassion-home',
-          'ambulance-services',
-          'community-kitchen',
-          'meals-for-invisibles',
-          'sunday-program'
-        ];
+        // Fetch the main programs.json file
+        const response = await fetch('/assets/data/programs.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
         
-        // Fetch each program individually
-        const programPromises = programIds.map(async (id) => {
-          const response = await fetch(`/assets/data/programs/${id}.json`);
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status} for program ${id}`);
-          }
-          return response.json();
-        });
-        
-        // Wait for all programs to be fetched
-        const fetchedPrograms = await Promise.all(programPromises);
-        setPrograms(fetchedPrograms);
+        if (data && Array.isArray(data.programs)) {
+          setPrograms(data.programs);
+        } else {
+          throw new Error('Invalid programs data format');
+        }
       } catch (error) {
         setError(error instanceof Error ? error : new Error('An unknown error occurred'));
         console.error("Failed to fetch programs:", error);
@@ -165,9 +153,9 @@ const ProgramsAndServices = () => {
                   <Link to={`/programs/${program.id}`} className="hover:text-primary transition-colors">
                     <h3 className="text-2xl font-bold mb-3">{program.title}</h3>
                   </Link>
-                  <p className="text-gray-600 mb-4">
-                    {program.shortDescription}
-                  </p>
+                  <div className="text-gray-600 mb-4">
+                    <div dangerouslySetInnerHTML={{ __html: program.fullDescription.replace(/\n/g, '<br/>') }} />
+                  </div>
                   <div className="flex flex-wrap gap-4">
                     {program.stats && program.stats.map((stat, statIndex) => (
                       <div key={statIndex} className="flex items-center">
@@ -180,7 +168,7 @@ const ProgramsAndServices = () => {
                   </div>
                   <div className="mt-4">
                     <Link 
-                      to={`/programs/${program.id}`} 
+                      to={program.id === 'sunday-program' ? '/programs/compassion-home?tab=sunday' : `/programs/${program.id}`} 
                       className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
                     >
                       Learn more
