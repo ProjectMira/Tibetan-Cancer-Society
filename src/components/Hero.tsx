@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Heart, Search, Calendar, Users, Info } from 'lucide-react';
+import { ArrowRight, Heart, Search, Calendar, Users, Info, Truck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
@@ -65,14 +65,14 @@ const Hero = () => {
             </div>
           </Link>
           
-          <Link to="/programs/patient-support" className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow group">
+          <Link to="/programs/ambulance-services" className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow group">
             <div className="flex items-start">
               <div className="bg-blue-100 p-3 rounded-full mr-4">
-                <Heart className="h-6 w-6 text-primary" />
+                <Truck className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-1 group-hover:text-primary transition-colors">Patient Support</h3>
-                <p className="text-sm text-gray-600">Financial and emotional support for cancer patients</p>
+                <h3 className="font-semibold text-lg mb-1 group-hover:text-primary transition-colors">Ambulance Services</h3>
+                <p className="text-sm text-gray-600">Transportation for cancer patients to medical facilities</p>
               </div>
             </div>
           </Link>

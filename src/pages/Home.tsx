@@ -104,33 +104,21 @@ const ServicesSection = () => {
     const fetchProgramsData = async () => {
       setLoading(true);
       try {
-        // List of program IDs to fetch
-        const programIds = [
-          'cancer-awareness-camp',
-          'world-cancer-day',
-          'patient-support',
-          'compassion-home',
-          'ambulance-services',
-          'community-kitchen',
-          'meals-for-invisibles',
-          'sunday-program'
-        ];
+        // Fetch the centralized programs.json file
+        const response = await fetch('/assets/data/programs.json');
+        if (!response.ok) {
+          throw new Error(`Failed to load programs data: ${response.status}`);
+        }
         
-        // Fetch each program individually
-        const programPromises = programIds.map(async (id) => {
-          const response = await fetch(`/assets/data/programs/${id}.json`);
-          if (!response.ok) {
-            throw new Error(`Failed to load ${id} data`);
-          }
-          return response.json();
-        });
+        const data = await response.json();
         
-        // Wait for all programs to be fetched
-        const fetchedPrograms = await Promise.all(programPromises);
+        if (!data || !Array.isArray(data.programs)) {
+          throw new Error('Invalid programs data format');
+        }
         
-        // Create a record with program ID as key
+        // Create a record with program ID as key for easier access
         const programsRecord: Record<string, ProgramData> = {};
-        fetchedPrograms.forEach((program) => {
+        data.programs.forEach((program: ProgramData) => {
           programsRecord[program.id] = program;
         });
         
@@ -227,7 +215,6 @@ const ServicesSection = () => {
           <>
             <ProgramCard programId="cancer-awareness-camp" label="Early Detection Program" />
             <ProgramCard programId="world-cancer-day" label="Annual Event" />
-            <ProgramCard programId="patient-support" label="Support Program" />
             <ProgramCard programId="compassion-home" label="Accommodation Program" />
             <ProgramCard programId="ambulance-services" label="Transportation Program" />
             <ProgramCard programId="community-kitchen" label="Nutrition Program" />

@@ -19,6 +19,7 @@ import AmbulanceServices from './pages/AmbulanceServices';
 import CommunityKitchen from './pages/CommunityKitchen';
 import CompassionHome from './pages/CompassionHome';
 import WorldCancerDay from './pages/WorldCancerDay';
+import MealsForInvisible from './pages/MealsForInvisible';
 
 const queryClient = new QueryClient();
 
@@ -70,6 +71,7 @@ const App = () => {
             <Route path="/programs/community-kitchen" element={<CommunityKitchen />} />
             <Route path="/programs/compassion-home" element={<CompassionHome />} />
             <Route path="/programs/world-cancer-day" element={<WorldCancerDay />} />
+            <Route path="/programs/meals-for-invisibles" element={<MealsForInvisible />} />
             <Route path="/program/:id" element={<ProgramDetail programs={programs} />} />
             <Route path="/programs/:id" element={<ProgramDetail programs={programs} />} />
             <Route path="/team" element={<Team />} />
