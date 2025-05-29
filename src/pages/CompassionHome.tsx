@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PageLayout from '../components/PageLayout';
+import ImageModal from '../components/ImageModal';
 import { Calendar, MapPin, Users } from 'lucide-react';
 
 interface HomeData {
@@ -34,12 +35,50 @@ const CompassionHome: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'homes' | 'sunday'>('homes');
 
   useEffect(() => {
-    // Check URL parameters for tab selection
-    const queryParams = new URLSearchParams(window.location.search);
-    const tabParam = queryParams.get('tab');
-    if (tabParam === 'sunday') {
-      setActiveTab('sunday');
-    }
+    // This effect runs once on component mount
+    const handleTabSelection = () => {
+      // Check URL parameters for tab selection
+      const queryParams = new URLSearchParams(window.location.search);
+      const tabParam = queryParams.get('tab');
+      const hash = window.location.hash;
+      
+      // Set active tab based on URL parameter or hash
+      if (tabParam === 'sunday' || hash.includes('sunday-program')) {
+        setActiveTab('sunday');
+        
+        // Focus on the Sunday program section after a short delay to ensure DOM is fully loaded
+        setTimeout(() => {
+          // First try to click the Sunday tab button to ensure proper tab activation
+          const sundayTabButton = document.getElementById('sunday-program-tab');
+          if (sundayTabButton && sundayTabButton instanceof HTMLButtonElement) {
+            sundayTabButton.click(); // Programmatically click the button to ensure event handlers run
+            sundayTabButton.focus();
+            
+            // After clicking the tab, scroll to the content section
+            setTimeout(() => {
+              const sundayProgramSection = document.getElementById('sunday-program-section');
+              if (sundayProgramSection) {
+                sundayProgramSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              } else {
+                // If section not found, at least scroll to the tab
+                sundayTabButton.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+            }, 100);
+          }
+        }, 500); // Increased delay to ensure DOM is fully loaded
+      }
+    };
+    
+    // Run the handler once on mount
+    handleTabSelection();
+    
+    // Also add a listener for hash changes (for when users navigate with browser back/forward)
+    window.addEventListener('hashchange', handleTabSelection);
+    
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener('hashchange', handleTabSelection);
+    };
     
     const fetchData = async () => {
       try {
@@ -69,31 +108,40 @@ const CompassionHome: React.FC = () => {
     fetchData();
   }, []);
 
-  // Image Modal Component
-  const ImageModal = ({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) => {
-    return (
-      <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4" onClick={onClose}>
-        <div className="relative max-w-4xl max-h-[90vh] overflow-hidden">
-          <button 
-            className="absolute top-2 right-2 bg-black/50 text-white rounded-full p-2 hover:bg-black/70 transition-colors"
-            onClick={(e) => {
-              e.stopPropagation();
-              onClose();
-            }}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-          <img 
-            src={src} 
-            alt={alt} 
-            className="max-h-[85vh] max-w-full object-contain bg-white/10 backdrop-blur-sm rounded-lg" 
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      </div>
-    );
+  // Navigation functions for the image modal
+  const getImagesForActiveView = () => {
+    if (activeTab === 'homes' && homeData?.compassion_home && homeData.compassion_home.length > 0) {
+      return homeData.compassion_home[activeHomeIndex].images || [];
+    } else if (activeTab === 'sunday' && homeData?.sunday_program) {
+      return homeData.sunday_program.images || [];
+    }
+    return [];
+  };
+  
+  const handlePrevImage = () => {
+    if (!selectedImage) return;
+    
+    const images = getImagesForActiveView();
+    const currentIndex = images.findIndex(img => img === selectedImage);
+    if (currentIndex > 0) {
+      setSelectedImage(images[currentIndex - 1]);
+    } else {
+      // Loop to the end if at the beginning
+      setSelectedImage(images[images.length - 1]);
+    }
+  };
+  
+  const handleNextImage = () => {
+    if (!selectedImage) return;
+    
+    const images = getImagesForActiveView();
+    const currentIndex = images.findIndex(img => img === selectedImage);
+    if (currentIndex < images.length - 1) {
+      setSelectedImage(images[currentIndex + 1]);
+    } else {
+      // Loop to the beginning if at the end
+      setSelectedImage(images[0]);
+    }
   };
 
   if (loading) {
@@ -353,7 +401,7 @@ const CompassionHome: React.FC = () => {
             ) : (
               <>
                 {/* Sunday Program */}
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 mb-12">
+                <div id="sunday-program-section" className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 mb-12">
                   <div className="bg-primary text-white text-center py-3 rounded-t-lg">
                     <h3 className="text-xl font-bold">Sunday Program</h3>
                   </div>
@@ -432,6 +480,10 @@ const CompassionHome: React.FC = () => {
               setImageModalOpen(false);
               setSelectedImage(null);
             }}
+            onNext={handleNextImage}
+            onPrevious={handlePrevImage}
+            currentIndex={getImagesForActiveView().findIndex(img => img === selectedImage)}
+            totalImages={getImagesForActiveView().length}
           />
         )}
       </section>

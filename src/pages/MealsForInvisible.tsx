@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PageLayout from '../components/PageLayout';
+import ImageModal from '../components/ImageModal';
 import { Calendar, Users, Coffee, DollarSign } from 'lucide-react';
 
 interface MealService {
@@ -11,18 +12,22 @@ interface MealService {
 }
 
 interface MFIData {
-  mealServices: MealService[];
+  list: MealService[];
+  images: string[];
 }
 
 const MealsForInvisible: React.FC = () => {
   const [mfiData, setMfiData] = useState<MealService[]>([]);
+  const [mfiImages, setMfiImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<'overview' | 'services'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'served'>('overview');
   const [currentPage, setCurrentPage] = useState(1);
   const [footerData, setFooterData] = useState<any>(null);
   const [totalMeals, setTotalMeals] = useState(0);
   const [totalSponsors, setTotalSponsors] = useState(0);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [imageModalOpen, setImageModalOpen] = useState(false);
   const itemsPerPage = 10;
 
   useEffect(() => {
@@ -35,16 +40,21 @@ const MealsForInvisible: React.FC = () => {
         }
         const data = await mfiResponse.json();
         
-        // Ensure data is an array
-        if (Array.isArray(data)) {
-          setMfiData(data);
+        // Check if data has the expected structure
+        if (data && data.list && Array.isArray(data.list)) {
+          setMfiData(data.list);
+          
+          // Set images if available
+          if (data.images && Array.isArray(data.images)) {
+            setMfiImages(data.images);
+          }
           
           // Calculate total meals and unique sponsors
-          const totalMeals = data.reduce((sum: number, service: MealService) => sum + service.MEALS_PROVIDED, 0);
+          const totalMeals = data.list.reduce((sum: number, service: MealService) => sum + service.MEALS_PROVIDED, 0);
           setTotalMeals(totalMeals);
           
           // Count unique sponsors
-          const uniqueSponsors = new Set(data.map((service: MealService) => service.SPONSOR));
+          const uniqueSponsors = new Set(data.list.map((service: MealService) => service.SPONSOR));
           setTotalSponsors(uniqueSponsors.size);
         } else {
           throw new Error('Invalid data format');
@@ -118,6 +128,31 @@ const MealsForInvisible: React.FC = () => {
       }).format(date);
     } catch (error) {
       return dateString; // Return original string if parsing fails
+    }
+  };
+  
+  // Navigation functions for the image modal
+  const handlePrevImage = () => {
+    if (!selectedImage) return;
+    
+    const currentIndex = mfiImages.findIndex(img => img === selectedImage);
+    if (currentIndex > 0) {
+      setSelectedImage(mfiImages[currentIndex - 1]);
+    } else {
+      // Loop to the end if at the beginning
+      setSelectedImage(mfiImages[mfiImages.length - 1]);
+    }
+  };
+  
+  const handleNextImage = () => {
+    if (!selectedImage) return;
+    
+    const currentIndex = mfiImages.findIndex(img => img === selectedImage);
+    if (currentIndex < mfiImages.length - 1) {
+      setSelectedImage(mfiImages[currentIndex + 1]);
+    } else {
+      // Loop to the beginning if at the end
+      setSelectedImage(mfiImages[0]);
     }
   };
 
@@ -195,15 +230,15 @@ const MealsForInvisible: React.FC = () => {
               <button
                 type="button"
                 className={`px-6 py-4 text-lg font-medium flex items-center justify-center gap-2 transition-all duration-200 ${
-                  activeTab === 'services'
+                  activeTab === 'served'
                     ? 'bg-primary text-white shadow-inner'
                     : 'bg-white text-gray-700 hover:bg-gray-50'
                 } border border-gray-200`}
-                onClick={() => setActiveTab('services')}
-                aria-label="View Meal Services"
+                onClick={() => setActiveTab('served')}
+                aria-label="View Meals Served"
               >
                 <Users className="h-5 w-5" />
-                <span>Meal Services</span>
+                <span>Meals Served</span>
               </button>
             </div>
           </div>
@@ -380,6 +415,50 @@ const MealsForInvisible: React.FC = () => {
                   </div>
                 </div>
               </div>
+              
+              {/* Image Gallery */}
+              {mfiImages.length > 0 && (
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 mb-12">
+                  <div className="bg-primary text-white text-center py-3 rounded-t-lg">
+                    <h3 className="text-xl font-bold">Program Gallery</h3>
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                      {mfiImages.map((image, index) => (
+                        <div 
+                          key={index} 
+                          className="overflow-hidden rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 cursor-pointer transform transition hover:scale-105"
+                          onClick={() => {
+                            setSelectedImage(image);
+                            setImageModalOpen(true);
+                          }}
+                        >
+                          <img 
+                            src={image} 
+                            alt={`Meals for Invisible program activity ${index + 1}`} 
+                            className="w-full h-48 object-cover"
+                            loading="lazy"
+                            onError={(e) => {
+                              const target = e.target as HTMLImageElement;
+                              // Try with different case extensions if the original fails
+                              if (image.toLowerCase().endsWith('.jpg')) {
+                                target.src = image.replace(/\.jpg$/i, '.JPG');
+                              } else if (image.toLowerCase().endsWith('.jpeg')) {
+                                target.src = image.replace(/\.jpeg$/i, '.JPEG');
+                              } else if (image.toLowerCase().endsWith('.png')) {
+                                target.src = image.replace(/\.png$/i, '.PNG');
+                              } else {
+                                target.src = '/assets/placeholders/placeholder-image.svg';
+                              }
+                            }}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -424,6 +503,22 @@ const MealsForInvisible: React.FC = () => {
           </div>
         </div>
       </section>
+      
+      {/* Image Modal */}
+      {imageModalOpen && selectedImage && (
+        <ImageModal
+          src={selectedImage}
+          alt="Meals for Invisible Image"
+          onClose={() => {
+            setImageModalOpen(false);
+            setSelectedImage(null);
+          }}
+          onNext={handleNextImage}
+          onPrevious={handlePrevImage}
+          currentIndex={mfiImages.findIndex(img => img === selectedImage)}
+          totalImages={mfiImages.length}
+        />
+      )}
     </PageLayout>
   );
 };

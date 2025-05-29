@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import ImageModal from '../components/ImageModal';
 import { Calendar, MapPin, FileText, Users, ChevronDown, ChevronUp } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
@@ -68,6 +69,11 @@ const CancerAwarenessCamp = () => {
   const [error, setError] = useState<Error | null>(null);
   const [expandedCamps, setExpandedCamps] = useState<{ [key: string]: boolean }>({});
   const [expandedSettlements, setExpandedSettlements] = useState<{ [key: string]: boolean }>({});
+  
+  // Image modal state
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [imageModalOpen, setImageModalOpen] = useState(false);
+  const [activeSettlement, setActiveSettlement] = useState<Settlement | null>(null);
 
   useEffect(() => {
     const fetchCampData = async () => {
@@ -132,6 +138,33 @@ const CancerAwarenessCamp = () => {
     { name: 'Female', value: stats.female }
   ];
 
+  // Image modal navigation functions
+  const handlePrevImage = () => {
+    if (!selectedImage || !activeSettlement) return;
+    
+    const images = activeSettlement.photos || [];
+    const currentIndex = images.findIndex(img => img === selectedImage);
+    if (currentIndex > 0) {
+      setSelectedImage(images[currentIndex - 1]);
+    } else {
+      // Loop to the end if at the beginning
+      setSelectedImage(images[images.length - 1]);
+    }
+  };
+  
+  const handleNextImage = () => {
+    if (!selectedImage || !activeSettlement) return;
+    
+    const images = activeSettlement.photos || [];
+    const currentIndex = images.findIndex(img => img === selectedImage);
+    if (currentIndex < images.length - 1) {
+      setSelectedImage(images[currentIndex + 1]);
+    } else {
+      // Loop to the beginning if at the end
+      setSelectedImage(images[0]);
+    }
+  };
+
   if (loading) {
     return (
       <PageLayout>
@@ -165,9 +198,35 @@ const CancerAwarenessCamp = () => {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-blue-700 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
+      <section className="relative">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          {campData.healthCamps && campData.healthCamps.length > 0 && 
+           campData.healthCamps[0].settlements && 
+           campData.healthCamps[0].settlements.length > 0 && 
+           campData.healthCamps[0].settlements[0].photos && 
+           campData.healthCamps[0].settlements[0].photos.length > 0 ? (
+            <img 
+              src={campData.healthCamps[0].settlements[0].photos[0]} 
+              alt="Cancer Awareness Camp" 
+              className="w-full h-full object-cover brightness-50"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = '/assets/programs/awareness-camp.jpg';
+              }}
+            />
+          ) : (
+            <img 
+              src={campData.image || "/assets/programs/awareness-camp.jpg"} 
+              alt="Cancer Awareness Camp" 
+              className="w-full h-full object-cover brightness-50"
+            />
+          )}
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="max-w-3xl text-white">
             <h1 className="text-4xl font-bold mb-4">{campData.title}</h1>
             <p className="text-xl mb-6">{campData.fullDescription}</p>
             <div className="flex flex-wrap gap-4">
@@ -391,7 +450,15 @@ const CancerAwarenessCamp = () => {
                                     <h6 className="text-sm font-semibold mb-4">Photo Gallery</h6>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                                       {settlement.photos.map((photo, index) => (
-                                        <div key={index} className="rounded-lg overflow-hidden shadow-sm">
+                                        <div 
+                                          key={index} 
+                                          className="rounded-lg overflow-hidden shadow-sm cursor-pointer transform transition hover:scale-105"
+                                          onClick={() => {
+                                            setSelectedImage(photo);
+                                            setActiveSettlement(settlement);
+                                            setImageModalOpen(true);
+                                          }}
+                                        >
                                           <img 
                                             src={photo} 
                                             alt={`${settlement.name} Camp Photo ${index + 1}`} 
@@ -419,6 +486,22 @@ const CancerAwarenessCamp = () => {
           </div>
         </div>
       </section>
+
+      {/* Image Modal */}
+      {imageModalOpen && selectedImage && activeSettlement && (
+        <ImageModal
+          src={selectedImage}
+          alt="Camp Photo"
+          onClose={() => {
+            setImageModalOpen(false);
+            setSelectedImage(null);
+          }}
+          onNext={handleNextImage}
+          onPrevious={handlePrevImage}
+          currentIndex={activeSettlement.photos.findIndex(img => img === selectedImage)}
+          totalImages={activeSettlement.photos.length}
+        />
+      )}
 
       {/* Call to Action */}
       <section className="py-12 bg-white">
