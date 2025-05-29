@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PageLayout from '../components/PageLayout';
+import ImageModal from '../components/ImageModal';
 import { Calendar, MapPin, Users } from 'lucide-react';
 
 interface KitchenData {
@@ -54,31 +55,31 @@ const CommunityKitchen: React.FC = () => {
     fetchData();
   }, []);
 
-  // Image Modal Component
-  const ImageModal = ({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) => {
-    return (
-      <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4" onClick={onClose}>
-        <div className="relative max-w-4xl max-h-[90vh] overflow-hidden">
-          <button 
-            className="absolute top-2 right-2 bg-black/50 text-white rounded-full p-2 hover:bg-black/70 transition-colors"
-            onClick={(e) => {
-              e.stopPropagation();
-              onClose();
-            }}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-          <img 
-            src={src} 
-            alt={alt} 
-            className="max-h-[85vh] max-w-full object-contain bg-white/10 backdrop-blur-sm rounded-lg" 
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      </div>
-    );
+  // Navigation functions for the image modal
+  const handlePrevImage = () => {
+    if (!selectedImage || !activeKitchen) return;
+    
+    const images = activeKitchen.images || [];
+    const currentIndex = images.findIndex(img => img === selectedImage);
+    if (currentIndex > 0) {
+      setSelectedImage(images[currentIndex - 1]);
+    } else {
+      // Loop to the end if at the beginning
+      setSelectedImage(images[images.length - 1]);
+    }
+  };
+  
+  const handleNextImage = () => {
+    if (!selectedImage || !activeKitchen) return;
+    
+    const images = activeKitchen.images || [];
+    const currentIndex = images.findIndex(img => img === selectedImage);
+    if (currentIndex < images.length - 1) {
+      setSelectedImage(images[currentIndex + 1]);
+    } else {
+      // Loop to the beginning if at the end
+      setSelectedImage(images[0]);
+    }
   };
 
   if (loading) {
@@ -328,6 +329,10 @@ const CommunityKitchen: React.FC = () => {
               setImageModalOpen(false);
               setSelectedImage(null);
             }}
+            onNext={handleNextImage}
+            onPrevious={handlePrevImage}
+            currentIndex={activeKitchen.images.findIndex(img => img === selectedImage)}
+            totalImages={activeKitchen.images.length}
           />
         )}
       </section>

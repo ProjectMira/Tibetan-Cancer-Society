@@ -23,9 +23,7 @@
           "value": "25+",
           "label": "Camps Conducted"
         }
-      ],
-      "contactPerson": "Tenzin Dolma",
-      "contactEmail": "camps@tibetancancersociety.org"
+      ]
     },
     {
       "id": "world-cancer-day",
@@ -50,9 +48,7 @@
           "value": "7",
           "label": "Years of Celebration"
         }
-      ],
-      "contactPerson": "Lobsang Wangmo",
-      "contactEmail": "events@tibetancancersociety.org"
+      ]
     },
     {
       "id": "compassion-home",
@@ -77,9 +73,7 @@
           "value": "3000+",
           "label": "Nights of Accommodation Provided"
         }
-      ],
-      "contactPerson": "Pema Yangzom",
-      "contactEmail": "compassionhome@tibetancancersociety.org"
+      ]
     },
     {
       "id": "ambulance-services",
@@ -104,9 +98,7 @@
           "value": "5000+",
           "label": "Kilometers Traveled"
         }
-      ],
-      "contactPerson": "Tenzin Choedak",
-      "contactEmail": "ambulance@tibetancancersociety.org"
+      ]
     },
     {
       "id": "community-kitchen",
@@ -131,9 +123,7 @@
           "value": "150+",
           "label": "Families Supported"
         }
-      ],
-      "contactPerson": "Dolma Tsering",
-      "contactEmail": "kitchen@tibetancancersociety.org"
+      ]
     },
     {
       "id": "meals-for-invisibles",
@@ -158,9 +148,7 @@
           "value": "75+",
           "label": "Regular Recipients"
         }
-      ],
-      "contactPerson": "Tenzin Yangdon",
-      "contactEmail": "meals@tibetancancersociety.org"
+      ]
     },
     {
       "id": "sunday-program",
@@ -185,9 +173,7 @@
           "value": "200+",
           "label": "Sessions Conducted"
         }
-      ],
-      "contactPerson": "Tenzin Dolma",
-      "contactEmail": "sunday@tibetancancersociety.org"
+      ]
     }
   ]
 }
