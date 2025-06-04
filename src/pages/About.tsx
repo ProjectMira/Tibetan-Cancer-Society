@@ -1,9 +1,66 @@
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PageLayout from '../components/PageLayout';
 import { FileText, Award, Heart, Target } from 'lucide-react';
+import ImageModal from '../components/ImageModal';
+
+// Helper to generate title from filename
+function titleFromFilename(filename: string) {
+  return filename
+    .replace(/.*\//, '') // Remove path
+    .replace(/[-_]/g, ' ')
+    .replace(/\.[^.]+$/, '')
+    .replace(/\b(\d{1,2})\b/g, ' $1')
+    .replace(/\b([A-Z]{2,})\b/g, s => s.charAt(0) + s.slice(1).toLowerCase())
+    .replace(/\b([a-z])/g, s => s.toUpperCase())
+    .trim();
+}
 
 const About = () => {
+  // Modal state
+  const [modalDoc, setModalDoc] = React.useState<null | { src: string; title: string; description?: string }>(null);
+  const [modalIndex, setModalIndex] = React.useState<number>(-1);
+  const openModal = (doc: { image: string; title: string }, idx: number) => {
+    setModalDoc({ src: doc.image, title: doc.title });
+    setModalIndex(idx);
+  };
+  const closeModal = () => {
+    setModalDoc(null);
+    setModalIndex(-1);
+  };
+  const handlePrev = () => {
+    if (!documentImages.length) return;
+    const prevIdx = (modalIndex - 1 + documentImages.length) % documentImages.length;
+    setModalDoc({ src: documentImages[prevIdx].image, title: documentImages[prevIdx].title });
+    setModalIndex(prevIdx);
+  };
+  const handleNext = () => {
+    if (!documentImages.length) return;
+    const nextIdx = (modalIndex + 1) % documentImages.length;
+    setModalDoc({ src: documentImages[nextIdx].image, title: documentImages[nextIdx].title });
+    setModalIndex(nextIdx);
+  };
+
+  // State for document images from JSON
+  const [documentImages, setDocumentImages] = React.useState<{ image: string; title: string }[]>([]);
+  const [loadingDocs, setLoadingDocs] = React.useState(true);
+  const [errorDocs, setErrorDocs] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    const fetchDocs = async () => {
+      try {
+        const res = await fetch('/assets/data/documents.json');
+        if (!res.ok) throw new Error('Failed to fetch documents');
+        const data = await res.json();
+        setDocumentImages(data[Object.keys(data)[0]] || []);
+      } catch (e) {
+        setErrorDocs('Could not load documents.');
+      } finally {
+        setLoadingDocs(false);
+      }
+    };
+    fetchDocs();
+  }, []);
+
   return (
     <PageLayout>
       {/* Hero Section */}
@@ -127,81 +184,69 @@ const About = () => {
             </div>
             <h2 className="text-3xl font-bold mb-4">Appreciation and Legal Documents</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              The Tibetan Cancer Society is officially recognized by the Central Tibetan Administration and registered as a non-profit organization.
+              Recognition and legal documentation are vital for our mission—these letters and certificates reflect the trust, support, and official status granted to the Tibetan Cancer Society by various authorities and partners.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {/* HH Dalai Lama Office Letter */}
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-              <div className="flex items-start mb-4">
-                <div className="bg-primary/10 p-3 rounded-full mr-4">
-                  <FileText className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">HH Dalai Lama Office Letter</h3>
-                  <p className="text-gray-600 text-sm">
-                    Official letter of recognition and support from the Office of His Holiness the 14th Dalai Lama, acknowledging the importance of our work in the Tibetan community.
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-lg overflow-hidden border border-gray-200">
-                <img 
-                  src="/assets/about-images/HH_letter.jpeg" 
-                  alt="HH Dalai Lama Office Letter" 
-                  className="w-full h-auto"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = '/assets/placeholder-image.jpg';
-                  }}
-                />
-              </div>
-              <div className="mt-4 text-center">
-                <a 
-                  href="/assets/documents/HH_letter.pdf" 
-                  target="_blank"
-                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
-                >
-                  View Full Document
-                </a>
-              </div>
-            </div>
-
-            {/* Letter of Registration */}
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-              <div className="flex items-start mb-4">
-                <div className="bg-primary/10 p-3 rounded-full mr-4">
-                  <FileText className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Letter of Registration</h3>
-                  <p className="text-gray-600 text-sm">
-                    Official registration document confirming our status as a registered non-profit organization dedicated to cancer care and support in the Tibetan community.
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-lg overflow-hidden border border-gray-200">
-                <img 
-                  src="/assets/about-images/registration.jpeg" 
-                  alt="Registration Letter" 
-                  className="w-full h-auto"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = '/assets/placeholder-image.jpg';
-                  }}
-                />
-              </div>
-              <div className="mt-4 text-center">
-                <a 
-                  href="/assets/documents/registration_letter.pdf" 
-                  target="_blank"
-                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
-                >
-                  View Full Document
-                </a>
-              </div>
+          {/* Unified Documents Grid */}
+          <div className="mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {loadingDocs ? (
+                <div className="text-center text-gray-500 col-span-2">Loading documents...</div>
+              ) : errorDocs ? (
+                <div className="text-center text-red-500 col-span-2">{errorDocs}</div>
+              ) : (
+                documentImages.map((doc, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-white rounded-2xl border border-gray-200 shadow-md flex flex-col items-center mx-auto max-w-lg p-6"
+                    style={{ minWidth: 320 }}
+                  >
+                    {/* Icon and Title Row */}
+                    <div className="flex items-center w-full mb-4">
+                      <div className="bg-primary/10 p-3 rounded-full mr-4 flex-shrink-0">
+                        <FileText className="h-6 w-6 text-primary" />
+                      </div>
+                      <div className="font-bold text-lg text-gray-900 text-left">{doc.title}</div>
+                    </div>
+                    {/* Optional Description */}
+                    {doc.description && (
+                      <div className="text-gray-600 text-sm mb-4 w-full text-left">{doc.description}</div>
+                    )}
+                    {/* Image */}
+                    <div
+                      className="w-full flex items-center justify-center overflow-hidden rounded-lg border border-gray-100 bg-white mb-2 cursor-pointer"
+                      style={{ minHeight: 320, maxHeight: 400 }}
+                      onClick={() => openModal(doc, idx)}
+                    >
+                      <img
+                        src={doc.image}
+                        alt={doc.title}
+                        className="object-contain max-h-96 w-auto max-w-full p-4"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = '/assets/placeholders/placeholder-image.svg';
+                        }}
+                      />
+                    </div>
+                  </div>
+                ))
+              )}
             </div>
           </div>
+
+          {/* Modal for full-size image */}
+          {modalDoc && (
+            <ImageModal
+              src={modalDoc.src}
+              alt={modalDoc.title}
+              onClose={closeModal}
+              onNext={handleNext}
+              onPrevious={handlePrev}
+              currentIndex={modalIndex}
+              totalImages={documentImages.length}
+            />
+          )}
         </div>
       </section>
 

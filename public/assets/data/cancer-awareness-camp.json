@@ -2762,6 +2762,1138 @@
           ]
         }
       ]
+    },
+    {
+      "id": "19",
+      "date": "April 11-May 04, 2018",
+      "place": "Karnataka",
+      "testsOffered": [
+            "General Health Check-up", 
+            "H. pylori Testing", 
+            "ECG Check-up", 
+            "Blood Test", 
+            "Cancer Awareness Talk",
+            "Free hypertension test",
+            "Free ibreastexam Test",
+            "Free Cervical Test (PAP smear)", 
+            "Free Oncologist Consultation",
+            "Free oral cancer detection"
+           ],
+      "collaborators": [
+        {
+          "name": "The Tibet Fund",
+          "logo":"/assets/collaborators/The Tibet Fund.png" 
+        },
+        {
+          "name": "UICC Global cancer control",
+          "logo": "/assets/collaborators/UICC Global cancer control.png"
+        },
+         {
+          "name": "CTA Department of Health",
+          "logo": "/assets/collaborators/CTA Department of Health.png"
+        },
+         {
+          "name": "Narayana Health Care",
+          "logo": "/assets/collaborators/Narayana Health Care.png"
+        }
+      ],
+      "settlements": [
+        {
+          "name": "Bylakuppe Tibetan Settlement",
+          "summary": "The Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, the CTA Health Department, and Narayana Hospital, organized a comprehensive Cancer Awareness Health Camp across the Tibetan settlements in Bylakuppe, Hunsur, and Kollegal in Karnataka from April 11 to May 4, 2018. This initiative, held in one of the oldest and largest Tibetan refugee communities in India, aimed to raise awareness about cancer, promote early detection, and provide accessible screening services. The camp offered H-Pylori testing, Random Blood Sugar (RBS) tests, ECGs, Pap smear tests, iBreast examinations, and cancer education sessions. Activities included a cancer awareness exhibition, interactive talks and Q&A sessions led by medical professionals, and direct engagement with residents from areas such as TCV Bylakuppe and both Old and New Bylakuppe. The event was supported by a team of doctors and 22 dedicated volunteers who contributed tirelessly to its success. Key goals of the initiative included early detection and diagnosis, community education, accessible healthcare services, and reducing cancer-related mortality by connecting patients with necessary treatments and support systems. The collaborative effort with healthcare providers further ensured follow-up care and built a foundation for ongoing community support and cancer stigma reduction.",
+          "genderStats": {
+            "male": 256,
+            "female": 510
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 180 },
+            { "group": "16-30", "count": 95 },
+            { "group": "31-45", "count": 141 },
+            { "group": "46-60", "count": 210 },
+            { "group": "61+", "count": 269 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 256 },
+            { "category": "Negative", "count": 489 },
+            { "category": "Invalid", "count": 21 }
+          ],
+          "photos": [
+            "/assets/camps/2018-Karnataka-Bylakuppe1.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe2.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe3.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe4.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe5.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe6.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe7.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe8.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe9.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe10.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe11.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe12.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe13.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe14.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe15.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe16.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe17.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe18.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe19.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe20.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe21.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe22.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe23.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe24.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe25.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe26.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe27.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe28.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe29.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe30.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe31.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe32.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe33.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe34.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe35.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe36.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe37.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe38.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe39.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe40.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe41.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe42.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe43.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe44.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe45.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe46.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe47.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe48.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe49.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe50.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe51.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe52.jpg",
+            "/assets/camps/2018-Karnataka-Bylakuppe53.jpg"
+          ]
+        },
+         {
+          "name": "Gulladhalla Tibetan Settlement",
+          "summary": "The Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, the CTA Health Department, and Narayana Hospital, organized a two-day Cancer Awareness and Screening Health Camp on April 16th and 17th, 2025, at the Golathalla Tibetan Settlement in Bylakuppe, Karnataka. This initiative aimed to promote early detection and awareness of cancer and other chronic diseases within the community. Over the course of two consecutive days, residents were provided with a range of free health services, including hypertension testing, blood sugar testing, ECG, iBreast examinations for breast cancer detection, Pap smear tests for cervical cancer screening, oral cancer screening, general health consultations, oncologist consultations, and mammography. The camp was supported by a team of doctors, specialists, and dedicated volunteers, working collaboratively to offer accessible and high-quality healthcare. The event reflected TCS’s ongoing commitment to reducing cancer-related mortality, empowering individuals through education, and ensuring timely access to diagnostics and treatment support in underserved Tibetan communities.",
+          "genderStats": {
+            "male": 35,
+            "female": 201
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 1 },
+            { "group": "16-30", "count": 142 },
+            { "group": "31-45", "count": 9 },
+            { "group": "46-60", "count": 22 },
+            { "group": "61+", "count": 62 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 58 },
+            { "category": "Negative", "count": 169 },
+            { "category": "Invalid", "count": 9 }
+          ],
+          "photos": [
+            "/assets/camps/2018-karnataka-gulladhala1.jpg",
+            "/assets/camps/2018-karnataka-gulladhala2.jpg",
+            "/assets/camps/2018-karnataka-gulladhala3.jpg",
+            "/assets/camps/2018-karnataka-gulladhala4.jpg",
+            "/assets/camps/2018-karnataka-gulladhala5.jpg",
+            "/assets/camps/2018-karnataka-gulladhala6.jpg",
+            "/assets/camps/2018-karnataka-gulladhala7.jpg",
+            "/assets/camps/2018-karnataka-gulladhala8.jpg",
+            "/assets/camps/2018-karnataka-gulladhala9.jpg",
+            "/assets/camps/2018-karnataka-gulladhala10.jpg",
+            "/assets/camps/2018-karnataka-gulladhala11.jpg",
+            "/assets/camps/2018-karnataka-gulladhala12.jpg",
+            "/assets/camps/2018-karnataka-gulladhala13.jpg",
+            "/assets/camps/2018-karnataka-gulladhala14.jpg",
+            "/assets/camps/2018-karnataka-gulladhala15.jpg",
+            "/assets/camps/2018-karnataka-gulladhala16.jpg",
+            "/assets/camps/2018-karnataka-gulladhala17.jpg",
+            "/assets/camps/2018-karnataka-gulladhala18.jpg",
+            "/assets/camps/2018-karnataka-gulladhala19.jpg",
+            "/assets/camps/2018-karnataka-gulladhala20.jpg",
+            "/assets/camps/2018-karnataka-gulladhala21.jpg",
+            "/assets/camps/2018-karnataka-gulladhala22.jpg",
+            "/assets/camps/2018-karnataka-gulladhala23.jpg",
+            "/assets/camps/2018-karnataka-gulladhala24.jpg",
+            "/assets/camps/2018-karnataka-gulladhala25.jpg",
+            "/assets/camps/2018-karnataka-gulladhala26.jpg",
+            "/assets/camps/2018-karnataka-gulladhala27.jpg",
+            "/assets/camps/2018-karnataka-gulladhala28.jpg",
+            "/assets/camps/2018-karnataka-gulladhala29.jpg"
+          ]
+        },
+         {
+          "name": "Tashi Lhunpo Monastery",
+          "summary": "The Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, the CTA Health Department, and Narayana Hospital, organized two free health camps focused on cancer awareness and detection at Tashi Lhunpo Monastery in Bylakuppe. The first camp was held on April 23, 2018, and the second on April 25, 2018, in commemoration of the birthday of Gyalwang Panchen Lama. These camps aimed to promote early detection and increase awareness of cancer and other chronic health conditions among the monastic community. A wide range of free medical services was provided, including hypertension testing, blood sugar testing, ECG, iBreast examinations for breast cancer screening, Pap smear tests for cervical cancer detection, general health consultations, and oncologist consultations. Supported by a team of experienced medical professionals and volunteers, the camps offered essential healthcare access to the monastic population, reinforcing TCS’s mission to improve health outcomes through early diagnosis, education, and collaborative healthcare delivery in Tibetan communities.",
+          "genderStats": {
+            "male": 87,
+            "female": 33
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 0 },
+            { "group": "16-30", "count": 5 },
+            { "group": "31-45", "count": 33 },
+            { "group": "46-60", "count": 57 },
+            { "group": "61+", "count": 36 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 25 },
+            { "category": "Negative", "count": 90 },
+            { "category": "Invalid", "count": 5 }
+          ],
+          "photos": [
+            "/assets/camps/2018-karnataka-tashilhunpo1.jpg",
+            "/assets/camps/2018-karnataka-tashilhunpo2.jpg",
+            "/assets/camps/2018-karnataka-tashilhunpo3.jpg",
+            "/assets/camps/2018-karnataka-tashilhunpo4.jpg",
+            "/assets/camps/2018-karnataka-tashilhunpo5.jpg",
+            "/assets/camps/2018-karnataka-tashilhunpo6.jpg",
+            "/assets/camps/2018-karnataka-tashilhunpo7.jpg"
+          ]
+        },
+         {
+          "name": "Sera Jey & Mey Monastery",
+          "summary": "On April 23, 2018, the Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, the CTA Health Department, and Narayana Hospital, conducted a cancer awareness program at the Sera-Jey and Sera-Mey monasteries in Bylakuppe. The session at Sera-Jey Monastery was held from 6:30 PM to 7:30 PM, followed by the session at Sera-Mey Monastery from 7:30 PM to 8:30 PM. The program was led by a renowned oncologist from Narayana Hospital, Mysore, and was aimed at educating the monastic community about the importance of early cancer detection, preventive measures, and general awareness regarding cancer symptoms and treatment options. Dr. Sonam la, advisor to the Tibetan Cancer Society, provided live translation throughout the sessions, ensuring that the information was effectively communicated to all participants. The initiative served as a vital step in spreading awareness and fostering proactive health practices within the monastic community.",
+          "genderStats": {
+            "male": 67,
+            "female": 13
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 0 },
+            { "group": "16-30", "count": 3 },
+            { "group": "31-45", "count": 16 },
+            { "group": "46-60", "count": 40 },
+            { "group": "61+", "count": 21 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 23 },
+            { "category": "Negative", "count": 55 },
+            { "category": "Invalid", "count": 2 }
+          ],
+          "photos": [
+            "/assets/camps/2018-karnataka-serajey1.jpg",
+            "/assets/camps/2018-karnataka-serajey2.jpg",
+            "/assets/camps/2018-karnataka-serajey3.jpg",
+            "/assets/camps/2018-karnataka-serajey4.jpg",
+            "/assets/camps/2018-karnataka-serajey5.jpg",
+            "/assets/camps/2018-karnataka-serajey6.jpg",
+            "/assets/camps/2018-karnataka-serajey7.jpg",
+            "/assets/camps/2018-karnataka-serajey8.jpg",
+            "/assets/camps/2018-karnataka-serajey9.jpg",
+            "/assets/camps/2018-karnataka-serajey10.jpg",
+            "/assets/camps/2018-karnataka-serajey11.jpg",
+            "/assets/camps/2018-karnataka-serajey12.jpg",
+            "/assets/camps/2018-karnataka-serajey13.jpg",
+            "/assets/camps/2018-karnataka-serajey14.jpg",
+            "/assets/camps/2018-karnataka-serajey15.jpg",
+            "/assets/camps/2018-karnataka-serajey16.jpg",
+            "/assets/camps/2018-karnataka-serajey17.jpg",
+            "/assets/camps/2018-karnataka-serajey18.jpg",
+            "/assets/camps/2018-karnataka-serajey19.jpg",
+            "/assets/camps/2018-karnataka-serajey20.jpg",
+            "/assets/camps/2018-karnataka-serajey21.jpg",
+            "/assets/camps/2018-karnataka-serajey22.jpg",
+            "/assets/camps/2018-karnataka-serajey23.jpg",
+            "/assets/camps/2018-karnataka-serajey24.jpg",
+            "/assets/camps/2018-karnataka-serajey25.jpg"
+          ]
+        },
+        {
+          "name": "Chakure Tibetan Community",
+          "summary": "On April 24, 2018, the Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, the CTA Health Department, and Narayana Hospital, conducted a free health camp cum cancer detection program at the Chakure Tibetan community near Priya-Patna. The initiative aimed to provide essential health services and promote early detection of cancer within this Tibetan settlement. A range of free medical services was offered, including hypertension testing, blood sugar testing, ECG, iBreast examinations for breast cancer screening, Pap smear tests for cervical cancer detection, general health consultations, and oncologist consultations. Additionally, free medicines were distributed to patients based on medical assessments. The camp was supported by a team of medical professionals and dedicated volunteers, furthering TCS’s mission to improve healthcare access, raise cancer awareness, and support early diagnosis and treatment in underserved Tibetan communities.",
+          "genderStats": {
+            "male": 54,
+            "female": 24
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 9 },
+            { "group": "16-30", "count": 2 },
+            { "group": "31-45", "count": 17 },
+            { "group": "46-60", "count": 23 },
+            { "group": "61+", "count": 23 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 19 },
+            { "category": "Negative", "count": 45 },
+            { "category": "Invalid", "count": 14 }
+          ],
+          "photos": [
+            "/assets/camps/2018-karnataka-chakure1.jpg",
+            "/assets/camps/2018-karnataka-chakure2.jpg",
+            "/assets/camps/2018-karnataka-chakure3.jpg",
+            "/assets/camps/2018-karnataka-chakure4.jpg",
+            "/assets/camps/2018-karnataka-chakure5.jpg",
+            "/assets/camps/2018-karnataka-chakure6.jpg",
+            "/assets/camps/2018-karnataka-chakure7.jpg",
+            "/assets/camps/2018-karnataka-chakure8.jpg",
+            "/assets/camps/2018-karnataka-chakure9.jpg",
+            "/assets/camps/2018-karnataka-chakure10.jpg",
+            "/assets/camps/2018-karnataka-chakure11.jpg",
+            "/assets/camps/2018-karnataka-chakure12.jpg",
+            "/assets/camps/2018-karnataka-chakure13.jpg"
+          ]
+        },
+        {
+          "name": "Hunsur Tibetan Settlement",
+          "summary": "On April 26 and 27, 2018, the Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, the CTA Health Department, and Narayana Hospital, conducted a free health camp cum cancer detection program at Hunsur Phende Hospital. The two-day initiative focused on promoting early detection and improving access to essential healthcare services for the local Tibetan community. The camp offered a comprehensive range of free medical services, including hypertension testing, blood sugar testing, ECG, iBreast examinations for breast cancer screening, Pap smear tests for cervical cancer detection, general health consultations, and consultations with an oncologist. Free medicines were distributed to patients based on medical advice. Additionally, patients who required further evaluation were referred for free ultrasound scans at a nearby local diagnostic center, as advised by attending doctors. The camp was supported by a dedicated team of healthcare professionals and volunteers, reinforcing TCSs mission to deliver accessible and preventive healthcare, raise cancer awareness, and ensure early intervention within Tibetan settlements.",
+          "genderStats": {
+            "male": 47,
+            "female": 148
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 1 },
+            { "group": "16-30", "count": 23 },
+            { "group": "31-45", "count": 59 },
+            { "group": "46-60", "count": 60 },
+            { "group": "61+", "count": 52 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 55 },
+            { "category": "Negative", "count": 140 },
+            { "category": "Invalid", "count": 0 }
+          ],
+          "photos": [
+            "/assets/camps/2018-karnataka-hunsur1.jpg",
+            "/assets/camps/2018-karnataka-hunsur2.jpg",
+            "/assets/camps/2018-karnataka-hunsur3.jpg",
+            "/assets/camps/2018-karnataka-hunsur4.jpg",
+            "/assets/camps/2018-karnataka-hunsur5.jpg",
+            "/assets/camps/2018-karnataka-hunsur6.jpg",
+            "/assets/camps/2018-karnataka-hunsur7.jpg",
+            "/assets/camps/2018-karnataka-hunsur8.jpg",
+            "/assets/camps/2018-karnataka-hunsur9.jpg",
+            "/assets/camps/2018-karnataka-hunsur10.jpg",
+            "/assets/camps/2018-karnataka-hunsur11.jpg",
+            "/assets/camps/2018-karnataka-hunsur12.jpg",
+            "/assets/camps/2018-karnataka-hunsur13.jpg",
+            "/assets/camps/2018-karnataka-hunsur14.jpg",
+            "/assets/camps/2018-karnataka-hunsur15.jpg",
+            "/assets/camps/2018-karnataka-hunsur16.jpg",
+            "/assets/camps/2018-karnataka-hunsur17.jpg",
+            "/assets/camps/2018-karnataka-hunsur18.jpg",
+            "/assets/camps/2018-karnataka-hunsur19.jpg",
+            "/assets/camps/2018-karnataka-hunsur20.jpg",
+            "/assets/camps/2018-karnataka-hunsur21.jpg"
+          ]
+        },
+         {
+          "name": "Kollegal Tibetan Settlement",
+          "summary": "From April 28 to 30, 2018, the Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, the CTA Health Department, and Narayana Hospital, conducted a free health camp cum cancer detection program at the Kollegal Tibetan Health Centre. The initiative provided essential health services to the Tibetan community, including free hypertension testing, blood sugar testing, ECG, iBreast examinations for breast cancer screening, Pap smear tests for cervical cancer detection, general health consultations, oncologist consultations, and the distribution of free medicines. On April 31, 2018, TCS also conducted free H. pylori testing; however, due to limited slides and equipment, the test was made available to only 25 individuals. During the course of the program, the team encountered an elderly woman who shared that she and her husband had stopped taking their prescribed medications due to financial hardship. After verifying her circumstances, TCS confirmed the couples inability to afford treatment and responded by providing a six-month supply of essential medication. The organization has also committed to continuing its support for their medical needs in the future. This compassionate intervention highlighted TCSs dedication not only to cancer awareness and detection, but also to providing holistic and sustained support to the most vulnerable members of the community.",
+          "genderStats": {
+            "male": 23,
+            "female": 83
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 15 },
+            { "group": "16-30", "count": 40 },
+            { "group": "31-45", "count": 40 },
+            { "group": "46-60", "count": 42 },
+            { "group": "61+", "count": 27 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 22 },
+            { "category": "Negative", "count": 83 },
+            { "category": "Invalid", "count": 1 }
+          ],
+          "photos": [
+            "/assets/camps/2018-karnataka-kollegal1.jpg",
+            "/assets/camps/2018-karnataka-kollegal2.jpg",
+            "/assets/camps/2018-karnataka-kollegal3.jpg",
+            "/assets/camps/2018-karnataka-kollegal4.jpg",
+            "/assets/camps/2018-karnataka-kollegal5.jpg",
+            "/assets/camps/2018-karnataka-kollegal6.jpg",
+            "/assets/camps/2018-karnataka-kollegal7.jpg",
+            "/assets/camps/2018-karnataka-kollegal8.jpg",
+            "/assets/camps/2018-karnataka-kollegal9.jpg",
+            "/assets/camps/2018-karnataka-kollegal10.jpg",
+            "/assets/camps/2018-karnataka-kollegal11.jpg",
+            "/assets/camps/2018-karnataka-kollegal12.jpg",
+            "/assets/camps/2018-karnataka-kollegal13.jpg",
+            "/assets/camps/2018-karnataka-kollegal14.jpg",
+            "/assets/camps/2018-karnataka-kollegal15.jpg",
+            "/assets/camps/2018-karnataka-kollegal16.jpg",
+            "/assets/camps/2018-karnataka-kollegal17.jpg",
+            "/assets/camps/2018-karnataka-kollegal18.jpg",
+            "/assets/camps/2018-karnataka-kollegal19.jpg",
+            "/assets/camps/2018-karnataka-kollegal20.jpg",
+            "/assets/camps/2018-karnataka-kollegal21.jpg",
+            "/assets/camps/2018-karnataka-kollegal22.jpg",
+            "/assets/camps/2018-karnataka-kollegal23.jpg",
+            "/assets/camps/2018-karnataka-kollegal24.jpg",
+            "/assets/camps/2018-karnataka-kollegal25.jpg",
+            "/assets/camps/2018-karnataka-kollegal26.jpg",
+            "/assets/camps/2018-karnataka-kollegal27.jpg",
+            "/assets/camps/2018-karnataka-kollegal28.jpg",
+            "/assets/camps/2018-karnataka-kollegal29.jpg",
+            "/assets/camps/2018-karnataka-kollegal30.jpg",
+            "/assets/camps/2018-karnataka-kollegal31.jpg",
+            "/assets/camps/2018-karnataka-kollegal32.jpg",
+            "/assets/camps/2018-karnataka-kollegal33.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "date": "Sept 03-Sept 12, 2018",
+      "place": "Karnataka",
+      "testsOffered": [
+            "General Health Check-up", 
+            "H. pylori Testing", 
+            "ECG Check-up", 
+            "Blood Test", 
+            "Cancer Awareness Talk",
+            "Free hypertension test",
+            "Free ibreastexam Test",
+            "Free Cervical Test (PAP smear)", 
+            "Free Oncologist Consultation",
+            "Free oral cancer detection"
+           ],
+      "collaborators": [
+         {
+          "name": "The Tibet Fund",
+          "logo":"/assets/collaborators/The Tibet Fund.png" 
+        },
+        {
+          "name": "UICC Global cancer control",
+          "logo": "/assets/collaborators/UICC Global cancer control.png"
+        },
+         {
+          "name": "CTA Department of Health",
+          "logo": "/assets/collaborators/CTA Department of Health.png"
+        },
+         {
+          "name": "Narayana Health Care",
+          "logo": "/assets/collaborators/Narayana Health Care.png"
+        }
+      ],
+      "settlements": [
+        {
+          "name": "Mundgod Tibetan Settlement Camp 3 and 9",
+          "summary": "On September 3, 2018, the Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, the CTA Health Department, and Narayana Hospital, organized a comprehensive free health camp cum cancer detection program at the Mundgod Tibetan Settlement, covering several camp areas. The objective of the camp was to promote early cancer detection and provide essential medical screenings to the Tibetan community. A total of 114 patients participated in the camp—32 males and 82 females. iBreast examinations were carried out for 16 women, with one case testing positive and referred for further evaluation. Cervical cancer screening through Pap smear tests was performed on 18 women, and all results were found to be normal. Portable ECGs were conducted for all 114 patients, with 9 individuals showing abnormalities and subsequently advised to undergo follow-up ECGs and 2D echocardiograms. Additionally, Dr. Anita conducted clinical breast examinations for 73 women. The camp also provided general health consultations, oncologist evaluations, and free medicines to all patients in need. This initiative highlighted TCSs dedication to improving community health, raising cancer awareness, and ensuring timely medical intervention for the Tibetan refugee population in Mundgod.",
+          "genderStats": {
+            "male": 32,
+            "female": 92
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 4 },
+            { "group": "16-30", "count": 17 },
+            { "group": "31-45", "count": 45 },
+            { "group": "46-60", "count": 32 },
+            { "group": "61+", "count": 26 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 14 },
+            { "category": "Negative", "count": 100 },
+            { "category": "Invalid", "count": 0 }
+          ],
+          "photos": [
+            "/assets/camps/2018-karnataka-campthreeandnine1.jpg",
+            "/assets/camps/2018-karnataka-campthreeandnine2.jpg",
+            "/assets/camps/2018-karnataka-campthreeandnine3.jpg",
+            "/assets/camps/2018-karnataka-campthreeandnine4.jpg",
+            "/assets/camps/2018-karnataka-campthreeandnine5.jpg",
+            "/assets/camps/2018-karnataka-campthreeandnine6.jpg",
+            "/assets/camps/2018-karnataka-campthreeandnine7.jpg",
+            "/assets/camps/2018-karnataka-campthreeandnine8.jpg",
+            "/assets/camps/2018-karnataka-campthreeandnine9.jpg",
+            "/assets/camps/2018-karnataka-campthreeandnine10.jpg"
+          ]
+        },
+         {
+          "name": "Mundgod Tibetan Settlement Camp 1 and 2",
+          "summary": "On September 4, 2018, the Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, the CTA Health Department, and Narayana Hospital, conducted a free health camp cum cancer detection program at Camp 1 and Camp 2 of the Mundgod Tibetan Settlement as part of its ongoing efforts to provide accessible healthcare and promote early cancer detection within Tibetan refugee communities, with 105 patients (27 males and 78 females) receiving services including 15 iBreast exams (all normal), 20 Pap smear tests (all normal), 105 portable ECGs (21 abnormal cases referred for further testing), clinical breast examinations by Dr. Anita for 70 women, 8 of whom underwent mammograms resulting in 3 suspected positives referred for hospital investigation, along with free general consultations, oncologist evaluations, and medicine distribution, reaffirming TCSs commitment to proactive healthcare and early intervention.",
+          "genderStats": {
+            "male": 27,
+            "female": 78
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 0 },
+            { "group": "16-30", "count": 26 },
+            { "group": "31-45", "count": 45 },
+            { "group": "46-60", "count": 56 },
+            { "group": "61+", "count": 23 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 18 },
+            { "category": "Negative", "count": 61 },
+            { "category": "Invalid", "count": 0 }
+          ],
+          "photos": [
+            "/assets/camps/2018-karnataka-camponeandtwo1.jpg",
+            "/assets/camps/2018-karnataka-camponeandtwo2.jpg",
+            "/assets/camps/2018-karnataka-camponeandtwo3.jpg",
+            "/assets/camps/2018-karnataka-camponeandtwo4.jpg",
+            "/assets/camps/2018-karnataka-camponeandtwo5.jpg",
+            "/assets/camps/2018-karnataka-camponeandtwo6.jpg",
+            "/assets/camps/2018-karnataka-camponeandtwo7.jpg",
+            "/assets/camps/2018-karnataka-camponeandtwo8.jpg",
+            "/assets/camps/2018-karnataka-camponeandtwo9.jpg",
+            "/assets/camps/2018-karnataka-camponeandtwo10.jpg"
+          ]
+        },
+         {
+          "name": "Mundgod Tibetan Settlement Camp 5 and Jangchup Choeling Nunnery",
+          "summary": "On September 5, 2018, the Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, the CTA Health Department, and Narayana Hospital, conducted a free health camp cum cancer detection program at Camp 5 and Jangchup Choeling Nunnery in Mundgod Tibetan Settlement, where a total of 166 patients (13 males and 153 females) received services including 23 iBreast examinations with 2 positive cases, 22 Pap smear tests all with normal results, 166 portable ECGs out of which 19 showed abnormalities and were advised to repeat ECGs followed by 2D echocardiograms, and 65 women screened by Dr. Anita, of whom 13 underwent mammograms resulting in 8 suspected positive cases referred to the hospital for further evaluation, along with general consultations, oncologist evaluations, and free medicine distribution, reflecting TCSs commitment to early cancer detection and improved community health access.",
+          "genderStats": {
+            "male": 13,
+            "female": 133
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 2 },
+            { "group": "16-30", "count": 48 },
+            { "group": "31-45", "count": 29 },
+            { "group": "46-60", "count": 41 },
+            { "group": "61+", "count": 26 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 27 },
+            { "category": "Negative", "count": 115 },
+            { "category": "Invalid", "count": 4 }
+          ],
+          "photos": [
+            "/assets/camps/2018-karnataka-jangchupchoeling1.jpg",
+            "/assets/camps/2018-karnataka-jangchupchoeling2.jpg",
+            "/assets/camps/2018-karnataka-jangchupchoeling3.jpg",
+            "/assets/camps/2018-karnataka-jangchupchoeling4.jpg",
+            "/assets/camps/2018-karnataka-jangchupchoeling5.jpg",
+            "/assets/camps/2018-karnataka-jangchupchoeling6.jpg",
+            "/assets/camps/2018-karnataka-jangchupchoeling7.jpg",
+            "/assets/camps/2018-karnataka-jangchupchoeling8.jpg",
+            "/assets/camps/2018-karnataka-jangchupchoeling9.jpg",
+            "/assets/camps/2018-karnataka-jangchupchoeling10.jpg"
+          ]
+        },
+         {
+          "name": "Mundgod Tibetan Settlement Camp 4",
+          "summary": "On September 6, 2018, the Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, the CTA Health Department, and Narayana Hospital, conducted a free health camp cum cancer detection program at Camp 4 of the Mundgod Tibetan Settlement, where 138 patients (39 males and 99 females) participated in the screenings, including 19 iBreast examinations with no positive cases detected, 29 cervical cancer screenings (Pap smears) all of which returned normal results, and 138 portable ECGs of which 17 showed abnormalities and were advised for repeat ECGs and 2D echocardiograms; Dr. Anita also clinically screened 82 female patients, with 6 referred for mammogram screenings, resulting in 2 confirmed positive cases who were referred for further hospital investigation and treatment, and as patients waited in long queues, refreshments were provided as a gesture of care and appreciation, reinforcing TCSs patient-centered approach and commitment to community health.",
+          "genderStats": {
+            "male": 39,
+            "female": 99
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 0 },
+            { "group": "16-30", "count": 18 },
+            { "group": "31-45", "count": 48 },
+            { "group": "46-60", "count": 53 },
+            { "group": "61+", "count": 19 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 31 },
+            { "category": "Negative", "count": 104 },
+            { "category": "Invalid", "count": 3 }
+          ],
+          "photos": [
+            "/assets/camps/2018-karnataka-campfour1.jpg",
+            "/assets/camps/2018-karnataka-campfour2.jpg",
+            "/assets/camps/2018-karnataka-campfour3.jpg",
+            "/assets/camps/2018-karnataka-campfour4.jpg",
+            "/assets/camps/2018-karnataka-campfour5.jpg",
+            "/assets/camps/2018-karnataka-campfour6.jpg",
+            "/assets/camps/2018-karnataka-campfour7.jpg",
+            "/assets/camps/2018-karnataka-campfour8.jpg",
+            "/assets/camps/2018-karnataka-campfour9.jpg",
+            "/assets/camps/2018-karnataka-campfour10.jpg"
+          ]
+        },
+         {
+          "name": "Mundgod Tibetan Settlement Camp 6 and 7",
+          "summary": "On September 7, 2018, the Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, the CTA Health Department, and Narayana Hospital, organized a free health camp cum cancer detection program at Camp 6 and Camp 7 of the Mundgod Tibetan Settlement, where a total of 115 patients (27 males and 88 females) received screenings including 16 iBreast examinations with 1 positive case, 35 Pap smear cervical tests all yielding normal results, and 115 portable ECGs with 32 abnormal results, for which patients were advised to undergo repeat ECGs followed by 2D echocardiograms; with the arrival of the H-pylori kit, 10 stool tests were conducted resulting in 3 positive cases, and Dr. Anita screened 42 female patients, among whom several underwent mammogram screening leading to 3 suspected positive cases referred for hospital-based investigation and treatment, while refreshments were served to patients as a gesture of care during long wait times, exemplifying TCSs commitment to both compassionate service and proactive community healthcare.",
+          "genderStats": {
+            "male": 27,
+            "female": 88
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 4 },
+            { "group": "16-30", "count": 17 },
+            { "group": "31-45", "count": 45 },
+            { "group": "46-60", "count": 32 },
+            { "group": "61+", "count": 26 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 3 },
+            { "category": "Negative", "count": 7 },
+            { "category": "Invalid", "count": 0 }
+          ],
+          "photos": [
+            "/assets/camps/2018-karnataka-campsixandseven1.jpg",
+            "/assets/camps/2018-karnataka-campsixandseven2.jpg",
+            "/assets/camps/2018-karnataka-campsixandseven3.jpg",
+            "/assets/camps/2018-karnataka-campsixandseven4.jpg",
+            "/assets/camps/2018-karnataka-campsixandseven5.jpg",
+            "/assets/camps/2018-karnataka-campsixandseven6.jpg",
+            "/assets/camps/2018-karnataka-campsixandseven7.jpg",
+            "/assets/camps/2018-karnataka-campsixandseven8.jpg",
+            "/assets/camps/2018-karnataka-campsixandseven9.jpg",
+            "/assets/camps/2018-karnataka-campsixandseven10.jpg"
+          ]
+        },
+         {
+          "name": "Mundgod Tibetan Settlement Camp 8",
+          "summary": "On September 8, 2018, the Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, the CTA Health Department, and Narayana Hospital, conducted a free health camp cum cancer detection program at Camp 8 of the Mundgod Tibetan Settlement for both community members and staff, where 104 patients (37 males and 67 females) received services including 4 iBreast examinations with 1 positive case detected, 31 cervical cancer screenings (Pap smears), and 104 portable ECGs, among which 20 were found abnormal and advised to undergo further evaluation through repeat ECGs and 2D echocardiograms; additionally, 31 H-pylori stool tests were conducted, resulting in 11 positive cases, and refreshments were provided to all patients during their wait time, reflecting TCSs dedication to quality healthcare, early detection, and compassionate community outreach.",
+          "genderStats": {
+            "male": 37,
+            "female": 67
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 2 },
+            { "group": "16-30", "count": 35 },
+            { "group": "31-45", "count": 22 },
+            { "group": "46-60", "count": 25 },
+            { "group": "61+", "count": 19 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 11 },
+            { "category": "Negative", "count": 20 },
+            { "category": "Invalid", "count": 0 }
+          ],
+          "photos": [
+            "/assets/camps/2018-karnataka-campeight1.jpg",
+            "/assets/camps/2018-karnataka-campeight2.jpg",
+            "/assets/camps/2018-karnataka-campeight3.jpg",
+            "/assets/camps/2018-karnataka-campeight4.jpg",
+            "/assets/camps/2018-karnataka-campeight5.jpg",
+            "/assets/camps/2018-karnataka-campeight6.jpg",
+            "/assets/camps/2018-karnataka-campeight7.jpg",
+            "/assets/camps/2018-karnataka-campeight8.jpg",
+            "/assets/camps/2018-karnataka-campeight9.jpg",
+            "/assets/camps/2018-karnataka-campeight10.jpg"
+          ]
+        },
+         {
+          "name": "Gaden Monastery and Nunnery",
+          "summary": "On September 9, 2018, the Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, the CTA Health Department, and Narayana Hospital, conducted a focused health camp for monks and nuns from two different monasteries, along with left-over patients from previous camps in the Mundgod Tibetan Settlement. A total of 59 individuals (52 males and 7 females) participated in the program, which included 4 iBreast examinations with 3 positive cases, 2 cervical cancer screenings (Pap smears) with both results returning normal, and 59 portable ECGs, of which 8 were found abnormal and referred for repeat ECGs and 2D echocardiograms. Additionally, 9 H-pylori stool tests were performed, resulting in 2 positive cases. Refreshments were provided to all patients, reflecting TCSs commitment to compassionate care and comprehensive health services for both monastic and lay community members.",
+          "genderStats": {
+            "male": 52,
+            "female": 7
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 0 },
+            { "group": "16-30", "count": 27 },
+            { "group": "31-45", "count": 19 },
+            { "group": "46-60", "count": 8 },
+            { "group": "61+", "count": 5 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 2 },
+            { "category": "Negative", "count": 7 },
+            { "category": "Invalid", "count": 0 }
+          ],
+          "photos": [
+            "/assets/camps/2018-karnataka-gaden1.jpg",
+            "/assets/camps/2018-karnataka-gaden2.jpg",
+            "/assets/camps/2018-karnataka-gaden3.jpg",
+            "/assets/camps/2018-karnataka-gaden4.jpg",
+            "/assets/camps/2018-karnataka-gaden5.jpg",
+            "/assets/camps/2018-karnataka-gaden6.jpg",
+            "/assets/camps/2018-karnataka-gaden7.jpg",
+            "/assets/camps/2018-karnataka-gaden8.jpg",
+            "/assets/camps/2018-karnataka-gaden9.jpg",
+            "/assets/camps/2018-karnataka-gaden10.jpg"
+          ]
+        },
+         {
+          "name": "Mundgod Tibetan Settlement Camp 1 to 9",
+          "summary": "On September 10, 2018, the Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, the CTA Health Department, and Narayana Hospital, carried out a settlement-wide H-pylori rapid stool antigen screening across all camps in the Mundgod Tibetan Settlement. Four dedicated teams, each consisting of two healthcare professionals, were mobilized to ensure comprehensive coverage of the community. Team 1, comprising Nurse Lhawang la, Nurse Kundon la, and Director Dorjee la, visited Camps 6, 7, and 8. Team 2, with Nurse Yeshi la and Nurse Karma la, covered Camps 3, 5, and 9. Team 3, made up of Nurse Dechen la and Nurse Ngadon la, visited Camps 1 and 2, while Team 4, consisting of Nurse Pasang la and Dodhon la, conducted screenings in Camp 4. This door-to-door initiative demonstrated TCS’s commitment to proactive and inclusive health outreach by ensuring that H-pylori screening was accessible to all residents across the settlement.",
+          "genderStats": {
+            "male": 129,
+            "female": 292
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 15 },
+            { "group": "16-30", "count": 65 },
+            { "group": "31-45", "count": 195 },
+            { "group": "46-60", "count": 88 },
+            { "group": "61+", "count": 58 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 45 },
+            { "category": "Negative", "count": 293 },
+            { "category": "Invalid", "count": 83 }
+          ],
+          "photos": [
+            "/assets/camps/2018-karnataka-camponetonine1.jpg",
+            "/assets/camps/2018-karnataka-camponetonine2.jpg",
+            "/assets/camps/2018-karnataka-camponetonine3.jpg",
+            "/assets/camps/2018-karnataka-camponetonine4.jpg",
+            "/assets/camps/2018-karnataka-camponetonine5.jpg",
+            "/assets/camps/2018-karnataka-camponetonine6.jpg",
+            "/assets/camps/2018-karnataka-camponetonine7.jpg",
+            "/assets/camps/2018-karnataka-camponetonine8.jpg",
+            "/assets/camps/2018-karnataka-camponetonine9.jpg",
+            "/assets/camps/2018-karnataka-camponetonine10.jpg"
+          ]
+        },
+         {
+          "name": "Mundgod Tibetan Old Age Home",
+          "summary": "On September 12, 2018, the Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, the CTA Health Department, and Narayana Hospital, conducted the final health camp in the Mundgod Tibetan Settlement by organizing an H-pylori stool antigen test for the residents of the local old age home. Recognizing the challenges faced by many elderly individuals—such as mobility issues, lack of wheelchair access, and the long distance to earlier health camp venues—TCS made the decision to visit the facility directly to ensure inclusive care. A total of 23 individuals were tested, out of which 4 were found reactive. In addition to the medical service, TCS also provided fruits and juice to all elderly residents as a gesture of care and support. The cost of refreshments, totaling ₹5,920, was fully covered by TCS. This compassionate outreach marked the conclusion of the Mundgod health camp series, reflecting TCSs deep commitment to accessibility and dignity in healthcare for all community members.",
+          "genderStats": {
+            "male": 12,
+            "female": 11
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 0 },
+            { "group": "16-30", "count": 0 },
+            { "group": "31-45", "count": 0 },
+            { "group": "46-60", "count": 2 },
+            { "group": "61+", "count": 21 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 4 },
+            { "category": "Negative", "count": 19 },
+            { "category": "Invalid", "count": 0 }
+          ],
+          "photos": [
+            "/assets/camps/2018-karnataka-oldagehome1.jpg",
+            "/assets/camps/2018-karnataka-oldagehome2.jpg",
+            "/assets/camps/2018-karnataka-oldagehome3.jpg",
+            "/assets/camps/2018-karnataka-oldagehome4.jpg",
+            "/assets/camps/2018-karnataka-oldagehome5.jpg",
+            "/assets/camps/2018-karnataka-oldagehome6.jpg",
+            "/assets/camps/2018-karnataka-oldagehome7.jpg",
+            "/assets/camps/2018-karnataka-oldagehome8.jpg",
+            "/assets/camps/2018-karnataka-oldagehome9.jpg",
+            "/assets/camps/2018-karnataka-oldagehome10.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "date": "Oct 06-Oct 07, 2018",
+      "place": "Delhi",
+      "testsOffered": [
+            "General Health Check-up", 
+            "H. pylori Testing", 
+            "ECG Check-up", 
+            "Blood Test", 
+            "Cancer Awareness Talk",
+            "Breast clinical examination",
+            "Free Cervical Test (PAP smear)", 
+            "Free Oncologist Consultation",
+            "Free oral cancer detection",
+            "GRBS Test",
+            "Head and neck oncologist consultation",
+            "cardiologist consultation",
+            "Gynecologist consultation",
+            "Orthopedist consultation",
+            "Pediatrician consultation",
+            "Ophthalmologist consultation",
+            "Free Medicine"
+           ],
+      "collaborators": [
+         {
+          "name": "The Tibet Fund",
+          "logo":"/assets/collaborators/The Tibet Fund.png" 
+        },
+        {
+          "name": "UICC Global cancer control",
+          "logo": "/assets/collaborators/UICC Global cancer control.png"
+        },
+         {
+          "name": "Rajiv Gandhi Cancer Institute and Research Centre",
+          "logo": "/assets/collaborators/rgci.png"
+        },
+         {
+          "name": "Holy Family Hospital",
+          "logo": "/assets/collaborators/Holy Family Hospital.png"
+        }
+      ],
+      "settlements": [
+        {
+          "name": "Sameyling Tibetan Settlement, Majnukatilla",
+          "summary": "The Tibetan Cancer Society (TCS), in collaboration with The Tibet Fund, UICC Global Cancer Control, Rajiv Gandhi Cancer Institute and Research Centre, and Holy Family Hospital, successfully conducted a cancer awareness and detection camp on the 6th and 7th of October 2018 at Majnu-ka-Tilla, Delhi. Initially planned for September, the program was postponed due to unforeseen circumstances. The awareness campaign was promoted in advance through pamphlets and banners with the support of the Primary Health Centre nursing team under the supervision of the Chief Representative Officer. On October 6th, a cancer awareness session was held at the Majnu-ka-Tilla monastery area featuring an interactive session with renowned oncologist Dr. Sajjan Rajpurohit, a PowerPoint presentation on cancer causes and prevention, and video stories from cancer patients and survivors. The following day, October 7th, the cancer detection cum general health check-up camp took place at TCV Day School, offering free services including cervical cancer screening (Pap smear), clinical breast exams, oral cancer screening, H-pylori stool tests, ECG, hypertension and random blood sugar checks, as well as consultations with general physicians, oncologists, cardiologists, gynecologists, orthopedists, pediatricians, and ophthalmologists. A total of 272 people were screened—113 males and 159 females—with substantial participation in all services provided. The event received media coverage and was broadcast by Radio Free Asia on October 11, 2018, showcasing TCSs dedication to accessible and comprehensive cancer care and health education within the Tibetan community.",
+          "genderStats": {
+            "male": 113,
+            "female": 159
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 11 },
+            { "group": "16-30", "count": 48 },
+            { "group": "31-45", "count": 89 },
+            { "group": "46-60", "count": 78 },
+            { "group": "61+", "count": 13 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 37 },
+            { "category": "Negative", "count": 63 },
+            { "category": "Invalid", "count": 0 }
+          ],
+          "photos": [
+            "/assets/camps/2018-Delhi-mt1.jpg",
+            "/assets/camps/2018-Delhi-mt2.jpg",
+            "/assets/camps/2018-Delhi-mt3.jpg",
+            "/assets/camps/2018-Delhi-mt4.jpg",
+            "/assets/camps/2018-Delhi-mt5.jpg",
+            "/assets/camps/2018-Delhi-mt6.jpg",
+            "/assets/camps/2018-Delhi-mt7.jpg",
+            "/assets/camps/2018-Delhi-mt8.jpg",
+            "/assets/camps/2018-Delhi-mt9.jpg",
+            "/assets/camps/2018-Delhi-mt10.jpg",
+            "/assets/camps/2018-Delhi-mt11.jpg",
+            "/assets/camps/2018-Delhi-mt12.jpg",
+            "/assets/camps/2018-Delhi-mt13.jpg",
+            "/assets/camps/2018-Delhi-mt14.jpg",
+            "/assets/camps/2018-Delhi-mt15.jpg",
+            "/assets/camps/2018-Delhi-mt16.jpg",
+            "/assets/camps/2018-Delhi-mt17.jpg",
+            "/assets/camps/2018-Delhi-mt18.jpg",
+            "/assets/camps/2018-Delhi-mt19.jpg",
+            "/assets/camps/2018-Delhi-mt20.jpg",
+            "/assets/camps/2018-Delhi-mt21.jpg",
+            "/assets/camps/2018-Delhi-mt22.jpg",
+            "/assets/camps/2018-Delhi-mt23.jpg",
+            "/assets/camps/2018-Delhi-mt24.jpg",
+            "/assets/camps/2018-Delhi-mt25.jpg",
+            "/assets/camps/2018-Delhi-mt26.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "date": "Dec 26-Dec 27, 2018",
+      "place": "Bihar",
+      "testsOffered": [ 
+            "H. pylori Testing",  
+            "Cancer Awareness campaign",
+            "Cancer Patient Fund Raising",
+            "Free Cancer Pamphlet Distribution"
+           ],
+      "collaborators": [
+        {
+          "name": "UICC Global cancer control",
+          "logo": "/assets/collaborators/UICC Global cancer control.png"
+        }
+      ],
+      "settlements": [
+        {
+          "name": "Bodh Gaya, Bihar",
+          "summary": "On December 26, 2018, the Tibetan Cancer Society (TCS), in collaboration with the Union for International Cancer Control (UICC), organized a Cancer Awareness Campaign and Fundraising Camp in Bodh Gaya, Bihar, during the auspicious presence of His Holiness the Dalai Lama. As the final major event of the year, this initiative was designed to raise awareness about cancer and generate funds to support financially challenged cancer patients within the Tibetan community. Recognized under the Geneva framework, TCS is the only registered NGO dedicated exclusively to cancer care and medical support for Tibetans. The two-day event focused on educating the public about cancer prevention, early detection, and the importance of timely medical intervention. Activities included H. pylori testing, a cancer awareness campaign, fundraising for cancer patients, and free distribution of cancer information pamphlets. These efforts aimed to empower individuals with knowledge, reduce stigma, and encourage proactive health behaviors. The funds raised will be used to support cancer screenings, treatment procedures, and essential medications for underprivileged patients. The campaign also served to foster community engagement and solidarity, bringing together diverse groups to support a shared humanitarian cause. It highlighted the Tibetan Cancer Societys continued commitment to serving cancer patients and raising health awareness, setting a strong foundation for expanded outreach and support in the year ahead.",
+          "genderStats": {
+            "male": 58,
+            "female": 93
+          },
+          "ageGroups": [
+            { "group": "0-15", "count": 4 },
+            { "group": "16-30", "count": 32 },
+            { "group": "31-45", "count": 70 },
+            { "group": "46-60", "count": 33 },
+            { "group": "61+", "count": 12 }
+          ],
+          "testResults": [
+            { "category": "Positive", "count": 5 },
+            { "category": "Negative", "count": 11 },
+            { "category": "Invalid", "count": 0 }
+          ],
+          "photos": [
+            "/assets/camps/2018-bihar-bodhgaya1.jpg",
+            "/assets/camps/2018-bihar-bodhgaya2.jpg",
+            "/assets/camps/2018-bihar-bodhgaya3.jpg",
+            "/assets/camps/2018-bihar-bodhgaya4.jpg",
+            "/assets/camps/2018-bihar-bodhgaya5.jpg",
+            "/assets/camps/2018-bihar-bodhgaya6.jpg",
+            "/assets/camps/2018-bihar-bodhgaya7.jpg",
+            "/assets/camps/2018-bihar-bodhgaya8.jpg",
+            "/assets/camps/2018-bihar-bodhgaya9.jpg",
+            "/assets/camps/2018-bihar-bodhgaya10.jpg",
+            "/assets/camps/2018-bihar-bodhgaya10.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "date": "July 15-Aug 08, 2016",
+      "place": "Bangalore",
+      "testsOffered": [
+            "General Health Check-up", 
+            "Blood Test", 
+            "Cancer Awareness Talk",
+            "free Mammography Test",
+            "Free Cervical Test (PAP smear)", 
+            "Free Oncologist Consultation",
+            "Free oral cancer detection"
+           ],
+      "collaborators": [
+         {
+          "name": "The Tibet Fund",
+          "logo":"/assets/collaborators/The Tibet Fund.png" 
+        },
+        {
+          "name": "UICC Global cancer control",
+          "logo": "/assets/collaborators/UICC Global cancer control.png"
+        },
+         {
+          "name": "CTA Department of Health",
+          "logo": "/assets/collaborators/CTA Department of Health.png"
+        },
+         {
+          "name": "Kidwai Memorial Institute of Oncology",
+          "logo": "/assets/collaborators/Kidwaiinstitute.png"
+        }
+      ],
+      "settlements": [
+        {
+          "name": "Tibetan Youth Hostel, Bangalore",
+          "summary": "From June 24 to June 26, 2016, the Tibetan Cancer Society (TCS), in collaboration with the UICC (Union for International Cancer Control), the Department of Health CTA, and Kidwai Memorial Institute of Oncology, organized a cancer awareness program and health camp at the Tibetan Youth Hostel (TYH) in Bangalore. Under the supervision of Gen Dhondup la and the TYH student council, the event drew participation from around 300 students. On June 24, a cancer awareness session was held featuring Dr. K.B. Lingegowda, MD, FIPM, Professor and Head of Palliative Medicine and Director of Kidwai Memorial Institute of Oncology, who spoke on the causes of cancer, early signs and symptoms of breast and cervical cancer, and the significance of screening. Informative books and pamphlets were distributed to attendees. Free mammography services were arranged for women aged 40 to 60, though only three availed the service despite extensive promotion. Clinical Breast Examinations were conducted in private settings, and suspicious cases were referred for mammography using a mobile screening unit. Additionally, oral cancer screenings were provided to detect early signs of cancer in the mouth and throat, with emphasis on individuals at high risk. Random Blood Sugar (RBS) tests were conducted to identify potential cases of diabetes or blood sugar imbalances. General health check-ups and consultations were also offered to assess overall well-being, including monitoring of blood pressure, cholesterol, and other common health indicators.",
+          "photos": [
+            "/assets/camps/2016-karnataka-tyh1.jpg",
+            "/assets/camps/2016-karnataka-tyh2.jpg",
+            "/assets/camps/2016-karnataka-tyh3.jpg",
+            "/assets/camps/2016-karnataka-tyh4.jpg",
+            "/assets/camps/2016-karnataka-tyh5.jpg",
+            "/assets/camps/2016-karnataka-tyh6.jpg",
+            "/assets/camps/2016-karnataka-tyh7.jpg",
+            "/assets/camps/2016-karnataka-tyh8.jpg",
+            "/assets/camps/2016-karnataka-tyh9.jpg",
+            "/assets/camps/2016-karnataka-tyh10.jpg",
+            "/assets/camps/2016-karnataka-tyh11.jpg",
+            "/assets/camps/2016-karnataka-tyh12.jpg",
+            "/assets/camps/2016-karnataka-tyh13.jpg",
+            "/assets/camps/2016-karnataka-tyh14.jpg",
+            "/assets/camps/2016-karnataka-tyh15.jpg",
+            "/assets/camps/2016-karnataka-tyh16.jpg",
+            "/assets/camps/2016-karnataka-tyh17.jpg",
+            "/assets/camps/2016-karnataka-tyh18.jpg",
+            "/assets/camps/2016-karnataka-tyh19.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "date": "Oct 03-Oct 07, 2016",
+      "place": "Bylakuppe",
+      "testsOffered": [
+            "General Health Check-up", 
+            "H. pylori Testing", 
+            "ECG Check-up", 
+            "Blood Test", 
+            "Cancer Awareness Talk",
+            "Free Mammography Test",
+            "Free Cervical Test (PAP smear)", 
+            "Free Oncologist Consultation",
+            "Free oral cancer detection",
+            "GRBS Test",
+            "Head and neck oncologist consultation",
+            "cardiologist consultation",
+            "Gynecologist consultation",
+            "Orthopedist consultation",
+            "Pediatrician consultation",
+            "Ophthalmologist consultation",
+            "Free Medicine"
+           ],
+      "collaborators": [
+        {
+          "name": "The Tibet Fund",
+          "logo":"/assets/collaborators/The Tibet Fund.png" 
+        },
+        {
+          "name": "UICC Global cancer control",
+          "logo": "/assets/collaborators/UICC Global cancer control.png"
+        },
+        {
+          "name": "CTA Department of Health",
+          "logo": "/assets/collaborators/CTA Department of Health.png"
+        },
+        {
+          "name": "Tso Jhey Hospital",
+          "logo": "/assets/collaborators/Tso Jhey Hospital.png"
+        },
+        {
+          "name": "Norwegian Church Aid (NCA)",
+          "logo": "/assets/collaborators/Norwegian Church Aid.png"
+        }
+      ],
+      "settlements": [
+        {
+          "name": "Bylakuppe Tibetan Settlement",
+          "summary": "From October 3 to 7, the Tibetan Cancer Society (TCS), in collaboration with the UICC Global Cancer Union, the Central Tibetan Administration’s Department of Health, Norwegian Church Aid, and Tsojhey Hospital, successfully organized a free mega health camp held simultaneously at Tsojhey Hospital and TCV Bylakuppe. The event witnessed the participation of approximately 20,000 individuals and provided a comprehensive range of free medical services. General health checkups included height and weight measurements, blood pressure monitoring, GRBS (Random Blood Sugar), ECG, and 2D Echo tests. A range of super-specialist consultations were also offered, including cardiology, orthopaedics, gastroenterology, paediatrics, and general physician services. Free mammography was provided continuously for five days to women aged 40 and above. On October 5, a free dental checkup and treatment session was conducted. The highlight of the camp was the cancer detection initiative on October 6, which included free clinical breast examinations, cervical cancer testing via PAP smears, oral cancer screening, oncologist consultations, and gynaecologist checkups. The camp underscored TCS's commitment to early cancer detection, community healthcare access, and collaboration with international and local partners to improve health outcomes in the Tibetan community.",
+          "photos": [
+            "/assets/camps/2016-Bylakuppe-b1.jpg",
+            "/assets/camps/2016-Bylakuppe-b2.jpg",
+            "/assets/camps/2016-Bylakuppe-b3.jpg",
+            "/assets/camps/2016-Bylakuppe-b4.jpg",
+            "/assets/camps/2016-Bylakuppe-b5.jpg",
+            "/assets/camps/2016-Bylakuppe-b6.jpg",
+            "/assets/camps/2016-Bylakuppe-b7.jpg",
+            "/assets/camps/2016-Bylakuppe-b8.jpg",
+            "/assets/camps/2016-Bylakuppe-b9.jpg",
+            "/assets/camps/2016-Bylakuppe-b10.jpg",
+            "/assets/camps/2016-Bylakuppe-b11.jpg",
+            "/assets/camps/2016-Bylakuppe-b12.jpg",
+            "/assets/camps/2016-Bylakuppe-b13.jpg",
+            "/assets/camps/2016-Bylakuppe-b14.jpg",
+            "/assets/camps/2016-Bylakuppe-b15.jpg",
+            "/assets/camps/2016-Bylakuppe-b16.jpg",
+            "/assets/camps/2016-Bylakuppe-b17.jpg",
+            "/assets/camps/2016-Bylakuppe-b18.jpg",
+            "/assets/camps/2016-Bylakuppe-b19.jpg",
+            "/assets/camps/2016-Bylakuppe-b20.jpg",
+            "/assets/camps/2016-Bylakuppe-b21.jpg",
+            "/assets/camps/2016-Bylakuppe-b22.jpg",
+            "/assets/camps/2016-Bylakuppe-b23.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "date": "Jan 26-Jan 27, 2015",
+      "place": "Bangalore",
+      "testsOffered": ["General Health Check-up", "Free Oral and Dental Check up", "Free Cervical Test", "Blood Test", "Free Breast Examination" ],
+      "collaborators": [
+        {
+          "name": "UICC Global cancer control",
+          "logo": "/assets/collaborators/UICC Global cancer control.png" 
+        },
+        {
+          "name": "Indian Cancer Society",
+          "logo": "/assets/collaborators/Indian Cancer Society.png"
+        },
+        {
+        "name": "The Federation of Tibetan Charitable Institutions (FTCI)",
+          "logo": "/assets/collaborators/FTCI.png"
+        }
+      ],
+      "settlements": [
+        {
+          "name": "Tibetan Youth Hostel",
+          "summary": "On January 26th, 2015, the Tibetan Cancer Society (TCS) successfully organized its first-ever medical health camp at the Tibetan Youth Hostel in Bangalore, in collaboration with the Indian Cancer Society Karnataka Branch and co-sponsored by the Federation of Tibetan Charitable Institutions (FTCI). This landmark event marked the beginning of TCSs efforts to promote healthcare access and awareness within the Tibetan community. With an overwhelming turnout, particularly among college-going students, the camp offered a range of free medical services including general health check-ups, oral and dental consultations with treatment, cervical cancer screening (PAP smears), and breast examinations. This collaboration with the Indian Cancer Society was a historic achievement, as it was the first partnership of its kind between a Tibetan NGO and a renowned Indian cancer care institution. The event not only addressed immediate healthcare needs but also laid the groundwork for future community outreach, highlighting the importance of early detection and preventive health care. The success of the camp reinforced TCSs commitment to empowering the Tibetan diaspora with essential medical services and health education, establishing a strong foundation for its continued mission in public health advocacy.",
+          "photos": [
+            "/assets/camps/2015-bangalore-tyh1.jpg",
+            "/assets/camps/2015-bangalore-tyh2.jpg",
+            "/assets/camps/2015-bangalore-tyh3.jpg",
+            "/assets/camps/2015-bangalore-tyh4.jpg",
+            "/assets/camps/2015-bangalore-tyh5.jpg",
+            "/assets/camps/2015-bangalore-tyh6.jpg",
+            "/assets/camps/2015-bangalore-tyh7.jpg",
+            "/assets/camps/2015-bangalore-tyh8.jpg",
+            "/assets/camps/2015-bangalore-tyh9.jpg",
+            "/assets/camps/2015-bangalore-tyh10.jpg",
+            "/assets/camps/2015-bangalore-tyh11.jpg",
+            "/assets/camps/2015-bangalore-tyh12.jpg",
+            "/assets/camps/2015-bangalore-tyh13.jpg",
+            "/assets/camps/2015-bangalore-tyh14.jpg",
+            "/assets/camps/2015-bangalore-tyh15.jpg",
+            "/assets/camps/2015-bangalore-tyh16.jpg",
+            "/assets/camps/2015-bangalore-tyh17.jpg",
+            "/assets/camps/2015-bangalore-tyh18.jpg",
+            "/assets/camps/2015-bangalore-tyh19.jpg",
+            "/assets/camps/2015-bangalore-tyh20.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "date": "Feb 28-Feb 29, 2015",
+      "place": "Bangalore",
+      "testsOffered": ["General Health Check-up", "Free Oral and Dental Check up", "Free Cervical Test", "Blood Test", "Free Breast Examination" ],
+      "collaborators": [
+        {
+          "name": "UICC Global cancer control",
+          "logo": "/assets/collaborators/UICC Global cancer control.png" 
+        },
+        {
+          "name": "Rajiv Gandhi Cancer Institute & Research Centre",
+          "logo": "/assets/collaborators/rgci.png"
+        },
+        {
+        "name": "Healthcare Global Enterprises Ltd",
+          "logo": "/assets/collaborators/Healthcare Global Enterprises Ltd.png"
+        }
+      ],
+      "settlements": [
+        {
+          "name": "Dalai Lama Institute for Higher Education",
+          "summary": "On February 28th, 2015, the Tibetan Cancer Society (TCS) organized a successful medical health camp at the Dalai Lama Institute of Higher Education in Bangalore, in collaboration with Healthcare Global Enterprise, the Rajiv Gandhi Cancer Institute and Research Centre Branch, and co-sponsored by Taste of Tibet. This event marked a significant milestone in TCSs mission to promote health awareness and provide essential medical services to the Tibetan community. Attracting a large number of participants, especially college students, the camp offered free general health check-ups, oral and dental consultations with treatment, cervical cancer screening (PAP smears), and breast examinations with mammography. The collaboration with leading medical institutions underscored TCSs dedication to improving healthcare access within the Tibetan diaspora. The event not only addressed immediate health needs but also educated participants on the importance of early detection and routine health monitoring. This impactful initiative strengthened TCSs foundation for future medical camps and community outreach, reaffirming its commitment to public health and building sustainable partnerships with prominent healthcare providers.",
+          "photos": [
+            "/assets/camps/2015-bangalore-dlihe1.jpg",
+            "/assets/camps/2015-bangalore-dlihe2.jpg",
+            "/assets/camps/2015-bangalore-dlihe3.jpg",
+            "/assets/camps/2015-bangalore-dlihe4.jpg",
+            "/assets/camps/2015-bangalore-dlihe5.jpg",
+            "/assets/camps/2015-bangalore-dlihe6.jpg",
+            "/assets/camps/2015-bangalore-dlihe7.jpg",
+            "/assets/camps/2015-bangalore-dlihe8.jpg",
+            "/assets/camps/2015-bangalore-dlihe9.jpg",
+            "/assets/camps/2015-bangalore-dlihe10.jpg",
+            "/assets/camps/2015-bangalore-dlihe11.jpg",
+            "/assets/camps/2015-bangalore-dlihe12.jpg",
+            "/assets/camps/2015-bangalore-dlihe13.jpg",
+            "/assets/camps/2015-bangalore-dlihe14.jpg",
+            "/assets/camps/2015-bangalore-dlihe15.jpg",
+            "/assets/camps/2015-bangalore-dlihe16.jpg",
+            "/assets/camps/2015-bangalore-dlihe17.jpg",
+            "/assets/camps/2015-bangalore-dlihe18.jpg",
+            "/assets/camps/2015-bangalore-dlihe19.jpg",
+            "/assets/camps/2015-bangalore-dlihe20.jpg",
+            "/assets/camps/2015-bangalore-dlihe21.jpg",
+            "/assets/camps/2015-bangalore-dlihe22.jpg",
+            "/assets/camps/2015-bangalore-dlihe23.jpg",
+            "/assets/camps/2015-bangalore-dlihe24.jpg",
+            "/assets/camps/2015-bangalore-dlihe25.jpg",
+            "/assets/camps/2015-bangalore-dlihe26.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "date": "April 11-April 12, 2015",
+      "place": "Hunsur",
+      "testsOffered": ["General Health Check-up", "Free Oral and Dental Check up", "Free Cervical Test", "Blood Test", "Free Breast Examination" ],
+      "collaborators": [
+        {
+          "name": "UICC Global cancer control",
+          "logo": "/assets/collaborators/UICC Global cancer control.png" 
+        },
+        {
+          "name": "Shangri la Plaza",
+          "logo": "/assets/collaborators/Shangri la Plaza.png"
+        }
+      ],
+      "settlements": [
+        {
+          "name": "Hunsur Tibetan Settlement",
+          "summary": "On February 28th, 2015, the Tibetan Cancer Society (TCS) organized a successful medical health camp at the Dalai Lama Institute of Higher Education in Bangalore, in collaboration with Healthcare Global Enterprise, the Rajiv Gandhi Cancer Institute and Research Centre Branch, and co-sponsored by Taste of Tibet. This event marked a significant milestone in TCSs mission to promote health awareness and provide essential medical services to the Tibetan community. Attracting a large number of participants, especially college students, the camp offered free general health check-ups, oral and dental consultations with treatment, cervical cancer screening (PAP smears), and breast examinations with mammography. The collaboration with leading medical institutions underscored TCSs dedication to improving healthcare access within the Tibetan diaspora. The event not only addressed immediate health needs but also educated participants on the importance of early detection and routine health monitoring. This impactful initiative strengthened TCSs foundation for future medical camps and community outreach, reaffirming its commitment to public health and building sustainable partnerships with prominent healthcare providers.",
+          "photos": [
+            "/assets/camps/2015-Hunsur-h1.jpg",
+            "/assets/camps/2015-Hunsur-h2.jpg",
+            "/assets/camps/2015-Hunsur-h3.jpg",
+            "/assets/camps/2015-Hunsur-h4.jpg",
+            "/assets/camps/2015-Hunsur-h5.jpg",
+            "/assets/camps/2015-Hunsur-h6.jpg",
+            "/assets/camps/2015-Hunsur-h7.jpg",
+            "/assets/camps/2015-Hunsur-h8.jpg",
+            "/assets/camps/2015-Hunsur-h9.jpg",
+            "/assets/camps/2015-Hunsur-h10.jpg",
+            "/assets/camps/2015-Hunsur-h11.jpg",
+            "/assets/camps/2015-Hunsur-h12.jpg",
+            "/assets/camps/2015-Hunsur-h13.jpg",
+            "/assets/camps/2015-Hunsur-h14.jpg",
+            "/assets/camps/2015-Hunsur-h15.jpg",
+            "/assets/camps/2015-Hunsur-h16.jpg",
+            "/assets/camps/2015-Hunsur-h17.jpg",
+            "/assets/camps/2015-Hunsur-h18.jpg",
+            "/assets/camps/2015-Hunsur-h19.jpg",
+            "/assets/camps/2015-Hunsur-h20.jpg",
+            "/assets/camps/2015-Hunsur-h21.jpg",
+            "/assets/camps/2015-Hunsur-h22.jpg",
+            "/assets/camps/2015-Hunsur-h23.jpg",
+            "/assets/camps/2015-Hunsur-h24.jpg",
+            "/assets/camps/2015-Hunsur-h25.jpg",
+            "/assets/camps/2015-Hunsur-h26.jpg",
+            "/assets/camps/2015-Hunsur-h27.jpg",
+            "/assets/camps/2015-Hunsur-h28.jpg",
+            "/assets/camps/2015-Hunsur-h29.jpg"
+          ]
+        }
+      ]
     }
   ]
 }

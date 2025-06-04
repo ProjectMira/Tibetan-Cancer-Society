@@ -10,6 +10,7 @@ interface CancerDayEvent {
   activities_awareness_mission: string[];
   guest_of_honour: string;
   image: string[];
+  about_event?: string;
 }
 
 const WorldCancerDay: React.FC = () => {
@@ -177,6 +178,14 @@ const WorldCancerDay: React.FC = () => {
             <div className="h-2 bg-gradient-to-r from-primary to-primary/60"></div>
             <div className="p-6 md:p-8">
               <h3 className="text-2xl font-bold mb-6">{activeEvent.year} World Cancer Day</h3>
+              {/* About Event Section */}
+              {activeEvent["About Event"] || activeEvent.about_event ? (
+                <div className="mb-8">
+                  <div className="bg-primary/5 border-l-4 border-primary p-4 rounded-lg text-gray-700 text-base">
+                    {activeEvent["About Event"] || activeEvent.about_event}
+                  </div>
+                </div>
+              ) : null}
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-gray-50 p-4 rounded-lg">

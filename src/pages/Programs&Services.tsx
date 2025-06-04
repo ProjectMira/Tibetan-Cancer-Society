@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
-import { ArrowRight, Heart, Search, Users, Info, Truck, Megaphone } from 'lucide-react';
+import { ArrowRight, Heart, Search, Users, Info, Truck, Megaphone, Ambulance, Home, Coffee, Calendar } from 'lucide-react';
 
 // Helper function to get the appropriate icon component
 const getIconComponent = (iconName: string) => {
@@ -138,6 +138,54 @@ const ProgramsAndServices = () => {
           <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-12">
             Discover the various ways we support the Tibetan community in the fight against cancer.
           </p>
+          
+          {/* Navigation Bar */}
+          <div className="mb-12">
+            <nav className="flex flex-wrap justify-center gap-2 md:gap-4">
+              <Link 
+                to="/programs-services" 
+                className="flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors text-sm md:text-base"
+              >
+                <Info className="h-4 w-4 mr-2" />
+                All Programs
+              </Link>
+              <Link 
+                to="/programs/ambulance-services" 
+                className="flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors text-sm md:text-base"
+              >
+                <Ambulance className="h-4 w-4 mr-2" />
+                Ambulance Services
+              </Link>
+              <Link 
+                to="/programs/compassion-home" 
+                className="flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors text-sm md:text-base"
+              >
+                <Home className="h-4 w-4 mr-2" />
+                Compassion Home
+              </Link>
+              <Link 
+                to="/programs/community-kitchen" 
+                className="flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors text-sm md:text-base"
+              >
+                <Coffee className="h-4 w-4 mr-2" />
+                Community Kitchen
+              </Link>
+              <Link 
+                to="/programs/cancer-awareness-camp" 
+                className="flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors text-sm md:text-base"
+              >
+                <Heart className="h-4 w-4 mr-2" />
+                Cancer Awareness Camp
+              </Link>
+              <Link 
+                to="/programs/world-cancer-day" 
+                className="flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors text-sm md:text-base"
+              >
+                <Calendar className="h-4 w-4 mr-2" />
+                World Cancer Day
+              </Link>
+            </nav>
+          </div>
           
           {allPrograms.map((program, index) => (
             <div key={program.id} className="mb-10 bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
