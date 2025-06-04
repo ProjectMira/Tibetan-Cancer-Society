@@ -74,12 +74,8 @@ const CompassionHome: React.FC = () => {
     
     // Also add a listener for hash changes (for when users navigate with browser back/forward)
     window.addEventListener('hashchange', handleTabSelection);
-    
-    // Cleanup listener on unmount
-    return () => {
-      window.removeEventListener('hashchange', handleTabSelection);
-    };
-    
+
+    // Fetch data
     const fetchData = async () => {
       try {
         // Fetch compassion home data
@@ -104,8 +100,12 @@ const CompassionHome: React.FC = () => {
         setLoading(false);
       }
     };
-
     fetchData();
+
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener('hashchange', handleTabSelection);
+    };
   }, []);
 
   // Navigation functions for the image modal
@@ -316,31 +316,29 @@ const CompassionHome: React.FC = () => {
                   <div className="p-6">
                     <div className="mb-6">
                       <div className="bg-gray-50 p-5 rounded-lg">
-                        <div className="mb-3">
-                          <div className="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                            <span className="font-semibold">Inauguration:</span>
-                            <span className="ml-2">{activeHome.inauguration_date}</span>
-                          </div>
-                          
-                          <div className="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z" />
-                            </svg>
-                            <span className="font-semibold">Funded By:</span>
-                            <span className="ml-2">{activeHome.funded_by}</span>
-                          </div>
-                          
-                          <div className="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                            </svg>
-                            <div>
-                              <span className="font-semibold">Total Staff:</span>
-                              <span className="ml-2 block text-gray-700">{activeHome.total_staff}</span>
-                            </div>
+                        <div className="flex items-center mb-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                          <span className="font-semibold">Inauguration:</span>
+                          <span className="ml-2">{activeHome.inauguration_date}</span>
+                        </div>
+                        
+                        <div className="flex items-center mb-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                          </svg>
+                          <span className="font-semibold">Funded By:</span>
+                          <span className="ml-2">{activeHome.funded_by}</span>
+                        </div>
+                        
+                        <div className="flex items-start">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary mr-2 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                          </svg>
+                          <div>
+                            <span className="font-semibold">Total Staff:</span>
+                            <span className="ml-2 block text-gray-700">{activeHome.total_staff}</span>
                           </div>
                         </div>
                       </div>

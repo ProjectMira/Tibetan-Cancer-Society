@@ -150,35 +150,35 @@ const ProgramsAndServices = () => {
                 All Programs
               </Link>
               <Link 
-                to="/ambulance-services" 
+                to="/programs/ambulance-services" 
                 className="flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors text-sm md:text-base"
               >
                 <Ambulance className="h-4 w-4 mr-2" />
                 Ambulance Services
               </Link>
               <Link 
-                to="/compassion-home" 
+                to="/programs/compassion-home" 
                 className="flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors text-sm md:text-base"
               >
                 <Home className="h-4 w-4 mr-2" />
                 Compassion Home
               </Link>
               <Link 
-                to="/community-kitchen" 
+                to="/programs/community-kitchen" 
                 className="flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors text-sm md:text-base"
               >
                 <Coffee className="h-4 w-4 mr-2" />
                 Community Kitchen
               </Link>
               <Link 
-                to="/cancer-awareness-camp" 
+                to="/programs/cancer-awareness-camp" 
                 className="flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors text-sm md:text-base"
               >
                 <Heart className="h-4 w-4 mr-2" />
                 Cancer Awareness Camp
               </Link>
               <Link 
-                to="/world-cancer-day" 
+                to="/programs/world-cancer-day" 
                 className="flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors text-sm md:text-base"
               >
                 <Calendar className="h-4 w-4 mr-2" />
