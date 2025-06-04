@@ -348,6 +348,7 @@ const CancerAwarenessCamp = () => {
                                   {/* Statistics Section */}
                                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                                     {/* Gender Distribution */}
+                                    {settlement.genderStats && typeof settlement.genderStats.male === 'number' && typeof settlement.genderStats.female === 'number' ? (
                                     <div className="bg-white p-4 rounded-lg shadow-sm">
                                       <h6 className="text-sm font-semibold mb-4 text-center">Gender Distribution</h6>
                                       <div className="h-64">
@@ -382,8 +383,10 @@ const CancerAwarenessCamp = () => {
                                         </div>
                                       </div>
                                     </div>
+                                    ) : null}
 
                                     {/* Age Demographics */}
+                                    {Array.isArray(settlement.ageGroups) && settlement.ageGroups.length > 0 ? (
                                     <div className="bg-white p-4 rounded-lg shadow-sm">
                                       <h6 className="text-sm font-semibold mb-4 text-center">Age Demographics</h6>
                                       <div className="h-64">
@@ -405,8 +408,10 @@ const CancerAwarenessCamp = () => {
                                         </ResponsiveContainer>
                                       </div>
                                     </div>
+                                    ) : null}
 
                                     {/* Test Results */}
+                                    {Array.isArray(settlement.testResults) && settlement.testResults.length > 0 ? (
                                     <div className="bg-white p-4 rounded-lg shadow-sm">
                                       <h6 className="text-sm font-semibold mb-4 text-center">Test Results</h6>
                                       <div className="h-64">
@@ -443,6 +448,7 @@ const CancerAwarenessCamp = () => {
                                         ))}
                                       </div>
                                     </div>
+                                    ) : null}
                                   </div>
 
                                   {/* Photo Gallery */}
