@@ -94,23 +94,16 @@ const ProgramsAndServices = () => {
       <section className="relative py-16 md:py-24">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          {programs && programs.length > 0 && (
-            <img 
-              src={programs[0].image || "/assets/programs/health-camp.jpg"} 
-              alt="Programs & Services Background" 
-              className="w-full h-full object-cover" 
-              style={{ objectPosition: '50% 40%' }}
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                // Try another program image as fallback
-                if (programs.length > 1) {
-                  target.src = programs[1].image || "/assets/programs/compassion-home.jpg";
-                } else {
-                  target.src = "/assets/programs/health-camp.jpg";
-                }
-              }}
-            />
-          )}
+          <img 
+            src="/assets/hero-images/TCS program and services.jpg" 
+            alt="Programs & Services Background" 
+            className="w-full h-full object-cover" 
+            style={{ objectPosition: '50% 40%' }}
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = "/assets/programs/health-camp.jpg";
+            }}
+          />
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
         

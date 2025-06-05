@@ -61,6 +61,54 @@ const About = () => {
     fetchDocs();
   }, []);
 
+  // Add state for media coverage
+  const [mediaCoverage, setMediaCoverage] = React.useState<any[]>([]);
+  const [loadingMedia, setLoadingMedia] = React.useState(true);
+  const [errorMedia, setErrorMedia] = React.useState<string | null>(null);
+  const [mediaModalOpen, setMediaModalOpen] = React.useState(false);
+  const [mediaModalImages, setMediaModalImages] = React.useState<string[]>([]);
+  const [mediaModalIndex, setMediaModalIndex] = React.useState<number>(-1);
+  const [mediaModalTitle, setMediaModalTitle] = React.useState<string>('');
+
+  React.useEffect(() => {
+    const fetchMedia = async () => {
+      try {
+        const res = await fetch('/assets/data/media-coverage.json');
+        if (!res.ok) throw new Error('Failed to fetch media coverage');
+        const data = await res.json();
+        setMediaCoverage(data.media_coverage || []);
+      } catch (e) {
+        setErrorMedia('Could not load media coverage.');
+      } finally {
+        setLoadingMedia(false);
+      }
+    };
+    fetchMedia();
+  }, []);
+
+  const openMediaModal = (images: string[], idx: number, title: string) => {
+    setMediaModalImages(images);
+    setMediaModalIndex(idx);
+    setMediaModalOpen(true);
+    setMediaModalTitle(title);
+  };
+  const closeMediaModal = () => {
+    setMediaModalOpen(false);
+    setMediaModalImages([]);
+    setMediaModalIndex(-1);
+    setMediaModalTitle('');
+  };
+  const handleMediaPrev = () => {
+    if (!mediaModalImages.length) return;
+    const prevIdx = (mediaModalIndex - 1 + mediaModalImages.length) % mediaModalImages.length;
+    setMediaModalIndex(prevIdx);
+  };
+  const handleMediaNext = () => {
+    if (!mediaModalImages.length) return;
+    const nextIdx = (mediaModalIndex + 1) % mediaModalImages.length;
+    setMediaModalIndex(nextIdx);
+  };
+
   return (
     <PageLayout>
       {/* Hero Section */}
@@ -68,7 +116,7 @@ const About = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img 
-            src="/assets/about-images/TCS.JPG" 
+            src="/assets/hero-images/About Us.jpg" 
             alt="About Us Background" 
             className="w-full h-full object-cover" 
             style={{ objectPosition: '50% 30%' }}
@@ -116,7 +164,7 @@ const About = () => {
             <div className="md:w-1/2">
               <div className="rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="/assets/about-images/TCS.JPG" 
+                  src="/assets/hero-images/About Us.jpg" 
                   alt="Tibetan Cancer Society" 
                   className="w-full h-auto"
                   onError={(e) => {
@@ -248,6 +296,82 @@ const About = () => {
             />
           )}
         </div>
+      </section>
+
+      {/* Media Coverage Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
+              <Award className="h-3 w-3 mr-1" />
+              <span>Media Coverage</span>
+            </div>
+            <h2 className="text-3xl font-bold mb-4">Media Coverage of the Tibetan Cancer Society</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Explore how our work has been featured in the media over the years.
+            </p>
+          </div>
+          {loadingMedia ? (
+            <div className="text-center text-gray-500">Loading media coverage...</div>
+          ) : errorMedia ? (
+            <div className="text-center text-red-500">{errorMedia}</div>
+          ) : (
+            mediaCoverage.map((outlet, outletIdx) => (
+              <div key={outletIdx} className="mb-12">
+                <h3 className="text-2xl font-semibold mb-6 text-primary">{outlet.media_outlet}</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                  {outlet.articles.map((article, artIdx) => {
+                    // Normalize cover image to array
+                    const images = Array.isArray(article['cover image']) ? article['cover image'] : [article['cover image']];
+                    return images.map((img, imgIdx) => (
+                      <div key={imgIdx} className="bg-white rounded-xl border border-gray-100 shadow-sm flex flex-col items-center p-4">
+                        <div
+                          className="w-full h-56 flex items-center justify-center overflow-hidden rounded-lg mb-3 cursor-pointer bg-white"
+                          onClick={() => openMediaModal(images, imgIdx, outlet.media_outlet)}
+                        >
+                          <img
+                            src={img}
+                            alt={outlet.media_outlet + ' media coverage'}
+                            className="object-contain max-h-56 w-auto max-w-full"
+                            onError={(e) => {
+                              const target = e.target as HTMLImageElement;
+                              target.src = '/assets/placeholders/placeholder-image.svg';
+                            }}
+                          />
+                        </div>
+                        <div className="text-center w-full">
+                          <div className="font-semibold text-base mb-1 mt-1 break-words leading-tight">{article.date}</div>
+                          {article.article_link && (
+                            <a
+                              href={article.article_link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-primary hover:underline text-sm"
+                            >
+                              Read Article
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    ));
+                  })}
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+        {/* Media Image Modal */}
+        {mediaModalOpen && mediaModalImages.length > 0 && (
+          <ImageModal
+            src={mediaModalImages[mediaModalIndex]}
+            alt={mediaModalTitle + ' media coverage'}
+            onClose={closeMediaModal}
+            onNext={mediaModalImages.length > 1 ? handleMediaNext : undefined}
+            onPrevious={mediaModalImages.length > 1 ? handleMediaPrev : undefined}
+            currentIndex={mediaModalIndex}
+            totalImages={mediaModalImages.length}
+          />
+        )}
       </section>
 
       {/* Call to Action */}

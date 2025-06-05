@@ -186,7 +186,7 @@ const CompassionHome: React.FC = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img 
-            src="/assets/backgrounds/compassion-home-bg.jpg" 
+            src="/assets/hero-images/compassion home.jpg" 
             alt="Compassion Home" 
             className="w-full h-full object-cover" 
             style={{ objectPosition: '50% 40%' }}

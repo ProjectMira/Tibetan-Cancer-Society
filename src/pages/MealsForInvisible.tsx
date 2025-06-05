@@ -163,7 +163,7 @@ const MealsForInvisible: React.FC = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img 
-            src="/assets/programs/MFI.png" 
+            src="/assets/hero-images/Meals for Invisible.jpg" 
             alt="Meals for Invisible" 
             className="w-full h-full object-cover" 
             style={{ objectPosition: '50% 40%' }}

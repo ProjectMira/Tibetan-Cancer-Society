@@ -178,40 +178,16 @@ const AmbulanceServices: React.FC = () => {
       <section className="relative py-16 md:py-24">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          {ambulanceData && ambulanceData.ambulance_cars && ambulanceData.ambulance_cars.length > 0 && 
-           ambulanceData.ambulance_cars[0].Ambulance1 && 
-           ambulanceData.ambulance_cars[0].Ambulance1.images && 
-           ambulanceData.ambulance_cars[0].Ambulance1.images.length > 0 ? (
-            <img 
-              src={ambulanceData.ambulance_cars[0].Ambulance1.images[0]} 
-              alt="Ambulance Services" 
-              className="w-full h-full object-cover" 
-              style={{ objectPosition: '50% 40%' }}
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                // Try another ambulance image if available
-                if (ambulanceData.ambulance_cars[0].Ambulance2 && 
-                    ambulanceData.ambulance_cars[0].Ambulance2.images && 
-                    ambulanceData.ambulance_cars[0].Ambulance2.images.length > 0) {
-                  target.src = ambulanceData.ambulance_cars[0].Ambulance2.images[0];
-                } else {
-                  target.src = '/assets/programs/ambulance.jpg';
-                }
-              }}
-            />
-          ) : (
-            <img 
-              src="/assets/programs/ambulance.jpg" 
-              alt="Ambulance Services" 
-              className="w-full h-full object-cover" 
-              style={{ objectPosition: '50% 40%' }}
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                // Use a different ambulance image as fallback
-                target.src = '/assets/programs/ambulance.png';
-              }}
-            />
-          )}
+          <img 
+            src="/assets/hero-images/Ambulance service.jpg" 
+            alt="Ambulance Services" 
+            className="w-full h-full object-cover" 
+            style={{ objectPosition: '50% 40%' }}
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = '/assets/programs/ambulance.jpg';
+            }}
+          />
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
         
