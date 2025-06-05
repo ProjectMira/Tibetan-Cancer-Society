@@ -1,0 +1,421 @@
+{
+  "media_coverage": [
+    {
+      "media_outlet": "Radio Free Asia",
+      "articles": [
+        {
+          "date": "2015-04-17",
+          "cover image": "/assets/media-coverage/2015rfa2.png",
+          "article_link": "https://www.rfa.org/tibetan/society/stomach-cancer-04212015112851.html?fbclid=IwY2xjawKnpSlleHRuA2FlbQIxMQBicmlkETFVM01pdkxoNVM1V04zdk1TAR6rHem7olk0XwIV4DE3keRsoKMGdahPj2Dd8IL71QhxAuXZ4UzjksBa4k3Kpg_aem_kO-UaGZ71FiAtdRyd6HqZQ"
+        },
+        {
+          "date": "2015-04-21",
+          "cover image": "/assets/media-coverage/2016rfa3.png",
+          "article_link": "https://www.rfa.org/tibetan/exile/tibetan-cancer-society-conducting-free-medical-camp-in-hunsur-04172015095052.html?fbclid=IwY2xjawKnpaZleHRuA2FlbQIxMQBicmlkETFVM01pdkxoNVM1V04zdk1TAR5COYv86oO3N77_CCliQWdrMbzudpo7QHB9K5AMRYXrrTp9GXpEHLgo7IGPng_aem_fZloPA8Bmify459Iw5ms1A"
+        },
+        {
+          "date": "2016-05-21",
+          "cover image": "/assets/media-coverage/2016rfaone1.png",
+          "article_link": "https://www.youtube.com/watch?v=0qlZ66C4ay8"
+        },
+         {
+          "date": "2016-10-05",
+          "cover image": "/assets/media-coverage/2016rfa1.png",
+          "article_link": "https://www.rfa.org/tibetan/society/free-medical-camp-in-bylakuppe-10052016120909.html"
+        },
+         {
+          "date": "2019-02-02",
+          "cover image": "/assets/media-coverage/2019rfa1.png",
+          "article_link": "https://www.rfa.org/tibetan/exile/tibetan-cancer-society-becomes-a-full-time-member-of-union-of-international-cancer-control-02022019114513.html"
+        },
+        {
+          "date": "2019-02-12",
+          "cover image": "/assets/media-coverage/2019rfa2.png",
+          "article_link": "https://www.rfa.org/tibetan/exile/an-interview-with-tsultrim-dorjee-about-their-5-years-of-service-in-the-tibetan-exile-community-02122019134002.html?fbclid=IwY2xjawKn_2ZleHRuA2FlbQIxMQBicmlkETE1aDM5NkFhT1ppWmF3aWZjAR5gjCjXf2099QQX4QDIBJHBRn1DNC5ybw1Qco5Ave2KQj_ExjnqK-DvYvdVqA_aem_RR9fT5MhdE9F5wdvocah-g"
+        },
+          {
+          "date": "2021-02-17",
+          "cover image": "/assets/media-coverage/2021rfaone1.png",
+          "article_link": "https://www.facebook.com/rfa.tibetan/videos/164825948613377"
+        },
+         {
+          "date": "2021-04-29",
+          "cover image": "/assets/media-coverage/2021rfa1.png",
+          "article_link": "https://www.rfa.org/tibetan/society/covid-19-india-04292021142555.html"
+        },
+         {
+          "date": "2021-05-07",
+          "cover image": "/assets/media-coverage/2021rfa2.png",
+          "article_link": "https://www.rfa.org/tibetan/sargyur/corona-covid-19-tibetan-05072021115903.html"
+        },
+        {
+          "date": "2023-02-15",
+          "cover image": "/assets/media-coverage/2023rfa1.png",
+          "article_link": "https://www.facebook.com/rfa.tibetan/videos/576277544558756"
+        },
+         {
+          "date": "2024-01-04",
+          "cover image": "/assets/media-coverage/2024rfa1.png",
+          "article_link": "https://www.rfa.org/tibetan/video?v=1_855eq7mb"
+        },
+        {
+          "date": "2025-02-18",
+          "cover image": "/assets/media-coverage/2025rfa1.png",
+          "article_link": "https://www.rfa.org/tibetan/video?v=1_855eq7mb"
+        }
+      ]
+    },
+    {
+      "media_outlet": "Tibet Times",
+      "articles": [
+        {
+          "date": "2019-11-15",
+          "cover image": "/assets/media-coverage/tibettimes1.png",
+          "article_link": "https://tibettimes.net/2019/11/15/181765/"
+        },
+         {
+          "date": "2020-02-04",
+          "cover image": "/assets/media-coverage/tibettimes2.png",
+          "article_link": "https://tibettimes.net/2020/02/04/202354/"
+        },
+         {
+          "date": "2021-02-04",
+          "cover image": "/assets/media-coverage/tibettimes3.png",
+          "article_link": "https://tibettimes.net/2021/02/04/210554/"
+        },
+         {
+          "date": "2021-04-22",
+          "cover image": "/assets/media-coverage/tibettimes4.png",
+          "article_link": "https://tibettimes.net/2021/04/22/212346/"
+        },
+         {
+          "date": "2021-05-07",
+          "cover image": "/assets/media-coverage/tibettimesone5.png",
+          "article_link": "https://tibettimes.net/2021/05/07/212618/"
+        },
+         {
+          "date": "2021-05-22",
+          "cover image": "/assets/media-coverage/tibettimes5.png",
+          "article_link": "https://tibettimes.net/2021/05/22/212887/"
+        },
+        {
+          "date": "2022-02-05",
+          "cover image": "/assets/media-coverage/tibettimes6.png",
+          "article_link": "https://tibettimes.net/2022/02/05/217706/"
+        },
+        {
+          "date": "2023-02-04",
+          "cover image": "/assets/media-coverage/tibettimes7.png",
+          "article_link": "https://tibettimes.net/2023/02/04/224092/"
+        }
+      ]
+    },
+    {
+      "media_outlet": "Voice of Tibet",
+      "articles": [
+        {
+          "date": "2019-02-02",
+          "cover image": "/assets/media-coverage/vot1.png",
+          "article_link": "https://vot.org/%e0%bd%a2%e0%bd%ba%e0%bd%a6%e0%bc%8b%e0%bd%82%e0%bd%9f%e0%bd%a0%e0%bc%8b%e0%bd%a6%e0%be%a4%e0%bd%ba%e0%bd%93%e0%bc%8b%e0%bd%94%e0%bc%8d-%e0%bc%a2%e0%bc%a0%e0%bc%a1%e0%bc%a9%e0%bc%8d%e0%bc%a0%e0%bc%a2/"
+        },
+         {
+          "date": "2020-02-04",
+          "cover image": "/assets/media-coverage/vot2.png",
+          "article_link": "https://vot.org/%e0%bd%a2%e0%bd%ba%e0%bd%a6%e0%bc%8b%e0%bd%82%e0%bd%9f%e0%bd%a0%e0%bc%8b%e0%bd%94%e0%bc%8b%e0%bd%a6%e0%bd%84%e0%bd%a6%e0%bc%8d-%e0%bc%a2%e0%bc%a0%e0%bc%a1%e0%bc%a9%e0%bc%8d%e0%bc%a1%e0%bc%a1-3/"
+        },
+         {
+          "date": "2020-02-04",
+          "cover image": "/assets/media-coverage/vot3.png",
+          "article_link": "https://vot.org/%e0%bd%96%e0%bd%9e%e0%bd%b4%e0%bd%82%e0%bd%a6%e0%bc%8b%e0%bd%a6%e0%be%92%e0%bd%a2%e0%bc%8b%e0%bd%91%e0%bd%b4%e0%bc%8b%e0%bd%a2%e0%be%92%e0%be%b1%e0%bd%a3%e0%bc%8b%e0%bd%a6%e0%be%a4%e0%be%b1%e0%bd%b2-4/"
+        },
+         {
+          "date": "2020-02-09",
+          "cover image": "/assets/media-coverage/vot4.png",
+          "article_link": "https://vot.org/%e0%bd%a2%e0%bd%ba%e0%bd%a6%e0%bc%8b%e0%bd%82%e0%bd%9f%e0%bd%a0%e0%bc%8b%e0%bd%89%e0%bd%b2%e0%bc%8b%e0%bd%98%e0%bc%8d-%e0%bc%a2%e0%bc%a0%e0%bc%a2%e0%bc%a0%e0%bc%8d%e0%bc%a0%e0%bc%a2%e0%bc%8d-2/"
+        },
+         {
+          "date": "2020-06-28",
+          "cover image": "/assets/media-coverage/vot5.png",
+          "article_link": "https://vot.org/%e0%bd%a2%e0%bd%ba%e0%bd%a6%e0%bc%8b%e0%bd%82%e0%bd%9f%e0%bd%a0%e0%bc%8b%e0%bd%89%e0%bd%b2%e0%bc%8b%e0%bd%98%e0%bc%8d-%e0%bc%a2%e0%bc%a0%e0%bc%a2%e0%bc%a0%e0%bc%8d%e0%bc%a0%e0%bc%a6%e0%bc%8d-3/"
+        },
+         {
+          "date": "2021-02-04",
+          "cover image": "/assets/media-coverage/vot6.png",
+          "article_link": "https://vot.org/%e0%bd%a2%e0%bd%b2%e0%bd%93%e0%bc%8b%e0%bd%98%e0%bd%ba%e0%bd%91%e0%bc%8b%e0%bd%90%e0%bd%bc%e0%bd%82%e0%bc%8b-h-pylori-%e0%bd%93%e0%bd%91%e0%bc%8b%e0%bd%a2%e0%be%9f%e0%bd%82%e0%bd%a6%e0%bc%8b/"
+        },
+        {
+          "date": "2021-04-26",
+          "cover image": "/assets/media-coverage/vot7.png",
+          "article_link": "https://vot.org/%e0%bd%a3%e0%be%a1%e0%bd%b2%e0%bc%8b%e0%bd%a3%e0%bd%b2%e0%bc%8b%e0%bd%93%e0%bd%a6%e0%bc%8b%e0%bd%96%e0%bd%bc%e0%bd%91%e0%bc%8b%e0%bd%98%e0%bd%b2%e0%bc%8b%e0%bd%93%e0%bd%91%e0%bc%8b%e0%bd%98%e0%bd%93/"
+        },
+        {
+          "date": "2021-05-05",
+          "cover image": "/assets/media-coverage/vot8.png",
+          "article_link": "https://vot.org/%e0%bd%93%e0%bd%91%e0%bc%8b%e0%bd%a1%e0%bd%98%e0%bd%a6%e0%bc%8b%e0%bd%81%e0%be%b2%e0%bd%bc%e0%bd%91%e0%bc%8b%e0%bd%96%e0%bd%bc%e0%bd%91%e0%bc%8b%e0%bd%98%e0%bd%b2%e0%bc%8b%e0%bd%9a%e0%bd%bc%e0%bd%82/"
+        },
+         {
+          "date": "2021-08-16",
+          "cover image": "/assets/media-coverage/vot9.png",
+          "article_link": "https://vot.org/%e0%bd%a2%e0%bd%ba%e0%bd%a6%e0%bc%8b%e0%bd%82%e0%bd%9f%e0%bd%a0%e0%bc%8b%e0%bd%9f%e0%be%b3%e0%bc%8b%e0%bd%96%e0%bc%8d-%e0%bc%a2%e0%bc%a0%e0%bc%a2%e0%bc%a1%e0%bc%8d%e0%bc%a0%e0%bc%a8%e0%bc%8d%e0%bc%a1/"
+        },
+        {
+          "date": "2021-08-27",
+          "cover image": "/assets/media-coverage/vot10.png",
+          "article_link": "https://vot.org/%e0%bd%98%e0%bd%ba%e0%bc%8b%e0%bd%a6%e0%bd%bc%e0%bd%a2%e0%bc%8b%e0%bd%91%e0%bd%b4%e0%bc%8b%e0%bd%96%e0%be%b1%e0%bd%98%e0%bd%a6%e0%bc%8b%e0%bd%96%e0%bd%a2%e0%be%a9%e0%bd%ba%e0%bc%8b%e0%bd%81%e0%bd%84/"
+        },
+         {
+          "date": "2021-09-06",
+          "cover image": "/assets/media-coverage/vot15.png",
+          "article_link": "https://vot.org/%e0%bd%a6%e0%be%b3%e0%bd%ba%e0%bc%8b%e0%bd%a3%e0%bd%b4%e0%bd%84%e0%bc%8b%e0%bd%91%e0%bd%82%e0%bd%ba%e0%bc%8b%e0%bd%a2%e0%be%a9%e0%bc%8b%e0%bd%9a%e0%bd%bc%e0%bd%82%e0%bd%a6%e0%bc%8b%e0%bd%94%e0%bd%a6/"
+        },
+        {
+          "date": "2022-02-07",
+          "cover image": "/assets/media-coverage/vot11.png",
+          "article_link": "https://vot.org/%e0%bd%a0%e0%bd%96%e0%be%b2%e0%bd%a6%e0%bc%8b%e0%bd%93%e0%bd%91%e0%bc%8b%e0%bd%95%e0%bd%bc%e0%bd%82%e0%bc%8b%e0%bd%98%e0%bd%81%e0%bd%93%e0%bc%8b%e0%bd%a1%e0%bd%bc%e0%bd%84%e0%bd%a6%e0%bc%8b%e0%bd%a3/"
+        },
+        {
+          "date": "2022-08-22",
+          "cover image": "/assets/media-coverage/vot12.png",
+          "article_link": "https://vot.org/%e0%bd%a6%e0%be%92%e0%bd%bc%e0%bc%8b%e0%bd%a4%e0%bd%ba%e0%bd%a6%e0%bc%8b%e0%bd%a2%e0%bd%96%e0%bc%8b%e0%bd%a2%e0%be%92%e0%be%b1%e0%bc%8b%e0%bd%98%e0%bd%9a%e0%bd%bc%e0%bc%8b%e0%bd%a3%e0%bd%82%e0%bd%a6/"
+        },
+        {
+          "date": "2023-02-04",
+          "cover image": "/assets/media-coverage/vot13.png",
+          "article_link": "https://vot.org/%e0%bd%a0%e0%bd%96%e0%be%b2%e0%bd%a6%e0%bc%8b%e0%bd%93%e0%bd%91%e0%bc%8b%e0%bd%82%e0%bd%bc%e0%bc%8b%e0%bd%a2%e0%be%9f%e0%bd%bc%e0%bd%82%e0%bd%a6%e0%bc%8b%e0%bd%a6%e0%be%a4%e0%bd%ba%e0%bd%a3%e0%bc%8b/"
+        },
+        {
+          "date": "2024-02-04",
+          "cover image": "/assets/media-coverage/vot14.png",
+          "article_link": "https://vot.org/%e0%bd%a0%e0%bd%96%e0%be%b2%e0%bd%a6%e0%bc%8b%e0%bd%93%e0%bd%91%e0%bc%8b%e0%bd%96%e0%bd%a2%e0%be%9f%e0%bd%82%e0%bc%8b%e0%bd%91%e0%bd%94%e0%be%b1%e0%bd%91%e0%bc%8b%e0%bd%96%e0%bd%a2%e0%be%92%e0%be%b1/"
+        }
+      ]
+    },
+         {
+      "media_outlet": "Tibet Times",
+      "articles": [
+        {
+          "date": "2019-11-15",
+          "cover image": "/assets/media-coverage/tibettimes1.png",
+          "article_link": "https://tibettimes.net/2019/11/15/181765/"
+        },
+        {
+          "date": "2020-02-04",
+          "cover image": "/assets/media-coverage/tibettimes2.png",
+          "article_link": "https://tibettimes.net/2020/02/04/202354/"
+        },
+        {
+          "date": "2021-02-04",
+          "cover image": "/assets/media-coverage/tibettimes3.png",
+          "article_link": "https://tibettimes.net/2021/02/04/210554/"
+        },
+        {
+          "date": "2021-04-22",
+          "cover image": "/assets/media-coverage/tibettimesone4.png",
+          "article_link": "https://tibettimes.net/2021/04/22/212346/"
+        },
+         {
+          "date": "2021-05-07",
+          "cover image": "/assets/media-coverage/tibettimesone5.png",
+          "article_link": "https://tibettimes.net/2021/05/07/212618/"
+        },
+        {
+          "date": "2021-05-22",
+          "cover image": "/assets/media-coverage/tibettimes5.png",
+          "article_link": "https://tibettimes.net/2021/05/22/212887/"
+        },
+         {
+          "date": "2022-02-05",
+          "cover image": "/assets/media-coverage/tibettimes6.png",
+          "article_link": "https://tibettimes.net/2019/11/15/181765/"
+        },
+         {
+          "date": "2023-02-04",
+          "cover image": "/assets/media-coverage/tibettimes7.png",
+          "article_link": "https://tibettimes.net/2023/02/04/224092/"
+        }
+      ]
+    },
+         {
+      "media_outlet": "Tibet Express",
+      "articles": [
+        {
+          "date": "2019-02-02",
+          "cover image": "/assets/media-coverage/tibetexpress1.png",
+          "article_link": "https://bangchen.net/%e0%bd%96%e0%bd%bc%e0%bd%91%e0%bc%8b%e0%bd%80%e0%be%b1%e0%bd%b2%e0%bc%8b%e0%bd%a0%e0%bd%96%e0%be%b2%e0%bd%a6%e0%bc%8b%e0%bd%93%e0%bd%91%e0%bc%8b%e0%bd%9a%e0%bd%bc%e0%bd%82%e0%bd%a6%e0%bc%8b%e0%bd%94/"
+        },
+         {
+          "date": "2020-02-04",
+          "cover image": "/assets/media-coverage/tibetexpress2.png",
+          "article_link": "https://bangchen.net/%e0%bd%a2%e0%be%92%e0%be%b1%e0%bd%a3%e0%bc%8b%e0%bd%a6%e0%be%a4%e0%be%b1%e0%bd%b2%e0%bd%a0%e0%bd%b2%e0%bc%8b%e0%bd%a0%e0%bd%96%e0%be%b2%e0%bd%a6%e0%bc%8b%e0%bd%93%e0%bd%91%e0%bc%8b%e0%bd%89%e0%bd%b2/"
+        },
+         {
+          "date": "2021-02-05",
+          "cover image": "/assets/media-coverage/tibetexpress3.png",
+          "article_link": "https://bangchen.net/%e0%bd%a2%e0%be%a1%e0%bc%8b%e0%bd%a6%e0%bd%a2%e0%bc%8b%e0%bd%a2%e0%be%92%e0%be%b1%e0%bd%a3%e0%bc%8b%e0%bd%a6%e0%be%a4%e0%be%b1%e0%bd%b2%e0%bd%a0%e0%bd%b2%e0%bc%8b%e0%bd%a0%e0%bd%96%e0%be%b2%e0%bd%a6/"
+        }
+      ]
+    },
+      {
+      "media_outlet": "Voice of America Tibetan",
+      "articles": [
+         {
+          "date": "2020-10-04",
+          "cover image": "/assets/media-coverage/voa1.png",
+          "article_link": "https://www.youtube.com/watch?v=QocmgZdAywE"
+        },
+        {
+          "date": "2021-05-04",
+          "cover image": "/assets/media-coverage/voa2.png",
+          "article_link": "https://www.voatibetan.com/a/tibetan-individuals-and-groups-help-covid-situation-with-tibetans-in-india/5877716.html"
+        },
+        {
+          "date": "2021-05-06",
+          "cover image": "/assets/media-coverage/voaone3.png",
+          "article_link": "https://www.voatibetan.com/a/tibetan-ngos-collectively-working-on-covid-relief-care-in-tibetan-settlements/5880683.html"
+        },
+        {
+          "date": "2021-06-06",
+          "cover image": "/assets/media-coverage/voa3.png",
+          "article_link": "https://www.voatibetan.com/a/tsultrim-dorjee-the-founder-and-director-of-the-tibetan-cancer-society-/5918437.html"
+        },
+        {
+          "date": "2024-02-06",
+          "cover image": "/assets/media-coverage/voa4.png",
+          "article_link": "https://www.voatibetan.com/a/world-cancer-day-observed-in-dharamshala/6428213.html"
+        }
+     ]
+   },
+   {
+      "media_outlet": "Tibet.Net",
+      "articles": [
+         {
+          "date": "2021-02-04",
+          "cover image": "/assets/media-coverage/tibetdotnet1.png",
+          "article_link": "https://tibet.net/deputy-speaker-inaugurates-world-cancer-day-awareness-program/"
+         },
+         {
+          "date": "2021-02-05",
+          "cover image": "/assets/media-coverage/tibetdotnet2.png",
+          "article_link": "https://tibet.net/on-world-cancer-day-health-kalon-choekyong-wangchuk-calls-for-healthy-lifestyle-practices-to-keep-cancer-at-bay/"
+         },
+         {
+          "date": "2021-06-06",
+          "cover image": "/assets/media-coverage/tibetdotnet3.png",
+          "article_link": "https://tibet.net/covid-booster-vaccine-administered-at-samyeling-tibetan-settlement-delhi/"
+         },
+         {
+          "date": "2023-02-06",
+          "cover image": "/assets/media-coverage/tibetdotnet4.png",
+          "article_link": "https://tibet.net/department-of-health-initiates-world-cancer-day-awareness-programs/"
+         },
+         {
+          "date": "2024-02-05",
+          "cover image": "/assets/media-coverage/tibetdotnet5.png",
+          "article_link": "https://tibet.net/deputy-speaker-inaugurates-signature-campaign-for-cancer-awareness-event/"
+         }
+      ]
+    },
+    {
+      "media_outlet": "Phayul",
+      "articles": [
+        
+         {
+          "date": "2019-11-16",
+          "cover image": "/assets/media-coverage/phayul1.png",
+          "article_link": "https://www.phayul.com/2019/11/16/42081/"
+         }
+      ]
+    },
+    {
+      "media_outlet": "Tibettv",
+      "articles": [
+        
+         {
+          "date": "2021-06-13",
+          "cover image": "/assets/media-coverage/tibettv1.png",
+          "article_link": "https://www.youtube.com/watch?v=LwsGgLF4XRM"
+         }
+      ]
+    },
+    {
+      "media_outlet": "Media Others",
+      "articles": [
+         {
+          "date": "2015-03-04",
+          "cover image": "/assets/media-coverage/media5.png",
+          "article_link": "https://www.dalailamainstitute.edu.in/newsupdates/free-health-camp-on-cancer-awareness-february-28-2015/"
+         },
+         {
+          "date": "2019-12-01",
+          "cover image": "/assets/media-coverage/media2.png",
+          "article_link": "https://shangpakagyu.org/memorandum-of-understanding-between-drodhen-kunkhyab-charitable-trust-and-tibetan-cancer-society/"
+         },
+         {
+          "date": "2021-02-04",
+          "cover image": "/assets/media-coverage/media10.png",
+          "article_link": "https://www.thetibetpost.com/news/exile/tibetan-cancer-society-observes-the-world-cancer-day-with-its-signature-campaign?highlight=WyJ0aWJldGFuIiwiY2FuY2VyIiwic29jaWV0eSJd"
+         },
+         {
+          "date": "2021-05-09",
+          "cover image": "/assets/media-coverage/media4.png",
+          "article_link": "https://shangpakagyu.org/helping-tcs-and-the-local-communities/"
+         },
+         {
+          "date": "2021-06-06",
+          "cover image": "/assets/media-coverage/media3.png",
+          "article_link": "https://shangpakagyu.org/kalu-rinpoche-thank-you-to-all-the-donors-and-participants/"
+         },
+         {
+          "date": "2021-07-21",
+          "cover image": "/assets/media-coverage/media8.png",
+          "article_link": "https://tibetfund.org/what-we-do/empowering-tibetan-civil-society/"
+         },
+         {
+          "date": "2021-10-23",
+          "cover image": "/assets/media-coverage/media6.png",
+          "article_link": "https://tibetanhealth.org/news/health-kalon-paid-a-visit-to-free-health-camp-organised-by-tibetan-cancer-society/"
+         },
+         {
+          "date": "2021-10-25",
+          "cover image": "/assets/media-coverage/media9.png",
+          "article_link": "https://tibetrelieffund.co.uk/tag/tibetan-cancer-society/"
+         },
+         {
+          "date": "2022-10-23",
+          "cover image": "/assets/media-coverage/media1.png",
+          "article_link": "https://www.facebook.com/tenzinwangyalrinpoche/videos/525686302289250"
+         },
+          {
+          "date": "2023-01-18",
+          "cover image": "/assets/media-coverage/media7.png",
+          "article_link": "https://tibetrelieffund.co.uk/india-diary-part-4-delhi-meeting-up-with-empowering-the-vision-and-tibetan-cancer-society/"
+         },
+         {
+          "date": "2024-12-25",
+          "cover image": "/assets/media-coverage/media11.png",
+          "article_link": "https://tseringfoundation.ch/en/news-international/#1737120034249-2d3a5bc3-b465"
+         }
+      ]
+    },
+    {
+      "media_outlet": "National Media India",
+      "articles": [
+         {
+          "date": "2024-07-23",
+          "cover image": "/assets/media-coverage/n1.png",
+          "article_link": "https://ladakh.gov.in/successful-conclusion-of-ladakh-mega-health-camp-by-tibetan-cancer-society-and-rotary-eye-hospital/"
+         },
+         {
+          "date": "2024-07-24",
+          "cover image": "/assets/media-coverage/n2.png",
+          "article_link": "https://www.reachladakh.com/news/social-news/ladakh-mega-health-camp-by-tibetan-cancer-society-and-rotary-eye-hospital-concludes"
+         },
+         {
+          "date": "2024-07-23",
+          "cover image": "/assets/media-coverage/n3.png",
+          "article_link": "https://indusdispatch.in/ladakh-mega-health-camp-by-tibetan-cancer-society-and-rotary-eye-hospital-concludes/"
+         }
+      ]
+    } 
+  ]
+}
