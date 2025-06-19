@@ -11,9 +11,7 @@ const Navbar = () => {
     phone: '',
     email: ''
   });
-  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [programsDropdownOpen, setProgramsDropdownOpen] = useState(false);
-  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
   const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
 
   const navigate = useNavigate();
@@ -91,10 +89,7 @@ const Navbar = () => {
                   tabIndex={0}
                   onClick={(e) => {
                     e.preventDefault();
-                    setProgramsDropdownOpen((open) => {
-                      if (!open) setAboutDropdownOpen(false);
-                      return !open;
-                    });
+                    setProgramsDropdownOpen((open) => !open);
                   }}
                 >
                   Programs & Services <ChevronDown className="h-4 w-4" />
@@ -136,26 +131,14 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden fixed top-[6.5rem] left-0 right-0 bg-white shadow-lg z-50 border-t border-gray-200">
           <div className="px-4 py-2 space-y-1 divide-y divide-gray-200">
-            {/* About Us Mobile Dropdown */}
-            <div>
-              <button
-                className="w-full text-left py-3 font-medium hover:text-primary flex items-center justify-between"
-                onClick={() => setMobileAboutOpen((v) => !v)}
-              >
-                About Us <ChevronDown className={`h-4 w-4 ml-2 transition-transform ${mobileAboutOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {mobileAboutOpen && (
-                <div className="pl-4 pb-2">
-                  <Link to="/about#hero" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Hero/Intro</Link>
-                  <Link to="/about#mission" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Mission</Link>
-                  <Link to="/about#appreciation" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Appreciation & Legal Documents</Link>
-                  <Link to="/about#media-coverage" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Media Coverage</Link>
-                  <Link to="/team" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Our Team</Link>
-                  <Link to="/testimonials" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Testimonials</Link>
-                  <Link to="/contact" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-                </div>
-              )}
-            </div>
+            {/* About Us Simple Link */}
+            <Link 
+              to="/about" 
+              className="block py-3 font-medium hover:text-primary"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              About Us
+            </Link>
             {/* Programs & Services Mobile Dropdown */}
             <div>
               <button
@@ -216,9 +199,6 @@ const Navbar = () => {
       )}
       
       {/* Desktop Dropdowns (full-width, root-level) */}
-      {aboutDropdownOpen && (
-        {/* About Us dropdown removed as requested */}
-      )}
       {programsDropdownOpen && (
         <div className="fixed left-0 right-0 top-[64px] bg-white shadow-xl border-t border-gray-200 z-40">
           <div className="max-w-6xl mx-auto px-0 pt-6 pb-0">

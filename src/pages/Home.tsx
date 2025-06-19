@@ -265,51 +265,44 @@ const Home = () => {
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Patient Stories</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Hear from those who have been supported by the Tibetan Cancer Society.
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Words of Hope</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Read stories from the brave individuals and families we've supported.
             </p>
           </div>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {testimonials.map((testimonial) => (
-              <div
-                key={testimonial.id}
-                className="bg-white rounded-xl shadow-sm p-6 transition-shadow hover:shadow-md"
-              >
-                <Quote className="h-8 w-8 text-primary mb-4" />
-                <div className="mb-2">
-                  <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
-                    {testimonial.diagnosis}
-                  </span>
-                </div>
-                <blockquote className="mb-4">
-                  <p className="text-gray-700 italic line-clamp-4">{testimonial.quote}</p>
-                </blockquote>
-                <div className="flex items-center">
-                  <div className="flex-shrink-0">
-                    <img
-                      className="h-12 w-12 rounded-full object-cover"
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src = '/assets/default-avatar.png';
-                      }}
-                    />
-                  </div>
-                  <div className="ml-4">
-                    <div className="text-base font-semibold">{testimonial.name}, {testimonial.age}</div>
-                    <div className="text-sm text-muted-foreground">
-                      {testimonial.location} • {testimonial.date}
+          <div className="overflow-hidden">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+            >
+              {testimonials.map((testimonial) => (
+                <CarouselItem key={testimonial.id}>
+                  <div className="flex items-center">
+                    <div className="flex-shrink-0">
+                      <img
+                        className="h-12 w-12 rounded-full object-cover"
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = '/assets/default-avatar.png';
+                        }}
+                      />
+                    </div>
+                    <div className="ml-4">
+                      <div className="text-base font-semibold">{testimonial.name}, {testimonial.age}</div>
+                      <div className="text-sm text-muted-foreground">
+                        {testimonial.location} • {testimonial.date}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                </CarouselItem>
+              ))}
+            </Carousel>
           </div>
-
-          <div className="text-center">
+          <div className="text-center mt-4">
             <Link
               to="/testimonials"
               className="inline-flex items-center text-primary hover:text-primary/80 font-semibold"
