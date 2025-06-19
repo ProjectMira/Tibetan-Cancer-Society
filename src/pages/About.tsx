@@ -404,19 +404,19 @@ const About = () => {
               <PlayCircle className="h-3 w-3 mr-1" />
               <span>Video Gallery</span>
             </div>
-            <h2 className="text-3xl font-bold mb-4">Health Camp Videos</h2>
+            <h2 className="text-3xl font-bold mb-4">Tibetan Cancer Society Media</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Watch our health camps in action and see the impact of our cancer awareness and screening programs in Tibetan communities.
+              Watch interviews and media coverage featuring our work in cancer awareness, ambulance services, and community support programs.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { id: "8rSR2sf3VC0", title: "Health Camp Video 1", url: "https://www.youtube.com/watch?v=8rSR2sf3VC0" },
-              { id: "LwsGgLF4XRM", title: "Health Camp Video 2", url: "https://www.youtube.com/watch?v=LwsGgLF4XRM" },
-              { id: "MWz66bWh3e8", title: "Health Camp Video 3", url: "https://www.youtube.com/watch?v=MWz66bWh3e8" },
-              { id: "Ef3TrtQQEqk", title: "Health Camp Video 4", url: "https://www.youtube.com/watch?v=Ef3TrtQQEqk" },
-              { id: "QocmgZdAywE", title: "Health Camp Video 5", url: "https://www.youtube.com/watch?v=QocmgZdAywE" }
+              { id: "8rSR2sf3VC0", title: "In conversation with the founder of Tibetan Cancer Society", url: "https://www.youtube.com/watch?v=8rSR2sf3VC0" },
+              { id: "LwsGgLF4XRM", title: "Tsultrim Dorjee on Tibetan Cancer Society in COVID Times", url: "https://www.youtube.com/watch?v=LwsGgLF4XRM" },
+              { id: "MWz66bWh3e8", title: "Tibetan Cancer Society and their 'Meals for the Invisibles'", url: "https://www.youtube.com/watch?v=MWz66bWh3e8" },
+              { id: "Ef3TrtQQEqk", title: "In Conversation with TYC & Tibet Cancer Society president about social work in BodhGaya", url: "https://www.youtube.com/watch?v=Ef3TrtQQEqk" },
+              { id: "QocmgZdAywE", title: "Tibetan Cancer Society launches new Ambulance to help patients and poor in Delhi", url: "https://www.youtube.com/watch?v=QocmgZdAywE" }
             ].map((video, index) => {
               const embedUrl = `https://www.youtube.com/embed/${video.id}`;
               
@@ -435,7 +435,7 @@ const About = () => {
                   <div className="p-4">
                     <h3 className="font-semibold text-gray-900 mb-2">{video.title}</h3>
                     <p className="text-sm text-gray-600">
-                      Watch our cancer awareness and screening activities in Tibetan communities.
+                      Media coverage and interviews about our organization's mission and impact.
                     </p>
                   </div>
                 </div>
