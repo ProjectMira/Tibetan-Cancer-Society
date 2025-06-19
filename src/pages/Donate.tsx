@@ -98,6 +98,49 @@ const Donate = () => {
               </div>
             </div>
           </div>
+
+          {/* Government Certifications Section */}
+          <div className="bg-gray-50 p-4 md:p-8 rounded-lg shadow-sm">
+            <h3 className="text-xl font-semibold mb-6 text-center">Government Certifications</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              {/* 12A Certificate */}
+              <div className="text-center">
+                <h4 className="text-lg font-medium mb-4 text-gray-800">12A Tax Exemption Certificate</h4>
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <img 
+                    src="/assets/about-images/12a10.png" 
+                    alt="12A Tax Exemption Certificate" 
+                    className="w-full h-auto rounded-md border border-gray-200"
+                  />
+                </div>
+                <p className="text-sm text-gray-600 mt-2">
+                  Registered under Section 12A of the Income Tax Act
+                </p>
+              </div>
+
+              {/* 80G Certificate */}
+              <div className="text-center">
+                <h4 className="text-lg font-medium mb-4 text-gray-800">80G Tax Deduction Certificate</h4>
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <img 
+                    src="/assets/about-images/80g11.png" 
+                    alt="80G Tax Deduction Certificate" 
+                    className="w-full h-auto rounded-md border border-gray-200"
+                  />
+                </div>
+                <p className="text-sm text-gray-600 mt-2">
+                  Donations eligible for 50% tax deduction under Section 80G
+                </p>
+              </div>
+            </div>
+            
+            <div className="mt-6 p-4 bg-green-50 rounded-lg">
+              <p className="text-center text-sm text-green-800">
+                <strong>Tax Benefits:</strong> Your donations are eligible for tax deductions as per Indian Income Tax regulations. 
+                Please consult your tax advisor for specific deduction amounts.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </PageLayout>

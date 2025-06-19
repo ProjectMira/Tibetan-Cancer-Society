@@ -54,7 +54,7 @@
       "id": "compassion-home",
       "title": "Compassion Home",
       "shortDescription": "A safe and supportive residence for cancer patients undergoing treatment away from home.",
-      "fullDescription": "Compassion Home provides temporary accommodation for cancer patients who need to travel away from their homes for treatment. Our facility offers a comfortable, supportive environment where patients can stay during their treatment period, reducing the financial and logistical burden of finding accommodation near treatment centers.",
+      "fullDescription": "Compassion Home, an initiative of the Tibetan Cancer Society, provides a safe and welcoming haven for cancer patients who must travel far from home to receive treatment. Our facility offers a peaceful and supportive environment where patients can stay throughout their treatment journey, easing the emotional, financial, and logistical challenges of finding accommodation near hospitals. We are dedicated to offering comfort, dignity, and care to those facing cancer, helping them feel at home even when they are far from their own.",
       "icon": "Home",
       "image": "/assets/programs/compassion-home.JPG",
       "features": [
@@ -79,7 +79,7 @@
       "id": "ambulance-services",
       "title": "Ambulance Services",
       "shortDescription": "Emergency and scheduled transportation for cancer patients to medical facilities.",
-      "fullDescription": "Our Ambulance Services provide critical transportation for cancer patients who need to reach medical facilities for treatment, emergencies, or routine appointments. This service is especially important for elderly patients and those with mobility issues, ensuring they can access necessary medical care without transportation barriers.",
+      "fullDescription": "Our Ambulance Services are a lifeline for cancer patients who need safe and reliable transportation to hospitals and clinics for treatment, emergencies, or regular check-ups. This service is especially crucial for elderly individuals and those with mobility challenges, helping them access critical medical care without the burden of transportation difficulties. Operated by the Tibetan Cancer Society, our ambulances serve everyone in need, regardless of background or financial status. From Delhi to distant states like Bihar, Karnataka, Sikkim, and Ladakh, we reach patients even in the most remote areas. While we operate on a low-cost model, we provide full services free of charge to those who are financially disadvantaged. Our mission is to ensure that no one is denied care because of distance or poverty. Our ambulances bring hope, dignity, and compassion wherever they go.",
       "icon": "Truck",
       "image": "/assets/programs/ambulance.png",
       "features": [
@@ -104,7 +104,7 @@
       "id": "community-kitchen",
       "title": "Community Kitchen",
       "shortDescription": "Providing nutritious meals for cancer patients and their families during treatment.",
-      "fullDescription": "Our Community Kitchen program prepares and delivers nutritious meals to cancer patients and their families. Proper nutrition is crucial during cancer treatment, yet many patients struggle with meal preparation due to fatigue, treatment side effects, or financial constraints. Our kitchen provides healthy, specially prepared meals that support patients' nutritional needs during treatment.",
+      "fullDescription": "Our Community Kitchen prepares and delivers nutritious, healing meals to cancer patients and their families, recognizing that proper nutrition is essential during treatment but often difficult to maintain due to fatigue, side effects, or financial challenges. To support patients during this critical time, we provide carefully prepared meals designed to meet their specific dietary needs. Beyond cancer care, we are committed to serving vulnerable members of our community by offering nutritious, unlimited meals at no cost to Tibetan homeless individuals, people struggling with or recovering from addiction, sex workers, and anyone who cannot afford a meal. Our kitchen is a place of nourishment, compassion, and dignity, where everyone in need is welcomed and cared for.",
       "icon": "Utensils",
       "image": "/assets/programs/community-kitchen.jpg",
       "features": [
@@ -154,7 +154,7 @@
       "id": "sunday-program",
       "title": "Sunday Program",
       "shortDescription": "Weekly gatherings for cancer patients and survivors to connect, share, and heal together.",
-      "fullDescription": "Our Sunday Program provides a regular gathering space for cancer patients, survivors, and their families. Every Sunday, we host activities that promote healing, connection, and emotional wellbeing. These gatherings include support group discussions, meditation sessions, art therapy, educational talks, and simply sharing meals together in a supportive community environment.",
+      "fullDescription": "Our Sunday Program offers a peaceful and supportive space where cancer patients, survivors, and their families can come together each week to connect, heal, and find comfort in community. Every Sunday, we host a variety of activities that nourish emotional wellbeing and foster a sense of belonging, including support group discussions, guided meditation, art therapy, educational talks, and the simple joy of sharing a meal. It is a day to step away from the noise and routines of hospitals and leave behind the quiet isolation of the compassion home. Instead, participants are invited to enjoy a change of environment, experience fresh air, and spend meaningful time surrounded by understanding hearts in a warm and welcoming setting.",
       "icon": "Users",
       "image": "/assets/programs/sundayprogram.jpg",
       "features": [
