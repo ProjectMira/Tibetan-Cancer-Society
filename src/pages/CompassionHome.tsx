@@ -158,7 +158,7 @@ const CompassionHome: React.FC = () => {
     return (
       <PageLayout>
         <div className="flex justify-center items-center min-h-[50vh]">
-          <p className="text-lg text-red-600">Error loading compassion home data: {error}</p>
+                      <p className="text-lg text-pink-600">Error loading compassion home data: {error}</p>
         </div>
       </PageLayout>
     );
@@ -204,7 +204,7 @@ const CompassionHome: React.FC = () => {
           <div className="max-w-3xl text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Compassion Home</h1>
             <p className="text-xl mb-8">
-              Providing a safe, comfortable, and supportive environment for cancer patients during their treatment journey.
+              Compassion Home, an initiative of the Tibetan Cancer Society, provides a safe and welcoming haven for cancer patients who must travel far from home to receive treatment. Our facility offers a peaceful and supportive environment where patients can stay throughout their treatment journey, easing the emotional, financial, and logistical challenges of finding accommodation near hospitals. We are dedicated to offering comfort, dignity, and care to those facing cancer, helping them feel at home even when they are far from their own.
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="bg-white/10 backdrop-blur-sm px-4 py-3 rounded-lg flex items-center">
@@ -221,6 +221,56 @@ const CompassionHome: React.FC = () => {
                 <Users className="h-5 w-5 mr-2 text-primary" />
                 <span>Supportive Community</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Statistics Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Providing safe haven and support for cancer patients during their treatment journey.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div className="text-3xl font-bold text-blue-900 mb-2">200+</div>
+              <div className="text-blue-700 font-medium">Patients Housed</div>
+            </div>
+
+            <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-full mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div className="text-3xl font-bold text-green-900 mb-2">3000+</div>
+              <div className="text-green-700 font-medium">Nights of Accommodation</div>
+            </div>
+
+            <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl border border-purple-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-600 text-white rounded-full mb-4">
+                <MapPin className="h-6 w-6" />
+              </div>
+              <div className="text-3xl font-bold text-purple-900 mb-2">2</div>
+              <div className="text-purple-700 font-medium">Safe Locations</div>
+            </div>
+
+            <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl border border-orange-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-600 text-white rounded-full mb-4">
+                <Calendar className="h-6 w-6" />
+              </div>
+              <div className="text-3xl font-bold text-orange-900 mb-2">9+</div>
+              <div className="text-orange-700 font-medium">Years of Service</div>
             </div>
           </div>
         </div>
@@ -486,38 +536,7 @@ const CompassionHome: React.FC = () => {
         )}
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-primary/5 p-8 md:p-12 rounded-2xl text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Support Our Compassion Home</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-              Help us continue providing safe accommodation and support for cancer patients during their treatment journey.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a 
-                href={`tel:${footerData?.contact?.phone || '+91 82172 11567'}`} 
-                className="bg-primary text-white hover:bg-primary/90 font-semibold py-3 px-6 rounded-full transition-colors flex items-center"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
-                Contact Us
-              </a>
-              <a 
-                href={`mailto:${footerData?.contact?.email || 'tibetancancersocietys@gmail.com'}`} 
-                className="bg-white text-primary border border-primary hover:bg-gray-50 font-semibold py-3 px-6 rounded-full transition-colors flex items-center"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
-                Email Us
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+
     </PageLayout>
   );
 };

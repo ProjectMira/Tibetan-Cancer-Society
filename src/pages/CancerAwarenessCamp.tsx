@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import ImageModal from '../components/ImageModal';
-import { Calendar, MapPin, FileText, Users, ChevronDown, ChevronUp } from 'lucide-react';
+import { Calendar, MapPin, FileText, Users, ChevronDown, ChevronUp, PlayCircle, DollarSign } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 // Define types for our data
@@ -56,12 +56,21 @@ interface CampData {
   contactPerson: string;
   contactEmail: string;
   healthCamps: HealthCamp[];
+  videos?: {
+    topic: string;
+    category: string;
+    video_links: Array<{
+      id: string;
+      url: string;
+      title: string;
+    }>;
+  };
 }
 
 // Colors for charts
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8'];
 const GENDER_COLORS = ['#0088FE', '#FF6B8A'];
-const RESULT_COLORS = ['#4CAF50', '#FFC107', '#F44336'];
+const RESULT_COLORS = ['#4CAF50', '#FFC107', '#FF69B4'];
 
 const CancerAwarenessCamp = () => {
   const [campData, setCampData] = useState<CampData | null>(null);
@@ -69,6 +78,7 @@ const CancerAwarenessCamp = () => {
   const [error, setError] = useState<Error | null>(null);
   const [expandedCamps, setExpandedCamps] = useState<{ [key: string]: boolean }>({});
   const [expandedSettlements, setExpandedSettlements] = useState<{ [key: string]: boolean }>({});
+  const [footerData, setFooterData] = useState<any>(null);
   
   // Image modal state
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -84,6 +94,14 @@ const CancerAwarenessCamp = () => {
         }
         const data = await response.json();
         setCampData(data);
+
+        // Fetch footer data
+        const footerResponse = await fetch('/assets/data/footer.json');
+        if (!footerResponse.ok) {
+          throw new Error('Failed to fetch footer data');
+        }
+        const footerData = await footerResponse.json();
+        setFooterData(footerData);
 
         // Initialize expanded state for all camps and settlements
         const campStates: { [key: string]: boolean } = {};
@@ -180,7 +198,7 @@ const CancerAwarenessCamp = () => {
       <PageLayout>
         <div className="flex justify-center items-center min-h-[50vh]">
           <div className="text-center">
-            <p className="text-lg text-red-600 mb-4">
+            <p className="text-lg text-pink-600 mb-4">
               {error ? `Error: ${error.message}` : 'Camp data not found'}
             </p>
             <Link 
@@ -232,10 +250,63 @@ const CancerAwarenessCamp = () => {
             <div className="flex flex-wrap gap-4">
               {campData.stats.map((stat, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
-                  <div className="text-2xl font-bold">{stat.value}</div>
                   <div className="text-sm opacity-80">{stat.label}</div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Statistics Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our cancer awareness and detection efforts across Tibetan communities
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <div className="text-3xl font-bold text-blue-900 mb-2">45,000</div>
+              <div className="text-blue-700 font-medium">People Screened</div>
+            </div>
+
+            <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-full mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <div className="text-3xl font-bold text-green-900 mb-2">144+</div>
+              <div className="text-green-700 font-medium">Campus</div>
+            </div>
+
+            <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl border border-purple-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-600 text-white rounded-full mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <div className="text-3xl font-bold text-purple-900 mb-2">39.21%</div>
+              <div className="text-purple-700 font-medium">H. pylori Positive</div>
+            </div>
+
+            <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl border border-orange-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-600 text-white rounded-full mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div className="text-3xl font-bold text-orange-900 mb-2">60.79%</div>
+              <div className="text-orange-700 font-medium">H. pylori Negative</div>
             </div>
           </div>
         </div>
@@ -509,6 +580,51 @@ const CancerAwarenessCamp = () => {
         />
       )}
 
+      {/* Cancer Awareness Camp Videos Section */}
+      {campData.videos && (
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
+                <PlayCircle className="h-3 w-3 mr-1" />
+                <span>Video Gallery</span>
+              </div>
+              <h2 className="text-3xl font-bold mb-4">Cancer Awareness Camp Videos</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Watch our cancer awareness and detection camps in action, see how we educate communities and provide vital screening services.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {campData.videos.video_links.map((video, index) => {
+                const embedUrl = `https://www.youtube.com/embed/${video.id}`;
+                
+                return (
+                  <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <div className="aspect-video">
+                      <iframe
+                        src={embedUrl}
+                        title={video.title}
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold text-gray-900 mb-2">{video.title}</h3>
+                      <p className="text-sm text-gray-600">
+                        Watch our cancer awareness and detection activities in Tibetan communities.
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Call to Action */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -518,17 +634,33 @@ const CancerAwarenessCamp = () => {
               If you would like to organize a cancer awareness and detection camp in your community, please get in touch with us.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                to="/contact" 
-                className="bg-primary text-white hover:bg-primary/90 font-semibold py-3 px-6 rounded-full transition-colors"
-              >
-                Contact Us
-              </Link>
               <a 
-                href={`mailto:${campData.contactEmail}`} 
-                className="bg-white text-primary border border-primary hover:bg-gray-50 font-semibold py-3 px-6 rounded-full transition-colors"
+                href={`https://wa.me/${(footerData?.contact?.phone || '+91 82172 11567').replace(/[^0-9]/g, '')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-white hover:bg-primary/90 font-semibold py-3 px-6 rounded-full transition-colors flex items-center"
               >
-                Email the Program Coordinator
+                <svg className="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.051 3.488"/>
+                </svg>
+                Contact Us
+              </a>
+              <a 
+                href={`mailto:${footerData?.contact?.email || 'tibetancancersocietys@gmail.com'}`} 
+                className="bg-white text-primary border border-primary hover:bg-gray-50 font-semibold py-3 px-6 rounded-full transition-colors flex items-center"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                Email Us
+              </a>
+              <a 
+                href="/donate" 
+                className="bg-green-600 text-white hover:bg-green-700 font-semibold py-3 px-6 rounded-full transition-colors flex items-center"
+              >
+                <DollarSign className="h-5 w-5 mr-2" />
+                Donate Now
               </a>
             </div>
           </div>

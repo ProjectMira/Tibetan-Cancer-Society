@@ -48,7 +48,7 @@ const Team = () => {
   }
 
   if (error) {
-    return <PageLayout><div className="flex justify-center items-center min-h-[50vh]"><p className="text-lg text-red-500">Error loading team members: {error.message}</p></div></PageLayout>;
+    return <PageLayout><div className="flex justify-center items-center min-h-[50vh]"><p className="text-lg text-pink-500">Error loading team members: {error.message}</p></div></PageLayout>;
   }
 
   return (

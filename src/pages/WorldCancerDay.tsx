@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PageLayout from '../components/PageLayout';
 import ImageModal from '../components/ImageModal';
-import { MapPin, Award } from 'lucide-react';
+import { MapPin, Award, Calendar, Users } from 'lucide-react';
 
 interface CancerDayEvent {
   year: string;
@@ -67,7 +67,7 @@ const WorldCancerDay: React.FC = () => {
     return (
       <PageLayout>
         <div className="flex justify-center items-center min-h-[50vh]">
-          <p className="text-lg text-red-600">Error loading World Cancer Day data: {error}</p>
+          <p className="text-lg text-pink-600">Error loading World Cancer Day data: {error}</p>
         </div>
       </PageLayout>
     );
@@ -120,20 +120,78 @@ const WorldCancerDay: React.FC = () => {
       <section className="relative py-16 md:py-24">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div 
-            className="w-full h-full bg-cover bg-center opacity-15"
-            style={{ backgroundImage: `url('/assets/backgrounds/world-cancer-day-bg.jpg')` }}
+          <img 
+            src="/assets/hero-images/world cancer day .png" 
+            alt="World Cancer Day" 
+            className="w-full h-full object-cover" 
+            style={{ objectPosition: '50% 40%' }}
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = '/assets/programs/cancer-day.jpg';
+            }}
           />
+          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="max-w-3xl text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">World Cancer Day</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl mb-8">
               An annual global initiative to raise awareness, improve education, and promote action against cancer.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Impact Statistics Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Raising awareness and promoting action against cancer through our annual World Cancer Day initiatives.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mb-4">
+                <Calendar className="h-6 w-6" />
+              </div>
+              <div className="text-3xl font-bold text-blue-900 mb-2">10+</div>
+              <div className="text-blue-700 font-medium">Years of Celebration</div>
+            </div>
+
+            <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-full mb-4">
+                <Users className="h-6 w-6" />
+              </div>
+              <div className="text-3xl font-bold text-green-900 mb-2">1000+</div>
+              <div className="text-green-700 font-medium">Annual Participants</div>
+            </div>
+
+            <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl border border-purple-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-600 text-white rounded-full mb-4">
+                <Award className="h-6 w-6" />
+              </div>
+              <div className="text-3xl font-bold text-purple-900 mb-2">UICC</div>
+              <div className="text-purple-700 font-medium">Member Organization</div>
+            </div>
+
+            <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl border border-orange-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-600 text-white rounded-full mb-4">
+                <MapPin className="h-6 w-6" />
+              </div>
+              <div className="text-3xl font-bold text-orange-900 mb-2">5+</div>
+              <div className="text-orange-700 font-medium">Event Locations</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* About World Cancer Day */}
           <div className="bg-white rounded-xl shadow-sm overflow-hidden mb-10">
@@ -141,17 +199,37 @@ const WorldCancerDay: React.FC = () => {
             <div className="p-5 md:p-6">
               <h3 className="text-xl font-bold mb-4 text-primary flex items-center">
                 <Award className="h-5 w-5 mr-2" />
-                About World Cancer Day
+                World Cancer Day: United in Action, Rooted in Compassion
               </h3>
               <div className="text-gray-700 space-y-4">
-                <p className="text-gray-600 mb-6">
-                  World Cancer Day is an international day marked on February 4 to raise awareness of cancer and to encourage its prevention, detection, and treatment. The Tibetan Cancer Society actively participates in this global initiative through various awareness programs and activities.
+                <h4 className="text-lg font-semibold text-gray-800 mb-3">Tibetan Cancer Society Observes World Cancer Day as a Proud Member of UICC, Geneva</h4>
+                
+                <p className="text-gray-600 mb-4">
+                  Every year on February 4th, the global community comes together to mark World Cancer Day, a unified effort led by the Union for International Cancer Control (UICC) to raise awareness, improve education, and inspire action against one of the world's most pressing health challenges. As a proud member of UICC, based in Geneva, Switzerland, the Tibetan Cancer Society (TCS) is honored to stand in solidarity with healthcare institutions, NGOs, policymakers, and communities around the world, reaffirming our shared commitment to reducing the impact of cancer—especially among the most vulnerable.
                 </p>
-                <p className="text-gray-600 mb-6">
-                  Our organization also runs a <a href="/programs/compassion-home?tab=sunday" className="text-primary font-medium hover:underline">Sunday Program</a> as part of our Compassion Home initiative, providing additional support to cancer patients.
+                
+                <p className="text-gray-600 mb-4">
+                  At TCS, World Cancer Day is more than a symbolic occasion. It is a call to action. Every year, we organize special programs, outreach events, and educational campaigns that reflect the year's global theme, while also tailoring our efforts to meet the unique needs of the Tibetan refugee diaspora and underserved Himalayan communities. Whether the theme is "Close the Care Gap," "I Am and I Will," or "Together, all our actions matter," we adapt its message into culturally resonant, community-driven initiatives that promote early detection, prevention, and compassion-centered care.
                 </p>
-                <p>
-                  Our World Cancer Day events typically include awareness campaigns, free health screenings, educational talks by oncologists, and community activities that bring people together in the fight against cancer.
+                
+                <p className="text-gray-600 mb-4">
+                  In previous years, our World Cancer Day programs have included free cancer screening camps, school and monastery outreach, public health talks, interactive awareness sessions, and patient support drives. We bring these initiatives directly into settlements and remote areas where healthcare access is limited, ensuring that no one is left behind because of geography, economic hardship, or social stigma.
+                </p>
+                
+                <p className="text-gray-600 mb-4">
+                  Our participation in World Cancer Day is also a reflection of our core belief—that cancer care is a human right, not a privilege. As one of the few Tibetan-led cancer organizations in South Asia, TCS bridges the gap between global best practices and grassroots realities. We use this annual moment not only to raise awareness but also to foster hope, mobilize support, and advocate for equitable healthcare policies that serve all people, regardless of background or circumstance.
+                </p>
+                
+                <p className="text-gray-600 mb-4">
+                  In alignment with UICC's vision, we work toward a future where early diagnosis is accessible, where treatment is timely and affordable, and where every patient is treated with dignity and empathy. World Cancer Day empowers us to amplify this mission and connect it to a broader global movement.
+                </p>
+                
+                <p className="text-gray-600 mb-4">
+                  This year, as we mark World Cancer Day, we invite individuals, organizations, and supporters around the world to join hands with us. Whether by sponsoring a screening camp, supporting our Compassion Home, sharing our message online, or simply speaking up about the importance of early detection—you become part of a global force working to eliminate the inequalities that fuel this disease.
+                </p>
+                
+                <p className="text-gray-600 font-medium">
+                  Together, we remember those we have lost, we support those who are fighting, and we continue our work so that one day, no one has to suffer alone. From the heart of the Tibetan community to the global stage, the Tibetan Cancer Society remains committed to Compassion in Action, and Hope in Healing.
                 </p>
               </div>
             </div>
@@ -232,7 +310,7 @@ const WorldCancerDay: React.FC = () => {
           
           {/* Image Gallery */}
           <div className="mt-12 bg-white rounded-xl shadow-sm overflow-hidden p-6">
-            <div className="h-1.5 bg-gradient-to-r from-red-500 to-primary mb-6"></div>
+            <div className="h-1.5 bg-gradient-to-r from-pink-500 to-primary mb-6"></div>
             <h3 className="text-2xl font-bold text-center mb-8">{activeEvent.year} Event Gallery</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {activeEvent.image.map((img, index) => (
@@ -292,38 +370,7 @@ const WorldCancerDay: React.FC = () => {
         )}
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-primary/5 p-8 md:p-12 rounded-2xl text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Join Us in the Fight Against Cancer</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-              Support our World Cancer Day initiatives and help us raise awareness about cancer prevention and early detection.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a 
-                href={`tel:${footerData?.contact?.phone || '+91 82172 11567'}`} 
-                className="bg-primary text-white hover:bg-primary/90 font-semibold py-3 px-6 rounded-full transition-colors flex items-center"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
-                Contact Us
-              </a>
-              <a 
-                href={`mailto:${footerData?.contact?.email || 'tibetancancersocietys@gmail.com'}`} 
-                className="bg-white text-primary border border-primary hover:bg-gray-50 font-semibold py-3 px-6 rounded-full transition-colors flex items-center"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
-                Email Us
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+
     </PageLayout>
   );
 };

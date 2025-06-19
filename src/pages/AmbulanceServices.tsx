@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
-import { Calendar, MapPin, RotateCw, Heart, Info, Ambulance, Home, Coffee } from 'lucide-react';
+import { Calendar, MapPin, RotateCw, Heart, Info, Ambulance, Home, Coffee, PlayCircle } from 'lucide-react';
 import ImageModal from '../components/ImageModal';
 
 interface AmbulanceService {
@@ -42,6 +42,15 @@ interface AmbulanceData {
     Story: string;
     Image: string[];
   }[];
+  videos?: {
+    topic: string;
+    category: string;
+    video_links: Array<{
+      id: string;
+      url: string;
+      title: string;
+    }>;
+  };
 }
 
 const AmbulanceServices: React.FC = () => {
@@ -100,7 +109,7 @@ const AmbulanceServices: React.FC = () => {
     return (
       <PageLayout>
         <div className="flex justify-center items-center min-h-[50vh]">
-          <p className="text-lg text-red-600">Error loading ambulance data: {error}</p>
+          <p className="text-lg text-pink-600">Error loading ambulance data: {error}</p>
         </div>
       </PageLayout>
     );
@@ -196,7 +205,7 @@ const AmbulanceServices: React.FC = () => {
           <div className="max-w-3xl text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Ambulance Services</h1>
             <p className="text-xl mb-8">
-              Providing critical transportation for patients to access medical care when they need it most.
+              Our Ambulance Services are a lifeline for cancer patients who need safe and reliable transportation to hospitals and clinics for treatment, emergencies, or regular check-ups. This service is especially crucial for elderly individuals and those with mobility challenges, helping them access critical medical care without the burden of transportation difficulties. Operated by the Tibetan Cancer Society, our ambulances serve everyone in need, regardless of background or financial status. From Delhi to distant states like Bihar, Karnataka, Sikkim, and Ladakh, we reach patients even in the most remote areas. While we operate on a low-cost model, we provide full services free of charge to those who are financially disadvantaged. Our mission is to ensure that no one is denied care because of distance or poverty. Our ambulances bring hope, dignity, and compassion wherever they go.
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="bg-white/10 backdrop-blur-sm px-4 py-3 rounded-lg flex items-center">
@@ -270,21 +279,55 @@ const AmbulanceServices: React.FC = () => {
         </div>
       </section>
 
-      {/* Statistics Section */}
-      <section className="py-12 bg-white">
+      {/* Impact Statistics Section */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-primary/5 p-6 rounded-xl text-center">
-              <div className="text-4xl font-bold text-primary mb-2">{regularServices.length}+</div>
-              <p className="text-gray-600">Total Ambulance Services</p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Providing critical transportation services to cancer patients across remote and urban areas.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 16v3a2 2 0 01-2 2h-1a2 2 0 01-2-2v-1h-2v1a2 2 0 01-2 2H9a2 2 0 01-2-2v-3m14-6v2a2 2 0 01-2 2H9a2 2 0 01-2-2v-2m14-6l-3-3H8L5 7m14-1v2H5V6a2 2 0 012-2h10a2 2 0 012 2z" />
+                </svg>
+              </div>
+              <div className="text-3xl font-bold text-blue-900 mb-2">750+</div>
+              <div className="text-blue-700 font-medium">Total Ambulance Services</div>
             </div>
-            <div className="bg-primary/5 p-6 rounded-xl text-center">
-              <div className="text-4xl font-bold text-primary mb-2">{patientStories ? patientStories.length : 0}</div>
-              <p className="text-gray-600">Patient Stories</p>
+
+            <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-full mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
+              <div className="text-3xl font-bold text-green-900 mb-2">1,55,000</div>
+              <div className="text-green-700 font-medium">Total K.M. Covered</div>
             </div>
-            <div className="bg-primary/5 p-6 rounded-xl text-center">
-              <div className="text-4xl font-bold text-primary mb-2">24/7</div>
-              <p className="text-gray-600">Emergency Availability</p>
+
+            <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl border border-purple-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-600 text-white rounded-full mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <div className="text-3xl font-bold text-purple-900 mb-2">{patientStories ? patientStories.length : 0}</div>
+              <div className="text-purple-700 font-medium">Patient Stories</div>
+            </div>
+
+            <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl border border-orange-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-600 text-white rounded-full mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div className="text-3xl font-bold text-orange-900 mb-2">24/7</div>
+              <div className="text-orange-700 font-medium">Emergency Availability</div>
             </div>
           </div>
         </div>
@@ -693,6 +736,51 @@ const AmbulanceServices: React.FC = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Ambulance Service Videos Section */}
+      {ambulanceData.videos && (
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
+                <PlayCircle className="h-3 w-3 mr-1" />
+                <span>Video Gallery</span>
+              </div>
+              <h2 className="text-3xl font-bold mb-4">Ambulance Service Videos</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Watch our ambulance services in action and see how we provide critical transportation for patients in need.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {ambulanceData.videos.video_links.map((video, index) => {
+                const embedUrl = `https://www.youtube.com/embed/${video.id}`;
+                
+                return (
+                  <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <div className="aspect-video">
+                      <iframe
+                        src={embedUrl}
+                        title={video.title}
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold text-gray-900 mb-2">{video.title}</h3>
+                      <p className="text-sm text-gray-600">
+                        Watch our emergency ambulance services providing critical transportation for patients.
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>

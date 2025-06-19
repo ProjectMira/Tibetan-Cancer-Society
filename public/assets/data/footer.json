@@ -14,6 +14,10 @@
       {
         "platform": "instagram",
         "url": "https://www.instagram.com/tibetan.cancersociety/"
+      },
+      {
+        "platform": "whatsapp",
+        "url": "https://wa.me/918217211567"
       }
     ]
   },
@@ -22,6 +26,7 @@
     "delhiAddress": "Tibetan Cancer Society, Community Kitchen, Ladakh Budh Vihar, Delhi - 110054",
     "southAddress": "TCS Shop Number : 11, New Shopping Complex, Old Camp No. 1, Bylakuppe - 571104",
     "phone": "+91 82172 11567",
+    "landline": "+91 1892318799",
     "email": "tibetancancersocietys@gmail.com"
   }
 }

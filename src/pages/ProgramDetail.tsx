@@ -82,7 +82,7 @@ const ProgramDetail = () => {
       <PageLayout>
         <div className="flex justify-center items-center min-h-[50vh]">
           <div className="text-center">
-            <p className="text-lg text-red-600 mb-4">
+            <p className="text-lg text-pink-600 mb-4">
               {error ? `Error: ${error.message}` : 'Program not found'}
             </p>
             <Link 

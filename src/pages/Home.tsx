@@ -11,6 +11,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import PhotoGallery from '../components/PhotoGallery';
+import ProgramCard from '../components/ProgramCard';
 import { Link } from 'react-router-dom';
 import { Quote, ArrowRight, Users, MapPin } from 'lucide-react';
 
@@ -27,52 +28,85 @@ const AboutSection = () => {
         </div>
         
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 text-center">
-          <div className="p-4 bg-white rounded-xl shadow-sm">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">1000+</div>
-            <div className="text-sm text-gray-600">Cancer Screenings Conducted</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200">
+            <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div className="text-3xl font-bold text-blue-900 mb-2">45,000+</div>
+            <div className="text-blue-700 font-medium">Cancer Screenings Conducted</div>
           </div>
-          <div className="p-4 bg-white rounded-xl shadow-sm">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
-            <div className="text-sm text-gray-600">Patients Supported</div>
+
+          <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200">
+            <div className="inline-flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-full mb-4">
+              <Users className="h-6 w-6" />
+            </div>
+            <div className="text-3xl font-bold text-green-900 mb-2">30,000+</div>
+            <div className="text-green-700 font-medium">Patients Supported</div>
           </div>
-          <div className="p-4 bg-white rounded-xl shadow-sm">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">50+</div>
-            <div className="text-sm text-gray-600">Awareness Programs</div>
+
+          <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl border border-purple-200">
+            <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-600 text-white rounded-full mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+              </svg>
+            </div>
+            <div className="text-3xl font-bold text-purple-900 mb-2">144+</div>
+            <div className="text-purple-700 font-medium">Awareness Programs</div>
           </div>
-          <div className="p-4 bg-white rounded-xl shadow-sm">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">10</div>
-            <div className="text-sm text-gray-600">Years of Service</div>
+
+          <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl border border-orange-200">
+            <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-600 text-white rounded-full mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div className="text-3xl font-bold text-orange-900 mb-2">10</div>
+            <div className="text-orange-700 font-medium">Years of Service</div>
           </div>
         </div>
         
+        {/* About Organization Box */}
+        <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200 mb-12">
+          <h3 className="text-2xl font-bold mb-4">Tibetan Cancer Society (TCS)</h3>
+          <div className="text-lg font-semibold text-primary mb-4 italic">
+            Compassion in Action. Hope in Healing.
+          </div>
+          <p className="text-gray-600 mb-4">
+            The Tibetan Cancer Society (TCS) is a registered non-governmental organization (NGO) founded in 2014 and formally established on May 8, 2015, with a mission to address the growing burden of cancer within the Tibetan refugee diaspora and other marginalized communities across India, Nepal, and the Himalayan region. Our organization is committed to advancing cancer prevention, early detection, patient care, and public education—offering compassionate, culturally sensitive, and holistic support to those most in need.
+          </p>
+          <p className="text-gray-600 mb-4">
+            What began as a deeply personal response to a health crisis in the Tibetan exile community has evolved into one of South Asia's most respected Tibetan-led healthcare initiatives. Without formal medical training or institutional financial backing, our founder relied on empathy, resilience, and community mobilization to build an organization that now serves as a lifeline for thousands of individuals and families affected by cancer.
+          </p>
+          <p className="text-gray-600 mb-6">
+            At TCS, we believe that access to quality cancer care is not a privilege, but a human right. Guided by this principle, we work tirelessly to eliminate the barriers that prevent vulnerable populations from receiving timely diagnoses, effective treatment, and dignified support throughout their journey.
+          </p>
+          <Link to="/about" className="inline-flex items-center text-primary font-medium hover:underline">
+            Learn more about us
+            <ArrowRight className="h-4 w-4 ml-1" />
+          </Link>
+        </div>
+
+        {/* Founder Message and Image Side by Side */}
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="md:w-1/2">
-            <h3 className="text-2xl font-bold mb-4">About Tibetan Cancer Society</h3>
-            <p className="text-gray-600 mb-4">
-              The Tibetan Cancer Society (TCS) is a non-profit organization dedicated to cancer prevention, early detection, and awareness in Tibetan communities. Founded by Mr. Tsultrim Dorjee in 2014 and officially registered in May 2015, TCS addresses the urgent need for better cancer care in the Tibetan diaspora.
+            <h4 className="text-xl font-semibold mb-4 text-gray-900">A Message from Our Founder</h4>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              "When I first became aware of the alarming rise in cancer cases within our Tibetan refugee settlements, I was deeply troubled not only by the suffering I witnessed but also by the absence of any organization dedicated to cancer awareness, early detection, or patient support within our community. After months of research, I learned that cancer accounted for nearly 80 percent of both morbidity and mortality among the Tibetan exile population, making it the most urgent health crisis we faced. Yet no efforts were being made to address it. With no formal medical training, financial support, or institutional guidance, I made a personal commitment to act. I started with nothing more than a sense of duty and the small profit generated from my modest business, which I fully reinvested into organizing awareness campaigns and screening camps. My original intention was to establish a foundation and hand it over to the Central Tibetan Administration so they could expand and sustain the work. In 2016, I had the opportunity to meet Sikyong Dr. Lobsang Sangay and formally presented the documentation for the Tibetan Cancer Society, requesting that the CTA take over the mission. While he appreciated the initiative, he encouraged me to continue the work independently. From that moment onward, I accepted the responsibility with a full heart. Despite immense challenges and personal sacrifices, I remained committed to building an organization that would stand as a symbol of compassion, dignity, and hope. The Tibetan Cancer Society was not built through wealth or influence, but through persistence, community trust, and the belief that no one should have to face cancer alone. Today, every life we touch reflects the strength of that belief and the collective effort of those who continue to walk this path with us. This is more than a healthcare initiative; it is a human movement rooted in empathy and sustained by unwavering hope."
             </p>
-            <p className="text-gray-600 mb-6">
-              Our mission is to prevent cancer through early screening, awareness programs, and health education while providing crucial support to those affected by cancer.
-            </p>
-            <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-primary mb-6">
-              <h4 className="font-semibold mb-2">Recent Achievement</h4>
-              <p className="text-sm text-gray-600">
-                In 2024, we successfully launched our mobile cancer screening program, reaching remote Tibetan settlements and providing free screenings to over 200 individuals.
-              </p>
-            </div>
-            <Link to="/about" className="inline-flex items-center text-primary font-medium hover:underline">
-              Learn more about us
-              <ArrowRight className="h-4 w-4 ml-1" />
-            </Link>
           </div>
           <div className="md:w-1/2">
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img 
-                src="assets/about-images/TCS.JPG" 
-                alt="Tibetan Cancer Society" 
+                src="/assets/home/Tsultrim Dorjee.png" 
+                alt="Tsultrim Dorjee - Founder of Tibetan Cancer Society" 
                 className="w-full h-auto"
               />
+            </div>
+            <div className="text-center mt-4">
+              <p className="text-gray-700 font-medium">Mr. Tsultrim Dorjee, Founder & CEO</p>
             </div>
           </div>
         </div>
@@ -133,69 +167,16 @@ const ServicesSection = () => {
     fetchProgramsData();
   }, []);
 
-  // Program Card component for displaying each program
-  const ProgramCard = ({ programId, label }: { programId: string, label: string }) => {
-    const program = programsData[programId];
-    
-    if (!program && !loading) {
-      return <div>Program information not available</div>;
-    }
-    
-    // Determine the correct link path based on the program ID
-    const linkPath = programId === 'sunday-program' ? '/programs/compassion-home?tab=sunday' : `/programs/${programId}`;
-    
-    return (
-      <div className="mb-10 bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
-        <div className="flex flex-col md:flex-row gap-8">
-          <div className="md:w-1/3">
-            <img 
-              src={program?.image || `/assets/programs/${programId}.jpg`} 
-              alt={program?.title || programId} 
-              className="w-full h-auto rounded-lg object-cover"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.src = '/assets/placeholders/placeholder-image.svg';
-              }}
-            />
-          </div>
-          <div className="md:w-2/3">
-            <div className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
-              {label}
-            </div>
-            <Link to={linkPath} className="hover:text-primary transition-colors">
-              <h3 className="text-2xl font-bold mb-3">{program?.title || programId}</h3>
-            </Link>
-            <div className="text-gray-600 mb-4">
-              {program ? (
-                <div dangerouslySetInnerHTML={{ __html: program.fullDescription.replace(/\n/g, '<br/>') }} />
-              ) : (
-                <p>Loading program information...</p>
-              )}
-            </div>
-            <div className="flex flex-wrap gap-4">
-              {program?.stats && program.stats.map((stat, index) => (
-                <div key={index} className="flex items-center">
-                  <div className="bg-green-100 p-2 rounded-full mr-2">
-                    <Users className="h-4 w-4 text-green-600" />
-                  </div>
-                  <span className="text-sm">{stat.value} {stat.label.toLowerCase()}</span>
-                </div>
-              ))}
-            </div>
-            <div className="mt-4">
-              <Link 
-                to={linkPath} 
-                className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
-              >
-                Learn more
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
+  // Program configurations with custom labels
+  const programConfigs = [
+    { id: "cancer-awareness-camp", label: "Early Detection Program" },
+    { id: "world-cancer-day", label: "Annual Event" },
+    { id: "compassion-home", label: "Accommodation Program" },
+    { id: "ambulance-services", label: "Transportation Program" },
+    { id: "community-kitchen", label: "Nutrition Program" },
+    { id: "meals-for-invisibles", label: "Outreach Program" },
+    { id: "sunday-program", label: "Community Program" }
+  ];
 
   return (
     <section className="py-16 md:py-24 bg-gray-50">
@@ -208,19 +189,29 @@ const ServicesSection = () => {
         </div>
         
         {loading ? (
-          <div className="text-center py-12">
-            <p className="text-lg">Loading programs information...</p>
+          <div className="space-y-10">
+            {programConfigs.map((config) => (
+              <ProgramCard 
+                key={config.id}
+                program={null as any}
+                label={config.label}
+                loading={true}
+              />
+            ))}
           </div>
         ) : (
-          <>
-            <ProgramCard programId="cancer-awareness-camp" label="Early Detection Program" />
-            <ProgramCard programId="world-cancer-day" label="Annual Event" />
-            <ProgramCard programId="compassion-home" label="Accommodation Program" />
-            <ProgramCard programId="ambulance-services" label="Transportation Program" />
-            <ProgramCard programId="community-kitchen" label="Nutrition Program" />
-            <ProgramCard programId="meals-for-invisibles" label="Outreach Program" />
-            <ProgramCard programId="sunday-program" label="Community Program" />
-          </>
+          <div>
+            {programConfigs.map((config) => {
+              const program = programsData[config.id];
+              return (
+                <ProgramCard 
+                  key={config.id}
+                  program={program}
+                  label={config.label}
+                />
+              );
+            })}
+          </div>
         )}
       </div>
     </section>

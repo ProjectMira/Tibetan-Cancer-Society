@@ -66,14 +66,36 @@ const Testimonials = () => {
 
   return (
     <PageLayout>
-      <section className="py-12 md:py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">Patient Testimonials</h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Real stories from our community members who have been supported by the Tibetan Cancer Society.
+      {/* Hero Section */}
+      <section className="relative py-16 md:py-24">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <img 
+            src="/assets/hero-images/Patient Story.png" 
+            alt="Patient Stories Background" 
+            className="w-full h-full object-cover" 
+            style={{ objectPosition: '50% 40%' }}
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = "/assets/testimonials/Jamphel Sangpo.png";
+            }}
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl text-white">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Patient Testimonials</h1>
+            <p className="text-xl mb-8">
+              Real stories from our community members who have been supported by the Tibetan Cancer Society. Their courage and resilience inspire us every day.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {selectedTestimonial ? (
             // --- Detailed View (Modal) ---
