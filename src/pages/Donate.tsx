@@ -39,7 +39,7 @@ const Donate = () => {
   if (error) {
     return <PageLayout>
       <div className="flex justify-center items-center min-h-[50vh]">
-        <p className="text-center py-8 text-lg text-red-600">Error loading bank information: {error.message}</p>
+                  <p className="text-center py-8 text-lg text-pink-600">Error loading bank information: {error.message}</p>
       </div>
     </PageLayout>;
   }

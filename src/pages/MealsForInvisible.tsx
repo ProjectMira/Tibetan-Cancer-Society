@@ -16,14 +16,18 @@ interface MFIData {
   images: string[];
   videos?: {
     topic: string;
-    video_links: string[];
+    video_links: Array<{
+      id: string;
+      url: string;
+      title: string;
+    }>;
   };
 }
 
 const MealsForInvisible: React.FC = () => {
   const [mfiData, setMfiData] = useState<MealService[]>([]);
   const [mfiImages, setMfiImages] = useState<string[]>([]);
-  const [mfiVideos, setMfiVideos] = useState<{topic: string; video_links: string[]} | null>(null);
+  const [mfiVideos, setMfiVideos] = useState<{topic: string; video_links: Array<{id: string; url: string; title: string}>} | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'overview' | 'served'>('overview');
@@ -102,7 +106,7 @@ const MealsForInvisible: React.FC = () => {
     return (
       <PageLayout>
         <div className="flex justify-center items-center min-h-[50vh]">
-          <p className="text-lg text-red-600">Error loading data: {error}</p>
+          <p className="text-lg text-pink-600">Error loading data: {error}</p>
         </div>
       </PageLayout>
     );
@@ -212,28 +216,48 @@ const MealsForInvisible: React.FC = () => {
       </section>
 
       {/* Impact Statistics Section */}
-      <section className="py-12 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Impact Statistics</h2>
-            <p className="text-lg text-gray-600">Making a difference in the lives of the invisible members of our community</p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Making a difference in the lives of the invisible members of our community through our meal distribution program.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-primary/5 p-6 rounded-xl text-center">
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">1,25,000+</div>
-              <p className="text-gray-600">Meals Provided</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-600 text-white rounded-full mb-4">
+                <Coffee className="h-6 w-6" />
+              </div>
+              <div className="text-3xl font-bold text-blue-900 mb-2">1,25,000+</div>
+              <div className="text-blue-700 font-medium">Meals Provided</div>
             </div>
-            <div className="bg-primary/5 p-6 rounded-xl text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">1500+</div>
-              <p className="text-gray-600">Generous Sponsors</p>
+
+            <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-green-600 text-white rounded-full mb-4">
+                <Users className="h-6 w-6" />
+              </div>
+              <div className="text-3xl font-bold text-green-900 mb-2">1500+</div>
+              <div className="text-green-700 font-medium">Generous Sponsors</div>
             </div>
-            <div className="bg-primary/5 p-6 rounded-xl text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">100+</div>
-              <p className="text-gray-600">Beneficiaries</p>
+
+            <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl border border-purple-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-600 text-white rounded-full mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <div className="text-3xl font-bold text-purple-900 mb-2">100+</div>
+              <div className="text-purple-700 font-medium">Beneficiaries</div>
             </div>
-            <div className="bg-primary/5 p-6 rounded-xl text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">5+</div>
-              <p className="text-gray-600">Years of Service</p>
+
+            <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl border border-orange-200">
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-600 text-white rounded-full mb-4">
+                <Calendar className="h-6 w-6" />
+              </div>
+              <div className="text-3xl font-bold text-orange-900 mb-2">5+</div>
+              <div className="text-orange-700 font-medium">Years of Service</div>
             </div>
           </div>
         </div>
@@ -580,22 +604,15 @@ const MealsForInvisible: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {mfiVideos.video_links.map((videoUrl, index) => {
-                // Handle both youtu.be and youtube.com formats
-                let videoId = '';
-                if (videoUrl.includes('youtu.be/')) {
-                  videoId = videoUrl.split('youtu.be/')[1].split('?')[0];
-                } else if (videoUrl.includes('youtube.com/watch?v=')) {
-                  videoId = videoUrl.split('v=')[1].split('&')[0];
-                }
-                const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+              {mfiVideos.video_links.map((video, index) => {
+                const embedUrl = `https://www.youtube.com/embed/${video.id}`;
                 
                 return (
                   <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
                     <div className="aspect-video">
                       <iframe
                         src={embedUrl}
-                        title={`Meals for Invisible Video ${index + 1}`}
+                        title={video.title}
                         className="w-full h-full"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -603,7 +620,7 @@ const MealsForInvisible: React.FC = () => {
                       />
                     </div>
                     <div className="p-4">
-                      <h3 className="font-semibold text-gray-900 mb-2">Meals for Invisible Video {index + 1}</h3>
+                      <h3 className="font-semibold text-gray-900 mb-2">{video.title}</h3>
                       <p className="text-sm text-gray-600">
                         Watch our meal distribution activities serving those who need it most.
                       </p>

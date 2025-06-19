@@ -264,7 +264,7 @@ const About = () => {
               {loadingDocs ? (
                 <div className="text-center text-gray-500 col-span-2">Loading documents...</div>
               ) : errorDocs ? (
-                <div className="text-center text-red-500 col-span-2">{errorDocs}</div>
+                <div className="text-center text-pink-500 col-span-2">{errorDocs}</div>
               ) : (
                 documentImages.map((doc, idx) => (
                   <div
@@ -336,7 +336,7 @@ const About = () => {
           {loadingMedia ? (
             <div className="text-center text-gray-500">Loading media coverage...</div>
           ) : errorMedia ? (
-            <div className="text-center text-red-500">{errorMedia}</div>
+                            <div className="text-center text-pink-500">{errorMedia}</div>
           ) : (
             mediaCoverage.map((outlet, outletIdx) => (
               <div key={outletIdx} className="mb-12">
@@ -412,21 +412,20 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              "https://www.youtube.com/watch?v=8rSR2sf3VC0",
-              "https://www.youtube.com/watch?v=LwsGgLF4XRM",
-              "https://www.youtube.com/watch?v=MWz66bWh3e8",
-              "https://www.youtube.com/watch?v=Ef3TrtQQEqk",
-              "https://www.youtube.com/watch?v=QocmgZdAywE"
-            ].map((videoUrl, index) => {
-              const videoId = videoUrl.split('v=')[1];
-              const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+              { id: "8rSR2sf3VC0", title: "Health Camp Video 1", url: "https://www.youtube.com/watch?v=8rSR2sf3VC0" },
+              { id: "LwsGgLF4XRM", title: "Health Camp Video 2", url: "https://www.youtube.com/watch?v=LwsGgLF4XRM" },
+              { id: "MWz66bWh3e8", title: "Health Camp Video 3", url: "https://www.youtube.com/watch?v=MWz66bWh3e8" },
+              { id: "Ef3TrtQQEqk", title: "Health Camp Video 4", url: "https://www.youtube.com/watch?v=Ef3TrtQQEqk" },
+              { id: "QocmgZdAywE", title: "Health Camp Video 5", url: "https://www.youtube.com/watch?v=QocmgZdAywE" }
+            ].map((video, index) => {
+              const embedUrl = `https://www.youtube.com/embed/${video.id}`;
               
               return (
                 <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
                   <div className="aspect-video">
                     <iframe
                       src={embedUrl}
-                      title={`Health Camp Video ${index + 1}`}
+                      title={video.title}
                       className="w-full h-full"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -434,7 +433,7 @@ const About = () => {
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-semibold text-gray-900 mb-2">Health Camp Video {index + 1}</h3>
+                    <h3 className="font-semibold text-gray-900 mb-2">{video.title}</h3>
                     <p className="text-sm text-gray-600">
                       Watch our cancer awareness and screening activities in Tibetan communities.
                     </p>

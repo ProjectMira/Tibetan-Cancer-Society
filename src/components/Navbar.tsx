@@ -116,7 +116,7 @@ const Navbar = () => {
 
             {/* Mobile Menu Button */}
             <div className="flex items-center md:hidden">
-              <Link to="/donate" className="flex items-center bg-red-600 text-white hover:bg-red-700 px-3 py-1.5 rounded-md mr-4">
+              <Link to="/donate" className="flex items-center bg-pink-600 text-white hover:bg-pink-700 px-3 py-1.5 rounded-md mr-4">
                 <Heart className="h-3.5 w-3.5 mr-1" />
                 Donate
               </Link>
@@ -240,7 +240,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <button className="w-full flex items-center justify-center gap-2 bg-blue-600 text-white py-4 text-xl font-bold shadow hover:bg-blue-700 transition" onClick={() => { setProgramsDropdownOpen(false); navigate('/programs-services'); }}>
+          <button className="w-full flex items-center justify-center gap-2 bg-pink-600 text-white py-4 text-xl font-bold shadow hover:bg-pink-700 transition" onClick={() => { setProgramsDropdownOpen(false); navigate('/programs-services'); }}>
             Explore Programs & Services <span className="ml-1">→</span>
           </button>
         </div>

@@ -59,14 +59,18 @@ interface CampData {
   videos?: {
     topic: string;
     category: string;
-    video_links: string[];
+    video_links: Array<{
+      id: string;
+      url: string;
+      title: string;
+    }>;
   };
 }
 
 // Colors for charts
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8'];
 const GENDER_COLORS = ['#0088FE', '#FF6B8A'];
-const RESULT_COLORS = ['#4CAF50', '#FFC107', '#F44336'];
+const RESULT_COLORS = ['#4CAF50', '#FFC107', '#FF69B4'];
 
 const CancerAwarenessCamp = () => {
   const [campData, setCampData] = useState<CampData | null>(null);
@@ -194,7 +198,7 @@ const CancerAwarenessCamp = () => {
       <PageLayout>
         <div className="flex justify-center items-center min-h-[50vh]">
           <div className="text-center">
-            <p className="text-lg text-red-600 mb-4">
+            <p className="text-lg text-pink-600 mb-4">
               {error ? `Error: ${error.message}` : 'Camp data not found'}
             </p>
             <Link 
@@ -592,22 +596,15 @@ const CancerAwarenessCamp = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {campData.videos.video_links.map((videoUrl, index) => {
-                // Handle both youtu.be and youtube.com formats
-                let videoId = '';
-                if (videoUrl.includes('youtu.be/')) {
-                  videoId = videoUrl.split('youtu.be/')[1].split('?')[0];
-                } else if (videoUrl.includes('youtube.com/watch?v=')) {
-                  videoId = videoUrl.split('v=')[1].split('&')[0];
-                }
-                const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+              {campData.videos.video_links.map((video, index) => {
+                const embedUrl = `https://www.youtube.com/embed/${video.id}`;
                 
                 return (
                   <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
                     <div className="aspect-video">
                       <iframe
                         src={embedUrl}
-                        title={`Cancer Awareness Camp Video ${index + 1}`}
+                        title={video.title}
                         className="w-full h-full"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -615,7 +612,7 @@ const CancerAwarenessCamp = () => {
                       />
                     </div>
                     <div className="p-4">
-                      <h3 className="font-semibold text-gray-900 mb-2">Cancer Awareness Camp Video {index + 1}</h3>
+                      <h3 className="font-semibold text-gray-900 mb-2">{video.title}</h3>
                       <p className="text-sm text-gray-600">
                         Watch our cancer awareness and detection activities in Tibetan communities.
                       </p>

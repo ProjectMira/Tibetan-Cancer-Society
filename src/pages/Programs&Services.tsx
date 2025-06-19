@@ -1,25 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
+import ProgramCard from '../components/ProgramCard';
 import { ArrowRight, Heart, Search, Users, Info, Truck, Megaphone, Ambulance, Home, Coffee, Calendar } from 'lucide-react';
-
-// Helper function to get the appropriate icon component
-const getIconComponent = (iconName: string) => {
-  switch (iconName) {
-    case 'Heart': return <Heart className="h-6 w-6 text-primary" />;
-    case 'Search': return <Search className="h-6 w-6 text-primary" />;
-    case 'Users': return <Users className="h-6 w-6 text-primary" />;
-    case 'Info': return <Info className="h-6 w-6 text-primary" />;
-    case 'Truck': return <Truck className="h-6 w-6 text-primary" />;
-    case 'Megaphone': return <Megaphone className="h-6 w-6 text-primary" />;
-    default: return <Info className="h-6 w-6 text-primary" />;
-  }
-};
-
-interface ProgramFeature {
-  value: string;
-  label: string;
-}
 
 interface Program {
   id: string;
@@ -29,7 +12,7 @@ interface Program {
   icon: string;
   image: string;
   features: string[];
-  stats: ProgramFeature[];
+  stats: { value: string; label: string }[];
   contactPerson: string;
   contactEmail: string;
 }
@@ -79,7 +62,7 @@ const ProgramsAndServices = () => {
     return (
       <PageLayout>
         <div className="flex justify-center items-center min-h-[50vh]">
-          <p className="text-lg text-red-600">Error loading programs: {error.message}</p>
+          <p className="text-lg text-pink-600">Error loading programs: {error.message}</p>
         </div>
       </PageLayout>
     );
@@ -181,51 +164,10 @@ const ProgramsAndServices = () => {
           </div>
           
           {allPrograms.map((program, index) => (
-            <div key={program.id} className="mb-10 bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
-              <div className="flex flex-col md:flex-row gap-8">
-                <div className="md:w-1/3">
-                  <img 
-                    src={program.image || `/assets/programs/${program.id}.jpg`} 
-                    alt={program.title} 
-                    className="w-full h-auto rounded-lg object-cover"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = '/assets/placeholders/placeholder-image.svg';
-                    }}
-                  />
-                </div>
-                <div className="md:w-2/3">
-                  <div className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
-                    {program.features && program.features.length > 0 ? program.features[0] : 'Support Program'}
-                  </div>
-                  <Link to={`/programs/${program.id}`} className="hover:text-primary transition-colors">
-                    <h3 className="text-2xl font-bold mb-3">{program.title}</h3>
-                  </Link>
-                  <div className="text-gray-600 mb-4">
-                    <div dangerouslySetInnerHTML={{ __html: program.fullDescription.replace(/\n/g, '<br/>') }} />
-                  </div>
-                  <div className="flex flex-wrap gap-4">
-                    {program.stats && program.stats.map((stat, statIndex) => (
-                      <div key={statIndex} className="flex items-center">
-                        <div className="bg-green-100 p-2 rounded-full mr-2">
-                          <Users className="h-4 w-4 text-green-600" />
-                        </div>
-                        <span className="text-sm">{stat.value}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-4">
-                    <Link 
-                      to={program.id === 'sunday-program' ? '/programs/compassion-home?tab=sunday#sunday-program-tab' : `/programs/${program.id}`} 
-                      className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
-                    >
-                      Learn more
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ProgramCard 
+              key={program.id}
+              program={program}
+            />
           ))}
         </div>
       </section>

@@ -45,7 +45,11 @@ interface AmbulanceData {
   videos?: {
     topic: string;
     category: string;
-    video_links: string[];
+    video_links: Array<{
+      id: string;
+      url: string;
+      title: string;
+    }>;
   };
 }
 
@@ -105,7 +109,7 @@ const AmbulanceServices: React.FC = () => {
     return (
       <PageLayout>
         <div className="flex justify-center items-center min-h-[50vh]">
-          <p className="text-lg text-red-600">Error loading ambulance data: {error}</p>
+          <p className="text-lg text-pink-600">Error loading ambulance data: {error}</p>
         </div>
       </PageLayout>
     );
@@ -753,22 +757,15 @@ const AmbulanceServices: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {ambulanceData.videos.video_links.map((videoUrl, index) => {
-                // Handle both youtu.be and youtube.com formats
-                let videoId = '';
-                if (videoUrl.includes('youtu.be/')) {
-                  videoId = videoUrl.split('youtu.be/')[1].split('?')[0];
-                } else if (videoUrl.includes('youtube.com/watch?v=')) {
-                  videoId = videoUrl.split('v=')[1].split('&')[0];
-                }
-                const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+              {ambulanceData.videos.video_links.map((video, index) => {
+                const embedUrl = `https://www.youtube.com/embed/${video.id}`;
                 
                 return (
                   <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
                     <div className="aspect-video">
                       <iframe
                         src={embedUrl}
-                        title={`Ambulance Service Video ${index + 1}`}
+                        title={video.title}
                         className="w-full h-full"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -776,7 +773,7 @@ const AmbulanceServices: React.FC = () => {
                       />
                     </div>
                     <div className="p-4">
-                      <h3 className="font-semibold text-gray-900 mb-2">Ambulance Service Video {index + 1}</h3>
+                      <h3 className="font-semibold text-gray-900 mb-2">{video.title}</h3>
                       <p className="text-sm text-gray-600">
                         Watch our emergency ambulance services providing critical transportation for patients.
                       </p>

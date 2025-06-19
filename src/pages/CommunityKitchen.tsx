@@ -96,7 +96,7 @@ const CommunityKitchen: React.FC = () => {
     return (
       <PageLayout>
         <div className="flex justify-center items-center min-h-[50vh]">
-          <p className="text-lg text-red-600">Error loading community kitchen data: {error}</p>
+          <p className="text-lg text-pink-600">Error loading community kitchen data: {error}</p>
         </div>
       </PageLayout>
     );
