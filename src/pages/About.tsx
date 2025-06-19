@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PageLayout from '../components/PageLayout';
-import { FileText, Award, Heart, Target } from 'lucide-react';
+import { FileText, Award, Heart, Target, PlayCircle } from 'lucide-react';
 import ImageModal from '../components/ImageModal';
 
 // Helper to generate title from filename
@@ -142,36 +142,55 @@ const About = () => {
       {/* Introduction Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-6">
+            <Heart className="h-3 w-3 mr-1" />
+            <span>Our Story</span>
+          </div>
+          
+          {/* About Organization Box */}
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200 mb-12">
+            <h2 className="text-3xl font-bold mb-4">Tibetan Cancer Society (TCS)</h2>
+            <div className="text-lg font-semibold text-primary mb-4 italic">
+              Compassion in Action. Hope in Healing.
+            </div>
+            <p className="text-gray-600 mb-4">
+              The Tibetan Cancer Society (TCS) is a registered non-governmental organization (NGO) founded in 2014 and formally established on May 8, 2015, with a mission to address the growing burden of cancer within the Tibetan refugee diaspora and other marginalized communities across India, Nepal, and the Himalayan region. Our organization is committed to advancing cancer prevention, early detection, patient care, and public education—offering compassionate, culturally sensitive, and holistic support to those most in need.
+            </p>
+            <p className="text-gray-600 mb-4">
+              What began as a deeply personal response to a health crisis in the Tibetan exile community has evolved into one of South Asia's most respected Tibetan-led healthcare initiatives. Without formal medical training or institutional financial backing, our founder relied on empathy, resilience, and community mobilization to build an organization that now serves as a lifeline for thousands of individuals and families affected by cancer.
+            </p>
+            <p className="text-gray-600 mb-6">
+              At TCS, we believe that access to quality cancer care is not a privilege, but a human right. Guided by this principle, we work tirelessly to eliminate the barriers that prevent vulnerable populations from receiving timely diagnoses, effective treatment, and dignified support throughout their journey.
+            </p>
+            <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-primary mb-6">
+              <p className="text-gray-600 text-sm italic">
+                TCS holds the distinction of being the first and only Tibetan cancer-focused society to be recognized and registered under the global UICC (Union for International Cancer Control) membership, further solidifying its credibility and commitment to global cancer care standards.
+              </p>
+            </div>
+          </div>
+
+          {/* Founder Message and Image Side by Side */}
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="md:w-1/2">
-              <div className="inline-flex items-center bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
-                <Heart className="h-3 w-3 mr-1" />
-                <span>Our Story</span>
-              </div>
-              <h2 className="text-3xl font-bold mb-4">Introduction</h2>
-              <p className="text-gray-600 mb-6">
-                The Tibetan Cancer Society (TCS) is a non-profit organization dedicated to cancer prevention, early detection, and awareness in Tibetan communities. Founded by Mr. Tsultrim Dorjee in 2014 and officially registered in May 2015, TCS was created to address the urgent need for better cancer care in the Tibetan diaspora.
+              <h4 className="text-xl font-semibold mb-4 text-gray-900">A Message from Our Founder</h4>
+              <p className="text-gray-700 text-sm leading-relaxed">
+                "When I first became aware of the alarming rise in cancer cases within our Tibetan refugee settlements, I was deeply troubled not only by the suffering I witnessed but also by the absence of any organization dedicated to cancer awareness, early detection, or patient support within our community. After months of research, I learned that cancer accounted for nearly 80 percent of both morbidity and mortality among the Tibetan exile population, making it the most urgent health crisis we faced. Yet no efforts were being made to address it. With no formal medical training, financial support, or institutional guidance, I made a personal commitment to act. I started with nothing more than a sense of duty and the small profit generated from my modest business, which I fully reinvested into organizing awareness campaigns and screening camps. My original intention was to establish a foundation and hand it over to the Central Tibetan Administration so they could expand and sustain the work. In 2016, I had the opportunity to meet Sikyong Dr. Lobsang Sangay and formally presented the documentation for the Tibetan Cancer Society, requesting that the CTA take over the mission. While he appreciated the initiative, he encouraged me to continue the work independently. From that moment onward, I accepted the responsibility with a full heart. Despite immense challenges and personal sacrifices, I remained committed to building an organization that would stand as a symbol of compassion, dignity, and hope. The Tibetan Cancer Society was not built through wealth or influence, but through persistence, community trust, and the belief that no one should have to face cancer alone. Today, every life we touch reflects the strength of that belief and the collective effort of those who continue to walk this path with us. This is more than a healthcare initiative; it is a human movement rooted in empathy and sustained by unwavering hope."
               </p>
-              <p className="text-gray-600 mb-6">
-                It was formally introduced during a 2016 health meeting organized by the Central Tibetan Administration, following His Holiness the Dalai Lama's call to improve Tibetan public health.
-              </p>
-              <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-primary mb-6">
-                <p className="text-gray-600 text-sm italic">
-                  TCS holds the distinction of being the first and only Tibetan cancer-focused society to be recognized and registered under the global UICC (Union for International Cancer Control) membership, further solidifying its credibility and commitment to global cancer care standards.
-                </p>
-              </div>
             </div>
             <div className="md:w-1/2">
               <div className="rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="/assets/hero-images/About Us.jpg" 
-                  alt="Tibetan Cancer Society" 
+                  src="/assets/home/Tsultrim Dorjee.png" 
+                  alt="Tsultrim Dorjee - Founder of Tibetan Cancer Society" 
                   className="w-full h-auto"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.src = '/assets/placeholder-image.jpg';
                   }}
                 />
+              </div>
+              <div className="text-center mt-4">
+                <p className="text-gray-700 font-medium">Mr. Tsultrim Dorjee, Founder & CEO</p>
               </div>
             </div>
           </div>
@@ -202,10 +221,13 @@ const About = () => {
               </div>
               <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
               <p className="text-gray-600 mb-6">
-                At the Tibetan Cancer Society, our mission is to do everything possible to prevent cancer in Tibetan communities through early screening, awareness programs, and health education. We are committed to empowering individuals with knowledge about cancer prevention and encouraging regular check-ups for early detection.
+                To reduce the human and societal burden of cancer—particularly within the Tibetan refugee diaspora and other underserved populations—through awareness, early detection, patient navigation, emergency response, and comprehensive care.
               </p>
               <p className="text-gray-600 mb-6">
-                We also provide crucial support to those affected by cancer, offering financial assistance for treatment, palliative care, rehabilitation, and overall welfare. Our work extends to research and awareness efforts to better understand and address the challenges faced by Tibetans living with cancer.
+                We strive to ensure that every individual, regardless of socioeconomic status, geography, or nationality, has access to compassionate, equitable, and culturally respectful healthcare.
+              </p>
+              <p className="text-gray-600 mb-6">
+                With deep hope and determination, we look forward to a future where our programs may also reach inside Tibet, bringing life-saving education, screening, and services to our people in their homeland.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white p-4 rounded-lg shadow-sm">
@@ -213,7 +235,7 @@ const About = () => {
                   <div className="text-sm text-gray-600">Year Founded</div>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="text-2xl font-bold text-primary mb-1">5000+</div>
+                  <div className="text-2xl font-bold text-primary mb-1">75,000+</div>
                   <div className="text-sm text-gray-600">Lives Impacted</div>
                 </div>
               </div>
@@ -374,8 +396,58 @@ const About = () => {
         )}
       </section>
 
-      {/* Call to Action */}
+      {/* Health Camp Videos Section */}
       <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
+              <PlayCircle className="h-3 w-3 mr-1" />
+              <span>Video Gallery</span>
+            </div>
+            <h2 className="text-3xl font-bold mb-4">Health Camp Videos</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Watch our health camps in action and see the impact of our cancer awareness and screening programs in Tibetan communities.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              "https://www.youtube.com/watch?v=8rSR2sf3VC0",
+              "https://www.youtube.com/watch?v=LwsGgLF4XRM",
+              "https://www.youtube.com/watch?v=MWz66bWh3e8",
+              "https://www.youtube.com/watch?v=Ef3TrtQQEqk",
+              "https://www.youtube.com/watch?v=QocmgZdAywE"
+            ].map((videoUrl, index) => {
+              const videoId = videoUrl.split('v=')[1];
+              const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+              
+              return (
+                <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
+                  <div className="aspect-video">
+                    <iframe
+                      src={embedUrl}
+                      title={`Health Camp Video ${index + 1}`}
+                      className="w-full h-full"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-semibold text-gray-900 mb-2">Health Camp Video {index + 1}</h3>
+                    <p className="text-sm text-gray-600">
+                      Watch our cancer awareness and screening activities in Tibetan communities.
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-primary/5 p-8 md:p-12 rounded-2xl text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Join Us in Our Mission</h2>

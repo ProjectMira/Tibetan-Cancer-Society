@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
-import { Calendar, MapPin, RotateCw, Heart, Info, Ambulance, Home, Coffee } from 'lucide-react';
+import { Calendar, MapPin, RotateCw, Heart, Info, Ambulance, Home, Coffee, PlayCircle } from 'lucide-react';
 import ImageModal from '../components/ImageModal';
 
 interface AmbulanceService {
@@ -42,6 +42,11 @@ interface AmbulanceData {
     Story: string;
     Image: string[];
   }[];
+  videos?: {
+    topic: string;
+    category: string;
+    video_links: string[];
+  };
 }
 
 const AmbulanceServices: React.FC = () => {
@@ -273,17 +278,21 @@ const AmbulanceServices: React.FC = () => {
       {/* Statistics Section */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="bg-primary/5 p-6 rounded-xl text-center">
-              <div className="text-4xl font-bold text-primary mb-2">{regularServices.length}+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">750+</div>
               <p className="text-gray-600">Total Ambulance Services</p>
             </div>
             <div className="bg-primary/5 p-6 rounded-xl text-center">
-              <div className="text-4xl font-bold text-primary mb-2">{patientStories ? patientStories.length : 0}</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">1,55,000</div>
+              <p className="text-gray-600">Total K.M. Covered</p>
+            </div>
+            <div className="bg-primary/5 p-6 rounded-xl text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{patientStories ? patientStories.length : 0}</div>
               <p className="text-gray-600">Patient Stories</p>
             </div>
             <div className="bg-primary/5 p-6 rounded-xl text-center">
-              <div className="text-4xl font-bold text-primary mb-2">24/7</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">24/7</div>
               <p className="text-gray-600">Emergency Availability</p>
             </div>
           </div>
@@ -693,6 +702,58 @@ const AmbulanceServices: React.FC = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Ambulance Service Videos Section */}
+      {ambulanceData.videos && (
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
+                <PlayCircle className="h-3 w-3 mr-1" />
+                <span>Video Gallery</span>
+              </div>
+              <h2 className="text-3xl font-bold mb-4">Ambulance Service Videos</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Watch our ambulance services in action and see how we provide critical transportation for patients in need.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {ambulanceData.videos.video_links.map((videoUrl, index) => {
+                // Handle both youtu.be and youtube.com formats
+                let videoId = '';
+                if (videoUrl.includes('youtu.be/')) {
+                  videoId = videoUrl.split('youtu.be/')[1].split('?')[0];
+                } else if (videoUrl.includes('youtube.com/watch?v=')) {
+                  videoId = videoUrl.split('v=')[1].split('&')[0];
+                }
+                const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+                
+                return (
+                  <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <div className="aspect-video">
+                      <iframe
+                        src={embedUrl}
+                        title={`Ambulance Service Video ${index + 1}`}
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold text-gray-900 mb-2">Ambulance Service Video {index + 1}</h3>
+                      <p className="text-sm text-gray-600">
+                        Watch our emergency ambulance services providing critical transportation for patients.
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>

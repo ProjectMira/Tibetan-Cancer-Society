@@ -1116,5 +1116,15 @@
         ]
       }
     }
-  ]
+  ],
+  "videos": {
+    "topic": "Ambulance Service",
+    "category": "Health Camp",
+    "video_links": [
+      "https://youtu.be/mFPFqPQb4Rk?si=DXoS_EMDEFHnG3Cn",
+      "https://youtu.be/DJ1jHyk4DEk?si=qHEHp8UPJIIWCD4t",
+      "https://youtu.be/bPCNMeMlzc4?si=MucqiCksQWfj0zrj",
+      "https://youtu.be/mE9YsoBovfo?si=dFinthZo1c-2CAK6"
+    ]
+  }
 }

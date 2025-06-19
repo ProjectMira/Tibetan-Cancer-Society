@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import ImageModal from '../components/ImageModal';
-import { Calendar, MapPin, FileText, Users, ChevronDown, ChevronUp } from 'lucide-react';
+import { Calendar, MapPin, FileText, Users, ChevronDown, ChevronUp, PlayCircle } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 // Define types for our data
@@ -56,6 +56,11 @@ interface CampData {
   contactPerson: string;
   contactEmail: string;
   healthCamps: HealthCamp[];
+  videos?: {
+    topic: string;
+    category: string;
+    video_links: string[];
+  };
 }
 
 // Colors for charts
@@ -232,10 +237,37 @@ const CancerAwarenessCamp = () => {
             <div className="flex flex-wrap gap-4">
               {campData.stats.map((stat, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
-                  <div className="text-2xl font-bold">{stat.value}</div>
                   <div className="text-sm opacity-80">{stat.label}</div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Statistics Section */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">Impact Statistics</h2>
+            <p className="text-lg text-gray-600">Our cancer awareness and detection efforts across Tibetan communities</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="bg-primary/5 p-6 rounded-xl text-center">
+              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">45,000</div>
+              <p className="text-gray-600">People Screened</p>
+            </div>
+            <div className="bg-primary/5 p-6 rounded-xl text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">144+</div>
+              <p className="text-gray-600">Campus</p>
+            </div>
+            <div className="bg-primary/5 p-6 rounded-xl text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">39.21%</div>
+              <p className="text-gray-600">H. pylori Positive</p>
+            </div>
+            <div className="bg-primary/5 p-6 rounded-xl text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">60.79%</div>
+              <p className="text-gray-600">H. pylori Negative</p>
             </div>
           </div>
         </div>
@@ -507,6 +539,58 @@ const CancerAwarenessCamp = () => {
           currentIndex={activeSettlement.photos.findIndex(img => img === selectedImage)}
           totalImages={activeSettlement.photos.length}
         />
+      )}
+
+      {/* Cancer Awareness Camp Videos Section */}
+      {campData.videos && (
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
+                <PlayCircle className="h-3 w-3 mr-1" />
+                <span>Video Gallery</span>
+              </div>
+              <h2 className="text-3xl font-bold mb-4">Cancer Awareness Camp Videos</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Watch our cancer awareness and detection camps in action, see how we educate communities and provide vital screening services.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {campData.videos.video_links.map((videoUrl, index) => {
+                // Handle both youtu.be and youtube.com formats
+                let videoId = '';
+                if (videoUrl.includes('youtu.be/')) {
+                  videoId = videoUrl.split('youtu.be/')[1].split('?')[0];
+                } else if (videoUrl.includes('youtube.com/watch?v=')) {
+                  videoId = videoUrl.split('v=')[1].split('&')[0];
+                }
+                const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+                
+                return (
+                  <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <div className="aspect-video">
+                      <iframe
+                        src={embedUrl}
+                        title={`Cancer Awareness Camp Video ${index + 1}`}
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold text-gray-900 mb-2">Cancer Awareness Camp Video {index + 1}</h3>
+                      <p className="text-sm text-gray-600">
+                        Watch our cancer awareness and detection activities in Tibetan communities.
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
       )}
 
       {/* Call to Action */}

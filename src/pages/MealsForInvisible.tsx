@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PageLayout from '../components/PageLayout';
 import ImageModal from '../components/ImageModal';
-import { Calendar, Users, Coffee, DollarSign } from 'lucide-react';
+import { Calendar, Users, Coffee, DollarSign, PlayCircle } from 'lucide-react';
 
 interface MealService {
   'SR.NO': number;
@@ -14,11 +14,16 @@ interface MealService {
 interface MFIData {
   list: MealService[];
   images: string[];
+  videos?: {
+    topic: string;
+    video_links: string[];
+  };
 }
 
 const MealsForInvisible: React.FC = () => {
   const [mfiData, setMfiData] = useState<MealService[]>([]);
   const [mfiImages, setMfiImages] = useState<string[]>([]);
+  const [mfiVideos, setMfiVideos] = useState<{topic: string; video_links: string[]} | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'overview' | 'served'>('overview');
@@ -47,6 +52,11 @@ const MealsForInvisible: React.FC = () => {
           // Set images if available
           if (data.images && Array.isArray(data.images)) {
             setMfiImages(data.images);
+          }
+          
+          // Set videos if available
+          if (data.videos) {
+            setMfiVideos(data.videos);
           }
           
           // Calculate total meals and unique sponsors
@@ -186,16 +196,44 @@ const MealsForInvisible: React.FC = () => {
             <div className="flex flex-wrap gap-4">
               <div className="bg-white/10 backdrop-blur-sm px-4 py-3 rounded-lg flex items-center">
                 <Coffee className="h-5 w-5 mr-2 text-primary" />
-                <span>{totalMeals.toLocaleString()} Meals Provided</span>
+                <span>Meals Provided</span>
               </div>
               <div className="bg-white/10 backdrop-blur-sm px-4 py-3 rounded-lg flex items-center">
                 <Users className="h-5 w-5 mr-2 text-primary" />
-                <span>{totalSponsors} Generous Sponsors</span>
+                <span>Generous Sponsors</span>
               </div>
               <div className="bg-white/10 backdrop-blur-sm px-4 py-3 rounded-lg flex items-center">
                 <Calendar className="h-5 w-5 mr-2 text-primary" />
                 <span>Regular Meal Distribution</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact Statistics Section */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">Impact Statistics</h2>
+            <p className="text-lg text-gray-600">Making a difference in the lives of the invisible members of our community</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div className="bg-primary/5 p-6 rounded-xl text-center">
+              <div className="text-2xl md:text-3xl font-bold text-primary mb-2">1,25,000+</div>
+              <p className="text-gray-600">Meals Provided</p>
+            </div>
+            <div className="bg-primary/5 p-6 rounded-xl text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">1500+</div>
+              <p className="text-gray-600">Generous Sponsors</p>
+            </div>
+            <div className="bg-primary/5 p-6 rounded-xl text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">100+</div>
+              <p className="text-gray-600">Beneficiaries</p>
+            </div>
+            <div className="bg-primary/5 p-6 rounded-xl text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">5+</div>
+              <p className="text-gray-600">Years of Service</p>
             </div>
           </div>
         </div>
@@ -300,93 +338,155 @@ const MealsForInvisible: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="mt-8">
-                  <h4 className="font-bold text-xl mb-4">Impact Statistics</h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <div className="bg-primary/5 p-4 rounded-lg text-center">
-                      <div className="text-3xl font-bold text-primary mb-1">{totalMeals.toLocaleString()}</div>
-                      <div className="text-gray-600">Meals Provided</div>
-                    </div>
-                    
-                    <div className="bg-primary/5 p-4 rounded-lg text-center">
-                      <div className="text-3xl font-bold text-primary mb-1">{totalSponsors}</div>
-                      <div className="text-gray-600">Generous Sponsors</div>
-                    </div>
-                    
-                    <div className="bg-primary/5 p-4 rounded-lg text-center">
-                      <div className="text-3xl font-bold text-primary mb-1">100+</div>
-                      <div className="text-gray-600">Daily Beneficiaries</div>
-                    </div>
-                    
-                    <div className="bg-primary/5 p-4 rounded-lg text-center">
-                      <div className="text-3xl font-bold text-primary mb-1">2+</div>
-                      <div className="text-gray-600">Years of Service</div>
-                    </div>
-                  </div>
-                </div>
+
               </div>
             </div>
           ) : (
             <div>
               <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 mb-8">
-                <div className="bg-primary text-white text-center py-3 rounded-t-lg">
+                <div className="bg-gradient-to-r from-primary to-primary/80 text-white text-center py-4 rounded-t-lg">
                   <h3 className="text-xl font-bold">Meal Service Records</h3>
+                  <p className="text-sm text-white/90 mt-1">Detailed record of all meal sponsorships and distributions</p>
                 </div>
                 
                 <div className="p-6">
+                  {/* Summary Stats */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 p-4 bg-gray-50 rounded-lg">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-primary">{currentServices.length}</div>
+                      <div className="text-xs text-gray-600">Records on Page</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-primary">{mfiData.length.toLocaleString()}</div>
+                      <div className="text-xs text-gray-600">Total Records</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-primary">{currentServices.reduce((sum, service) => sum + service.MEALS_PROVIDED, 0).toLocaleString()}</div>
+                      <div className="text-xs text-gray-600">Meals This Page</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-primary">{totalMeals.toLocaleString()}</div>
+                      <div className="text-xs text-gray-600">Total Meals</div>
+                    </div>
+                  </div>
+
                   <div className="overflow-x-auto">
                     <table className="min-w-full divide-y divide-gray-200">
                       <thead>
-                        <tr>
-                          <th className="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                          <th className="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Sponsor</th>
-                          <th className="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Purpose</th>
-                          <th className="px-4 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Meals Provided</th>
+                        <tr className="bg-gradient-to-r from-gray-50 to-gray-100">
+                          <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
+                            <div className="flex items-center">
+                              <Calendar className="h-4 w-4 mr-2 text-primary" />
+                              Date
+                            </div>
+                          </th>
+                          <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
+                            <div className="flex items-center">
+                              <Users className="h-4 w-4 mr-2 text-primary" />
+                              Sponsor
+                            </div>
+                          </th>
+                          <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">Purpose</th>
+                          <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
+                            <div className="flex items-center">
+                              <Coffee className="h-4 w-4 mr-2 text-primary" />
+                              Meals
+                            </div>
+                          </th>
                         </tr>
                       </thead>
-                      <tbody className="bg-white divide-y divide-gray-200">
+                      <tbody className="bg-white divide-y divide-gray-100">
                         {currentServices.map((service, index) => (
-                          <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                            <td className="px-4 py-3 text-sm text-gray-900">{formatDate(service.DATE)}</td>
-                            <td className="px-4 py-3 text-sm text-gray-900">{service.SPONSOR}</td>
-                            <td className="px-4 py-3 text-sm text-gray-900">{service.PURPOSE}</td>
-                            <td className="px-4 py-3 text-sm text-gray-900">{service.MEALS_PROVIDED.toLocaleString()}</td>
+                          <tr key={index} className={`transition-colors hover:bg-blue-50 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}>
+                            <td className="px-6 py-4 whitespace-nowrap">
+                              <div className="text-sm font-medium text-gray-900">{formatDate(service.DATE)}</div>
+                            </td>
+                            <td className="px-6 py-4">
+                              <div className="text-sm font-medium text-gray-900 max-w-xs">
+                                {service.SPONSOR}
+                              </div>
+                            </td>
+                            <td className="px-6 py-4">
+                              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                {service.PURPOSE}
+                              </span>
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap">
+                              <div className="flex items-center">
+                                <span className="text-lg font-bold text-primary">{service.MEALS_PROVIDED.toLocaleString()}</span>
+                                <span className="text-xs text-gray-500 ml-1">meals</span>
+                              </div>
+                            </td>
                           </tr>
                         ))}
                       </tbody>
                     </table>
                   </div>
                   
-                  {/* Pagination */}
+                  {/* Enhanced Pagination */}
                   {totalPages > 1 && (
-                    <div className="flex justify-center mt-8">
-                      <nav className="flex items-center space-x-2">
-                        <button
-                          onClick={() => paginate(Math.max(1, currentPage - 1))}
-                          disabled={currentPage === 1}
-                          className={`px-3 py-1 rounded-md ${currentPage === 1 ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'}`}
-                        >
-                          Previous
-                        </button>
-                        
-                        {Array.from({ length: totalPages }, (_, i) => i + 1).map(number => (
+                    <div className="mt-8">
+                      <div className="flex items-center justify-between">
+                        <div className="text-sm text-gray-700">
+                          Showing <span className="font-medium">{indexOfFirstService + 1}</span> to{' '}
+                          <span className="font-medium">{Math.min(indexOfLastService, mfiData.length)}</span> of{' '}
+                          <span className="font-medium">{mfiData.length.toLocaleString()}</span> records
+                        </div>
+                        <nav className="flex items-center space-x-2">
                           <button
-                            key={number}
-                            onClick={() => paginate(number)}
-                            className={`px-3 py-1 rounded-md ${currentPage === number ? 'bg-primary text-white' : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'}`}
+                            onClick={() => paginate(Math.max(1, currentPage - 1))}
+                            disabled={currentPage === 1}
+                            className={`px-4 py-2 rounded-lg transition-colors ${
+                              currentPage === 1 
+                                ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
+                                : 'bg-white text-gray-700 hover:bg-primary hover:text-white border border-gray-300 shadow-sm'
+                            }`}
                           >
-                            {number}
+                            Previous
                           </button>
-                        ))}
-                        
-                        <button
-                          onClick={() => paginate(Math.min(totalPages, currentPage + 1))}
-                          disabled={currentPage === totalPages}
-                          className={`px-3 py-1 rounded-md ${currentPage === totalPages ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'}`}
-                        >
-                          Next
-                        </button>
-                      </nav>
+                          
+                          {/* Show page numbers with smart truncation */}
+                          {(() => {
+                            const pages = [];
+                            const showPages = 5;
+                            let startPage = Math.max(1, currentPage - Math.floor(showPages / 2));
+                            let endPage = Math.min(totalPages, startPage + showPages - 1);
+                            
+                            if (endPage - startPage < showPages - 1) {
+                              startPage = Math.max(1, endPage - showPages + 1);
+                            }
+                            
+                            for (let i = startPage; i <= endPage; i++) {
+                              pages.push(
+                                <button
+                                  key={i}
+                                  onClick={() => paginate(i)}
+                                  className={`px-4 py-2 rounded-lg transition-colors ${
+                                    currentPage === i 
+                                      ? 'bg-primary text-white shadow-md' 
+                                      : 'bg-white text-gray-700 hover:bg-primary hover:text-white border border-gray-300 shadow-sm'
+                                  }`}
+                                >
+                                  {i}
+                                </button>
+                              );
+                            }
+                            return pages;
+                          })()}
+                          
+                          <button
+                            onClick={() => paginate(Math.min(totalPages, currentPage + 1))}
+                            disabled={currentPage === totalPages}
+                            className={`px-4 py-2 rounded-lg transition-colors ${
+                              currentPage === totalPages 
+                                ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
+                                : 'bg-white text-gray-700 hover:bg-primary hover:text-white border border-gray-300 shadow-sm'
+                            }`}
+                          >
+                            Next
+                          </button>
+                        </nav>
+                      </div>
                     </div>
                   )}
                 </div>
@@ -463,6 +563,58 @@ const MealsForInvisible: React.FC = () => {
           )}
         </div>
       </section>
+
+      {/* Meals for Invisible Videos Section */}
+      {mfiVideos && mfiVideos.video_links && mfiVideos.video_links.length > 0 && (
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full mb-2">
+                <PlayCircle className="h-3 w-3 mr-1" />
+                <span>Video Gallery</span>
+              </div>
+              <h2 className="text-3xl font-bold mb-4">Meals for Invisible Videos</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Watch our meal distribution program in action, see how we serve nutritious meals to homeless and underprivileged individuals.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {mfiVideos.video_links.map((videoUrl, index) => {
+                // Handle both youtu.be and youtube.com formats
+                let videoId = '';
+                if (videoUrl.includes('youtu.be/')) {
+                  videoId = videoUrl.split('youtu.be/')[1].split('?')[0];
+                } else if (videoUrl.includes('youtube.com/watch?v=')) {
+                  videoId = videoUrl.split('v=')[1].split('&')[0];
+                }
+                const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+                
+                return (
+                  <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <div className="aspect-video">
+                      <iframe
+                        src={embedUrl}
+                        title={`Meals for Invisible Video ${index + 1}`}
+                        className="w-full h-full"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold text-gray-900 mb-2">Meals for Invisible Video {index + 1}</h3>
+                      <p className="text-sm text-gray-600">
+                        Watch our meal distribution activities serving those who need it most.
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Call to Action */}
       <section className="py-16 bg-white">

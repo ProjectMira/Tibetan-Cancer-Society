@@ -14,19 +14,19 @@
   ],
   "stats": [
     {
-      "value": "1500+",
+      "value": "45,000",
       "label": "People Screened"
     },
     {
-      "value": "25+",
-      "label": "Camps Conducted"
+      "value": "144+",
+      "label": "Campus"
     },
     {
-      "value": "70%",
+      "value": "60.79%",
       "label": "H. pylori Negative Results"
     },
     {
-      "value": "11%",
+      "value": "39.21%",
       "label": "H. pylori Positive Results"
     }
   ],
@@ -3895,5 +3895,16 @@
         }
       ]
     }
-  ]
+  ],
+  "videos": {
+    "topic": "Cancer Awareness Camp",
+    "category": "Health Camp",
+    "video_links": [
+      "https://youtu.be/oKDdMCYit7I?si=TfMrDqwcPelgb3j0",
+      "https://youtu.be/q6099F9yQxY?si=UeWfDOqcNoJNpb_H",
+      "https://youtu.be/UAbD9-Hm1aQ?si=qBPAmfN8lIhtKwEs",
+      "https://youtu.be/s7bfIZMRaY4?si=9i0oVBifggykgQLH",
+      "https://youtu.be/VtzBacEVIeA?si=H7uk-VeDHwm4gzdy"
+    ]
+  }
 }

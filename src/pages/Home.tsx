@@ -29,15 +29,15 @@ const AboutSection = () => {
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 text-center">
           <div className="p-4 bg-white rounded-xl shadow-sm">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">1000+</div>
+            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">45,000+</div>
             <div className="text-sm text-gray-600">Cancer Screenings Conducted</div>
           </div>
           <div className="p-4 bg-white rounded-xl shadow-sm">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
+            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">30,000+</div>
             <div className="text-sm text-gray-600">Patients Supported</div>
           </div>
           <div className="p-4 bg-white rounded-xl shadow-sm">
-            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">50+</div>
+            <div className="text-3xl md:text-4xl font-bold text-primary mb-2">144+</div>
             <div className="text-sm text-gray-600">Awareness Programs</div>
           </div>
           <div className="p-4 bg-white rounded-xl shadow-sm">
@@ -46,33 +46,45 @@ const AboutSection = () => {
           </div>
         </div>
         
+        {/* About Organization Box */}
+        <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200 mb-12">
+          <h3 className="text-2xl font-bold mb-4">Tibetan Cancer Society (TCS)</h3>
+          <div className="text-lg font-semibold text-primary mb-4 italic">
+            Compassion in Action. Hope in Healing.
+          </div>
+          <p className="text-gray-600 mb-4">
+            The Tibetan Cancer Society (TCS) is a registered non-governmental organization (NGO) founded in 2014 and formally established on May 8, 2015, with a mission to address the growing burden of cancer within the Tibetan refugee diaspora and other marginalized communities across India, Nepal, and the Himalayan region. Our organization is committed to advancing cancer prevention, early detection, patient care, and public education—offering compassionate, culturally sensitive, and holistic support to those most in need.
+          </p>
+          <p className="text-gray-600 mb-4">
+            What began as a deeply personal response to a health crisis in the Tibetan exile community has evolved into one of South Asia's most respected Tibetan-led healthcare initiatives. Without formal medical training or institutional financial backing, our founder relied on empathy, resilience, and community mobilization to build an organization that now serves as a lifeline for thousands of individuals and families affected by cancer.
+          </p>
+          <p className="text-gray-600 mb-6">
+            At TCS, we believe that access to quality cancer care is not a privilege, but a human right. Guided by this principle, we work tirelessly to eliminate the barriers that prevent vulnerable populations from receiving timely diagnoses, effective treatment, and dignified support throughout their journey.
+          </p>
+          <Link to="/about" className="inline-flex items-center text-primary font-medium hover:underline">
+            Learn more about us
+            <ArrowRight className="h-4 w-4 ml-1" />
+          </Link>
+        </div>
+
+        {/* Founder Message and Image Side by Side */}
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="md:w-1/2">
-            <h3 className="text-2xl font-bold mb-4">About Tibetan Cancer Society</h3>
-            <p className="text-gray-600 mb-4">
-              The Tibetan Cancer Society (TCS) is a non-profit organization dedicated to cancer prevention, early detection, and awareness in Tibetan communities. Founded by Mr. Tsultrim Dorjee in 2014 and officially registered in May 2015, TCS addresses the urgent need for better cancer care in the Tibetan diaspora.
+            <h4 className="text-xl font-semibold mb-4 text-gray-900">A Message from Our Founder</h4>
+            <p className="text-gray-700 text-sm leading-relaxed">
+              "When I first became aware of the alarming rise in cancer cases within our Tibetan refugee settlements, I was deeply troubled not only by the suffering I witnessed but also by the absence of any organization dedicated to cancer awareness, early detection, or patient support within our community. After months of research, I learned that cancer accounted for nearly 80 percent of both morbidity and mortality among the Tibetan exile population, making it the most urgent health crisis we faced. Yet no efforts were being made to address it. With no formal medical training, financial support, or institutional guidance, I made a personal commitment to act. I started with nothing more than a sense of duty and the small profit generated from my modest business, which I fully reinvested into organizing awareness campaigns and screening camps. My original intention was to establish a foundation and hand it over to the Central Tibetan Administration so they could expand and sustain the work. In 2016, I had the opportunity to meet Sikyong Dr. Lobsang Sangay and formally presented the documentation for the Tibetan Cancer Society, requesting that the CTA take over the mission. While he appreciated the initiative, he encouraged me to continue the work independently. From that moment onward, I accepted the responsibility with a full heart. Despite immense challenges and personal sacrifices, I remained committed to building an organization that would stand as a symbol of compassion, dignity, and hope. The Tibetan Cancer Society was not built through wealth or influence, but through persistence, community trust, and the belief that no one should have to face cancer alone. Today, every life we touch reflects the strength of that belief and the collective effort of those who continue to walk this path with us. This is more than a healthcare initiative; it is a human movement rooted in empathy and sustained by unwavering hope."
             </p>
-            <p className="text-gray-600 mb-6">
-              Our mission is to prevent cancer through early screening, awareness programs, and health education while providing crucial support to those affected by cancer.
-            </p>
-            <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-primary mb-6">
-              <h4 className="font-semibold mb-2">Recent Achievement</h4>
-              <p className="text-sm text-gray-600">
-                In 2024, we successfully launched our mobile cancer screening program, reaching remote Tibetan settlements and providing free screenings to over 200 individuals.
-              </p>
-            </div>
-            <Link to="/about" className="inline-flex items-center text-primary font-medium hover:underline">
-              Learn more about us
-              <ArrowRight className="h-4 w-4 ml-1" />
-            </Link>
           </div>
           <div className="md:w-1/2">
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img 
-                src="assets/about-images/TCS.JPG" 
-                alt="Tibetan Cancer Society" 
+                src="/assets/home/Tsultrim Dorjee.png" 
+                alt="Tsultrim Dorjee - Founder of Tibetan Cancer Society" 
                 className="w-full h-auto"
               />
+            </div>
+            <div className="text-center mt-4">
+              <p className="text-gray-700 font-medium">Mr. Tsultrim Dorjee, Founder & CEO</p>
             </div>
           </div>
         </div>

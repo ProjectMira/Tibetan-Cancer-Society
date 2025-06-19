@@ -16,6 +16,7 @@ interface FooterData {
     delhiAddress: string;
     southAddress: string;
     phone: string;
+    landline: string;
     email: string;
   };
 }
@@ -157,9 +158,12 @@ const Footer = () => {
                 <MapPin className="h-4 w-4 text-primary mt-0.5 mr-2" />
                 <span className="text-muted-foreground text-sm">{footerData.contact.mainAddress}</span>
               </li>
-              <li className="flex items-center">
-                <Phone className="h-4 w-4 text-primary mr-2" />
-                <span className="text-muted-foreground text-sm">{footerData.contact.phone}</span>
+              <li className="flex items-start">
+                <Phone className="h-4 w-4 text-primary mr-2 mt-0.5" />
+                <div className="text-muted-foreground text-sm">
+                  <div>Mobile: {footerData.contact.phone}</div>
+                  <div>Landline: {footerData.contact.landline}</div>
+                </div>
               </li>
               <li className="flex items-center">
                 <Mail className="h-4 w-4 text-primary mr-2" />
