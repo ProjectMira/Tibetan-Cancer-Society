@@ -24,20 +24,23 @@ const Contact = () => {
       }
     );
     
-    if (contentRef.current) {
-      observer.observe(contentRef.current);
+    const contentEl = contentRef.current;
+    const formEl = formRef.current;
+
+    if (contentEl) {
+      observer.observe(contentEl);
     }
     
-    if (formRef.current) {
-      observer.observe(formRef.current);
+    if (formEl) {
+      observer.observe(formEl);
     }
     
     return () => {
-      if (contentRef.current) {
-        observer.unobserve(contentRef.current);
+      if (contentEl) {
+        observer.unobserve(contentEl);
       }
-      if (formRef.current) {
-        observer.unobserve(formRef.current);
+      if (formEl) {
+        observer.unobserve(formEl);
       }
     };
   }, []);

@@ -28,13 +28,15 @@ const FeatureCard = ({ icon, title, description, delay }: FeatureCardProps) => {
       }
     );
     
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
+    const cardEl = cardRef.current;
+
+    if (cardEl) {
+      observer.observe(cardEl);
     }
     
     return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
+      if (cardEl) {
+        observer.unobserve(cardEl);
       }
     };
   }, [delay]);
@@ -70,13 +72,15 @@ const Features = () => {
       }
     );
     
-    if (headingRef.current) {
-      observer.observe(headingRef.current);
+    const headingEl = headingRef.current;
+
+    if (headingEl) {
+      observer.observe(headingEl);
     }
     
     return () => {
-      if (headingRef.current) {
-        observer.unobserve(headingRef.current);
+      if (headingEl) {
+        observer.unobserve(headingEl);
       }
     };
   }, []);

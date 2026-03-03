@@ -193,7 +193,7 @@ const ServicesSection = () => {
             {programConfigs.map((config) => (
               <ProgramCard 
                 key={config.id}
-                program={null as any}
+                program={null}
                 label={config.label}
                 loading={true}
               />

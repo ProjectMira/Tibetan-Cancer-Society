@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PageLayout from '../components/PageLayout';
 import ImageModal from '../components/ImageModal';
 import { Calendar, Users, Coffee, DollarSign, PlayCircle } from 'lucide-react';
+import type { FooterData } from '../types/footer';
 
 interface MealService {
   'SR.NO': number;
@@ -32,7 +33,7 @@ const MealsForInvisible: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'overview' | 'served'>('overview');
   const [currentPage, setCurrentPage] = useState(1);
-  const [footerData, setFooterData] = useState<any>(null);
+  const [footerData, setFooterData] = useState<FooterData | null>(null);
   const [totalMeals, setTotalMeals] = useState(0);
   const [totalSponsors, setTotalSponsors] = useState(0);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -474,7 +475,7 @@ const MealsForInvisible: React.FC = () => {
                             const pages = [];
                             const showPages = 5;
                             let startPage = Math.max(1, currentPage - Math.floor(showPages / 2));
-                            let endPage = Math.min(totalPages, startPage + showPages - 1);
+                            const endPage = Math.min(totalPages, startPage + showPages - 1);
                             
                             if (endPage - startPage < showPages - 1) {
                               startPage = Math.max(1, endPage - showPages + 1);

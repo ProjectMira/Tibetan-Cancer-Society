@@ -19,20 +19,23 @@ const About = () => {
       }
     );
     
-    if (contentRef.current) {
-      observer.observe(contentRef.current);
+    const contentEl = contentRef.current;
+    const imageEl = imageRef.current;
+
+    if (contentEl) {
+      observer.observe(contentEl);
     }
     
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
+    if (imageEl) {
+      observer.observe(imageEl);
     }
     
     return () => {
-      if (contentRef.current) {
-        observer.unobserve(contentRef.current);
+      if (contentEl) {
+        observer.unobserve(contentEl);
       }
-      if (imageRef.current) {
-        observer.unobserve(imageRef.current);
+      if (imageEl) {
+        observer.unobserve(imageEl);
       }
     };
   }, []);

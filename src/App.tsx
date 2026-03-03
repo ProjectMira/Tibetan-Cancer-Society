@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CacheManager, preloadCriticalResources, BundleAnalyzer } from './utils/performance';
+import { PageLoader } from './components/LoadingSpinner';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import ProgramsAndServices from "./pages/Programs&Services";
@@ -43,12 +45,30 @@ const App = () => {
   const [programs, setPrograms] = useState<Program[]>([]);
 
   useEffect(() => {
+    // Preload critical resources
+    preloadCriticalResources();
+    
+    // Log performance metrics after page load
+    setTimeout(() => {
+      BundleAnalyzer.logPerformanceMetrics();
+      BundleAnalyzer.monitorMemoryUsage();
+    }, 2000);
+    
     const fetchPrograms = async () => {
       try {
+        // Check cache first
+        const cachedPrograms = CacheManager.get<Program[]>('programs');
+        if (cachedPrograms) {
+          setPrograms(cachedPrograms);
+          return;
+        }
+        
         const response = await fetch('/assets/data/programs.json');
         if (response.ok) {
           const data = await response.json();
           setPrograms(data.programs);
+          // Cache for 30 minutes
+          CacheManager.set('programs', data.programs, 30);
         }
       } catch (error) {
         console.error("Failed to fetch programs:", error);
@@ -62,25 +82,27 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <TooltipProvider>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/programs-services" element={<ProgramsAndServices />} />
-            <Route path="/programs/cancer-awareness-camp" element={<CancerAwarenessCamp />} />
-            <Route path="/programs/ambulance-services" element={<AmbulanceServices />} />
-            <Route path="/programs/community-kitchen" element={<CommunityKitchen />} />
-            <Route path="/programs/compassion-home" element={<CompassionHome />} />
-            <Route path="/programs/world-cancer-day" element={<WorldCancerDay />} />
-            <Route path="/programs/meals-for-invisibles" element={<MealsForInvisible />} />
-            <Route path="/program/:id" element={<ProgramDetail programs={programs} />} />
-            <Route path="/programs/:id" element={<ProgramDetail programs={programs} />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/donate" element={<Donate />} />
-            <Route path="/testimonials" element={<Testimonials />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Suspense fallback={<PageLoader text="Loading page..." />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/programs-services" element={<ProgramsAndServices />} />
+              <Route path="/programs/cancer-awareness-camp" element={<CancerAwarenessCamp />} />
+              <Route path="/programs/ambulance-services" element={<AmbulanceServices />} />
+              <Route path="/programs/community-kitchen" element={<CommunityKitchen />} />
+              <Route path="/programs/compassion-home" element={<CompassionHome />} />
+              <Route path="/programs/world-cancer-day" element={<WorldCancerDay />} />
+              <Route path="/programs/meals-for-invisibles" element={<MealsForInvisible />} />
+              <Route path="/program/:id" element={<ProgramDetail programs={programs} />} />
+              <Route path="/programs/:id" element={<ProgramDetail programs={programs} />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/donate" element={<Donate />} />
+              <Route path="/testimonials" element={<Testimonials />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
           <Toaster />
           <Sonner />
         </TooltipProvider>

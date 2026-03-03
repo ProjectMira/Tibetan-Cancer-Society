@@ -4,6 +4,7 @@ import PageLayout from '../components/PageLayout';
 import ImageModal from '../components/ImageModal';
 import { Calendar, MapPin, FileText, Users, ChevronDown, ChevronUp, PlayCircle, DollarSign } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
+import type { FooterData } from '../types/footer';
 
 // Define types for our data
 interface Collaborator {
@@ -78,7 +79,7 @@ const CancerAwarenessCamp = () => {
   const [error, setError] = useState<Error | null>(null);
   const [expandedCamps, setExpandedCamps] = useState<{ [key: string]: boolean }>({});
   const [expandedSettlements, setExpandedSettlements] = useState<{ [key: string]: boolean }>({});
-  const [footerData, setFooterData] = useState<any>(null);
+  const [footerData, setFooterData] = useState<FooterData | null>(null);
   
   // Image modal state
   const [selectedImage, setSelectedImage] = useState<string | null>(null);

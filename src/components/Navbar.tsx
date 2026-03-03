@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, Phone, HelpCircle, Mail, Heart, Search, ChevronDown } from 'lucide-react';
 import HelpModal from './HelpModal';
+import type { FooterData } from '@/types/footer';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -35,10 +36,16 @@ const Navbar = () => {
     const fetchContactInfo = async () => {
       try {
         const response = await fetch('/assets/data/footer.json');
-        const data = await response.json();
+        if (!response.ok) {
+          throw new Error('Failed to load contact info');
+        }
+        const data: Partial<FooterData> = await response.json();
+        if (!data.contact) {
+          throw new Error('Invalid contact data');
+        }
         setContactInfo({
-          phone: data.contact.phone,
-          email: data.contact.email
+          phone: data.contact.phone || '',
+          email: data.contact.email || ''
         });
       } catch (error) {
         console.error('Error fetching contact info:', error);
@@ -233,4 +240,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

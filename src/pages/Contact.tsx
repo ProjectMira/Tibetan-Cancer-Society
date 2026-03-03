@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PageLayout from '../components/PageLayout';
 import { Phone, Mail, MapPin, Clock, ExternalLink } from 'lucide-react';
+import type { FooterData } from '../types/footer';
 
 const Contact = () => {
   const [contactInfo, setContactInfo] = useState({
@@ -16,7 +17,13 @@ const Contact = () => {
     const fetchContactInfo = async () => {
       try {
         const response = await fetch('/assets/data/footer.json');
-        const data = await response.json();
+        if (!response.ok) {
+          throw new Error('Failed to load contact information');
+        }
+        const data: Partial<FooterData> = await response.json();
+        if (!data.contact) {
+          throw new Error('Invalid contact information');
+        }
         setContactInfo(data.contact);
       } catch (error) {
         console.error('Error fetching contact info:', error);

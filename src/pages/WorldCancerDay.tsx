@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PageLayout from '../components/PageLayout';
 import ImageModal from '../components/ImageModal';
+import OptimizedImage from '../components/OptimizedImage';
+import { getImageFallback } from '../utils/imageMapping';
 import { MapPin, Award, Calendar, Users } from 'lucide-react';
 
 interface CancerDayEvent {
@@ -11,6 +13,7 @@ interface CancerDayEvent {
   guest_of_honour: string;
   image: string[];
   about_event?: string;
+  "About Event"?: string;
 }
 
 const WorldCancerDay: React.FC = () => {
@@ -19,7 +22,6 @@ const WorldCancerDay: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [imageModalOpen, setImageModalOpen] = useState(false);
-  const [footerData, setFooterData] = useState<any>(null);
   const [activeEventIndex, setActiveEventIndex] = useState<number>(0);
 
   useEffect(() => {
@@ -32,14 +34,6 @@ const WorldCancerDay: React.FC = () => {
         }
         const eventsData = await eventsResponse.json();
         setEventsData(eventsData); // JSON is already in array format
-        
-        // Fetch footer data
-        const footerResponse = await fetch('/assets/data/footer.json');
-        if (!footerResponse.ok) {
-          throw new Error('Failed to fetch footer data');
-        }
-        const footerData = await footerResponse.json();
-        setFooterData(footerData);
       } catch (err) {
         setError('Error loading data. Please try again later.');
         console.error('Error fetching data:', err);
@@ -313,42 +307,31 @@ const WorldCancerDay: React.FC = () => {
             <div className="h-1.5 bg-gradient-to-r from-pink-500 to-primary mb-6"></div>
             <h3 className="text-2xl font-bold text-center mb-8">{activeEvent.year} Event Gallery</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {activeEvent.image.map((img, index) => (
-                <div 
-                  key={index} 
-                  className="aspect-square overflow-hidden rounded-lg shadow-sm border border-gray-200 cursor-pointer transform transition hover:scale-105"
-                  onClick={() => {
-                    setSelectedImage(img);
-                    setImageModalOpen(true);
-                  }}
-                >
-                  <img
-                    className="w-full h-full object-cover"
-                    src={img}
-                    alt={`World Cancer Day ${activeEvent.year} Image ${index + 1}`}
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      // Try with different case extensions if the original fails
-                      if (img.toLowerCase().endsWith('.jpg')) {
-                        target.src = img.replace(/\.jpg$/i, '.JPG');
-                      } else if (img.toLowerCase().endsWith('.jpeg')) {
-                        target.src = img.replace(/\.jpeg$/i, '.JPEG');
-                      } else if (img.toLowerCase().endsWith('.png')) {
-                        target.src = img.replace(/\.png$/i, '.PNG');
-                      } else {
-                        // Try changing folder from 'cancer-day' to 'camps' or vice versa
-                        if (img.includes('/assets/cancer-day/')) {
-                          target.src = img.replace('/assets/cancer-day/', '/assets/camps/');
-                        } else if (img.includes('/assets/camps/')) {
-                          target.src = img.replace('/assets/camps/', '/assets/cancer-day/');
-                        } else {
-                          target.src = '/assets/placeholders/placeholder-image.svg';
-                        }
-                      }
-                    }}
-                  />
-                </div>
-              ))}
+              {activeEvent.image.map((img, index) => {
+                // Get fallback image using the mapping utility
+                const fallbackSrc = getImageFallback(img, index);
+                
+                return (
+                  <div 
+                    key={index} 
+                    className="aspect-square overflow-hidden rounded-lg shadow-sm border border-gray-200 cursor-pointer transform transition hover:scale-105"
+                  >
+                    <OptimizedImage
+                      src={img}
+                      alt={`World Cancer Day ${activeEvent.year} Image ${index + 1}`}
+                      width={400}
+                      height={400}
+                      fallbackSrc={fallbackSrc}
+                      loading="lazy"
+                      onClick={() => {
+                        setSelectedImage(fallbackSrc || img);
+                        setImageModalOpen(true);
+                      }}
+                      className="cursor-pointer"
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

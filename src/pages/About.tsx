@@ -15,6 +15,17 @@ function titleFromFilename(filename: string) {
     .trim();
 }
 
+interface MediaCoverageArticle {
+  date: string;
+  "cover image": string | string[];
+  article_link?: string;
+}
+
+interface MediaCoverageOutlet {
+  media_outlet: string;
+  articles: MediaCoverageArticle[];
+}
+
 const About = () => {
   // Modal state
   const [modalDoc, setModalDoc] = React.useState<null | { src: string; title: string; description?: string }>(null);
@@ -62,7 +73,7 @@ const About = () => {
   }, []);
 
   // Add state for media coverage
-  const [mediaCoverage, setMediaCoverage] = React.useState<any[]>([]);
+  const [mediaCoverage, setMediaCoverage] = React.useState<MediaCoverageOutlet[]>([]);
   const [loadingMedia, setLoadingMedia] = React.useState(true);
   const [errorMedia, setErrorMedia] = React.useState<string | null>(null);
   const [mediaModalOpen, setMediaModalOpen] = React.useState(false);

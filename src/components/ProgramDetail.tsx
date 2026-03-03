@@ -26,8 +26,8 @@ interface ProgramDetailProps {
 }
 
 const ProgramDetail: React.FC<ProgramDetailProps> = ({ programs }) => {
-  const { programId } = useParams<{ programId: string }>();
-  const program = programs.find(p => p.id === programId);
+  const { id } = useParams<{ id: string }>();
+  const program = programs.find((p) => p.id === id);
   
   if (!program) {
     return <Navigate to="/programs-services" />;
@@ -134,7 +134,7 @@ const ProgramDetail: React.FC<ProgramDetailProps> = ({ programs }) => {
                 .map(relatedProgram => (
                   <Link 
                     key={relatedProgram.id} 
-                    to={`/programs-services/${relatedProgram.id}`}
+                    to={`/programs/${relatedProgram.id}`}
                     className="group block p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
                   >
                     <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">

@@ -1,25 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { MapPin, Phone, Mail, Facebook, Twitter, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-interface FooterData {
-  organization: {
-    name: string;
-    description: string;
-    socialMedia: Array<{
-      platform: string;
-      url: string;
-    }>;
-  };
-  contact: {
-    mainAddress: string;
-    delhiAddress: string;
-    southAddress: string;
-    phone: string;
-    landline: string;
-    email: string;
-  };
-}
+import type { FooterData } from '@/types/footer';
 
 const Footer = () => {
   const [footerData, setFooterData] = useState<FooterData | null>(null);
@@ -31,8 +13,11 @@ const Footer = () => {
         if (!response.ok) {
           throw new Error('Failed to load footer data');
         }
-        const data = await response.json();
-        setFooterData(data);
+        const data: Partial<FooterData> = await response.json();
+        if (!data.organization || !data.contact) {
+          throw new Error('Invalid footer data');
+        }
+        setFooterData(data as FooterData);
       } catch (error) {
         console.error('Error loading footer data:', error);
       }
@@ -182,6 +167,17 @@ const Footer = () => {
         <div className="mt-8 pt-6 border-t border-gray-200">
           <p className="text-center text-muted-foreground text-sm">
             © {new Date().getFullYear()} {footerData.organization.name}. All rights reserved.
+          </p>
+          <p className="mt-2 text-center text-muted-foreground text-sm">
+            Website created by{' '}
+            <a
+              href="https://ta4tsering.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              ta4tsering.com
+            </a>
           </p>
         </div>
       </div>

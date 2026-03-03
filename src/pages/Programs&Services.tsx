@@ -188,10 +188,10 @@ const ProgramsAndServices = () => {
                 Contact Us
               </Link>
               <Link 
-                to="/resources" 
+                to="/contact" 
                 className="bg-white text-primary border border-primary hover:bg-gray-50 font-semibold py-3 px-6 rounded-full transition-colors"
               >
-                View Resources
+                Get Support
               </Link>
             </div>
           </div>

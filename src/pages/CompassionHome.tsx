@@ -30,7 +30,6 @@ const CompassionHome: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [imageModalOpen, setImageModalOpen] = useState(false);
-  const [footerData, setFooterData] = useState<any>(null);
   const [activeHomeIndex, setActiveHomeIndex] = useState<number>(0);
   const [activeTab, setActiveTab] = useState<'homes' | 'sunday'>('homes');
 
@@ -85,14 +84,6 @@ const CompassionHome: React.FC = () => {
         }
         const homeData = await homeResponse.json();
         setHomeData(homeData);
-        
-        // Fetch footer data
-        const footerResponse = await fetch('/assets/data/footer.json');
-        if (!footerResponse.ok) {
-          throw new Error('Failed to fetch footer data');
-        }
-        const footerData = await footerResponse.json();
-        setFooterData(footerData);
       } catch (err) {
         setError('Error loading data. Please try again later.');
         console.error('Error fetching data:', err);

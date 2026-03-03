@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import { Calendar, MapPin, RotateCw, Heart, Info, Ambulance, Home, Coffee, PlayCircle } from 'lucide-react';
 import ImageModal from '../components/ImageModal';
+import type { FooterData } from '../types/footer';
 
 interface AmbulanceService {
   'Patient Name'?: string;
@@ -63,7 +64,7 @@ const AmbulanceServices: React.FC = () => {
   const [imageModalOpen, setImageModalOpen] = useState(false);
   const [modalImages, setModalImages] = useState<string[]>([]);
   const [modalIndex, setModalIndex] = useState<number>(-1);
-  const [footerData, setFooterData] = useState<any>(null);
+  const [footerData, setFooterData] = useState<FooterData | null>(null);
   const itemsPerPage = 10;
 
   useEffect(() => {
@@ -129,9 +130,6 @@ const AmbulanceServices: React.FC = () => {
   const regularServices = ambulanceData.ambulance_service_provided;
   const patientStories = ambulanceData.patient_stories || [];
   const ambulanceCars = ambulanceData.ambulance_cars ? ambulanceData.ambulance_cars[0] : null;
-  
-  console.log('Patient Stories:', patientStories.length);
-  console.log('Regular Services:', regularServices.length);
   
   // Pagination for ambulance services
   const indexOfLastService = currentPage * itemsPerPage;
@@ -241,35 +239,35 @@ const AmbulanceServices: React.FC = () => {
               All Programs
             </Link>
             <Link 
-              to="/ambulance-services" 
+              to="/programs/ambulance-services" 
               className="flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors text-sm md:text-base"
             >
               <Ambulance className="h-4 w-4 mr-2" />
               Ambulance Services
             </Link>
             <Link 
-              to="/compassion-home" 
+              to="/programs/compassion-home" 
               className="flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors text-sm md:text-base"
             >
               <Home className="h-4 w-4 mr-2" />
               Compassion Home
             </Link>
             <Link 
-              to="/community-kitchen" 
+              to="/programs/community-kitchen" 
               className="flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors text-sm md:text-base"
             >
               <Coffee className="h-4 w-4 mr-2" />
               Community Kitchen
             </Link>
             <Link 
-              to="/cancer-awareness-camp" 
+              to="/programs/cancer-awareness-camp" 
               className="flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors text-sm md:text-base"
             >
               <Heart className="h-4 w-4 mr-2" />
               Cancer Awareness Camp
             </Link>
             <Link 
-              to="/world-cancer-day" 
+              to="/programs/world-cancer-day" 
               className="flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors text-sm md:text-base"
             >
               <Calendar className="h-4 w-4 mr-2" />

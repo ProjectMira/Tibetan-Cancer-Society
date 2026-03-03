@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PageLayout from '../components/PageLayout';
 import ImageModal from '../components/ImageModal';
 import { Calendar, MapPin, Users, DollarSign } from 'lucide-react';
+import type { FooterData } from '../types/footer';
 
 interface KitchenData {
   location: string;
@@ -23,7 +24,7 @@ const CommunityKitchen: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [imageModalOpen, setImageModalOpen] = useState(false);
-  const [footerData, setFooterData] = useState<any>(null);
+  const [footerData, setFooterData] = useState<FooterData | null>(null);
   const [activeKitchenIndex, setActiveKitchenIndex] = useState<0 | 1>(0);
 
   useEffect(() => {

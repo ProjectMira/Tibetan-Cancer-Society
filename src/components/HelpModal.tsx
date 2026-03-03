@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, Phone, Mail, MapPin } from 'lucide-react';
+import type { FooterData } from '@/types/footer';
 
 interface HelpModalProps {
   isOpen: boolean;
@@ -17,11 +18,17 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
     const fetchContactInfo = async () => {
       try {
         const response = await fetch('/assets/data/footer.json');
-        const data = await response.json();
+        if (!response.ok) {
+          throw new Error('Failed to load contact info');
+        }
+        const data: Partial<FooterData> = await response.json();
+        if (!data.contact) {
+          throw new Error('Invalid contact data');
+        }
         setContactInfo({
-          phone: data.contact.phone,
-          email: data.contact.email,
-          mainAddress: data.contact.mainAddress
+          phone: data.contact.phone || '',
+          email: data.contact.email || '',
+          mainAddress: data.contact.mainAddress || ''
         });
       } catch (error) {
         console.error('Error fetching contact info:', error);

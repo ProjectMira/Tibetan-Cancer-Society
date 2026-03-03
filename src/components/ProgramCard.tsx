@@ -32,7 +32,7 @@ interface Program {
 }
 
 interface ProgramCardProps {
-  program: Program;
+  program: Program | null;
   label?: string; // Optional custom label, falls back to first feature
   loading?: boolean;
   className?: string; // Optional additional CSS classes

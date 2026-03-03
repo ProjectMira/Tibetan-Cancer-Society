@@ -1,24 +1,24 @@
 [
       {
             "id": 1,
+            "name": "Tashi Tsering",
+            "role": "Volunteer Website Developer, India",
+            "message": "I Volunteered with the Tibetan Cancer Society (TCS)'s Ladakh Health Camp in 2022 for about a week, It was a great experience and I really appreciate the work TCS is doing for the walefare of the commnunity. After much thought I realize the best way to contribute to the TCS with my domain knowledge is to enhance its digital presence so I build this website for The Tibetan Cancer Society (TCS).",
+            "image": "/assets/team-images/Tashi Tsering.jpeg"
+      },
+      {
+            "id": 2,
             "name": "Norbu Tsering",
             "role": "Ex-TCS Program Manager, India",
             "message": "It has been a true honour and privilege to be part of the Tibetan Cancer Society (TCS) — a UICC-registered NGO — as an executive member in administrative and program management. From March 2022 to 2024, this period has been one of the most professionally rewarding journeys of my life.Under the inspiring leadership of Mr. Tsultrim Dorjee, whose vision for innovative and sustainable growth guided every step we took, I had the opportunity to actively contribute to grassroots planning, strategic development, and community-centered initiatives. Together, we witnessed TCS grow from a single branch to, today, three active branches, significantly expanding our mission.A highlight of my tenure was successfully leading and reporting on over 20 registered projects and grants, including significant initiatives funded by USAID–The Tibet Fund. I had the opportunity to organise and manage medical health camps, prepare documentation and proposals, coordinate fundraising events, and recruit and lead dozens of staff and hundreds of volunteers alongside the TCS Director. Beyond grants, I played a hands-on role in various field programs — notably Meals for Invisible, through which we distributed meals to lakhs of people every year.My work took me to some of the most remote and network-deprived corners of India and Nepal. Travelling from state to state, I worked alongside a dedicated network of nurses, doctors, managers, philanthropists, and stakeholders — an experience that was both humbling and deeply inspiring. Each challenge taught me resilience, adaptability, and the immense value of community-driven service.The Tibetan Cancer Society is not just an NGO — it is a testament to what collective vision, fieldwork, and tireless effort can achieve. Having walked hand-in-hand with its mission, staff, and leadership, I can confidently say it stands as one of the most action-oriented and result-driven Tibetan organisations I have known. I will forever carry pride in being part of this remarkable network and its enduring legacy.",
             "image": "/assets/team-images/Norbu Tsering.png"
       },
       {
-            "id": 2,
+            "id": 3,
             "name": "Sonam Dhargye",
             "role": "Ex-TCS Manager, Nepal",
             "message": "I wanted to express my gratitude for the opportunities I had while working with the Tibetan Cancer Society (TCS). I will always cherish the experiences and lessons learned. As a former manager at TCS, I witnessed the organization's remarkable work in providing cancer care and support to the Tibetan community at the grassroots level. Their dedication to improving health outcomes and promoting awareness about cancer is truly commendable. They provide accessible cancer treatment and care at the Compassion Home in Delhi. TCS promotes cancer awareness and educates the Tibetan community by organizing free health camps in India and Nepal. Most importantly, they support patients and their families as if they were their own, which further empowers our society. As a grassroots NGO, the Tibetan Cancer Society does a wonderful job with very limited resources. My personal favorite program is \"Meals for Invisible,\" which provides nutritious meals to poor and needy people around Delhi. I must thank those who selflessly donate to this program; your money is used solely for the benefit of the poor. Thank you, Tibetan Cancer Society, for your compassionate work and commitment to cancer care. Your efforts are making a real difference in our society",
             "image": "/assets/team-images/Sonam Dhargye.png"
-      },
-      {
-            "id": 3,
-            "name": "Tenzin Dekyong",
-            "role": "Ex-Staff Nurse, India",
-            "message": "As we celebrate the 10th anniversary of the Tibetan Cancer Society, I feel incredibly grateful for the opportunity to share a part of my journey with this inspiring organization. I joined TCS as a volunteer nurse on October 15, 2022, during a health camp organized in Nepal. Though it lasted just 15 days, those two weeks left a lasting impact on me. We visited four Tibetan settlements in Pokhara, reaching out to people of all ages—children, elders, monks, and nuns—and extended our care to Himalayan communities in Kathmandu as well. The work TCS does in Nepal is truly remarkable. From raising awareness about cancer to screening for serious conditions like H. pylori (which is linked to stomach cancer), they’re not just providing medical assistance—they’re offering hope. The emotional support they give is just as vital as the treatment itself. For me, this experience was more than just a volunteer opportunity—it was deeply meaningful. I didn’t just grow in my nursing skills; I grew as a person. I learned so much about compassion, resilience, and the power of human connection. Being surrounded by such dedicated and kind-hearted people reminded me why I chose this path in the first place. I’m so proud to have been even a small part of the work TCS does. It’s something I’ll carry with me always.",
-            "image": "/assets/team-images/Tenzin Dekyong.png"
       },
       {
             "id": 4,
@@ -462,11 +462,10 @@
             "image": "/assets/team-images/Pasang lhamo.png"
       },
       {
-            "id": 67,
-            "name": "Tashi Tsering",
-            "role": "Volunteer Website Developer, India",
-            "message": "I Volunteered with the Tibetan Cancer Society (TCS)'s Ladakh Health Camp in 2022 for about a week, It was a great experience and I really appreciate the work TCS is doing for the walefare of the commnunity. After much thought I realize the best way to contribute to the TCS with my domain knowledge is to enhance its digital presence so I build this website for The Tibetan Cancer Society (TCS).",
-            "image": "/assets/team-images/Tashi Tsering.jpeg"
+            "id": 3,
+            "name": "Tenzin Dekyong",
+            "role": "Ex-Staff Nurse, India",
+            "message": "As we celebrate the 10th anniversary of the Tibetan Cancer Society, I feel incredibly grateful for the opportunity to share a part of my journey with this inspiring organization. I joined TCS as a volunteer nurse on October 15, 2022, during a health camp organized in Nepal. Though it lasted just 15 days, those two weeks left a lasting impact on me. We visited four Tibetan settlements in Pokhara, reaching out to people of all ages—children, elders, monks, and nuns—and extended our care to Himalayan communities in Kathmandu as well. The work TCS does in Nepal is truly remarkable. From raising awareness about cancer to screening for serious conditions like H. pylori (which is linked to stomach cancer), they’re not just providing medical assistance—they’re offering hope. The emotional support they give is just as vital as the treatment itself. For me, this experience was more than just a volunteer opportunity—it was deeply meaningful. I didn’t just grow in my nursing skills; I grew as a person. I learned so much about compassion, resilience, and the power of human connection. Being surrounded by such dedicated and kind-hearted people reminded me why I chose this path in the first place. I’m so proud to have been even a small part of the work TCS does. It’s something I’ll carry with me always.",
+            "image": "/assets/team-images/Tenzin Dekyong.png"
       }
-
 ]
